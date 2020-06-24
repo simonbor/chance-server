@@ -1,8 +1,8 @@
-const connection = require('../../connection');
+const connection = require('../connection');
 const Address = require('../models/address');
 
 const addressGet = async function addressGet (req, res) {
-    const connect = await connection.connectDb();
+    const connect = await connection.createConnection();
 
     var Request = require('tedious').Request;  
     var TYPES = require('tedious').TYPES;
@@ -24,7 +24,7 @@ const addressGet = async function addressGet (req, res) {
 }
 
 const addressUpdate = async function addressUpdate (req, res) {  
-    const connect = await connection.connectDb();
+    const connect = await connection.createConnection();
 
     var Request = require('tedious').Request;  
     var TYPES = require('tedious').TYPES;

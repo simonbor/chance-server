@@ -1,0 +1,15 @@
+﻿{
+	"connection": {
+		"server": "localhost",
+		"authentication": {
+			"type": "default",
+			"options": {
+				"userName": "SV_MSSQL_USERNAME",
+				"password": "SV_MSSQL_PASSWORD"
+			}
+		},
+		"options": {
+			"database": "SV_MSSQL_DATABASE"
+		}
+	}
+}
