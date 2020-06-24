@@ -10,8 +10,8 @@ drop table if exists main.Driver
 
 go
 create table main.Driver (
-	DriverId int identity(1, 1) not null primary key,
-	Name nvarchar(100) null,
+	DriverId int not null identity(1, 1) primary key,
+	[Name] nvarchar(100) null,
 	MobileNum varchar(20) not null,
 	CarName nvarchar(50) null,
 	CarColor nvarchar(50) null
