@@ -21,8 +21,7 @@ create table main.Driver (
 )
 
 -- for beginning only Tel-Aviv record is enough
-go
-	create table main.City (
+create table main.City (
 	CityId int not null primary key,
 	[Name] varchar(100) not null,
 	LocalName nvarchar(100) not null,
@@ -34,7 +33,6 @@ go
 
 -- https://maps.b144.co.il/רחובות/מפת-תל-אביב-יפו/
 -- https://israel-streets.openalfa.com/tel-aviv-yafo/streetdir/a
-go
 create table main.Street (
 	StreetId int not null identity(1, 1) primary key,
 	[Name] varchar(100) null,			-- english correct name
@@ -52,7 +50,7 @@ create table main.Address (
 	StreetId int not null,
 	CityId int not null,
 	CountryId int not null,		-- CountryIsoCode, The State of Israel - 376
-	[Desc] nvarchar(1000) null,	-- optionaly contains the first complete message
+	[Desc] nvarchar(1000) null,	-- optionally contains the first complete message
 	Created datetime not null default(getutcdate()),
 	CreatedBy int null,
 	Updated datetime not null default(getutcdate()),
@@ -69,6 +67,7 @@ create table main.Location (
 	Longitude float not null,
 	Latitude float not null,
 	AddressId int null,
+	[Default] bit not null default 0,
 	[Desc] nvarchar(500) null,
 	Created datetime not null default(getutcdate()),
 	CreatedBy int null,
@@ -86,7 +85,7 @@ create table main.Chance (
     AddressId int null,
     DateStart datetime not null,
     DriversIn varchar(1000) null, 	-- array of customers id, BTW
-    DriversOut int not null,		-- out customer id
+    DriverOut int not null,		-- out customer id
 	Created datetime not null default(getutcdate()),
 	CreatedBy int null,
 	Updated datetime not null default(getutcdate()),
@@ -96,5 +95,5 @@ create table main.Chance (
 
     foreign key (LocationId) references main.Location(LocationId),
     foreign key (AddressId) references main.Address(AddressId),
-    foreign key (DriversOut) references main.Driver(DriverId)
+    foreign key (DriverOut) references main.Driver(DriverId)
 )

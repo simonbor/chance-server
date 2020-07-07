@@ -1,6 +1,6 @@
 use Parking
 
 go
-drop schema main
+drop schema if exists main
 go
 create schema main

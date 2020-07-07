@@ -1,13 +1,14 @@
 use Parking
 
-drop procedure if exists main.sp_GetDriver
-drop procedure if exists main.sp_InsertDriver
-drop procedure if exists main.sp_GetAddress
-drop procedure if exists main.sp_InsertAddress
-drop procedure if exists main.sp_GetLocationByAddress
-drop procedure if exists main.sp_InsertLocation
-drop procedure if exists main.sp_GetChanceByCity
-drop procedure if exists main.sp_InsertChance
+go
+drop procedure if exists main.sp_GetAddress;
+drop procedure if exists main.sp_GetChanceByCity;
+drop procedure if exists main.sp_GetLocationByAddress;
+drop procedure if exists main.sp_InsertAddress;
+drop procedure if exists main.sp_InsertChance;
+drop procedure if exists main.sp_InsertDriver;
+drop procedure if exists main.sp_InsertLocation;
+drop procedure if exists main.sp_GetDriver;
 
 -- =================================
 -- Driver
@@ -108,10 +109,10 @@ create procedure main.sp_InsertChance
 	@LocationId int = null,
 	@AddressId int = null,
 	@DateStart datetime,
-	@DriversOut int
+	@DriverOut int
 as
-	insert into main.Spot (LocationId, AddressId, DateStart, DriversOut)
-	values (@LocationId, @AddressId, @DateStart, @DriversOut)
+	insert into main.Spot (LocationId, AddressId, DateStart, DriverOut)
+	values (@LocationId, @AddressId, @DateStart, @DriverOut)
     select @@identity as ChanceId
 return 0
 
