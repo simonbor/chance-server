@@ -27,7 +27,7 @@ create procedure main.sp_InsertDriver
 as
 	insert into main.Driver ([Name], MobileNum)
 	values (@Name, @MobileNum)
-	select @@identity
+	select @@identity as DriverId
 return 0
 
 -- =================================
@@ -38,7 +38,7 @@ create procedure main.sp_GetAddress
 	@StreetName nvarchar(100),
 	@CityId int,
 	@Building int = null,
-	@ContryId int
+	@CountryId int
 as
 	declare @StreetId int = null
 	-- todo: select @StreetId by OtherNames when by Name it has not been found
@@ -47,7 +47,7 @@ as
 	if @StreetId is not null
 	begin
 		select * from [main].[Address] a 
-        where a.CountryId = @ContryId and 
+        where a.CountryId = @CountryId and 
                 a.cityid = @cityid and 
                 a.streetid = @streetid and 
                 a.building = @building
@@ -111,9 +111,9 @@ create procedure main.sp_InsertChance
 	@DateStart datetime,
 	@DriverOut int
 as
-	insert into main.Spot (LocationId, AddressId, DateStart, DriverOut)
+	insert into main.Chance (LocationId, AddressId, DateStart, DriverOut)
 	values (@LocationId, @AddressId, @DateStart, @DriverOut)
-    select @@identity as ChanceId
+	select @@identity as ChanceId
 return 0
 
 go
