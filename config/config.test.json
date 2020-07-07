@@ -1,15 +1,8 @@
 ﻿{
-	"connection": {
+	"config": {
+		"user": "",
+		"password": "",
 		"server": "localhost",
-		"authentication": {
-			"type": "default",
-			"options": {
-				"userName": "",
-				"password": ""
-			}
-		},
-		"options": {
-			"database": ""
-		}
+		"database": "ParkingTest"
 	}
 }
