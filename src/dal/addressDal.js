@@ -1,45 +1,31 @@
-const connection = require('../connection');
-const Address = require('../models/address');
+const config = require('../config');
+const mssql = require('mssql');
 
-const addressGet = async function addressGet (req, res) {
-    const connect = await connection.createConnection();
+const addressGet = async function(address) {
+    const pool = await mssql.connect(config.config);
+    const request = await pool.request();   
 
-    var Request = require('tedious').Request;  
-    var TYPES = require('tedious').TYPES;
+    request.input('StreetName', mssql.VarChar(50), address.StreetName);
+    request.input('CityId', mssql.Int, address.CityId);
+    request.input('CountryId', mssql.Int, address.CountryId);
+    request.input('Building', mssql.Int, address.Building);
 
-    var request = new Request("main.sp_GetAddress", function(err) {
-    });
-    
-    Object.keys(req.body).forEach(function(p) {
-        request.addParameter(p, TYPES.VarChar, req.body[p]);
-    });
-
-    request.on('row', function (columns) {
-    });
-
-    request.on('doneInProc', function (rowCount, more, rows) {
-    });
-
-    connection.callProcedure(request);
+    let addressData = await request.execute('main.sp_GetAddress');
+    return addressData.recordsets[0] || address;
 }
 
-const addressUpdate = async function addressUpdate (req, res) {  
-    const connect = await connection.createConnection();
+const addressInsert = async function(address) {  
+    const pool = await mssql.connect(config.config);
+    const request = await pool.request();   
 
-    var Request = require('tedious').Request;  
-    var TYPES = require('tedious').TYPES;
+    request.input('StreetName', mssql.VarChar(50), address.StreetLocalName);
+    request.input('CityId', mssql.Int, address.CityId);
+    request.input('CountryId', mssql.Int, address.CountryId);
+    request.input('Building', mssql.Int, address.Building);
+    request.input('CreatedBy', mssql.Int, address.CreatedBy);
 
-    var request = new Request("main.sp_InsertAddress", function(err) {
-        if(err){
-            console.log(err);
-        }
-    });
-
-    Object.keys(req.body).forEach(function(p) {
-        request.addParameter(p, TYPES.VarChar, req.body[p]);
-    });
-
-    connect.callProcedure(request);
+    addressData = await request.execute('main.sp_InsertAddress');
+    return addressData.recordsets[0];
 }
 
-module.exports = {addressGet, addressUpdate}
+module.exports = {addressGet, addressInsert}
