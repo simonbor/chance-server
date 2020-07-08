@@ -94,10 +94,14 @@ go
 create procedure main.sp_InsertLocation
 	@Latitude float,
 	@Longitude float,
-	@AddressId int = null
+	@Altitude float = null,
+	@AddressId int = null,
+	@Default bit = 0,
+	@Desc nvarchar(500) = null,
+	@CreatedBy int = null
 as
-	insert into main.Location(Latitude, Longitude, AddressId)
-	values (@Latitude, @Longitude, @AddressId)
+	insert into main.Location(Latitude, Longitude, Altitude, AddressId, [Default], [Desc], CreatedBy)
+	values (@Latitude, @Longitude, @Altitude, @AddressId, @Default, @Desc, @CreatedBy)
 
 	select @@identity as LocationId
 return 0

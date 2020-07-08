@@ -66,6 +66,7 @@ create table main.Location (
 	LocationId int not null identity(1,1) primary key,
 	Longitude float not null,
 	Latitude float not null,
+	Altitude float null,
 	AddressId int null,
 	[Default] bit not null default 0,
 	[Desc] nvarchar(500) null,
