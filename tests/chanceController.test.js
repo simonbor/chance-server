@@ -10,7 +10,7 @@ describe('chance controller tests', () => {
   const mockResponse = () => {
     const res = {}
     res.send = jest.fn().mockReturnValue(res)
-    res.status = jest.fn().mockReturnValue(res)
+    res.statusCode = jest.fn().mockReturnValue(res)
     res.json = jest.fn().mockReturnValue(res)
     return res;
   };
@@ -26,24 +26,28 @@ describe('chance controller tests', () => {
   test('test insert chance use case', async () => {
     const req = mockRequest();
     const res = mockResponse();
-    // ---
-    req.params.Address = {
-      "Street": {"LocalName": "Bograshov"},
-      "City": {"CityId": 1},
-      "Country": {"CountryId": 367},
-      "Building": 1
-    }
-    // ---
-    req.params.Driver = {"MobileNum": '0544123123'};
-    // ---
+
     // https://stackoverflow.com/questions/20083807/javascript-date-to-sql-date-object
     // new Date().toISOString().slice(0, 19).replace('T', ' ');
-    req.params.Chance = {"DateStart": (new Date()).toLocaleString("en-US")};
+    // req.body.Chance = {"DateStart": (new Date()).toLocaleString("en-US")};
+    req.body = {
+      "Address": {
+          "Street": {"LocalName": "Bograshov"},
+          "City": {"CityId": 1},
+          "Country": {"CountryId": 367},
+          "Building": 1
+        },
+      "Driver": {
+        "MobileNum": "0544123123"
+      },
+      "Chance": {
+        "DateStart": (new Date()).toLocaleString("en-US")
+      }
+    }
 
-    await chanceController.insertChance(req, res);
+    const chance = await chanceController.insertChance(req, res);
 
-    expect(res.send).toHaveBeenCalledTimes(1)
-    expect(res.send.mock.calls.length).toBe(1);
-    expect(res.status).toHaveBeenCalledWith(200);
+    expect(res.statusCode).toEqual(200);
+    expect(typeof chance).toBe('object');
   });
 });

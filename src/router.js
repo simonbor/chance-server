@@ -1,22 +1,23 @@
 const url = require('url');
 const {parse} = require('querystring');
-const addressController = require('./controllers/addressController')
+const addressController = require('./controllers/addressController');
+const chanceController = require('./controllers/chanceController');
 
-function collectRequestDataAsync(request) {
+function collectRequestDataAsync(request) {    
+    const FORM_URLENCODED = 'application/x-www-form-urlencoded';
+    let body = '';
+
     return new Promise(resolve => {
-        const FORM_URLENCODED = 'application/x-www-form-urlencoded';
-        if(request.headers['content-type'] === FORM_URLENCODED) {
-            let body = '';
-            request.on('data', chunk => {
-                body += chunk.toString();
-            });
-            request.on('end', () => {
+        request.on('data', chunk => {
+            body += chunk.toString();
+        });
+        request.on('end', () => {
+            if(request.headers['content-type'].toLowerCase() === FORM_URLENCODED) {
                 resolve(parse(body));
-            });
-        }
-        else {
-            resolve(null);
-        }
+            } else {
+                resolve(JSON.parse(body));
+            }
+        });
     });
 }
 
@@ -33,6 +34,10 @@ const route = async function(req, res) {
     } else if (reqUrl.pathname == '/address' && req.method === 'POST') {
         const address = await addressController.addressUpdate(req, res);
         res.end(JSON.stringify(address));
+
+    } else if (reqUrl.pathname == '/chance' && req.method === 'POST') {
+        const chance = await chanceController.insertChance(req, res);
+        res.end(JSON.stringify(chance));
 
     } else {
         res.statusCode = 404;

@@ -4,12 +4,18 @@
 		"authentication": {
 			"type": "default",
 			"options": {
-				"userName": "sa",
-				"password": "1234Qwer"
+				"userName": "",
+				"password": ""
 			}
 		},
 		"options": {
 			"database": "Parking"
 		}
+	},
+	"config": {
+		"user": "",
+		"password": "",
+		"server": "localhost",
+		"database": "Parking"
 	}
 }
