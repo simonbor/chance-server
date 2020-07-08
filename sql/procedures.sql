@@ -61,7 +61,8 @@ create procedure main.sp_InsertAddress
     @StreetName nvarchar(100),
 	@CityId int,
 	@CountryId int = 376,
-	@Building int = null
+	@Building int = null,
+	@CreatedBy int = null
 as
 	declare @StreetId int = null
 	-- todo: select @StreetId by OtherNames when by StreetName has not been found
@@ -74,8 +75,8 @@ as
     	set @StreetId = @@identity
 	end
 
-	insert into main.Address (CountryId, CityId, StreetId, Building)
-	values (@CountryId, @CityId, @StreetId, @Building)
+	insert into main.Address (CountryId, CityId, StreetId, Building, CreatedBy)
+	values (@CountryId, @CityId, @StreetId, @Building, @CreatedBy)
 	select @@identity as AddressId
 return 0
 
@@ -109,10 +110,11 @@ create procedure main.sp_InsertChance
 	@LocationId int = null,
 	@AddressId int = null,
 	@DateStart datetime,
-	@DriverOut int
+	@DriverOut int,
+	@CreatedBy int = null
 as
-	insert into main.Chance (LocationId, AddressId, DateStart, DriverOut)
-	values (@LocationId, @AddressId, @DateStart, @DriverOut)
+	insert into main.Chance (LocationId, AddressId, DateStart, DriverOut, CreatedBy)
+	values (@LocationId, @AddressId, @DateStart, @DriverOut, @CreatedBy)
 	select @@identity as ChanceId
 return 0
 
