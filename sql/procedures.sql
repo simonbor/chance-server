@@ -23,10 +23,12 @@ return 0
 go
 create procedure main.sp_InsertDriver
     @Name nvarchar(100) = null,
-	@MobileNum varchar(20)
+	@MobileNum varchar(20),
+	@CarName nvarchar(50) = null,
+	@CarColor nvarchar(50) = null
 as
-	insert into main.Driver ([Name], MobileNum)
-	values (@Name, @MobileNum)
+	insert into main.Driver ([Name], MobileNum, CarName, CarColor)
+	values (@Name, @MobileNum, @CarName, @CarColor)
 	select @@identity as DriverId
 return 0
 
