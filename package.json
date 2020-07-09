@@ -12,7 +12,8 @@
   "license": "ISC",
   "jest": {
     "globals": {
-       "DB_CREATION_DELAY_GAP": 1000
+      "DB_RECREATE": true,
+      "DB_RECREATE_DELAY": 1000
      }
   },  
   "dependencies": {

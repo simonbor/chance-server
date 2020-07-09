@@ -17,7 +17,7 @@ describe('chance controller tests', () => {
 
   beforeAll(async (done) => {
     // wait for db recreation
-    setTimeout(function() {done()}, DB_CREATION_DELAY_GAP);
+    setTimeout(function() {done()}, DB_RECREATE_DELAY);
   });
 
   test('test insert chance use case', async () => {
