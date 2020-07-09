@@ -1,11 +1,17 @@
-const addressBl = require('../bl/addressBl');
+const addressDal = require('../dal/addressDal');
 
 const addressGet = async (req, res) => {
-    return await addressBl.addressGet(req, res);
+    const address = await addressDal.addressGet(req.body.Address);
+
+    res.statusCode = 200;
+    return address;
 }
 
-const addressUpdate = async (req, res) => {
-    return await addressBl.addressUpdate(req, res);
+const addressInsert = async (req, res) => {
+    const address = await addressDal.addressInsert(req.body.Address);
+
+    res.statusCode = 200;
+    return address;
 }
 
-module.exports = {addressGet, addressUpdate}
+module.exports = {addressGet, addressInsert}

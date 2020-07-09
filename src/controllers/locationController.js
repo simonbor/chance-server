@@ -7,6 +7,7 @@ const insertLocation = async function(req, res) {
     let location = Location.create(req.body.Location);
     let address = new Address(req.body.Address)
 
+    // get AddressId
     address = await addressDal.addressGet(address);
     if(!address.AddressId){
         const addressDb = await addressDal.addressInsert(address);
