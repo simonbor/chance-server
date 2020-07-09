@@ -12,13 +12,12 @@
   "license": "ISC",
   "jest": {
     "globals": {
-      "DB_RECREATE": true,
-      "DB_RECREATE_DELAY": 1000
-     }
-  },  
+      "DB_RECREATE": false,
+      "DB_RECREATE_DELAY": 0
+    }
+  },
   "dependencies": {
-    "mssql": "^6.2.0",
-    "tedious": "^8.3.0"
+    "mssql": "^6.2.0"
   },
   "devDependencies": {
     "jest": "^24.9.0",

@@ -3,10 +3,12 @@ post http://localhost:8080/address HTTP/1.1
 content-type: application/json
 
 {
-  	"StreetName": "Bograshov",
-	"CityId": 1,
-	"Building": 55,
-	"CountryId": 367
+	"Address": {
+		"StreetLocalName": "Bograshov",
+		"CityId": 1,
+		"CountryId": 367,
+		"Building": 21
+    }
 }
 
 ### chance insert
@@ -15,10 +17,10 @@ content-type: application/json
 
 {
 	"Address": {
-      "Street": {"LocalName": "Bograshov"},
-      "City": {"CityId": 1},
-      "Country": {"CountryId": 367},
-      "Building": 1
+		"StreetLocalName": "Bograshov",
+		"CityId": 1,
+		"CountryId": 367,
+		"Building": 1
     },
 	"Driver": {
 		"MobileNum": "0544123123"
