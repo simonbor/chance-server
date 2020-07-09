@@ -1,6 +1,6 @@
 const chanceController = require('../src/controllers/locationController');
 
-describe.skip('location controller tests', () => {
+describe('location controller tests', () => {
   const mockRequest = () => {
     const req = {};
     req.body = jest.fn().mockReturnValue(req);
@@ -15,12 +15,9 @@ describe.skip('location controller tests', () => {
     return res;
   };
 
-  beforeAll( async () => {
-    // recreate db
-    await require('./db-init/schema').createSchema();
-    await require('./db-init/tables').createTables();
-    await require('./db-init/procedures').createProcedures();
-    await require('./db-init/data').defaultData();
+  beforeAll(async (done) => {
+    // wait for db recreation
+    setTimeout(function() {done()}, DB_CREATION_DELAY_GAP);
   });
 
   test('test location insert use case', async () => {
