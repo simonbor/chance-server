@@ -29,11 +29,11 @@ describe('chance controller tests', () => {
     // req.body.Chance = {"DateStart": (new Date()).toLocaleString("en-US")};
     req.body = {
       "Address": {
-          "Street": {"LocalName": "Bograshov"},
-          "City": {"CityId": 1},
-          "Country": {"CountryId": 367},
-          "Building": 1
-        },
+        "StreetLocalName": "Bograshov",
+        "CityId": 1,
+        "CountryId": 367,
+        "Building": 1
+      },
       "Driver": {
         "MobileNum": "0544123123"
       },
@@ -42,7 +42,7 @@ describe('chance controller tests', () => {
       }
     }
 
-    const chance = await chanceController.insertChance(req, res);
+    const chance = await chanceController.chanceInsert(req, res);
 
     expect(res.statusCode).toEqual(200);
     expect(typeof chance).toBe('object');

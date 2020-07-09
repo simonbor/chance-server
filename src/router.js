@@ -32,11 +32,11 @@ const route = async function(req, res) {
         res.end(JSON.stringify(await addressController.addressGet(req, res)));
 
     } else if (reqUrl.pathname == '/address' && req.method === 'POST') {
-        const address = await addressController.addressUpdate(req, res);
+        const address = await addressController.addressInsert(req, res);
         res.end(JSON.stringify(address));
 
     } else if (reqUrl.pathname == '/chance' && req.method === 'POST') {
-        const chance = await chanceController.insertChance(req, res);
+        const chance = await chanceController.chanceInsert(req, res);
         res.end(JSON.stringify(chance));
 
     } else {
