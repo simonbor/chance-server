@@ -12,8 +12,8 @@ const locationGet = async function(location) {
 }
 
 const locationInsert = async function(location) {  
-    const pool = await mssql.connect(config.config);
-    const request = await pool.request();   
+    const pool = await connect.getPool();
+    const request = await pool.request();
 
     request.input('Latitude', mssql.Float, location.Latitude);
     request.input('Longitude', mssql.Float, location.Longitude);

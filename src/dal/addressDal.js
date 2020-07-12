@@ -15,7 +15,7 @@ const addressGet = async function(address) {
 }
 
 const addressInsert = async function(address) {  
-    const pool = await mssql.connect(config.config);
+    const pool = await connect.getPool();
     const request = await pool.request();
 
     request.input('StreetName', mssql.VarChar(50), address.StreetLocalName);
