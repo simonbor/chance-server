@@ -1,19 +1,6 @@
 ﻿{
-	"connection": {
-		"server": "localhost",
-		"authentication": {
-			"type": "default",
-			"options": {
-				"userName": "",
-				"password": ""
-			}
-		},
-		"options": {
-			"database": "Parking"
-		}
-	},
 	"config": {
-		"user": "",
+		"user": "sa",
 		"password": "",
 		"server": "localhost",
 		"database": "Parking"

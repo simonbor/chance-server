@@ -1,8 +1,8 @@
-const config = require('../config');
 const mssql = require('mssql');
+const connect = require('../connect');
 
 const locationGet = async function(location) {
-    const pool = await mssql.connect(config.config);
+    const pool = await connect.getPool();
     const request = await pool.request();   
 
     request.input('AddressId', mssql.Int, location.AddressId);

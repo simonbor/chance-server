@@ -1,15 +1,8 @@
 ﻿{
-	"connection": {
+	"config": {
+		"user": "sa",
+		"password": "4e23e5990ff1867d",
 		"server": "localhost",
-		"authentication": {
-			"type": "default",
-			"options": {
-				"userName": "SV_MSSQL_USERNAME",
-				"password": "SV_MSSQL_PASSWORD"
-			}
-		},
-		"options": {
-			"database": "SV_MSSQL_DATABASE"
-		}
+		"database": "Parking"
 	}
 }

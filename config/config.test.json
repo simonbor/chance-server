@@ -1,6 +1,6 @@
 ﻿{
 	"config": {
-		"user": "",
+		"user": "sa",
 		"password": "",
 		"server": "localhost",
 		"database": "ParkingTest"

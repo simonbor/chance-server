@@ -1,8 +1,8 @@
-const config = require('../config');
 const mssql = require('mssql');
+const connect = require('../connect');
 
 const chanceInsert = async function (chance) {
-    const pool = await mssql.connect(config.config);
+    const pool = await connect.getPool();
     let request = await pool.request();
 
     // insert chance
