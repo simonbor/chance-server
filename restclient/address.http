@@ -1,5 +1,10 @@
+@PORT = 8080
+
+### chance test
+get http://localhost:{{PORT}}/ HTTP/1.1
+
 ### address insert
-post http://localhost:8080/address HTTP/1.1
+post http://localhost:{{PORT}}/address HTTP/1.1
 content-type: application/json
 
 {
@@ -7,12 +12,12 @@ content-type: application/json
 		"StreetLocalName": "Bograshov",
 		"CityId": 1,
 		"CountryId": 367,
-		"Building": 21
+		"Building": 25
     }
 }
 
 ### chance insert
-post http://localhost:8080/chance HTTP/1.1
+post http://localhost:{{PORT}}/chance HTTP/1.1
 content-type: application/json
 
 {

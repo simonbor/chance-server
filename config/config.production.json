@@ -2,7 +2,7 @@
 	"config": {
 		"user": "sa",
 		"password": "4e23e5990ff1867d",
-		"server": "localhost",
+		"server": "chance-database",
 		"database": "Parking"
 	}
 }

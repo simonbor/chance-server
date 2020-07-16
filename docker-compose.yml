@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  app:
+    container_name: chance-server
+    restart: always
+    build: .
+    ports:
+      - "8080:8080"
+    links:
+      - chance-database
+  chance-database:
+    container_name: chance-database
+    restart: always
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: ""
+      ACCEPT_EULA: "Y"
