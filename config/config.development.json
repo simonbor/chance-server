@@ -1,8 +1,8 @@
 ﻿{
 	"config": {
 		"user": "sa",
-		"password": "",
-		"server": "chance-database",
+		"password": "1262e49d6fbfac7fc5fc",
+		"server": "172.18.0.10",
 		"database": "Parking"
 	}
 }
