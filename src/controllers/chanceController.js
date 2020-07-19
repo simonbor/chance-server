@@ -5,10 +5,10 @@ const chanceDal = require('../dal/chanceDal');
 const chanceInsert = async (req, res) => {
 
     // get driver
-    const driver = await driverDal.driverGet(req.body.Driver);
-    if(!driver) {
-        const {driverId} = await driverDal.driverInsert(req.body.Driver);
-        driver.DriverId = driverId;
+    const driver = await driverDal.driverGet(req.body.Driver) || {};
+    if(!driver.DriverId) {
+        const {DriverId} = await driverDal.driverInsert(req.body.Driver);
+        driver.DriverId = DriverId;
     }
 
     // get address
