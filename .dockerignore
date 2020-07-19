@@ -1,6 +1,13 @@
 .git
-Dockerfile
+.gitignore
 .dockerignore
+.env
+.vscode
+Dockerfile*
+docker-compose*
 node_modules
 npm-debug.log
-.env
+README.md
+LICENSE
+
+

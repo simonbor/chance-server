@@ -1,0 +1,7 @@
+# for use sqlcmd on the image building stage -
+# https://towardsdatascience.com/build-a-mssql-docker-container-800166ecca21
+
+FROM mcr.microsoft.com/mssql/server:2019-latest
+
+WORKDIR /usr/src/sql
+COPY ./sql/ ./
