@@ -1,5 +1,4 @@
-const config = require('../../src/config');
-const mssql = require('mssql');
+const connect = require('../../src/connect');
 const fs = require('fs');
 
 const readFile = async (filePath) => {
@@ -20,7 +19,7 @@ const getScriptsArr = async() => {
 
 const createTables = async () => {
     const sqlArr = await getScriptsArr();
-    const pool = await mssql.connect(config.config);
+    const pool = await connect.getPool();
     const request = await pool.request();
     
     for(let i = 0; i < sqlArr.length; i++) {
