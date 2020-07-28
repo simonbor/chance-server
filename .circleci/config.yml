@@ -2,16 +2,20 @@ version: 2.1
 orbs:
   node: circleci/node@1.1.6
 jobs:
-  build-and-test:
-    executor:
-      name: node/default
+  build:
+    docker:
+      - image: simonbor/chance-repo:db-0.0.0
+        auth:
+          username: simonbor
+          password: $DOCKERHUB_PASSWORD
+        # env examples
+        environment:
+          MYSQL_USER: user
+          MYSQL_PASSWORD: passw0rd
+      - image: simonbor/chance-repo:api-0.0.0
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
-            - run: npm test
 workflows:
-    build-and-test:
-      jobs:
-        - build-and-test
+  build-deploy:
+    jobs:
+      - build
