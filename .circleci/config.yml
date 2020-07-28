@@ -6,8 +6,6 @@ jobs:
         auth:
           username: simonbor
           password: $DOCKERHUB____PASSWORD
-    steps:
-      - checkout
 workflows:
   build-deploy:
     jobs:
