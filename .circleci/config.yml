@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: simonbor/chance-repo:api-0.0.0
+      - image: simonbor/chance-repo:db-0.0.0
     steps:
       - checkout
 workflows:
