@@ -3,9 +3,8 @@ jobs:
   build:
     docker:
       - image: simonbor/chance-repo:db-0.0.0
-        auth:
-          username: simonbor
-          password: $DOCKERHUB____PASSWORD
+    steps:
+      - checkout
 workflows:
   build-deploy:
     jobs:
