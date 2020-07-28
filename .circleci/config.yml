@@ -3,12 +3,7 @@ jobs:
   build:
     working_directory: /root
     docker:
-      - image: mcr.microsoft.com/mssql/server:2019-latest
-        environment:
-          ACCEPT_EULA: "Y"
-          SA_PASSWORD: "1234Qwer"
-    steps:
-      - checkout
+      - image: simonbor/chance-repo:db-0.0.0
 workflows:
   build-deploy:
     jobs:
