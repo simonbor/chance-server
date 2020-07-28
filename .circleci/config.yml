@@ -1,6 +1,7 @@
 version: 2.1
 jobs:
   build:
+    working_directory: /root
     docker:
       - image: simonbor/chance-repo:db-0.0.0
         environment:
