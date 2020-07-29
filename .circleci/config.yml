@@ -16,5 +16,6 @@ jobs:
             set -x
             sudo curl https://cli-assets.heroku.com/install.sh | sh
             HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:login
-            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:push db api -a chance-app
-            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release db api -a chance-app
+            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:push --recursive -a chance-app
+            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release db -a chance-app
+            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release api -a chance-app
