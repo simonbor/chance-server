@@ -18,4 +18,4 @@ jobs:
             HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:login
             HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:push --recursive -a chance-app
             HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release db -a chance-app
-            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release api -a chance-app
+            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release web -a chance-app
