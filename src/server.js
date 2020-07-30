@@ -10,6 +10,8 @@ const server = http.createServer((req, res) => {
     router.route(req, res);
 });
 
+console.log(port);
+
 server.listen(port, host, () => {
     console.log(`Running on http://${host}:${port}/`);
 });
