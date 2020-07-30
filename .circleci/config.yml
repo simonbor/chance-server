@@ -19,3 +19,8 @@ jobs:
             HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:push --recursive -a chance-app
             HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release db -a chance-app
             HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release web -a chance-app
+      - run:
+          name: create docker network
+          command: |
+            docker network create --subnet=172.18.0.0/16 chance-network
+    
