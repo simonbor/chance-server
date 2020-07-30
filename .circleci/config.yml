@@ -36,6 +36,10 @@ jobs:
           command: |
             docker run -it --net chance-network --ip 172.18.0.5 --name web --restart=always -p 8080:8080 -d registry.heroku.com/chance-app/web
       - run:
+          name: sa password
+          command: |
+            echo HEROKU_SA_PASSWORD=${HEROKU_SA_PASSWORD}
+      - run:
           name: Change SA_PASSWORD
           command: |
-            docker exec -it registry.heroku.com/chance-app/db /opt/mssql-tools/bin/sqlcmd -S 172.18.0.10 -U SA -P "1234Qwer" -Q 'ALTER LOGIN SA WITH PASSWORD="${HEROKU_SA_PASSWORD}"'
+            docker exec -it db /opt/mssql-tools/bin/sqlcmd -S 172.18.0.10 -U SA -P "1234Qwer" -Q 'ALTER LOGIN SA WITH PASSWORD="${HEROKU_SA_PASSWORD}"'
