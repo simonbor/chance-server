@@ -38,4 +38,4 @@ jobs:
       - run:
           name: Change SA_PASSWORD
           command: |
-            sudo docker exec -it chance-database /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "1234Qwer" -Q 'ALTER LOGIN SA WITH PASSWORD="${HEROKU_SA_PASSWORD}"'
+            sudo docker exec -it db /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "1234Qwer" -Q 'ALTER LOGIN SA WITH PASSWORD="${HEROKU_SA_PASSWORD}"'
