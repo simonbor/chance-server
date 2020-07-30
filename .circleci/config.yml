@@ -38,4 +38,4 @@ jobs:
       - run:
           name: Change SA_PASSWORD
           command: |
-            docker exec -it db /opt/mssql-tools/bin/sqlcmd -S 172.18.0.10 -U SA -P "1234Qwer" -Q 'select 1'
+            docker exec -it db /opt/mssql-tools/bin/sqlcmd -S 172.18.0.10 -U SA -P "1234Qwer" -Q 'ALTER LOGIN SA WITH PASSWORD="1234Qwer"'
