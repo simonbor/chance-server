@@ -24,8 +24,6 @@ function collectRequestDataAsync(request) {
 const route = async function(req, res) {
     const reqUrl = url.parse(req.url, true);
 
-    console.log([req.url, reqUrl.pathname, req.method]);
-
     if (req.method === 'POST') {
         req.body = await collectRequestDataAsync(req);
     }
