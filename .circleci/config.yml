@@ -20,18 +20,18 @@ jobs:
             HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release db -a chance-app
             HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release web -a chance-app
       - run:
-          name: Create docker network
-          command: |
-            docker network create --subnet=172.18.0.0/16 chance-network
-      # - run:
-      #     name: Run db container
-      #     command: |
-      #       docker run -it --net chance-network --ip 172.18.0.10 --name db --restart=always -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=1234Qwer" -p 1433:1433 -d db
-      # - run:
-      #     name: Run web container
-      #     command: |
-      #       docker run -it --net chance-network --ip 172.18.0.5 --name web --restart=always -p 8080:8080 -d web
-      - run:
           name: Docker images
           command: |
             docker images
+      - run:
+          name: Create docker network
+          command: |
+            docker network create --subnet=172.18.0.0/16 chance-network
+      - run:
+          name: Run db container
+          command: |
+            docker run -it --net chance-network --ip 172.18.0.10 --name db --restart=always -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=1234Qwer" -p 1433:1433 -d registry.heroku.com/chance-app/db
+      - run:
+          name: Run web container
+          command: |
+            docker run -it --net chance-network --ip 172.18.0.5 --name web --restart=always -p 8080:8080 -d registry.heroku.com/chance-app/web
