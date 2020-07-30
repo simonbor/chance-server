@@ -31,3 +31,7 @@ jobs:
           name: Run web container
           command: |
             docker run -it --net chance-network --ip 172.18.0.5 --name web --restart=always -p 8080:8080 -d web
+      - run:
+          name: Docker images
+          command: |
+            docker images
