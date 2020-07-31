@@ -30,7 +30,7 @@ jobs:
       - run:
           name: Run db container
           command: |
-            sudo docker run -it --net chance-network --ip 172.18.0.10 --name db --restart=always -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=1234Qwer" -p 1433:1433 -d registry.heroku.com/chance-app/db
+            sudo docker run -it --net chance-network --ip 172.18.0.10 --name db --restart=always -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=$HEROKU_SA_PASSWORD" -p 1433:1433 -d registry.heroku.com/chance-app/db
       - run:
           name: Run web container
           command: |
@@ -46,4 +46,4 @@ jobs:
       - run:
           name: Create database
           command: |
-            docker exec -it db /opt/mssql-tools/bin/sqlcmd -i database.sql 
+            sudo docker exec -it db /opt/mssql-tools/bin/sqlcmd -U SA -P $HEROKU_SA_PASSWORD -i database.sql 
