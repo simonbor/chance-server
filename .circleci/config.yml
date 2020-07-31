@@ -39,11 +39,11 @@ jobs:
       #     name: Change SA_PASSWORD
       #     command: |
       #       docker exec -it db /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "1234Qwer" -Q 'ALTER LOGIN SA WITH PASSWORD="$HEROKU_SA_PASSWORD"'
-      - run:
-          name: Print HEROKU_SA_PASSWORD
-          command: |
-            echo $HEROKU_SA_PASSWORD
+      # - run:
+      #     name: Print HEROKU_SA_PASSWORD
+      #     command: |
+      #       echo $HEROKU_SA_PASSWORD
       - run:
           name: Create database
           command: |
-            docker exec -it db /opt/mssql-tools/bin/sqlcmd -U SA -P 1234Qwer -i database.sql 
+            docker exec -it db /opt/mssql-tools/bin/sqlcmd -U SA -P "1234Qwer" -i database.sql 
