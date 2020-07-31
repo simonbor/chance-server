@@ -31,7 +31,7 @@ jobs:
           name: Run db container
           command: |
             set -x
-            docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=1234Qwer" -p 1433:1433 -d registry.heroku.com/chance-app/db
+            docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD='1234Qwer'" -p 1433:1433 -d registry.heroku.com/chance-app/db
       - run:
           name: Run web container
           command: |
@@ -48,4 +48,4 @@ jobs:
           name: Create database
           command: |
             set -x
-            docker exec -it db /opt/mssql-tools/bin/sqlcmd -U SA -P 1234Qwer -i database.sql 
+            docker exec -it db /opt/mssql-tools/bin/sqlcmd -U SA -P '1234Qwer' -i database.sql 
