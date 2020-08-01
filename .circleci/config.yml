@@ -22,3 +22,8 @@ jobs:
           command: |
             set -x
             docker run -it --net chance-network --ip 172.18.0.10 --name db --restart=always -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=1234Qwer" -p 1433:1433 -d db
+      - run:
+          name: Create database
+          command: |
+            set -x
+            docker exec -it db /opt/mssql-tools/bin/sqlcmd -U SA -P '1234Qwer' -i database.sql 
