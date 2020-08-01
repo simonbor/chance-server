@@ -4,7 +4,7 @@ jobs:
   build:
     working_directory: ~/chance-tmp
     docker:
-      - image: circleci/node:12-alpine
+      - image: circleci/node:12
     steps:
       - checkout
       - run:
