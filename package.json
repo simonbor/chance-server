@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/server",
-    "test": "jest --forceExit --watchAll",
-    "ci:test": "jest --forceExit"
+    "test": "jest --forceExit"
   },
   "keywords": [],
   "author": "",
