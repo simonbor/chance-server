@@ -2,7 +2,7 @@ version: 2.1
 
 jobs:
   build:
-    working-directory: ~/tmp
+    working_directory: ~/chance-tmp
     docker:
       - image: circleci/node:12-alpine
     steps:
