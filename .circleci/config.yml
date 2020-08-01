@@ -29,4 +29,4 @@ jobs:
       - run:
           name: Docker login
           command: |
-            docker login -u $DOCKER_LOGIN $DOCKER_PASSWORD
+            docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
