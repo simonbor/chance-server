@@ -1,0 +1,18 @@
+version: 2.1
+
+jobs:
+  build:
+    working_directory: ~/chance-tmp
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout
+      - run:
+          name: npm install
+          command: |
+            sudo npm i
+      - run:
+          name: npm test
+          command: |
+            sudo npm test
+
