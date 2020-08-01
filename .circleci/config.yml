@@ -8,15 +8,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: update npm
-          command: |
-            sudo npm i -g npm@latest
-      - run:
           name: npm install
           command: |
             sudo npm i
       - run:
           name: npm test
           command: |
-            sudo npm ci:test
+            sudo jest --forceExit
 
