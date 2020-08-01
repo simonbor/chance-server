@@ -1,6 +1,7 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/chance-tmp
     docker:
       - image: docker/compose:1.22.0
     steps:
