@@ -1,32 +1,21 @@
-version: 2
+version: 2.1
+
+workflows:
+  build-deploy:
+    jobs:
+      - build-deploy
+
 jobs:
-  build:
-    working_directory: ~/chance-tmp
-    docker:
-      - image: docker/compose:1.22.0
+  build-deploy:
+    machine: true
     steps:
       - checkout
-      - setup_remote_docker
       - run:
-          name: folder listing for debugging
-          command: ls -al
-      # - run:
-      #     name: docker build
-      #     command: |
-      #       docker build -t db -f Dockerfile.db .
-      # - run:
-      #     name: Create docker network
-      #     command: |
-      #       docker network create --subnet=172.18.0.0/16 chance-network
-      # - run:
-      #     name: Run db container
-      #     command: |
-      #       docker run -it --net chance-network --ip 172.18.0.10 --name db --restart=always -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=1234Qwer" -p 1433:1433 -d db
-      # - run:
-      #     name: Create database
-      #     command: |
-      #       docker exec -it db /opt/mssql-tools/bin/sqlcmd -U SA -P 1234Qwer -i database.sql 
-      - run:
-          name: Docker login
+          name: Build and push Docker image to Heroku
           command: |
-            docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
+            set -x
+            sudo curl https://cli-assets.heroku.com/install.sh | sh
+            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:login
+            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:push --recursive -a chance-app
+            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release db -a chance-app
+            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release web -a chance-app
