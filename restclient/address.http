@@ -1,7 +1,10 @@
 @PORT = 8080
+# @ENV = https://chance-app.herokuapp.com
+@ENV = http://localhost:8080
 
+	
 ### chance test
-get http://localhost:{{PORT}}/ HTTP/1.1
+get {{ENV}}/ HTTP/1.1
 
 ### address insert
 post http://localhost:{{PORT}}/address HTTP/1.1
@@ -12,12 +15,12 @@ content-type: application/json
 		"StreetLocalName": "Bograshov",
 		"CityId": 1,
 		"CountryId": 367,
-		"Building": 25
+		"Building": 29
     }
 }
 
 ### chance insert
-post http://localhost:{{PORT}}/chance HTTP/1.1
+post {{ENV}}/chance HTTP/1.1
 content-type: application/json
 
 {
