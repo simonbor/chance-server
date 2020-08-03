@@ -10,8 +10,9 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
-# RUN yarn lint & yarn test
-# RUN npm test
+# Run the image as a non-root user
+# RUN adduser -D web_user
+# USER web_user
 
 EXPOSE 8080
 CMD [ "node", "src/server.js" ]
