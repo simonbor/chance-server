@@ -4,11 +4,11 @@ const config = require('./config');
 
 const getPool = async function () {
     
-    const tmpConfig =JSON.parse(JSON.stringify(config));
+    const dbConfig = JSON.parse(JSON.stringify(config['mssql-config']));
 
     // decrypt config password and connect
-    tmpConfig.config.password = cipher.decrypt(tmpConfig.config.password);
-    const pool = await mssql.connect(tmpConfig.config);
+    dbConfig.password = cipher.decrypt(dbConfig.password);
+    const pool = await mssql.connect(dbConfig);
 
     return pool;
 }

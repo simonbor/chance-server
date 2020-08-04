@@ -1,8 +1,16 @@
 ﻿{
-	"config": {
+	"mssql-config": {
 		"user": "sa",
 		"password": "1262e49d6fbfac7fc5fc",
 		"server": "db",
 		"database": "Parking"
-	}
+	},
+	"psql-config": {
+		"user": "postgres",
+		"host": "psql",
+		"database": "Parking",
+		"password": "1262e49d6fbfac7fc5fc",
+		"port": 5432
+	},
+	"db-in-use": "psql"
 }

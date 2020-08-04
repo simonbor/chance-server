@@ -1,6 +1,6 @@
 const chanceController = require('../src/controllers/chanceController');
 
-describe.skip('chance controller tests', () => {
+describe('chance controller tests', () => {
   const mockRequest = () => {
     const req = {};
     req.body = jest.fn().mockReturnValue(req);
