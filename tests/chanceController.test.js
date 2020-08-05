@@ -1,4 +1,5 @@
 const chanceController = require('../src/controllers/chanceController');
+const DbContext = require('../src/dal/dal-context/dbContext')
 
 describe('chance controller tests', () => {
   const mockRequest = () => {
@@ -16,6 +17,9 @@ describe('chance controller tests', () => {
   };
 
   beforeAll(async (done) => {
+    // init database (mssql, postgres)
+    DbContext.initContext();
+
     // wait for db recreation
     setTimeout(function() {done()}, DB_RECREATE_DELAY);
   });

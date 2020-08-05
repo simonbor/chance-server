@@ -1,6 +1,7 @@
 const driverDal = require('../dal/driverDal');
 const addressDal = require('../dal/addressDal');
 const chanceDal = require('../dal/chanceDal');
+const Chance = require('../models/chance');
 
 const chanceInsert = async (req, res) => {
 
@@ -17,14 +18,13 @@ const chanceInsert = async (req, res) => {
         const {addressId} = await addressDal.addressInsert(req.body.Address);
         address.AddressId = addressId;
     }
-    
+
     // insert chance
-    req.body.Chance.DriverOut = driver.DriverId;
-    req.body.Chance.AddressId = address.AddressId;
-    const chance = await chanceDal.chanceInsert(req.body.Chance);
+    const reqChance = new Chance(address.AddressId, driver.DriverId, req.body.Chance.DateStart, driver.DriverId);
+    const resChance = await chanceDal.chanceInsert(reqChance);
 
     res.statusCode = (200);
-    return chance;
+    return resChance;
 }
 
 module.exports = {chanceInsert}

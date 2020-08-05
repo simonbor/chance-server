@@ -1,19 +1,11 @@
-const mssql = require('mssql');
-const connect = require('../connect');
+'use strict';
+const DbContext = require('./dal-context/dbContext');
 
-const chanceInsert = async function (chance) {
-    const pool = await connect.getPool();
-    let request = await pool.request();
+const chanceInsert = async function(chance) {
+    const dbContext = new DbContext();
+    let chanceData = await dbContext.execute('main.sp_InsertChance', chance);
 
-    // insert chance
-    request = await pool.request();   
-    request.input('AddressId', mssql.Int, chance.AddressId);
-    request.input('DateStart', mssql.DateTime, chance.DateStart);
-    request.input('DriverOut', mssql.Int, chance.DriverOut);
-    request.input('CreatedBy', mssql.Int, chance.DriverOut);
-    let chanceData = await request.execute('main.sp_InsertChance');
-
-    return chanceData.recordset[0];
+    return chanceData;
 }
 
 module.exports = {chanceInsert}
