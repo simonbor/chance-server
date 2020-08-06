@@ -3,12 +3,16 @@
 -- Driver
 -- =================================
 
-create or replace function main.sp_GetDriver (	
-	MobileNum varchar(20)
-) returns setof main.Driver AS $$
-    select * from main.Driver d where d.MobileNum = MobileNum;
-$$ language sql;
+drop function if exists main.sp_GetDriver;
+create or replace function main.sp_GetDriver (
+	p_MobileNum varchar(20)
+) returns setof main.Driver as $$
+begin
+    return query select * from main.Driver where main.Driver.MobileNum = p_MobileNum;
+end;
+$$ language plpgsql;
 
+drop function if exists main.sp_InsertDriver;
 create or replace function main.sp_InsertDriver (
 	p_MobileNum varchar(20),
     p_Name varchar(100) = null,
@@ -52,25 +56,27 @@ drop function if exists main.sp_InsertAddress;
 create or replace function main.sp_InsertAddress (
     p_StreetName varchar(100),
 	p_CityId int,
-	p_CountryId int = 376,
 	p_Building int = null,
+	p_CountryId int = 376,
 	p_CreatedBy int = null
 ) returns integer
 language plpgsql AS $$
-	declare v_StreetId integer := '';
+	declare v_StreetId integer = null;
+	declare v_AddressId integer = null;
 begin
 	-- todo: select @StreetId by OtherNames when by StreetName has not been found
-	 select StreetId into v_StreetId from main.Street s where s.LocalName = p_StreetName limit 1;
-	
-	if found then
+	select StreetId into v_StreetId from main.Street s where s.LocalName = p_StreetName limit 1;
+	if not found then
 		insert into main.Street (LocalName)
 		values (p_StreetName)
-    	returning main.StreetId into v_StreetId;
+    	returning StreetId into v_StreetId;
 	end if;
 
 	insert into main.Address (CountryId, CityId, StreetId, Building, CreatedBy)
 	values (p_CountryId, p_CityId, v_StreetId, p_Building, p_CreatedBy)
-	returning main.AddressId;
+	returning main.Address.AddressId into v_AddressId;
+
+	return(v_AddressId);
 end;$$;
 
 -- =================================
@@ -103,17 +109,20 @@ $$ language sql;
 -- =================================
 drop function if exists main.sp_InsertChance;
 create or replace function main.sp_InsertChance (
-	p_DateStart timestamp(3),
 	p_DriverOut int,
-	p_LocationId int = null,
+	p_DateStart timestamp(3),
 	p_AddressId int = null,
+	p_LocationId int = null,
 	p_CreatedBy int = null
 ) returns integer
 language plpgsql AS $$
+	declare v_ChanceId integer = null;
 begin
 	insert into main.Chance (LocationId, AddressId, DateStart, DriverOut, CreatedBy)
 	values (p_LocationId, p_AddressId, p_DateStart, p_DriverOut, p_CreatedBy)
-	returning ChanceId;
+	returning main.Chance.ChanceId into v_ChanceId;
+
+	return(v_ChanceId);
 end;$$;
 
 drop function if exists main.GetChance;
