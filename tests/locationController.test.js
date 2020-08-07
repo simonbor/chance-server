@@ -1,4 +1,5 @@
 const chanceController = require('../src/controllers/locationController');
+const DbContext = require('../src/dal/dal-context/dbContext')
 
 describe('location controller tests', () => {
   const mockRequest = () => {
@@ -16,6 +17,9 @@ describe('location controller tests', () => {
   };
 
   beforeAll(async (done) => {
+    // init database (mssql, postgres)
+    DbContext.initContext();
+
     // wait for db recreation
     setTimeout(function() {done()}, DB_RECREATE_DELAY);
   });
@@ -38,9 +42,10 @@ describe('location controller tests', () => {
         "Desc": ""
       }
     }
-    const chance = await chanceController.insertLocation(req, res);
+    const location = await chanceController.insertLocation(req, res);
 
+    expect(location.LocationId > 0).toBeTruthy()
     expect(res.statusCode).toEqual(200);
-    expect(typeof chance).toBe('object');
+    expect(typeof location).toBe('object');
   });
 });
