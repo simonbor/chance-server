@@ -7,8 +7,8 @@
 	},
 	"psql-config": {
 		"user": "postgres",
-		"host": "psql",
-		"database": "Parking",
+		"host": "172.17.0.3",
+		"database": "parking",
 		"password": "1262e49d6fbfac7fc5fc",
 		"port": 5432
 	},
