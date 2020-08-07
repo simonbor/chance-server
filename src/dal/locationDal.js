@@ -1,5 +1,6 @@
-const mssql = require('mssql');
-const connect = require('../connect');
+'use strict';
+const DbContext = require('./dal-context/dbContext');
+const { Location, InsertLocationReq } = require('../models/location');
 
 const locationGet = async function(location) {
     const pool = await connect.getPool();
@@ -11,20 +12,14 @@ const locationGet = async function(location) {
     return locationData.recordset[0];
 }
 
-const locationInsert = async function(location) {  
-    const pool = await connect.getPool();
-    const request = await pool.request();
+const locationInsert = async function(locationReq) {  
+    const dbContext = new DbContext();    
 
-    request.input('Latitude', mssql.Float, location.Latitude);
-    request.input('Longitude', mssql.Float, location.Longitude);
-    request.input('Altitude', mssql.Float, location.Altitude);
-    request.input('AddressId', mssql.Int, location.AddressId);
-    request.input('Default', mssql.Bit, location.Default);
-    request.input('Desc', mssql.NVarChar(1000), location.Desc);
-    request.input('CreatedBy', mssql.Int, location.CreatedBy);
+    const insertLocationReq = new InsertLocationReq(locationReq)
+    const locationData = await dbContext.execute('main.sp_InsertLocation', insertLocationReq);
+    const location = new Location(locationData);
 
-    const locationData = await request.execute('main.sp_InsertLocation');
-    return locationData.recordset[0];
+    return location;
 }
 
 module.exports = {locationGet, locationInsert}

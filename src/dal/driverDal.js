@@ -1,27 +1,28 @@
-const mssql = require('mssql');
-const connect = require('../connect');
+'use strict';
+const DbContext = require('./dal-context/dbContext');
+const {Driver} = require('./../models/driver');
+const { GetDriverReq, InsertDriverReq } = require('../models/driver');
 
 const driverGet = async function(driver) {
-    const pool = await connect.getPool();
-    const request = await pool.request();   
+    const dbContext = new DbContext();
 
-    request.input('MobileNum', mssql.VarChar(20), driver.MobileNum);
-    let driverData = await request.execute('main.sp_GetDriver');
-    
-    return driverData.recordset[0];
+    const driverReq = new GetDriverReq(driver);
+    let driverData = await dbContext.execute('main.sp_GetDriver', driverReq);
+    // driverData = driverData[0]['row_to_json'];
+    const res = new Driver(driverData);
+
+    return res;
 }
 
 const driverInsert = async function(driver) {
-    const pool = await connect.getPool();
-    const request = await pool.request();   
-    
-    request.input('MobileNum', mssql.VarChar(20), driver.MobileNum);
-    request.input('Name', mssql.NVarChar(100), driver.Name);
-    request.input('CarName', mssql.NVarChar(50), driver.CarName);
-    request.input('CarColor', mssql.NVarChar(50), driver.CarColor);
-    driverData = await request.execute('main.sp_InsertDriver');
+    const dbContext = new DbContext();
 
-    return driverData.recordset[0];
+    const driverReq = new InsertDriverReq(driver);
+    let driverData = await dbContext.execute('main.sp_InsertDriver', driverReq);
+    // driverData = driverData[0]['row_to_json'];
+    const res = new Driver(driverData);
+
+    return res;
 }
 
 module.exports = {driverGet, driverInsert}

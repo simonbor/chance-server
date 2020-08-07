@@ -1,31 +1,24 @@
-const mssql = require('mssql');
-const connect = require('../connect');
+'use strict';
+const DbContext = require('./dal-context/dbContext');
+const { Address, GetAddressReq, InsertAddressReq } = require('../models/address');
 
-const addressGet = async function(address) {
-    const pool = await connect.getPool();
-    const request = await pool.request();   
+const addressGet = async function(addressPayload) {
+    const dbContext = new DbContext();
 
-    request.input('StreetName', mssql.VarChar(50), address.StreetLocalName);
-    request.input('CityId', mssql.Int, address.CityId);
-    request.input('CountryId', mssql.Int, address.CountryId);
-    request.input('Building', mssql.Int, address.Building);
-    let addressData = await request.execute('main.sp_GetAddress');
+    const addressReq = new GetAddressReq(addressPayload)
+    const addressRes = await dbContext.execute('main.sp_GetAddress', addressReq);
+    const address = new Address(addressRes);
 
-    return (addressData.recordset && addressData.recordset[0]) || address;
+    return address;
 }
 
-const addressInsert = async function(address) {  
-    const pool = await connect.getPool();
-    const request = await pool.request();
+const addressInsert = async function(addressPayload) {  
+    const dbContext = new DbContext();
+    const addressReq = new InsertAddressReq(addressPayload);
+    const addressRes = await dbContext.execute('main.sp_InsertAddress', addressReq);
+    const address = new Address(addressRes);
 
-    request.input('StreetName', mssql.VarChar(50), address.StreetLocalName);
-    request.input('CityId', mssql.Int, address.CityId);
-    request.input('CountryId', mssql.Int, address.CountryId);
-    request.input('Building', mssql.Int, address.Building);
-    request.input('CreatedBy', mssql.Int, address.CreatedBy);
-    addressData = await request.execute('main.sp_InsertAddress');
-    
-    return addressData.recordsets[0];
+    return address;
 }
 
-module.exports = {addressGet, addressInsert}
+module.exports = { addressGet, addressInsert }
