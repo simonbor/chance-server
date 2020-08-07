@@ -1,21 +1,16 @@
 const locationDal = require('../dal/locationDal');
 const addressDal = require('../dal/addressDal');
-const Location = require('../models/location');
-const Address = require('../models/address');
 
 const insertLocation = async function(req, res) {
-    let location = Location.create(req.body.Location);
-    let address = new Address(req.body.Address)
 
     // get AddressId
-    address = await addressDal.addressGet(address);
+    let address = await addressDal.addressGet(req.body.Address);
     if(!address.AddressId){
-        const addressDb = await addressDal.addressInsert(address);
-        address.AddressId = addressDb.AddressId;
+        address = await addressDal.addressInsert(req.body.Address);
     }
 
-    location.AddressId = address.AddressId;
-    location = await locationDal.locationInsert(location);
+    req.body.Location.AddressId = address.AddressId;
+    const location = await locationDal.locationInsert(req.body.Location);
 
     res.statusCode = 200;
     return location;
