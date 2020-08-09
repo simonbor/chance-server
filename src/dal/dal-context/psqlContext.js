@@ -19,6 +19,6 @@ module.exports = class MssqlContext {
         const res = await pool.query(`select row_to_json(${procedureName}(${csDollars}))`, arrParams);
         const data = res.rows[0] && res.rows[0]['row_to_json'] || res.rows;
 
-        return data;
+        return [[data]];
     }
 }

@@ -8,10 +8,18 @@ module.exports = class MssqlContext {
         let request = await pool.request();
 
         for (const param in reqParams) {
-            request.input(param, mssql[reqParams[param]['type']], reqParams[param]['value']);
+            const typeName = reqParams[param]["typeName"];
+            const typeLength = reqParams[param]["typeLength"] || 0;
+            const value = reqParams[param]["value"];
+
+            request.input(param, mssql[typeName](typeLength), value);
         }
 
-        let chanceData = await request.execute(procedureName);
-        return chanceData.recordset[0];
+        let data = await request.execute(procedureName);
+
+        // console.log(procedureName);
+        // console.log(data);
+
+        return data.recordsets;
     }
 }
