@@ -1,4 +1,4 @@
-const chanceController = require('../src/controllers/locationController');
+const locationController = require('../src/controllers/locationController');
 const DbContext = require('../src/dal/dal-context/dbContext')
 
 describe('location controller tests', () => {
@@ -30,7 +30,7 @@ describe('location controller tests', () => {
 
     req.body = {
       "Address": {
-          "StreetLocalName": "Bograshov",
+          "StreetName": "Bograshov",
           "CityId": 1,
           "CountryId": 367,
           "Building": 1
@@ -42,7 +42,7 @@ describe('location controller tests', () => {
         "Desc": ""
       }
     }
-    const location = await chanceController.insertLocation(req, res);
+    const location = await locationController.insertLocation(req, res);
 
     expect(location.LocationId > 0).toBeTruthy()
     expect(res.statusCode).toEqual(200);
