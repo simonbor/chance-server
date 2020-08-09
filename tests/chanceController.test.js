@@ -33,7 +33,7 @@ describe('chance controller tests', () => {
     // req.body.Chance = {"DateStart": (new Date()).toLocaleString("en-US")};
     req.body = {
       "Address": {
-        "StreetLocalName": "Bograshov",
+        "StreetName": "Bograshov",
         "CityId": 1,
         "CountryId": 367,
         "Building": 1
