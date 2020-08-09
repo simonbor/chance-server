@@ -1,96 +1,99 @@
+drop function if exists main."sp_GetDriver";
+drop function if exists main."sp_InsertDriver";
+drop function if exists main."sp_GetAddress";
+drop function if exists main."sp_InsertAddress";
+drop function if exists main."sp_GetLocationByAddress";
+drop function if exists main."sp_InsertLocation";
+drop function if exists main."sp_InsertChance";
+drop function if exists main."sp_GetChanceByCity";
 
 -- =================================
 -- Driver
 -- =================================
 
-drop function if exists main.sp_GetDriver;
-create or replace function main.sp_GetDriver (
+create or replace function main."sp_GetDriver" (
 	p_MobileNum varchar(20)
-) returns setof main.Driver as $$
+) returns setof main."Driver" as $$
 begin
-    return query select * from main.Driver where main.Driver.MobileNum = p_MobileNum;
+    return query select * from main."Driver" where main."Driver"."MobileNum" = p_MobileNum;
 end;
 $$ language plpgsql;
 
-drop function if exists main.sp_InsertDriver;
-create or replace function main.sp_InsertDriver (
+create or replace function main."sp_InsertDriver" (
 	p_MobileNum varchar(20),
     p_Name varchar(100) = null,
 	p_CarName varchar(50) = null,
 	p_CarColor varchar(50) = null
-) returns table(DriverId int, Name varchar(100)) as $$
-	insert into main.Driver (Name, MobileNum, CarName, CarColor)
+) returns table("DriverId" int, "Name" varchar(100)) as $$
+	insert into main."Driver" ("Name", "MobileNum", "CarName", "CarColor")
 	values (p_Name, p_MobileNum, p_CarName, p_CarColor);
 
-	select DriverId, Name from main.Driver d where d.MobileNum = p_MobileNum;
+	select "DriverId", "Name" from main."Driver" d where d."MobileNum" = p_MobileNum;
 $$ language sql;
 
 -- =================================
 -- Address
 -- =================================
 
-drop function if exists main.sp_GetAddress;
-create or replace function main.sp_GetAddress (
+create or replace function main."sp_GetAddress" (
 	p_StreetName varchar(100),
 	p_CityId int,
 	p_CountryId int,
 	p_Building int = null
-) returns setof main.Address 
+) returns setof main."Address"
 language plpgsql AS $$
 	declare v_StreetId integer = null;
 begin
 	-- todo: select @StreetId by OtherNames when by Name it has not been found
-	select StreetId into v_StreetId from main.Street s where s.LocalName = p_StreetName limit 1;
+	select "StreetId" into v_StreetId from main."Street" s where s."LocalName" = p_StreetName limit 1;
 	if found then
-		return query select * from main.Address a 
-        where a.CountryId = p_CountryId and 
-			a.Cityid = p_CityId and 
-			a.Streetid = v_StreetId and 
-			a.Building = p_Building;
+		return query select * from main."Address" a 
+        where a."CountryId" = p_CountryId and 
+			a."CityId" = p_CityId and 
+			a."StreetId" = v_StreetId and 
+			a."Building" = p_Building;
 	end if;
 end;$$;
 
 -- 1 check if street is exists
 -- 2 if street isn’t exists insert new Street and with obtained StreetId insert Address
-drop function if exists main.sp_InsertAddress;
-create or replace function main.sp_InsertAddress (
+create or replace function main."sp_InsertAddress" (
     p_StreetName varchar(100),
 	p_CityId int,
 	p_CountryId int = 376,
 	p_Building int = null,
 	p_CreatedBy int = null
-) returns table(AddressId int, CreatedBy int)
+) returns table("AddressId" int, "CreatedBy" int)
 language plpgsql AS $$
 	declare v_StreetId integer = null;
 	declare v_AddressId integer = null;
 begin
 	-- todo: select @StreetId by OtherNames when by StreetName has not been found
-	select StreetId into v_StreetId from main.Street s where s.LocalName = p_StreetName limit 1;
+	select "StreetId" into v_StreetId from main."Street" s where s."LocalName" = p_StreetName limit 1;
 	if not found then
-		insert into main.Street (LocalName)
+		insert into main."Street" ("LocalName")
 		values (p_StreetName)
-    	returning StreetId into v_StreetId;
+    	returning "StreetId" into v_StreetId;
 	end if;
 
-	insert into main.Address (CountryId, CityId, StreetId, Building, CreatedBy)
+	insert into main."Address" ("CountryId", "CityId", "StreetId", "Building", "CreatedBy")
 	values (p_CountryId, p_CityId, v_StreetId, p_Building, p_CreatedBy)
-	returning main.Address.AddressId into v_AddressId;
+	returning main."Address"."AddressId" into v_AddressId;
 
-	return query select a.AddressId, a.CreatedBy from main.Address a where a.AddressId = v_AddressId;
+	return query select a."AddressId", a."CreatedBy" from main."Address" a where a."AddressId" = v_AddressId;
 end;$$;
 
 -- =================================
 -- Location
 -- =================================
 
-create or replace function main.sp_GetLocationByAddress (
+create or replace function main."sp_GetLocationByAddress" (
 	p_AddressId int
-) RETURNS SETOF main.Location AS $$
-	select * from main.Location l where l.AddressId = p_AddressId limit 1;
+) RETURNS SETOF main."Location" AS $$
+	select * from main."Location" l where l."AddressId" = p_AddressId limit 1;
 $$ LANGUAGE SQL;
 
-drop function if exists main.sp_InsertLocation;
-create or replace function main.sp_InsertLocation (
+create or replace function main."sp_InsertLocation" (
 	p_Latitude double precision,
 	p_Longitude double precision,
 	p_Altitude double precision = null,
@@ -98,22 +101,21 @@ create or replace function main.sp_InsertLocation (
 	p_Default boolean = false,
 	p_Desc varchar(500) = null,
 	p_CreatedBy int = null
-) returns table(LocationId int, CreatedBy int)
+) returns table("LocationId" int, "CreatedBy" int)
 language plpgsql as $$
 	declare v_LocationId integer;
 begin
-	insert into main.Location(Latitude, Longitude, Altitude, AddressId, DefLocation, Descr, CreatedBy)
+	insert into main."Location"("Latitude", "Longitude", "Altitude", "AddressId", "DefLocation", "Desc", "CreatedBy")
 	values (p_Latitude, p_Longitude, p_Altitude, p_AddressId, p_Default, p_Desc, p_CreatedBy)
-	returning main.Location.LocationId into v_LocationId;
+	returning main."Location"."LocationId" into v_LocationId;
 	
-	return query select l.LocationId, l.CreatedBy from main.Location l where l.locationId = v_LocationId;
+	return query select l."LocationId", l."CreatedBy" from main."Location" l where l."LocationId" = v_LocationId;
 end;$$;
 
 -- =================================
 -- Chance
 -- =================================
-drop function if exists main.sp_InsertChance;
-create or replace function main.sp_InsertChance (
+create or replace function main."sp_InsertChance" (
 	p_DriverOut int,
 	p_DateStart timestamp(3),
 	p_AddressId int = null,
@@ -123,26 +125,25 @@ create or replace function main.sp_InsertChance (
 language plpgsql as $$
 	declare v_ChanceId integer;
 begin
-	insert into main.Chance (LocationId, AddressId, DateStart, DriverOut, CreatedBy)
+	insert into main."Chance" ("LocationId", "AddressId", "DateStart", "DriverOut", "CreatedBy")
 	values (p_LocationId, p_AddressId, p_DateStart, p_DriverOut, p_CreatedBy)
-	returning main.Chance.ChanceId into v_ChanceId;
+	returning main."Chance"."ChanceId" into v_ChanceId;
 
-	return query select c.ChanceId, c.CreatedBy from main.Chance c where c.ChanceId = v_ChanceId;
+	return query select c."ChanceId", c."CreatedBy" from main."Chance" c where c."ChanceId" = v_ChanceId;
 end;$$;
 
-drop function if exists main.GetChance;
-create or replace function main.sp_GetChanceByCity (
+create or replace function main."sp_GetChanceByCity" (
 	p_CityId int,
 	p_Gap int = 10 -- 10 minutes gap
-) returns setof main.Chance
+) returns setof main."Chance"
 language plpgsql AS $$
 	declare v_NowMinusGap timestamp(3) = (SELECT -@Gap * INTERVAL '1 mi' + getutcdate());
 begin
 	select * 
-	from main.Chance c 
-	where c.AddressId 
-		in (select AddressId from main.Address a where a.CityId = p_CityId) and
-        c.DateStart > v_NowMinusGap;
+	from main."Chance" c 
+	where c."AddressId" 
+		in (select "AddressId" from main."Address" a where a."CityId" = p_CityId) and
+        c."DateStart" > v_NowMinusGap;
 end;$$;
 
 
