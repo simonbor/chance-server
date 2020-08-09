@@ -8,7 +8,7 @@ const addressGet = async function(addressPayload) {
     const addressReq = new GetAddressReq(addressPayload)
     const addressRes = await dbContext.execute('main."sp_GetAddress"', addressReq);
     const address = new Address((addressRes[0])[0] || {});
-    
+
     return address;
 }
 
@@ -17,7 +17,7 @@ const addressInsert = async function(addressPayload) {
 
     const addressReq = new InsertAddressReq(addressPayload);
     const addressRes = await dbContext.execute('main."sp_InsertAddress"', addressReq);
-    const address = new Address(addressRes[0]);
+    const address = new Address((addressRes[0])[0]);
 
     return address;
 }

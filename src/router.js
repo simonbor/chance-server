@@ -28,7 +28,7 @@ const route = async function(req, res) {
         req.body = await collectRequestDataAsync(req);
     }
 
-    if (reqUrl.pathname == '/address' && req.method === 'GET') {
+    if (reqUrl.pathname == '/address-get' && req.method === 'POST') {
         res.end(JSON.stringify(await addressController.addressGet(req, res)));
 
     } else if (reqUrl.pathname == '/address' && req.method === 'POST') {

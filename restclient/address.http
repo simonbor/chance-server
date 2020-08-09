@@ -6,16 +6,29 @@
 ### chance test
 get {{ENV}}/ HTTP/1.1
 
-### address insert
-post http://localhost:{{PORT}}/address HTTP/1.1
+### address get
+post {{ENV}}/address-get HTTP/1.1
 content-type: application/json
 
 {
 	"Address": {
-		"StreetLocalName": "Bograshov",
+		"StreetName": "Bograshov",
 		"CityId": 1,
 		"CountryId": 367,
-		"Building": 29
+		"Building": 1
+    }
+}
+
+### address insert
+post {{ENV}}/address HTTP/1.1
+content-type: application/json
+
+{
+	"Address": {
+		"StreetName": "Bograshov",
+		"CityId": 1,
+		"CountryId": 367,
+		"Building": 9
     }
 }
 
@@ -25,7 +38,7 @@ content-type: application/json
 
 {
 	"Address": {
-		"StreetLocalName": "Bograshov",
+		"StreetName": "Bograshov",
 		"CityId": 1,
 		"CountryId": 367,
 		"Building": 1
