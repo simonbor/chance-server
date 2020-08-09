@@ -1,31 +1,31 @@
 class Address {
-	constructor({addressid, streetlocalname, building, streetid, cityid, countryid, createdby}) {
-		this.AddressId = 	addressid
-		this.CountryId = 	countryid;
-		this.CityId = 		cityid;
-		this.StreetLocalName = 	streetlocalname;
-		this.Building = 		building;
-		this.StreetId = 		streetid;
-		this.CreatedBy = 		createdby;
+	constructor({AddressId, StreetLocalName, Building, StreetId, CityId, CountryId, CreatedBy}) {
+		this.AddressId = 	AddressId;
+		this.CountryId = 	CountryId;
+		this.CityId = 		CityId;
+		this.StreetLocalName = 	StreetLocalName;
+		this.Building = 		Building;
+		this.StreetId = 		StreetId;
+		this.CreatedBy = 		CreatedBy;
 	}
 }
 
 class GetAddressReq{
-	constructor({StreetLocalName, Building,CityId, CountryId}) {
-		this.StreetLocalName = { 'type': 'VarChar(50)', 'value': StreetLocalName };
-		this.CityId = { 'type': 'Int', 'value': CityId };
-		this.CountryId = { 'type': 'Int', 'value': CountryId };
-		this.Building = { 'type': 'Int', 'value': Building };
+	constructor({StreetName, Building,CityId, CountryId}) {
+		this.StreetName = { 'typeName': 'VarChar', 'typeLength': 50, 'value': StreetName };
+		this.CityId = { 'typeName': 'Int', 'value': CityId };
+		this.CountryId = { 'typeName': 'Int', 'value': CountryId };
+		this.Building = { 'typeName': 'Int', 'value': Building };
 	}
 }
 
 class InsertAddressReq {
-	constructor({StreetLocalName, Building,CityId, CountryId, CreatedBy}) {
-		this.StreetLocalName = { 'type': 'VarChar(50)', 'value': StreetLocalName };
-		this.CityId = { 'type': 'Int', 'value': CityId };
-		this.CountryId = { 'type': 'Int', 'value': CountryId };
-		this.Building = { 'type': 'Int', 'value': Building };
-		this.CreatedBy = { 'type': 'Int', 'value': CreatedBy };
+	constructor({StreetName, Building,CityId, CountryId, CreatedBy}) {
+		this.StreetName = { 'typeName': 'VarChar', 'typeLength': 50, 'value': StreetName };
+		this.CityId = { 'typeName': 'Int', 'value': CityId };
+		this.CountryId = { 'typeName': 'Int', 'value': CountryId };
+		this.Building = { 'typeName': 'Int', 'value': Building };
+		this.CreatedBy = { 'typeName': 'Int', 'value': CreatedBy };
 	}
 }
 
