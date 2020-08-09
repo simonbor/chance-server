@@ -6,10 +6,10 @@
 		"database": "Parking"
 	},
 	"psql-config": {
-		"user": "postgres",
-		"host": "psql",
-		"database": "Parking",
-		"password": "1262e49d6fbfac7fc5fc",
+		"user": "bvpdpycwuxjezr",
+		"host": "ec2-54-246-115-40.eu-west-1.compute.amazonaws.com",
+		"database": "d281hj4hvq2ek6",
+		"password": "4623e29e6ee0853a98a4cf3f40c7e945577d93aaec189410ca589b371eeeca78b0007a47140316beb5146b0fe3ff0c9dcb129ff882140eb585cd7cfb34874bf5",
 		"port": 5432
 	},
 	"db-in-use": "psql"
