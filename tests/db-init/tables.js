@@ -7,7 +7,7 @@ const readFile = async (filePath) => {
 }
 
 const getScriptsArr = async() => {
-    const sql = await readFile('./sql/tables.sql');
+    const sql = await readFile('./sql/mssql/tables.sql');
 
     // split the file to small sql script parts
     return sql.split('go')
@@ -19,7 +19,7 @@ const getScriptsArr = async() => {
 
 const createTables = async () => {
     const sqlArr = await getScriptsArr();
-    const pool = await connect.getPool();
+    const pool = await connect.getPool('mssql');
     const request = await pool.request();
     
     for(let i = 0; i < sqlArr.length; i++) {
