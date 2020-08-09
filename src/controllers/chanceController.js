@@ -12,9 +12,9 @@ const chanceInsert = async (req, res) => {
     }
     
     // get address
-    req.body.Address.CreatedBy = driver.DriverId;
     let address = await addressDal.addressGet(req.body.Address);
     if(!address.AddressId){
+        req.body.Address.CreatedBy = driver.DriverId;
         address = await addressDal.addressInsert(req.body.Address);
     }
     
