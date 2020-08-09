@@ -7,9 +7,8 @@ const driverGet = async function(driver) {
     const dbContext = new DbContext();
 
     const driverReq = new GetDriverReq(driver);
-    let driverData = await dbContext.execute('main.sp_GetDriver', driverReq);
-    // driverData = driverData[0]['row_to_json'];
-    const res = new Driver(driverData);
+    let driverData = await dbContext.execute('main."sp_GetDriver"', driverReq);
+    const res = new Driver((driverData[0])[0] || {});
 
     return res;
 }
@@ -18,9 +17,8 @@ const driverInsert = async function(driver) {
     const dbContext = new DbContext();
 
     const driverReq = new InsertDriverReq(driver);
-    let driverData = await dbContext.execute('main.sp_InsertDriver', driverReq);
-    // driverData = driverData[0]['row_to_json'];
-    const res = new Driver(driverData);
+    let driverData = await dbContext.execute('main."sp_InsertDriver"', driverReq);
+    const res = new Driver((driverData[0])[0]);
 
     return res;
 }
