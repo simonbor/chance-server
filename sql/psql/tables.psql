@@ -26,7 +26,7 @@ create table main."City" (
 	"Desc" varchar(1000) null,
 	"Created" timestamp(3) not null default(timezone('utc', now())),
 	"Updated" timestamp(3) not null default(timezone('utc', now())),
-	"Deleted" timestamp(3) null
+	"Deleted" timestamp(3) null,
 
 	unique("LocalName")
 );
@@ -52,7 +52,7 @@ create table main."Address" (
 	"Building" int null,
 	"StreetId" int not null references main."Street"("StreetId"),
 	"CityId" int not null references main."City"("CityId"),
-	"CountryId" int not null,												-- CountryIsoCode, The State of Israel - 376
+	"CountryId" int not null,													-- CountryIsoCode, The State of Israel - 376
 	"Desc" varchar(1000) null,													-- optionally contains the first complete message
 	"Created" timestamp(3) not null default(timezone('utc', now())),
 	"CreatedBy" int null,

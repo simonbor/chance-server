@@ -1,4 +1,5 @@
 drop function if exists main."sp_GetDriver";
+drop function if exists main."sp_GetAllStreets";
 drop function if exists main."sp_InsertDriver";
 drop function if exists main."sp_GetAddress";
 drop function if exists main."sp_InsertAddress";
@@ -30,6 +31,18 @@ create or replace function main."sp_InsertDriver" (
 
 	select "DriverId", "Name" from main."Driver" d where d."MobileNum" = p_MobileNum;
 $$ language sql;
+
+-- =================================
+-- Streets
+-- =================================
+
+create or replace function main."sp_GetAllStreets" (
+	p_CityId int
+) returns setof main."Street" as $$
+begin
+    return query select * from main."Street" where main."Street"."CityId" = p_CityId;
+end;
+$$ language plpgsql;
 
 -- =================================
 -- Address
