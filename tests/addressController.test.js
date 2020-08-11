@@ -16,6 +16,7 @@ describe('location controller tests', () => {
     res.json = jest.fn().mockReturnValue(res)
     return res;
   };
+  const req = mockRequest();
 
   beforeAll(async (done) => {
     // init database (mssql, postgres)
@@ -24,23 +25,39 @@ describe('location controller tests', () => {
     // wait for db recreation
     setTimeout(function() {done()}, DB_RECREATE_DELAY);
   });
-
-  test('test address read empty address use case', async () => {
-    const req = mockRequest(), res = mockResponse();
-
+  beforeEach(async () => {
     req.body = {
       "Address": {
-          "StreetName": "Bograshov",
-          "CityId": 1,
-          "CountryId": 367,
-          "Building": 9999
-        }
+        "CityId": 1,
+        "CountryId": 367,
+        "Building": 1
+      }
     }
+  });
+
+  test('test address read - empty address use case', async () => {
+    const res = mockResponse();
+
+    req.body.Address.StreetName = 'Bograshov';
+
     const address = await addressController.addressGet(req, res);
-
-    // console.log(address);
-
     expect(address.AddressId === undefined).toBeTruthy()
+    expect(res.statusCode).toEqual(200);
+    expect(typeof address).toBe('object');
+  });
+
+  test('test address read - exists address use case', async () => {
+    const res = mockResponse();
+
+    req.body.Address.StreetName = 'בוגרשוב';
+
+    let address = await addressController.addressGet(req, res);
+    if(!address.AddressId) {
+      await addressController.addressInsert(req, res);
+    }
+    address = await addressController.addressGet(req, res);
+
+    expect(address.AddressId > 0).toBeTruthy()
     expect(res.statusCode).toEqual(200);
     expect(typeof address).toBe('object');
   });

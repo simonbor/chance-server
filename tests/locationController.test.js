@@ -1,3 +1,4 @@
+const addressController = require('../src/controllers/addressController');
 const locationController = require('../src/controllers/locationController');
 const DbContext = require('../src/dal/dal-context/dbContext')
 
@@ -15,6 +16,7 @@ describe('location controller tests', () => {
     res.json = jest.fn().mockReturnValue(res)
     return res;
   };
+  const req = mockRequest();
 
   beforeAll(async (done) => {
     // init database (mssql, postgres)
@@ -23,14 +25,10 @@ describe('location controller tests', () => {
     // wait for db recreation
     setTimeout(function() {done()}, DB_RECREATE_DELAY);
   });
-
-  test('test location insert use case', async () => {
-    const req = mockRequest();
-    const res = mockResponse();
-
+  beforeEach(async () => {
     req.body = {
       "Address": {
-          "StreetName": "Bograshov",
+          "StreetName": "בוגרשוב",
           "CityId": 1,
           "CountryId": 367,
           "Building": 1
@@ -41,6 +39,15 @@ describe('location controller tests', () => {
         "Default": "true",
         "Desc": ""
       }
+    }
+  });
+
+  test('test location insert use case', async () => {
+    const res = mockResponse();
+
+    let address = await addressController.addressGet(req, res);
+    if(!address.AddressId) {
+      await addressController.addressInsert(req, res);
     }
     const location = await locationController.insertLocation(req, res);
 
