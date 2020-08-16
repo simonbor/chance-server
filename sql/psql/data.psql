@@ -408,7 +408,7 @@ select 1, 'רנ"ק', null union all
 select 1, 'וייס אייזיק הירש', null union all
 select 1, 'וייס רפאל', null union all
 select 1, 'גרץ', null union all
-select 1, 'שי"ר', null union all
+select 1, 'שיר', 'שי"ר' union all
 select 1, 'רחל', null union all
 select 1, 'מלון אורה', null union all
 select 1, 'סמ בן יהודה', null union all
