@@ -35,7 +35,7 @@ const chanceInsert = async (req, res) => {
     } else {
         // todo: log waMessage
         console.log(`Error: The street name isn't found in the message "${waMessage}".`);
-        res.statusCode = 403;
+        res.statusCode = 400;
         return {};
     }
     
