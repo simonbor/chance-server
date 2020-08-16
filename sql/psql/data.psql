@@ -4,2813 +4,2813 @@ select 1, 'Tel Aviv', 'תל אביב' union all
 select 2, 'Jerusalem', 'ירושלים';
 
 truncate table main."Street" cascade;
-insert into main."Street" ("CityId", "LocalName")
-select 1, 'רדינג' union all
-select 1, 'בן הלל מרדכי' union all
-select 1, 'הררי' union all
-select 1, 'קרני יהודה' union all
-select 1, 'שמעוני' union all
-select 1, 'פיכמן' union all
-select 1, 'הברון הירש' union all
-select 1, 'בלום ליאון' union all
-select 1, 'ברש אשר' union all
-select 1, 'ברודצקי' union all
-select 1, 'נח' union all
-select 1, 'לחובר' union all
-select 1, 'סלואדור' union all
-select 1, 'הרטגלס' union all
-select 1, 'לבנון חיים' union all
-select 1, 'גרונימן' union all
-select 1, 'כפר יונה' union all
-select 1, 'פטאי יוסף' union all
-select 1, 'טורטשינר' union all
-select 1, 'צמחי היהודים' union all
-select 1, 'קרויס' union all
-select 1, 'ברודי' union all
-select 1, 'הופיין' union all
-select 1, 'בארט' union all
-select 1, 'אינשטיין' union all
-select 1, 'אוניברסיטת תל אבי' union all
-select 1, 'חי"ש' union all
-select 1, 'המשמר האזרחי' union all
-select 1, 'הנוטר' union all
-select 1, 'המתנדב' union all
-select 1, 'אפקים' union all
-select 1, 'חיל משמר' union all
-select 1, 'מגשימים' union all
-select 1, 'עלומים' union all
-select 1, 'מרדכי (מוטה) גור' union all
-select 1, 'מבטחים' union all
-select 1, 'שפיה' union all
-select 1, 'קוממיות' union all
-select 1, 'ברקאי שמואל' union all
-select 1, 'שמיר' union all
-select 1, 'ארזי יהודה' union all
-select 1, 'פרויד' union all
-select 1, 'קלוזנר' union all
-select 1, 'שבט ראובן' union all
-select 1, 'שבט גד' union all
-select 1, 'בני ישראל' union all
-select 1, 'שבט בנימין' union all
-select 1, 'שבט שמעון' union all
-select 1, 'שבט לוי' union all
-select 1, 'שבט יששכר' union all
-select 1, 'שבט יהודה' union all
-select 1, 'שבט זבולון' union all
-select 1, 'שבט דן' union all
-select 1, 'שבט אשר' union all
-select 1, 'שבט יוסף' union all
-select 1, 'רח 4222' union all
-select 1, 'ברלינר' union all
-select 1, 'ש"י' union all
-select 1, 'פראנקל' union all
-select 1, 'התנאים' union all
-select 1, 'הסבוראים' union all
-select 1, 'האמוראים' union all
-select 1, 'קרית שאול' union all
-select 1, 'רודנסקי שמואל' union all
-select 1, 'קלצ''קין' union all
-select 1, 'שד אבנר מאיר' union all
-select 1, 'קרן היסוד' union all
-select 1, 'טאגור רבינדרנארט' union all
-select 1, 'אנדרסן' union all
-select 1, 'פסטרנק אריה' union all
-select 1, 'ברגסון' union all
-select 1, 'מוריץ דניאל' union all
-select 1, 'פיליכובסקי' union all
-select 1, 'שד רוקח' union all
-select 1, 'יהודה הנשיא' union all
-select 1, 'לויטן יצחק' union all
-select 1, 'מניה וישראל' union all
-select 1, 'הרכש' union all
-select 1, 'פרופס אהרון צבי' union all
-select 1, 'רח 2203' union all
-select 1, 'אושה' union all
-select 1, 'משמר הגבול' union all
-select 1, 'אופנהיימר' union all
-select 1, 'גייגר' union all
-select 1, 'רבינא' union all
-select 1, 'רב אשי' union all
-select 1, 'ברזיל' union all
-select 1, 'אפטר יעקב' union all
-select 1, 'בורלא יהודה' union all
-select 1, 'אשכול לוי' union all
-select 1, 'עגנון ש"י' union all
-select 1, 'למדן יצחק' union all
-select 1, 'קיציס יוסף' union all
-select 1, 'בן ישי' union all
-select 1, 'קהילת סופיה' union all
-select 1, 'רוזאניס' union all
-select 1, 'מיזאן' union all
-select 1, 'רומנו' union all
-select 1, 'מנורה' union all
-select 1, 'גנתון' union all
-select 1, 'רוממה' union all
-select 1, 'מורשת' union all
-select 1, 'יפעת' union all
-select 1, 'יציץ' union all
-select 1, 'גזית' union all
-select 1, 'שדה דב' union all
-select 1, 'רפידים' union all
-select 1, 'מגדל שרשן' union all
-select 1, 'תל ברוך' union all
-select 1, 'אופיר' union all
-select 1, 'אוגרית' union all
-select 1, 'שורר חיים' union all
-select 1, 'הרבסט קרול' union all
-select 1, 'קפריסין' union all
-select 1, 'עמרי' union all
-select 1, 'בית חורון' union all
-select 1, 'בני אפרים' union all
-select 1, 'וייז ג''ורג''' union all
-select 1, 'קהילת יאסי' union all
-select 1, 'יד המעביר' union all
-select 1, 'קהילת בודפסט' union all
-select 1, 'קהילת ורשה' union all
-select 1, 'קהילת אודסה' union all
-select 1, 'קהילת קישינוב' union all
-select 1, 'קהילת טשרנוביץ' union all
-select 1, 'אמיל בריג' union all
-select 1, 'קהילת לודג''' union all
-select 1, 'הדר יוסף' union all
-select 1, 'בן זבארה' union all
-select 1, 'ברכיהו הנקדן' union all
-select 1, 'זכות משה' union all
-select 1, 'סומו יהודה' union all
-select 1, 'יוסף האפרתי' union all
-select 1, 'חופשי דוד' union all
-select 1, 'רח 579' union all
-select 1, 'קהילת לבוב' union all
-select 1, 'קהילת קרקוב' union all
-select 1, 'קהילת ביאליסטוק' union all
-select 1, 'קהילת בריסק' union all
-select 1, 'קדושי השואה' union all
-select 1, 'מבצע קדש' union all
-select 1, 'קהילת ונציה' union all
-select 1, 'קהילת סאלוניקי' union all
-select 1, 'קהילת ריגא' union all
-select 1, 'קהילת ז''יטומיר' union all
-select 1, 'קהילת פאדובה' union all
-select 1, 'קהילת פוזנא' union all
-select 1, 'קהילת קובנה' union all
-select 1, 'קהילת קיוב' union all
-select 1, 'חצור' union all
-select 1, 'קדש ברנע' union all
-select 1, 'שניר' union all
-select 1, 'קרן קיימת לישראל' union all
-select 1, 'אש שלום' union all
-select 1, 'לאה' union all
-select 1, 'אנכי' union all
-select 1, 'אלתרמן נתן' union all
-select 1, 'המאירי אביגדור' union all
-select 1, 'האוזנר דב' union all
-select 1, 'שיטרית' union all
-select 1, 'שינמן פנחס' union all
-select 1, 'אריכא יוסף' union all
-select 1, 'רקנאטי' union all
-select 1, 'פרסיץ שושנה' union all
-select 1, 'זאב' union all
-select 1, 'זליג' union all
-select 1, 'מעונות אוניברסיטה' union all
-select 1, 'מרק יעקב' union all
-select 1, 'אחימאיר אבא' union all
-select 1, 'בן יוסף שלמה' union all
-select 1, 'בית צורי אליהו' union all
-select 1, 'חכים אליהו' union all
-select 1, 'גרונר דב' union all
-select 1, 'אלקחי מרדכי' union all
-select 1, 'קשאני אליעזר' union all
-select 1, 'ברזאני משה' union all
-select 1, 'פיינשטיין' union all
-select 1, 'חביב אבשלום' union all
-select 1, 'נקר מאיר' union all
-select 1, 'וייס יעקב' union all
-select 1, 'דרזנר יחיאל' union all
-select 1, 'גליקסברג' union all
-select 1, 'שלונסקי' union all
-select 1, 'פרידלנד צבי' union all
-select 1, 'ברטונוב יהושע' union all
-select 1, 'צ''מרינסקי ברוך' union all
-select 1, 'טורקוב זיגמונד' union all
-select 1, 'מסקין אהרון' union all
-select 1, 'צה"ל' union all
-select 1, 'ברק' union all
-select 1, 'המצביאים' union all
-select 1, 'בת יפתח' union all
-select 1, 'סביון' union all
-select 1, 'נורית' union all
-select 1, 'הרדוף' union all
-select 1, 'אמנון ותמר' union all
-select 1, 'מרגנית' union all
-select 1, 'עיר שמש' union all
-select 1, 'יהונתן' union all
-select 1, 'אהוד' union all
-select 1, 'אבנר' union all
-select 1, 'יואב' union all
-select 1, 'השושנים' union all
-select 1, 'אבישי' union all
-select 1, 'שמגר' union all
-select 1, 'בניהו' union all
-select 1, 'בת חן' union all
-select 1, 'הפרסה' union all
-select 1, 'עשהאל' union all
-select 1, 'בנימין מטודלה' union all
-select 1, 'משמר הירדן' union all
-select 1, 'אלדד הדני' union all
-select 1, 'אשכנזי' union all
-select 1, 'פתחיה מרגנשבורג' union all
-select 1, 'רומנילי' union all
-select 1, 'אבן ספיר' union all
-select 1, 'תבואות הארץ' union all
-select 1, 'אליהו מפירארה' union all
-select 1, 'דילה רינה יוסף' union all
-select 1, 'חילו יצחק' union all
-select 1, 'הגולן' union all
-select 1, 'הרוגי מלכות' union all
-select 1, 'גולי קניה' union all
-select 1, 'גולי אריתראה' union all
-select 1, 'טובים עמנואל' union all
-select 1, 'נמירובר' union all
-select 1, 'לויטה' union all
-select 1, 'קרפל ליפא' union all
-select 1, 'טריטש' union all
-select 1, 'שטיינר' union all
-select 1, 'עולי הגרדום' union all
-select 1, 'מרכוס דוד' union all
-select 1, 'טבנקין יצחק' union all
-select 1, 'ניסן כהן' union all
-select 1, 'ק"ם' union all
-select 1, 'גדנ"ע' union all
-select 1, 'ביריה' union all
-select 1, 'הטית זין' union all
-select 1, 'הראל' union all
-select 1, 'עטרות' union all
-select 1, 'רבדים' union all
-select 1, 'רמות נפתלי' union all
-select 1, 'הלמד הא' union all
-select 1, 'באסולה' union all
-select 1, 'סמ משמר הירדן' union all
-select 1, 'הברזל' union all
-select 1, 'ולנברג ראול' union all
-select 1, 'רח 3412' union all
-select 1, 'הארד' union all
-select 1, 'הנחושת' union all
-select 1, 'רוזוב' union all
-select 1, 'דבורה הנביאה' union all
-select 1, 'רח 2832' union all
-select 1, 'רח 3832' union all
-select 1, 'רח 4832' union all
-select 1, 'נחלאות' union all
-select 1, 'בית אל' union all
-select 1, 'רמה' union all
-select 1, 'כיסופים' union all
-select 1, 'רביבים' union all
-select 1, 'אדירים' union all
-select 1, 'פילדלפיה' union all
-select 1, 'הצנחנים' union all
-select 1, 'אח"י דקר' union all
-select 1, 'אלמגור' union all
-select 1, 'כורזים' union all
-select 1, 'נהריים' union all
-select 1, 'מינץ בנימין' union all
-select 1, 'ענתות' union all
-select 1, 'שוהם מתתיהו' union all
-select 1, 'ויסבורג חיים' union all
-select 1, 'טולקובסקי' union all
-select 1, 'מויאל אהרון' union all
-select 1, 'בראלי' union all
-select 1, 'אבוקה' union all
-select 1, 'פומרוק יוסף' union all
-select 1, 'אמירים' union all
-select 1, 'מבוא גילת' union all
-select 1, 'מבוא גניגר' union all
-select 1, 'מבוא געתון' union all
-select 1, 'מבוא גרופית' union all
-select 1, 'הדף היומי' union all
-select 1, 'תירוש' union all
-select 1, 'סנה משה' union all
-select 1, 'כ"ג יורדי הסירה' union all
-select 1, 'התערוכה' union all
-select 1, 'ירמיהו' union all
-select 1, 'דיזנגוף' union all
-select 1, 'זכריה' union all
-select 1, 'צידון' union all
-select 1, 'שער ציון' union all
-select 1, 'הושע' union all
-select 1, 'נמל תל אביב' union all
-select 1, 'נחשון' union all
-select 1, 'חבקוק' union all
-select 1, 'נחום' union all
-select 1, 'מיכה' union all
-select 1, 'יואל הנביא' union all
-select 1, 'יחזקאל' union all
-select 1, 'מלאכי' union all
-select 1, 'עובדיה הנביא' union all
-select 1, 'סמ מיכה' union all
-select 1, 'צפניה' union all
-select 1, 'יוחנן הורקנוס' union all
-select 1, 'שמעון התרסי' union all
-select 1, 'סמ התרסי' union all
-select 1, 'אלכסנדר ינאי' union all
-select 1, 'שד נורדאו' union all
-select 1, 'יהושע בן נון' union all
-select 1, 'עמוס' union all
-select 1, 'סמ עמוס' union all
-select 1, 'סוקולוב' union all
-select 1, 'סמ נורדאו' union all
-select 1, 'ישעיהו' union all
-select 1, 'חגי' union all
-select 1, 'מודיעין' union all
-select 1, 'אגריפס' union all
-select 1, 'אוסישקין' union all
-select 1, 'ארבע ארצות' union all
-select 1, 'אשתורי הפרחי' union all
-select 1, 'משעול שמידט יוסף' union all
-select 1, 'עובדיה מברטנורה' union all
-select 1, 'אלקלעי' union all
-select 1, 'השל"ה' union all
-select 1, 'עמדן יעקב' union all
-select 1, 'אייבשיץ' union all
-select 1, 'הבשן' union all
-select 1, 'יריחו' union all
-select 1, 'עין גדי' union all
-select 1, 'הגלעד' union all
-select 1, 'הר נבו' union all
-select 1, 'זנגביל' union all
-select 1, 'בזל' union all
-select 1, 'מנדלשטם' union all
-select 1, 'טהון יהושע' union all
-select 1, 'יפה נוף' union all
-select 1, 'מוצקין' union all
-select 1, 'ויתקין' union all
-select 1, 'ז''בוטינסקי' union all
-select 1, 'גריזים' union all
-select 1, 'פקיעין' union all
-select 1, 'סמ זנגביל' union all
-select 1, 'סמ מנדלשטם' union all
-select 1, 'הירקון' union all
-select 1, 'ברון עקיבא' union all
-select 1, 'סמ נחושתן' union all
-select 1, 'שד יוצ"ר' union all
-select 1, 'זרובבל יעקב' union all
-select 1, 'בת מרים יוכבד' union all
-select 1, 'בוקשפן דוד' union all
-select 1, 'בויאר אברהם' union all
-select 1, 'דיסנצ''יק אריה' union all
-select 1, 'ארם משה' union all
-select 1, '2390' union all
-select 1, 'רח 5821' union all
-select 1, 'אגדתי ברוך' union all
-select 1, 'השחקנים' union all
-select 1, 'בינט מאיר' union all
-select 1, 'רח 2005' union all
-select 1, 'מהר"ל' union all
-select 1, 'חת"ם סופר' union all
-select 1, 'לוי יצחק' union all
-select 1, 'התניא' union all
-select 1, 'פרנקפורט' union all
-select 1, 'וילנא' union all
-select 1, 'פראג' union all
-select 1, 'הלפרין' union all
-select 1, 'זלטופולסקי' union all
-select 1, 'בן יהודה' union all
-select 1, 'מאנגר איציק' union all
-select 1, 'סמ החובבים' union all
-select 1, 'יוסט' union all
-select 1, 'בחור אליהו' union all
-select 1, 'עמנואל הרומי' union all
-select 1, 'אמסטרדם' union all
-select 1, 'קלונימוס' union all
-select 1, 'עזריה מן האדומים' union all
-select 1, 'קורדובה' union all
-select 1, 'וורמיזה' union all
-select 1, 'סמ נ"ס' union all
-select 1, 'הקליר' union all
-select 1, 'אלחריזי' union all
-select 1, 'בן עזרא' union all
-select 1, 'הפרדס' union all
-select 1, 'שמואל הנגיד' union all
-select 1, 'הדסה' union all
-select 1, 'יודפת' union all
-select 1, 'גוש חלב' union all
-select 1, 'באר טוביה' union all
-select 1, 'חולדה' union all
-select 1, 'מצדה' union all
-select 1, 'אד"ם הכהן' union all
-select 1, 'ליברמן' union all
-select 1, 'ויזל' union all
-select 1, 'יהל"ל' union all
-select 1, 'שד בן גוריון' union all
-select 1, 'לסל' union all
-select 1, 'אהרון דוד גורדון' union all
-select 1, 'ברנשטיין אדוארד' union all
-select 1, 'רנ"ק' union all
-select 1, 'וייס אייזיק הירש' union all
-select 1, 'וייס רפאל' union all
-select 1, 'גרץ' union all
-select 1, 'שי"ר' union all
-select 1, 'רחל' union all
-select 1, 'מלון אורה' union all
-select 1, 'סמ בן יהודה' union all
-select 1, 'מלון בזל' union all
-select 1, 'אמיל זולה' union all
-select 1, 'ז''ורס ז''אן' union all
-select 1, 'ביירון' union all
-select 1, 'קורולנקו' union all
-select 1, 'נתן החכם' union all
-select 1, 'הוז דב' union all
-select 1, 'ישורון' union all
-select 1, 'רופין' union all
-select 1, 'ארנון' union all
-select 1, 'הכרם' union all
-select 1, 'עם ישראל חי' union all
-select 1, 'יהואש' union all
-select 1, 'של"ג' union all
-select 1, 'מאפו' union all
-select 1, 'מנדלי מוכר ספרים' union all
-select 1, 'בוגרשוב' union all
-select 1, 'טייגר היל' union all
-select 1, 'סירקין' union all
-select 1, 'סמולנסקין' union all
-select 1, 'פרוג' union all
-select 1, 'שלום עליכם' union all
-select 1, 'חובבי ציון' union all
-select 1, 'בן עמי' union all
-select 1, 'גנסין' union all
-select 1, 'פינסקר' union all
-select 1, 'בילינסון' union all
-select 1, 'אהרונוביץ' union all
-select 1, 'דרויאנוב' union all
-select 1, 'לוריא' union all
-select 1, 'גליקסון' union all
-select 1, 'צפת' union all
-select 1, 'טבריה' union all
-select 1, 'רציף הירקון' union all
-select 1, 'פרי אליעזר' union all
-select 1, 'דיזנגוף סנטר' union all
-select 1, 'קהילת קליבלנד' union all
-select 1, 'חוף גורדון' union all
-select 1, 'מלון קרלטון' union all
-select 1, 'מרינה' union all
-select 1, 'פרופ'' יובל נאמן' union all
-select 1, 'מנדלסון' union all
-select 1, 'שפינוזה' union all
-select 1, 'פילון' union all
-select 1, 'כהן הרמן' union all
-select 1, 'ריינס' union all
-select 1, 'גוטליב' union all
-select 1, 'הירשנברג' union all
-select 1, 'ש"ץ' union all
-select 1, 'ישראליס' union all
-select 1, 'שלמה המלך' union all
-select 1, 'גורדון י ל' union all
-select 1, 'סמ יל"ג' union all
-select 1, 'סמ גור אריה' union all
-select 1, 'פרישמן' union all
-select 1, 'לכיש' union all
-select 1, 'מלון אסטור' union all
-select 1, 'מגידו' union all
-select 1, 'מצפה' union all
-select 1, 'גזר' union all
-select 1, 'שטנד' union all
-select 1, 'רייך' union all
-select 1, 'שד מסריק' union all
-select 1, 'שדרות ח"ן' union all
-select 1, 'אימבר' union all
-select 1, 'נצח ישראל' union all
-select 1, 'גדעון' union all
-select 1, 'השופטים' union all
-select 1, 'לטריס' union all
-select 1, 'הנביאים' union all
-select 1, 'מלכי ישראל' union all
-select 1, 'שמשון' union all
-select 1, 'ספיר' union all
-select 1, 'ספיר אליהו' union all
-select 1, 'סמ רשבג' union all
-select 1, 'המליץ' union all
-select 1, 'בוקי בן יגלי' union all
-select 1, 'המלך ג''ורג''' union all
-select 1, 'בר גיורא' union all
-select 1, 'עין חרוד' union all
-select 1, 'תל חי' union all
-select 1, 'זמנהוף' union all
-select 1, 'אסתר המלכה' union all
-select 1, 'שולמית' union all
-select 1, 'רות' union all
-select 1, 'יעל' union all
-select 1, 'שפירא צבי' union all
-select 1, 'שמריהו לוין' union all
-select 1, 'שד'' תרס"ט' union all
-select 1, 'חיסין' union all
-select 1, 'שד בן ציון' union all
-select 1, 'לב אברהם' union all
-select 1, 'מרמורק' union all
-select 1, 'ביל"ו' union all
-select 1, 'טוסקניני' union all
-select 1, 'הוברמן' union all
-select 1, 'יוסף אליהו' union all
-select 1, 'האלקושי' union all
-select 1, 'רוזנבאום' union all
-select 1, 'פולד ברכה' union all
-select 1, 'סטארה אלברט' union all
-select 1, 'צוויג סטפן' union all
-select 1, 'פינלס' union all
-select 1, 'בובליק' union all
-select 1, 'שלומציון המלכה' union all
-select 1, 'בני דן' union all
-select 1, 'מתתיהו כהן גדול' union all
-select 1, 'יוחנן הגדי' union all
-select 1, 'יונתן הופסי' union all
-select 1, 'אונקלוס' union all
-select 1, 'לואי מרשל' union all
-select 1, 'דה האז' union all
-select 1, 'מרים החשמונאית' union all
-select 1, 'חוני המעגל' union all
-select 1, 'אנטיגונוס' union all
-select 1, 'יהודה המכבי' union all
-select 1, 'אלעזר החורני' union all
-select 1, 'אריסטובול' union all
-select 1, 'שטריקר' union all
-select 1, 'שד סמאטס' union all
-select 1, 'ברנדיס' union all
-select 1, 'הרב צירלסון' union all
-select 1, 'ועידת קטוביץ' union all
-select 1, 'הרב פרידמן' union all
-select 1, 'רילף יצחק' union all
-select 1, 'רב צעיר' union all
-select 1, 'שלזינגר' union all
-select 1, 'הילדסהיימר' union all
-select 1, 'ניסנבוים' union all
-select 1, 'הרב עמיאל' union all
-select 1, 'ויצמן' union all
-select 1, 'בני משה' union all
-select 1, 'בירנבוים' union all
-select 1, 'ירושלמי' union all
-select 1, 'תוספתא' union all
-select 1, 'הכנסת הגדולה' union all
-select 1, 'בבלי' union all
-select 1, 'בן סירא' union all
-select 1, 'זמר חנה' union all
-select 1, 'מרגלית מאיר' union all
-select 1, 'הזוהר' union all
-select 1, 'המשנה' union all
-select 1, 'הנשיאים' union all
-select 1, 'פעמוני יוסף' union all
-select 1, 'סנהדרין' union all
-select 1, 'רחבת מילאנו' union all
-select 1, 'הרב ניסים' union all
-select 1, 'זטורי משה' union all
-select 1, 'שטינמן' union all
-select 1, 'עקיבא אריה' union all
-select 1, 'אהבת ציון' union all
-select 1, 'חיותמן' union all
-select 1, 'דנין' union all
-select 1, 'סמילנסקי' union all
-select 1, 'שרת משה' union all
-select 1, 'גור יהודה' union all
-select 1, 'שד הציונות' union all
-select 1, 'ויסוצקי' union all
-select 1, 'בילטמור' union all
-select 1, 'חנקין' union all
-select 1, 'קרמניצקי' union all
-select 1, 'פנקס' union all
-select 1, 'בודנהיימר' union all
-select 1, 'הא באייר' union all
-select 1, 'שור' union all
-select 1, 'מוזיר יעקב' union all
-select 1, 'ילין דוד' union all
-select 1, 'אפשטיין' union all
-select 1, 'מוסינזון' union all
-select 1, 'אבן ג''נאח' union all
-select 1, 'רד"ק' union all
-select 1, 'בן סרוק' union all
-select 1, 'בן שפרוט' union all
-select 1, 'בן לברט' union all
-select 1, 'רח 4811' union all
-select 1, 'רמז דוד' union all
-select 1, 'מטמון כהן' union all
-select 1, 'חדרה' union all
-select 1, 'תש"ח' union all
-select 1, 'הלסינקי' union all
-select 1, 'ליסין' union all
-select 1, 'ארלוזורוב' union all
-select 1, 'פייבל' union all
-select 1, 'זלוציסטי' union all
-select 1, 'קליי' union all
-select 1, 'זכרון יעקב' union all
-select 1, 'חברה חדשה' union all
-select 1, 'בלקינד' union all
-select 1, 'גלוסקין' union all
-select 1, 'כהנשטם' union all
-select 1, 'השופט נופך' union all
-select 1, 'גבעת המורה' union all
-select 1, 'ליפסקי לואי' union all
-select 1, 'רח 9721' union all
-select 1, 'מסוף רדינג' union all
-select 1, 'מסוף ארלוזורוב' union all
-select 1, 'דוש' union all
-select 1, 'בוסקוביץ' union all
-select 1, 'אלוני ניסים' union all
-select 1, 'רח 7921' union all
-select 1, 'רח 6921' union all
-select 1, 'הרב גורן שלמה' union all
-select 1, 'על פרשת דרכים' union all
-select 1, 'רח 4821' union all
-select 1, 'בארי' union all
-select 1, 'סולד הנרייטה' union all
-select 1, 'התמר' union all
-select 1, 'דרך נמיר מרדכי' union all
-select 1, 'הרימון' union all
-select 1, 'הגפן' union all
-select 1, 'הזית' union all
-select 1, 'התאנה' union all
-select 1, 'דפנה' union all
-select 1, 'שילה' union all
-select 1, 'מודיליאני' union all
-select 1, 'גליצנשטין' union all
-select 1, 'בצלאל' union all
-select 1, 'סוטין' union all
-select 1, 'אורי' union all
-select 1, 'פישמן מימון' union all
-select 1, 'נהרדעא' union all
-select 1, 'פומבדיתא' union all
-select 1, 'בלוך דוד' union all
-select 1, 'רב אלוף יעקב דורי' union all
-select 1, 'חכמי קירואן' union all
-select 1, 'רמברנדט' union all
-select 1, 'שטרוק' union all
-select 1, 'ליליאן' union all
-select 1, 'אנטוקולסקי' union all
-select 1, 'צייטלין' union all
-select 1, 'דובנוב' union all
-select 1, 'שד דוד המלך' union all
-select 1, 'בריינין ראובן' union all
-select 1, 'שד שאול המלך' union all
-select 1, 'דוליצקי' union all
-select 1, 'קצנלסון יצחק' union all
-select 1, 'אבן גבירול' union all
-select 1, 'מאנה' union all
-select 1, 'דה וינצ''י לאונרדו' union all
-select 1, 'זיו רבקה' union all
-select 1, 'מעלה שמיר משה' union all
-select 1, 'ברקוביץ' union all
-select 1, 'מרכז גולדה מאיר' union all
-select 1, 'ספיר פנחס' union all
-select 1, 'יהודה הלוי' union all
-select 1, 'ברדיצ''בסקי' union all
-select 1, 'שד רוטשילד' union all
-select 1, 'אחד העם' union all
-select 1, 'כרמיה' union all
-select 1, 'החשמונאים' union all
-select 1, 'לונץ' union all
-select 1, 'בר אילן' union all
-select 1, 'שיינקין' union all
-select 1, 'הגלבוע' union all
-select 1, 'מרכז בעלי מלאכה' union all
-select 1, 'נפחא יצחק' union all
-select 1, 'העבודה' union all
-select 1, 'חיות פרץ' union all
-select 1, 'רש"י' union all
-select 1, 'לאן א' union all
-select 1, 'סמטה אלמונית' union all
-select 1, 'סמטה פלונית' union all
-select 1, 'מיכ"ל' union all
-select 1, 'בורוכוב' union all
-select 1, 'חיים ואלישע' union all
-select 1, 'ורבורג' union all
-select 1, 'שבע השקמים' union all
-select 1, 'משעול יעקב' union all
-select 1, 'רבנו תם' union all
-select 1, 'טרומפלדור' union all
-select 1, 'ברוק צבי' union all
-select 1, 'ברנשטין כהן' union all
-select 1, 'שניאור זלמן' union all
-select 1, 'בר כוכבא' union all
-select 1, 'שמעון בר כוכבא' union all
-select 1, 'המכבי' union all
-select 1, 'בית לחם' union all
-select 1, 'אלנבי' union all
-select 1, 'אלו מציאות' union all
-select 1, 'ביאליק' union all
-select 1, 'אידלסון אברהם' union all
-select 1, 'הס משה' union all
-select 1, 'טשרניחובסקי' union all
-select 1, 'חברון' union all
-select 1, 'בית החיים' union all
-select 1, 'רציף הרברט סמואל' union all
-select 1, 'נס ציונה' union all
-select 1, 'סמ נס ציונה' union all
-select 1, 'הירדן' union all
-select 1, 'לאן ב' union all
-select 1, 'סמ גן מאיר' union all
-select 1, 'מורד הטיילת' union all
-select 1, 'מלון ימית' union all
-select 1, 'יונה הנביא' union all
-select 1, 'הכובשים' union all
-select 1, 'גאולה' union all
-select 1, 'הרב קוק' union all
-select 1, 'האר"י' union all
-select 1, 'אהרונסון' union all
-select 1, 'זרובבל' union all
-select 1, 'עזרא הסופר' union all
-select 1, 'דניאל' union all
-select 1, 'נחמיה' union all
-select 1, 'תרמ"ב' union all
-select 1, 'יום טוב' union all
-select 1, 'קפאח יחיה' union all
-select 1, 'סמ הכרמל' union all
-select 1, 'נחליאל' union all
-select 1, 'כנפי נשרים' union all
-select 1, 'קהילת עדן' union all
-select 1, 'ישכון' union all
-select 1, 'מל"ן' union all
-select 1, 'הכרמל' union all
-select 1, 'רבי מאיר' union all
-select 1, 'אלישיב' union all
-select 1, 'בית יוסף' union all
-select 1, 'אלשיך' union all
-select 1, 'רבן גמליאל' union all
-select 1, 'רבי עקיבא' union all
-select 1, 'גדרה' union all
-select 1, 'נג''ארה ישראל' union all
-select 1, 'הלל הזקן' union all
-select 1, 'השומר' union all
-select 1, 'נחלת בנימין' union all
-select 1, 'רמב"ם' union all
-select 1, 'סמ שפ"ר' union all
-select 1, 'התבור' union all
-select 1, 'רבינוביץ שפ"ר' union all
-select 1, 'צדוק הכהן' union all
-select 1, 'קלישר' union all
-select 1, 'יעב"ץ' union all
-select 1, 'סמ התבור' union all
-select 1, 'מוהליבר' union all
-select 1, 'גרוזנברג' union all
-select 1, 'ברנר' union all
-select 1, 'שטראוס' union all
-select 1, 'פיארברג' union all
-select 1, 'מלצ''ט' union all
-select 1, 'יבנה' union all
-select 1, 'עין ורד' union all
-select 1, 'יוסף הנשיא' union all
-select 1, 'יוחנן הסנדלר' union all
-select 1, 'אליוט ג''ורג''' union all
-select 1, 'מונטיפיורי' union all
-select 1, 'נטר קרל' union all
-select 1, 'יוחנן בן זכאי' union all
-select 1, 'בית השואבה' union all
-select 1, 'השחר' union all
-select 1, 'הר סיני' union all
-select 1, 'אחוזת בית' union all
-select 1, 'אנגל' union all
-select 1, 'המגיד' union all
-select 1, 'בלפור' union all
-select 1, 'מזא"ה' union all
-select 1, 'נחמני' union all
-select 1, 'יפה בצלאל' union all
-select 1, 'סמ האור' union all
-select 1, 'הרכבת' union all
-select 1, 'גת רימון' union all
-select 1, 'דה פיג''וטו' union all
-select 1, 'שד"ל' union all
-select 1, 'רמח"ל' union all
-select 1, 'החשמל' union all
-select 1, 'ברזילי' union all
-select 1, 'לבונטין' union all
-select 1, 'מקוה ישראל' union all
-select 1, 'סמ הגינה' union all
-select 1, 'לשם' union all
-select 1, 'חבשוש חיים' union all
-select 1, 'דרך יפו' union all
-select 1, 'סמ בית הבד' union all
-select 1, 'רוקח שמעון' union all
-select 1, 'שטיין' union all
-select 1, 'שרעבי' union all
-select 1, 'כפר סבא' union all
-select 1, 'בוסתנאי' union all
-select 1, 'לילינבלום' union all
-select 1, 'מולכו שלמה' union all
-select 1, '3952' union all
-select 1, 'תחכמוני' union all
-select 1, 'סמ תחכמוני' union all
-select 1, 'עין גנים' union all
-select 1, 'היכל התלמוד' union all
-select 1, 'סמ מולכו' union all
-select 1, 'נוה צדק' union all
-select 1, 'סמ נוה צדק' union all
-select 1, 'אלחנן יצחק' union all
-select 1, 'עצמון' union all
-select 1, 'לפין' union all
-select 1, 'יבנאל' union all
-select 1, 'מחנה יוסף' union all
-select 1, 'דגניה' union all
-select 1, 'החרמון' union all
-select 1, 'התלמי יהושע' union all
-select 1, 'שבזי' union all
-select 1, 'יהודה החסיד' union all
-select 1, 'סמ שבזי' union all
-select 1, 'כנרת' union all
-select 1, 'פינס' union all
-select 1, 'סמ החרמון' union all
-select 1, 'מטולה' union all
-select 1, 'עין יעקב' union all
-select 1, 'אחווה' union all
-select 1, 'שלוש' union all
-select 1, 'מגדל' union all
-select 1, 'סמ מגדל' union all
-select 1, 'חברת ש"ס' union all
-select 1, 'השנית' union all
-select 1, 'יקינתון' union all
-select 1, 'המרד' union all
-select 1, 'איל"ן' union all
-select 1, '1330' union all
-select 1, 'שלהבית' union all
-select 1, 'גוש 6007' union all
-select 1, 'לוע הארי' union all
-select 1, 'תרצ"ו' union all
-select 1, 'אילת' union all
-select 1, 'סמ שלוש' union all
-select 1, 'אשקלון' union all
-select 1, 'רח 3357' union all
-select 1, 'אולשן יצחק' union all
-select 1, 'ברנט' union all
-select 1, 'שמרלינג' union all
-select 1, 'אבא ושרה נאמן' union all
-select 1, 'כל ישראל חברים' union all
-select 1, 'אמזלג' union all
-select 1, 'יחיאלי' union all
-select 1, 'באר יעקב' union all
-select 1, 'נוה שלום' union all
-select 1, 'אלרואי' union all
-select 1, 'בית הנוער' union all
-select 1, 'גוש 8007' union all
-select 1, 'מישאל' union all
-select 1, 'חנניה' union all
-select 1, 'כרמלית' union all
-select 1, 'תרפט' union all
-select 1, 'גוש 5007' union all
-select 1, 'המצודה' union all
-select 1, 'עזריה' union all
-select 1, 'צורית' union all
-select 1, 'גוטמאכר' union all
-select 1, 'חוסן' union all
-select 1, 'הרב עוזיאל' union all
-select 1, 'ישיבת וולוז''ין' union all
-select 1, 'אלעזר (רוקח)' union all
-select 1, 'גומא' union all
-select 1, 'גלזנר' union all
-select 1, 'חזון איש' union all
-select 1, 'ברגנר אליזבת' union all
-select 1, 'מאה שערים' union all
-select 1, 'חלץ' union all
-select 1, 'גוש 4007' union all
-select 1, 'ראשונים' union all
-select 1, 'שביל האטד' union all
-select 1, 'הרב טולידנו' union all
-select 1, 'קוסובסקי' union all
-select 1, 'הרב הרצוג' union all
-select 1, 'קויפמן יחזקאל' union all
-select 1, 'לוי יוסף' union all
-select 1, 'שנקר אריה' union all
-select 1, 'גולדמן נחום' union all
-select 1, 'מוזס ולטר' union all
-select 1, 'גולדברג' union all
-select 1, 'טיומקין' union all
-select 1, 'סעדיה גאון' union all
-select 1, 'לויד ג''ורג''' union all
-select 1, 'וילסון' union all
-select 1, 'לינקולן' union all
-select 1, 'כורש' union all
-select 1, 'אוליפנט' union all
-select 1, 'קרית ספר' union all
-select 1, 'עמרם גאון' union all
-select 1, 'קרליבך' union all
-select 1, 'חכמי דוד' union all
-select 1, 'ריב"ל' union all
-select 1, 'שונצינו' union all
-select 1, 'ראם' union all
-select 1, 'תושיה' union all
-select 1, 'חומה ומגדל' union all
-select 1, 'אלישברג' union all
-select 1, 'בית אלפא' union all
-select 1, 'בית עובד' union all
-select 1, 'בן אביגדור' union all
-select 1, 'האחים מסלאויטה' union all
-select 1, 'המלאכה' union all
-select 1, 'המקצוע' union all
-select 1, 'הצפירה' union all
-select 1, 'השפלה' union all
-select 1, 'התעשיה' union all
-select 1, 'יגיע כפיים' union all
-select 1, 'יד חרוצים' union all
-select 1, 'טברסקי' union all
-select 1, 'מיקוניס שמואל' union all
-select 1, 'רבניצקי' union all
-select 1, 'שאר ישוב' union all
-select 1, 'שבח' union all
-select 1, 'שטיבל' union all
-select 1, 'שפרינצק' union all
-select 1, 'לסקוב חיים' union all
-select 1, 'בן אב"י איתמר' union all
-select 1, 'קפלן' union all
-select 1, 'הארבעה' union all
-select 1, 'הפטמן' union all
-select 1, 'עין דור' union all
-select 1, 'פריש דניאל' union all
-select 1, 'שד יהודית' union all
-select 1, 'הנצי"ב' union all
-select 1, 'קארו יוסף' union all
-select 1, 'איסרליש' union all
-select 1, 'ילין מור נתן' union all
-select 1, 'בית הלל' union all
-select 1, 'שץ גגה גרשון' union all
-select 1, 'ב"ק ישראל' union all
-select 1, 'בית שמאי' union all
-select 1, 'המסגר' union all
-select 1, 'דרך בגין' union all
-select 1, 'דרך בגין מנחם' union all
-select 1, 'הרכב' union all
-select 1, 'שפע טל' union all
-select 1, 'ארניה אסוולדו' union all
-select 1, 'גבעון' union all
-select 1, 'צקלג' union all
-select 1, 'נחל איילון' union all
-select 1, 'אלוף מנדלר אברהם' union all
-select 1, 'אלוף מגן קלמן' union all
-select 1, 'רב אלוף דוד אלעזר' union all
-select 1, 'רח 8901' union all
-select 1, 'סטרכילביץ צבי' union all
-select 1, 'רח ה' union all
-select 1, 'מקלף מרדכי' union all
-select 1, 'פועה' union all
-select 1, 'גבעת התחמושת' union all
-select 1, 'רח 1274' union all
-select 1, 'רח 1275' union all
-select 1, 'רח 1276' union all
-select 1, 'רח 1277' union all
-select 1, 'רח 1278' union all
-select 1, 'נתיבי איילון דרום' union all
-select 1, 'נתיבי איילון צפון' union all
-select 1, 'קור פאול' union all
-select 1, 'רח 1243' union all
-select 1, 'רח 1244' union all
-select 1, 'רח ז' union all
-select 1, 'אליפלט' union all
-select 1, 'מעון' union all
-select 1, 'הנגרים' union all
-select 1, 'חצרים' union all
-select 1, 'המחוגה' union all
-select 1, 'המשור' union all
-select 1, 'צריפין' union all
-select 1, 'קומפרט' union all
-select 1, 'אוארבך' union all
-select 1, 'בר הופמן' union all
-select 1, 'שלבים' union all
-select 1, 'וסרמן יעקב' union all
-select 1, 'פראנצויז' union all
-select 1, 'רח 294' union all
-select 1, 'רח 305' union all
-select 1, 'רוחמה' union all
-select 1, 'נחמה' union all
-select 1, 'ניצנה' union all
-select 1, 'סגולה' union all
-select 1, 'שד ירושלים' union all
-select 1, 'בת עמי' union all
-select 1, 'פוריה' union all
-select 1, 'תרצה' union all
-select 1, 'דיצה' union all
-select 1, 'אפ"ק' union all
-select 1, 'הרבי מבכרך' union all
-select 1, 'רח 6193' union all
-select 1, 'עציון גבר' union all
-select 1, 'רח 3312' union all
-select 1, 'רח 7193' union all
-select 1, 'רבנו חננאל' union all
-select 1, 'אבולעפיה' union all
-select 1, 'הש"ך' union all
-select 1, 'אלפסי' union all
-select 1, 'רח 3093' union all
-select 1, 'רח 5093' union all
-select 1, 'שארית ישראל' union all
-select 1, 'התקומה' union all
-select 1, 'התחיה' union all
-select 1, 'רח 375' union all
-select 1, 'היתד' union all
-select 1, 'רח 973' union all
-select 1, 'חזק' union all
-select 1, 'אומץ' union all
-select 1, 'שמעון הצדיק' union all
-select 1, 'שמעיה' union all
-select 1, 'אלעזר בן עזריה' union all
-select 1, 'שמעון בן זומא' union all
-select 1, 'שמעון בן עזאי' union all
-select 1, 'בן גמליאל' union all
-select 1, 'בני בתירא' union all
-select 1, 'אליעזר בן הורקנוס' union all
-select 1, 'חנינא בן תרדיון' union all
-select 1, 'אלעזר בן צדוק' union all
-select 1, 'רזיאל' union all
-select 1, 'הדואר' union all
-select 1, 'בן שטח שמעון' union all
-select 1, 'רח 3321' union all
-select 1, 'הגמנסיה העברית' union all
-select 1, 'המלך חירם' union all
-select 1, 'רח 543' union all
-select 1, 'רח 8333' union all
-select 1, 'רוסלאן' union all
-select 1, 'רטוש יונתן' union all
-select 1, 'רח 282' union all
-select 1, 'רח 8823' union all
-select 1, 'פנחס בן יאיר' union all
-select 1, 'בית אשל' union all
-select 1, 'אבטליון' union all
-select 1, 'אלעזר בן יוסי' union all
-select 1, 'חנינא בן דוסא' union all
-select 1, 'רח 3350' union all
-select 1, 'יועזר איש הבירה' union all
-select 1, 'שניצלר' union all
-select 1, 'ליענר שלמה' union all
-select 1, 'המנוע' union all
-select 1, 'הפלך' union all
-select 1, 'הכישור' union all
-select 1, 'הזרם' union all
-select 1, 'היסוד' union all
-select 1, 'רח 7103' union all
-select 1, 'רח 3018' union all
-select 1, 'רח 3019' union all
-select 1, 'רח 1203' union all
-select 1, 'רח 3233' union all
-select 1, 'רח 6333' union all
-select 1, 'רח 1533' union all
-select 1, 'רח 2673' union all
-select 1, 'רח 9262' union all
-select 1, 'רח 3361' union all
-select 1, 'סגל צבי הרמן' union all
-select 1, 'רח 382' union all
-select 1, 'רח 1433' union all
-select 1, 'סוגיהרה סמפו' union all
-select 1, 'רח 0233' union all
-select 1, 'סמטת הש"ך' union all
-select 1, 'מרזוק ועזר' union all
-select 1, 'רח 5393' union all
-select 1, 'רח 4393' union all
-select 1, 'רח 2393' union all
-select 1, 'מפרץ שלמה' union all
-select 1, 'הפנינים' union all
-select 1, 'רח 7093' union all
-select 1, 'רח 3028' union all
-select 1, 'שמעון הבורסקי' union all
-select 1, 'רח 1393' union all
-select 1, 'העליה השניה' union all
-select 1, 'שפתי ישנים' union all
-select 1, 'רח 4293' union all
-select 1, 'גוש 9107' union all
-select 1, 'גוש 0407' union all
-select 1, 'פסטר' union all
-select 1, 'אבן סינא' union all
-select 1, 'האגוז' union all
-select 1, 'אחילוף' union all
-select 1, 'שמואל בן עדיה' union all
-select 1, 'אמונים' union all
-select 1, 'אבן רשד' union all
-select 1, 'הצרי' union all
-select 1, 'בית רעים' union all
-select 1, 'שריד' union all
-select 1, 'הערמון' union all
-select 1, 'רח 9293' union all
-select 1, 'סייפן' union all
-select 1, 'החרוב' union all
-select 1, 'תות' union all
-select 1, 'חייבי משה' union all
-select 1, 'דודאים' union all
-select 1, 'צנובר' union all
-select 1, 'נסאר ג''ורג''' union all
-select 1, 'רח 5293' union all
-select 1, 'סלסלה' union all
-select 1, 'בן אחיטוב' union all
-select 1, 'תפוח' union all
-select 1, 'דוד הראובני' union all
-select 1, 'לונדון בצלאל' union all
-select 1, 'רח 3094' union all
-select 1, 'תמריר' union all
-select 1, 'זהבי דוד' union all
-select 1, 'רח 3083' union all
-select 1, 'ההגה' union all
-select 1, 'אלביטר עבדאלראוף' union all
-select 1, 'רח 6293' union all
-select 1, 'רח 1373' union all
-select 1, 'רח 3733' union all
-select 1, 'גרוסמן חייקה' union all
-select 1, 'ויינר זאב' union all
-select 1, 'התעודה האדומה' union all
-select 1, 'רח 2373' union all
-select 1, 'רח 0393' union all
-select 1, 'רח 6303' union all
-select 1, 'רח 0403' union all
-select 1, 'הצדף' union all
-select 1, 'השחף' union all
-select 1, 'הדולפין' union all
-select 1, 'העוגן' union all
-select 1, 'רח 0473' union all
-select 1, 'שערי ניקנור' union all
-select 1, 'רח 8293' union all
-select 1, 'נמל יפו' union all
-select 1, 'המלחים' union all
-select 1, 'קדם' union all
-select 1, 'הספינה' union all
-select 1, 'רב החובל' union all
-select 1, 'התורן' union all
-select 1, 'המשוט' union all
-select 1, 'המפרש' union all
-select 1, 'הקברניט' union all
-select 1, 'רח 2473' union all
-select 1, 'רח 2013' union all
-select 1, 'רח 103' union all
-select 1, 'רח 3750' union all
-select 1, 'הדגה' union all
-select 1, 'רח 7293' union all
-select 1, 'צופית' union all
-select 1, 'רח 101' union all
-select 1, 'רח 153' union all
-select 1, 'רח 157' union all
-select 1, 'מכמורת' union all
-select 1, 'הדייגים' union all
-select 1, 'רח 131' union all
-select 1, 'זיקים' union all
-select 1, 'רח 251' union all
-select 1, 'רח 561' union all
-select 1, 'רח 551' union all
-select 1, 'מכלל יופי' union all
-select 1, 'מד אנדרומדה' union all
-select 1, 'אזוב' union all
-select 1, 'פייר מנדס פרנס' union all
-select 1, 'שטרנהרץ' union all
-select 1, 'המגיד מדובנא' union all
-select 1, 'רח 3172' union all
-select 1, 'דונולו הרופא' union all
-select 1, 'שביב' union all
-select 1, 'נבטים' union all
-select 1, 'געש' union all
-select 1, 'הסנה' union all
-select 1, 'בצרה' union all
-select 1, 'החטה' union all
-select 1, 'הלוטוס' union all
-select 1, 'השקמה' union all
-select 1, 'הקיקיון' union all
-select 1, 'עגור' union all
-select 1, 'דישון' union all
-select 1, 'ולנסיה' union all
-select 1, 'מענית' union all
-select 1, 'שלוחות' union all
-select 1, 'הלענה' union all
-select 1, 'רח 3144' union all
-select 1, 'האשכולית' union all
-select 1, 'עולש' union all
-select 1, 'לוזים' union all
-select 1, 'רח 3136' union all
-select 1, 'רח 3142' union all
-select 1, 'הלימון' union all
-select 1, 'יסעור' union all
-select 1, 'השעורה' union all
-select 1, 'השיפון' union all
-select 1, 'טולוז' union all
-select 1, 'בית פלט' union all
-select 1, 'האלומה' union all
-select 1, 'רח 3178' union all
-select 1, 'השיבולת' union all
-select 1, 'רח 331' union all
-select 1, 'ים סוף' union all
-select 1, 'אסף הרופא' union all
-select 1, 'מנוחה' union all
-select 1, 'בת גלים' union all
-select 1, 'המרפא' union all
-select 1, 'הנופש' union all
-select 1, 'קורצ''אק יאנוש' union all
-select 1, 'שתי האחיות' union all
-select 1, 'רח 1913' union all
-select 1, 'האתרוג' union all
-select 1, 'ההדס' union all
-select 1, 'רח 6093' union all
-select 1, 'רח 3175' union all
-select 1, 'הערבה' union all
-select 1, 'רח 6573' union all
-select 1, 'רח 3180' union all
-select 1, 'רח 3201' union all
-select 1, 'רח 3179' union all
-select 1, 'רח 7393' union all
-select 1, 'רח 291' union all
-select 1, 'קדרון' union all
-select 1, 'מרגוע' union all
-select 1, 'רח 3913' union all
-select 1, 'רח 1613' union all
-select 1, 'מנדלשטם אוסיפ' union all
-select 1, 'בת ים' union all
-select 1, 'רח 3195' union all
-select 1, 'יטבת' union all
-select 1, 'זכרון קדושים' union all
-select 1, 'רח 002' union all
-select 1, 'רח 3198' union all
-select 1, 'שם הגדולים' union all
-select 1, 'פחד יצחק' union all
-select 1, 'רח 5573' union all
-select 1, 'רח 3416' union all
-select 1, 'רח 1303' union all
-select 1, 'רח 701' union all
-select 1, 'נתיב המזלות' union all
-select 1, 'מזל בתולה' union all
-select 1, 'מזל מאזנים' union all
-select 1, 'מזל עקרב' union all
-select 1, 'מזל קשת' union all
-select 1, 'מזל סרטן' union all
-select 1, 'מזל דגים' union all
-select 1, 'מזל טלה' union all
-select 1, 'מזל דלי' union all
-select 1, 'מזל גדי' union all
-select 1, 'מזל אריה' union all
-select 1, 'מזל שור' union all
-select 1, 'מזל תאומים' union all
-select 1, 'המגדלור' union all
-select 1, 'החלפנים' union all
-select 1, 'רח 3887' union all
-select 1, 'רח 6883' union all
-select 1, 'רח 5883' union all
-select 1, 'רח 1473' union all
-select 1, 'רח 3888' union all
-select 1, 'רח 4313' union all
-select 1, 'רח 3889' union all
-select 1, 'רח 4573' union all
-select 1, 'רח 3890' union all
-select 1, 'חריף אייזיק' union all
-select 1, 'הצורפים' union all
-select 1, 'שגב' union all
-select 1, 'רח 1983' union all
-select 1, 'רח 2983' union all
-select 1, 'רח 4143' union all
-select 1, 'רח 3413' union all
-select 1, 'רח 2143' union all
-select 1, 'אריסטו' union all
-select 1, 'טימן יעקב' union all
-select 1, 'רח 3408' union all
-select 1, 'רח א סחנה ג' union all
-select 1, 'רח 3383' union all
-select 1, 'הגבול' union all
-select 1, 'הולצברג שמחה' union all
-select 1, 'רח ח סחנה ג' union all
-select 1, 'אפלטון' union all
-select 1, 'סוקרטס' union all
-select 1, 'גוש 8407' union all
-select 1, 'רח 3983' union all
-select 1, 'רח 4983' union all
-select 1, 'רח 4883' union all
-select 1, 'רח 304' union all
-select 1, 'רח 204' union all
-select 1, 'רח 104' union all
-select 1, 'רח 5043' union all
-select 1, 'רח 3407' union all
-select 1, 'רח יא סחנה ג' union all
-select 1, 'רח יב סחנה ג' union all
-select 1, 'רח ב סחנה ג' union all
-select 1, 'רח ד סחנה ג' union all
-select 1, 'עבודת ישראל' union all
-select 1, 'מדרש פנחס' union all
-select 1, 'מאור עינים' union all
-select 1, 'שד חב"ד' union all
-select 1, 'הרבי מפשיסחא' union all
-select 1, 'רח 832' union all
-select 1, 'שד הבאש"ט' union all
-select 1, 'שד הבעש"ט' union all
-select 1, 'דב ממזריץ' union all
-select 1, 'אוהב ישראל' union all
-select 1, 'ישראל מריז''ין' union all
-select 1, 'נחמן מברסלב' union all
-select 1, 'כ"ץ יעקב יוסף' union all
-select 1, 'הסבא משפולה' union all
-select 1, 'בת עין' union all
-select 1, 'הרבי מלילוב' union all
-select 1, 'הרבי מויטבסק' union all
-select 1, 'הרבי מקוצק' union all
-select 1, 'הרבי מקרלין' union all
-select 1, 'חידושי הרי"ם' union all
-select 1, 'ציהתל"י' union all
-select 1, 'צהלון הרופא' union all
-select 1, 'שמואל ירחינאי' union all
-select 1, 'ישראלי יצחק' union all
-select 1, 'טוביה הרופא' union all
-select 1, 'דה פיליפ אדיס' union all
-select 1, 'רח 211' union all
-select 1, 'ליב בן שרה' union all
-select 1, 'פנץ נתן' union all
-select 1, 'רח'' 3214' union all
-select 1, 'שויצר דוביד' union all
-select 1, 'הרבי מקוטוב' union all
-select 1, 'מעפילי סלואדור' union all
-select 1, 'ארליך' union all
-select 1, 'עבד אל גני' union all
-select 1, 'עבד אל-גני' union all
-select 1, 'רח'' 57' union all
-select 1, 'תג''ר ציונה' union all
-select 1, 'רח 3737' union all
-select 1, 'פסטלוצי' union all
-select 1, 'ולבה יואל' union all
-select 1, 'רח 3738' union all
-select 1, 'רח 3739' union all
-select 1, 'מיכאל אנג''לו' union all
-select 1, 'דאנטה' union all
-select 1, 'ויקטור הוגו' union all
-select 1, 'ראסין ז''אן' union all
-select 1, 'פושקין' union all
-select 1, 'גורקי' union all
-select 1, 'אוז''שקובה' union all
-select 1, 'רומן רולן' union all
-select 1, 'עולי ציון' union all
-select 1, 'נועם' union all
-select 1, 'ריש גלותא' union all
-select 1, 'בעלי התוספות' union all
-select 1, 'שבטי ישראל' union all
-select 1, 'רב האי גאון' union all
-select 1, 'ארדון מרדכי' union all
-select 1, 'רח 3048' union all
-select 1, 'יהודה הימית' union all
-select 1, 'רח 3335' union all
-select 1, 'דרור' union all
-select 1, 'בעל הטורים' union all
-select 1, 'מגן אברהם' union all
-select 1, 'אבן שושן אברהם' union all
-select 1, 'דואר שושנה' union all
-select 1, 'רח 3053' union all
-select 1, 'יהודה מרגוזה' union all
-select 1, 'יפת' union all
-select 1, 'אביצור שמואל' union all
-select 1, 'ספיר ברוך' union all
-select 1, 'רבי חנינא' union all
-select 1, 'הגיחון' union all
-select 1, 'רבי פנחס' union all
-select 1, 'עמיעד' union all
-select 1, 'רבי נחמן' union all
-select 1, 'רבי יוחנן' union all
-select 1, 'רחבת אבוטבול יעקב' union all
-select 1, 'יהושע בן פרחיה' union all
-select 1, 'יוסי בן יוסי' union all
-select 1, 'רבי אדא' union all
-select 1, 'רבי תנחום' union all
-select 1, 'רבי אחא' union all
-select 1, 'קהילת אוסטרליה' union all
-select 1, 'רח מו סחנה ג' union all
-select 1, 'רח ג סחנה ג' union all
-select 1, 'רח ה סחנה ג' union all
-select 1, 'רח 1603' union all
-select 1, 'מחנה אריאל' union all
-select 1, 'מייזל זלמן' union all
-select 1, 'רח 3055' union all
-select 1, 'קיוסו אלברט' union all
-select 1, 'סהרון' union all
-select 1, 'פיקוס' union all
-select 1, 'עירית' union all
-select 1, 'הרב הלר חיים' union all
-select 1, 'אבינרי יצחק' union all
-select 1, '3933' union all
-select 1, 'רובינשטיין יצחק' union all
-select 1, 'רובינשטין' union all
-select 1, 'רח 6043' union all
-select 1, 'קרוא ברוך' union all
-select 1, 'רח 3824' union all
-select 1, 'רח 3404' union all
-select 1, 'רח 0193' union all
-select 1, 'רח 4193' union all
-select 1, 'רח 5193' union all
-select 1, 'רח 2193' union all
-select 1, 'רח 3193' union all
-select 1, 'באר שבע' union all
-select 1, 'סמ באר שבע' union all
-select 1, 'רח 324' union all
-select 1, 'רח 222' union all
-select 1, 'מדרש תנחומא' union all
-select 1, 'נחל הבשור' union all
-select 1, 'קדימה' union all
-select 1, 'קוץ'' אדוארד' union all
-select 1, 'רח 3241' union all
-select 1, 'נחל עוז' union all
-select 1, 'איסקוב נסים' union all
-select 1, 'רח 3226' union all
-select 1, 'גר צדק' union all
-select 1, 'וכטנגוב' union all
-select 1, 'חסידי האומות' union all
-select 1, 'עזה' union all
-select 1, 'מיצקביץ אדם' union all
-select 1, 'אנדרוס' union all
-select 1, 'רוזנבלט צבי' union all
-select 1, 'רח 2996' union all
-select 1, 'רח 381' union all
-select 1, 'נס לגויים' union all
-select 1, 'עדולם' union all
-select 1, 'היינה' union all
-select 1, 'חבר הלאומים' union all
-select 1, 'שרירא גאון' union all
-select 1, 'למרטין' union all
-select 1, 'רח 3071' union all
-select 1, 'הלוי משה' union all
-select 1, 'רח 3070' union all
-select 1, 'דברי חיים' union all
-select 1, 'אור החיים' union all
-select 1, 'רבנו ירוחם' union all
-select 1, 'רח 742' union all
-select 1, 'סמ שרירא' union all
-select 1, 'אשדוד' union all
-select 1, 'דרך יגאל ידין' union all
-select 1, 'רח 3382' union all
-select 1, 'רח 1493' union all
-select 1, 'רח 6833' union all
-select 1, 'תל גבורים' union all
-select 1, 'בית עולים שמעון' union all
-select 1, 'רח 3389' union all
-select 1, 'רח 3387' union all
-select 1, 'גוש 3996' union all
-select 1, 'רח 152א' union all
-select 1, 'רח 2933' union all
-select 1, 'רח 3393' union all
-select 1, 'נחל שורק' union all
-select 1, 'הכוזרי' union all
-select 1, 'הגבורים' union all
-select 1, 'ארבר מנחם' union all
-select 1, 'נוזהה' union all
-select 1, 'רח 1343' union all
-select 1, 'רח 3812' union all
-select 1, 'פעמונית' union all
-select 1, 'קהילת קנדה' union all
-select 1, 'החלוצים' union all
-select 1, 'זבולון' union all
-select 1, 'השוק' union all
-select 1, 'השוק סמ' union all
-select 1, 'מרחביה' union all
-select 1, 'המשביר' union all
-select 1, 'מרכלת' union all
-select 1, 'רענן' union all
-select 1, 'מזרחי' union all
-select 1, 'הקישון' union all
-select 1, 'כפר גלעדי' union all
-select 1, 'גבולות' union all
-select 1, 'אברבנאל' union all
-select 1, 'הרא"ש' union all
-select 1, 'הרצל' union all
-select 1, 'העליה' union all
-select 1, 'סמ העליה' union all
-select 1, 'פלורנטין' union all
-select 1, 'גנני' union all
-select 1, 'אוריאל אקוסטה' union all
-select 1, 'מסילת וולפסון' union all
-select 1, 'מסילת וולפסן' union all
-select 1, 'שד ושינגטון' union all
-select 1, 'ויטל חיים' union all
-select 1, 'קורדובירו' union all
-select 1, 'בנבנישתי' union all
-select 1, 'בן עטר' union all
-select 1, 'צ''לנוב' union all
-select 1, 'פרץ י ל' union all
-select 1, 'חזנוביץ' union all
-select 1, 'מסילת העולים' union all
-select 1, 'מולדת' union all
-select 1, 'הרב פרנקל' union all
-select 1, 'אלוף בצלות' union all
-select 1, 'בני ברק' union all
-select 1, 'הגר"א' union all
-select 1, 'ארלנג''ר' union all
-select 1, 'פין' union all
-select 1, 'סלומון' union all
-select 1, 'הנגב' union all
-select 1, 'השרון' union all
-select 1, 'הגליל' union all
-select 1, 'השומרון' union all
-select 1, 'ראש פינה' union all
-select 1, 'החרש' union all
-select 1, 'מירון' union all
-select 1, 'עין הקורא' union all
-select 1, 'איילת השחר' union all
-select 1, 'איגר עקיבא' union all
-select 1, 'יסוד המעלה' union all
-select 1, 'ראשון לציון' union all
-select 1, 'רח 2' union all
-select 1, 'הגדוד העברי' union all
-select 1, 'נוה שאנן' union all
-select 1, 'וולפסון' union all
-select 1, 'רח 3183' union all
-select 1, 'שטרן' union all
-select 1, 'שביל עכו' union all
-select 1, 'רח 3362' union all
-select 1, 'סג''רה' union all
-select 1, 'אהלי יעקב' union all
-select 1, 'בכורי ציון' union all
-select 1, 'שוקן' union all
-select 1, 'רח 6243' union all
-select 1, 'תחנה מרכזית' union all
-select 1, 'לודויפול' union all
-select 1, 'גולומב' union all
-select 1, 'רח א מכבי חדשה' union all
-select 1, 'רח ב מכבי חדשה' union all
-select 1, 'רח ג מכבי חדשה' union all
-select 1, 'ישראל מסלנט' union all
-select 1, 'לבנדה' union all
-select 1, 'קנטור' union all
-select 1, 'דרך קיבוץ גלויות' union all
-select 1, 'כרם חמד' union all
-select 1, 'שטינברג' union all
-select 1, 'השילוח' union all
-select 1, 'האסיף' union all
-select 1, 'כוכבי יצחק' union all
-select 1, 'פרי עץ חיים' union all
-select 1, 'ענתבי' union all
-select 1, 'סמ ענתבי' union all
-select 1, 'צמח דוד' union all
-select 1, 'רח 3677' union all
-select 1, 'תחנה מרכזית החדשה' union all
-select 1, 'עמיר' union all
-select 1, 'שד השלכת' union all
-select 1, 'מנשה בן ישראל' union all
-select 1, 'שיבת ציון' union all
-select 1, 'בית קציר' union all
-select 1, 'הקונגרס' union all
-select 1, 'מטלון' union all
-select 1, 'לוינסקי' union all
-select 1, 'בית גוברין' union all
-select 1, 'יון מצולה' union all
-select 1, 'הראב"ע' union all
-select 1, 'חובות הלבבות' union all
-select 1, 'סמ עובד' union all
-select 1, 'בן אשר' union all
-select 1, 'מלבי"ם' union all
-select 1, 'חיוג יהודה' union all
-select 1, 'ידעיה הפניני' union all
-select 1, 'רויגו אברהם' union all
-select 1, 'פלקירה' union all
-select 1, 'לצרוס משה' union all
-select 1, 'מקור חיים' union all
-select 1, 'בעל העקידה' union all
-select 1, 'רלב"ג' union all
-select 1, 'יש"ר מקנדיא' union all
-select 1, 'התיבונים' union all
-select 1, 'גבעת בן יהודה' union all
-select 1, 'טורי זהב' union all
-select 1, 'קרשקש חסדאי' union all
-select 1, 'אבודרהם' union all
-select 1, 'שח"ל' union all
-select 1, 'דה מודינה אריה' union all
-select 1, 'ראב"ד' union all
-select 1, 'סמ ראב"ד' union all
-select 1, 'סמ רבי פוזילוב' union all
-select 1, 'מורה נבוכים' union all
-select 1, 'לסקר' union all
-select 1, 'שיפר' union all
-select 1, 'מסילת ישרים' union all
-select 1, 'רבי מאיר בעל הנס' union all
-select 1, 'מימון שלמה' union all
-select 1, 'שד חכמי ישראל' union all
-select 1, 'חכמי לובלין' union all
-select 1, 'מהרש"א' union all
-select 1, 'בית חדש' union all
-select 1, 'חכמי אתונה' union all
-select 1, 'מאור הגולה' union all
-select 1, 'בלבן מאיר' union all
-select 1, 'שד הר ציון' union all
-select 1, 'סמ הר ציון' union all
-select 1, 'בר יוחאי' union all
-select 1, 'סמ בר יוחאי' union all
-select 1, 'העמל' union all
-select 1, 'המנור' union all
-select 1, 'הסדנה' union all
-select 1, 'דרך שלמה' union all
-select 1, 'ראשית חכמה' union all
-select 1, 'שערי תשובה' union all
-select 1, 'אליקום' union all
-select 1, 'סמ ראשית חכמה' union all
-select 1, 'חזקיהו המלך' union all
-select 1, 'גוש 2607' union all
-select 1, 'גוש 9696' union all
-select 1, 'גוש 3607' union all
-select 1, 'רח 3377' union all
-select 1, 'רח 8393' union all
-select 1, 'רח 3833' union all
-select 1, 'עמיקם' union all
-select 1, 'אסירי ציון' union all
-select 1, 'נס הרים' union all
-select 1, 'הקנאים' union all
-select 1, 'תרפ"א' union all
-select 1, 'מבקיעים' union all
-select 1, 'גבעת כ"ח' union all
-select 1, 'ניל"י' union all
-select 1, 'סמ חכמי ישראל' union all
-select 1, 'שלושת החיצים' union all
-select 1, 'המבצעים' union all
-select 1, 'הקלעים' union all
-select 1, 'השיירות' union all
-select 1, 'המשלטים' union all
-select 1, 'השופר' union all
-select 1, 'החצוצרה' union all
-select 1, 'הקשת' union all
-select 1, 'המצפן' union all
-select 1, 'המגן' union all
-select 1, 'הלפיד' union all
-select 1, 'דרך בן צבי' union all
-select 1, 'רח 6483' union all
-select 1, 'החרמש' union all
-select 1, 'הדגל' union all
-select 1, 'בורמה' union all
-select 1, 'הקרן' union all
-select 1, 'שד הותיקים' union all
-select 1, 'די רוסי' union all
-select 1, 'מאירבר' union all
-select 1, 'הזמיר' union all
-select 1, 'גוז''קוב' union all
-select 1, 'העוגב' union all
-select 1, 'גלאנץ לייב' union all
-select 1, 'הכינור' union all
-select 1, 'גורי ישראל' union all
-select 1, 'אחרון יוסף' union all
-select 1, 'מינקובסקי' union all
-select 1, 'זולצר' union all
-select 1, 'קפלנסקי' union all
-select 1, 'בוסל' union all
-select 1, 'רינגלבלום' union all
-select 1, 'שילר' union all
-select 1, 'לבנדובסקי' union all
-select 1, 'אנסקי' union all
-select 1, 'צונזר' union all
-select 1, 'היהודי זיס' union all
-select 1, 'זיגלבוים' union all
-select 1, 'ורשבסקי' union all
-select 1, 'גולדפאדן' union all
-select 1, 'השרביט' union all
-select 1, 'דיק' union all
-select 1, 'דשבסקי' union all
-select 1, 'לקרט' union all
-select 1, 'דריפוס' union all
-select 1, 'זייד אלכסנדר' union all
-select 1, 'אז"ר' union all
-select 1, 'אופטושו יוסף' union all
-select 1, 'קמינסקה' union all
-select 1, 'החזיון' union all
-select 1, 'רח 3785' union all
-select 1, 'הירשביין' union all
-select 1, 'שפיר קליין' union all
-select 1, 'רח 3873' union all
-select 1, 'בית יצקר' union all
-select 1, 'הפטיש' union all
-select 1, 'התנופה' union all
-select 1, 'המפעל' union all
-select 1, 'שביל המרץ' union all
-select 1, 'משגב עם' union all
-select 1, 'חיל השריון' union all
-select 1, 'גרינבוים' union all
-select 1, 'ליוויק' union all
-select 1, 'סמ אסירי ציון' union all
-select 1, 'גיתית' union all
-select 1, 'רח 3628' union all
-select 1, 'רח 9263' union all
-select 1, 'רח 4873' union all
-select 1, 'עלית הנוער' union all
-select 1, 'נהלל' union all
-select 1, 'ערבי נחל' union all
-select 1, 'זימן' union all
-select 1, 'ברוריה' union all
-select 1, 'עמק ברכה' union all
-select 1, 'יקנעם' union all
-select 1, 'מעבר יבוק' union all
-select 1, 'נחלת יצחק' union all
-select 1, 'פרי מגדים' union all
-select 1, 'פרחי אביב' union all
-select 1, 'חפץ חיים' union all
-select 1, 'אבני זכרון' union all
-select 1, 'בן שמן' union all
-select 1, 'גינוסר' union all
-select 1, 'שביל החלב' union all
-select 1, 'חיי אדם' union all
-select 1, 'טירת צבי' union all
-select 1, 'ילקוט הרועים' union all
-select 1, 'מנורת המאור' union all
-select 1, 'גלוסקא זכריה' union all
-select 1, 'תוצרת הארץ' union all
-select 1, 'אלון יגאל' union all
-select 1, 'הסוללים' union all
-select 1, 'ינון' union all
-select 1, 'תובל' union all
-select 1, 'הרקפת' union all
-select 1, 'הפרגים' union all
-select 1, 'הצבר' union all
-select 1, 'הכלנית' union all
-select 1, 'פליטי הספר' union all
-select 1, 'הניצנים' union all
-select 1, 'דם המכבים' union all
-select 1, 'דרך דיין משה' union all
-select 1, 'זכריני' union all
-select 1, 'הצלף' union all
-select 1, 'ניר עם' union all
-select 1, 'היסמין' union all
-select 1, 'הצפורן' union all
-select 1, 'החרצית' union all
-select 1, 'הדמומית' union all
-select 1, 'החצב' union all
-select 1, 'האספרגוס' union all
-select 1, 'דרך הגבורה' union all
-select 1, 'יפרח' union all
-select 1, 'יניב' union all
-select 1, 'ביצרון' union all
-select 1, 'בצרון' union all
-select 1, 'שד ההשכלה' union all
-select 1, 'בן זאב' union all
-select 1, 'גינצבורג' union all
-select 1, 'ארטר יצחק' union all
-select 1, 'גוטלובר' union all
-select 1, 'שולמן' union all
-select 1, 'צויפל' union all
-select 1, 'סלונימסקי' union all
-select 1, 'רובין שלמה' union all
-select 1, 'מנדלקרן' union all
-select 1, 'בן יעקב' union all
-select 1, 'טביוב' union all
-select 1, 'עמינדב' union all
-select 1, 'יצחק שדה' union all
-select 1, 'עין זיתים' union all
-select 1, 'פאת השולחן' union all
-select 1, 'מיטב' union all
-select 1, 'וולמן יהודה' union all
-select 1, 'בוקסנבאום יוסף' union all
-select 1, 'הנרקיס' union all
-select 1, 'רח 1135' union all
-select 1, 'בנימיני אהרון' union all
-select 1, 'סוסליק אריה' union all
-select 1, 'מוזס יהודה ונח' union all
-select 1, 'גובר רבקה' union all
-select 1, 'לילי מנחם' union all
-select 1, 'האומנים' union all
-select 1, 'רח 5031' union all
-select 1, 'רח 6031' union all
-select 1, 'דרך הטייסים' union all
-select 1, 'עמישב' union all
-select 1, 'גונן' union all
-select 1, 'דרך השלום' union all
-select 1, 'אשרמן יוסף' union all
-select 1, 'החבצלת' union all
-select 1, 'הצבי' union all
-select 1, 'עודד' union all
-select 1, 'רח סו כ שלם' union all
-select 1, 'רח סה כ שלם' union all
-select 1, 'רח ד כפר שלם' union all
-select 1, 'יפתח' union all
-select 1, 'מלילות' union all
-select 1, 'מסלול' union all
-select 1, 'תעוז' union all
-select 1, 'פרזון' union all
-select 1, 'דימונה' union all
-select 1, 'תמנע' union all
-select 1, 'הרודיון' union all
-select 1, 'טור מלכא' union all
-select 1, 'נשרי צבי' union all
-select 1, 'נגבה' union all
-select 1, 'עין גב' union all
-select 1, 'בית אורן' union all
-select 1, 'מונאש' union all
-select 1, 'קיש' union all
-select 1, 'עיינות' union all
-select 1, 'שפירא ישראל' union all
-select 1, 'ברגי בנימין' union all
-select 1, 'סמ איתן' union all
-select 1, 'אריאל' union all
-select 1, 'גבעתי' union all
-select 1, 'בן חיל' union all
-select 1, 'אלוף' union all
-select 1, 'בית קשת' union all
-select 1, 'מקראי קדש' union all
-select 1, 'יגור' union all
-select 1, 'מצודת בית"ר' union all
-select 1, 'וינגייט' union all
-select 1, 'הפורצים' union all
-select 1, 'שער הגיא' union all
-select 1, 'שד יד לבנים' union all
-select 1, 'לוחמי גליפולי' union all
-select 1, 'הפלמ"ח' union all
-select 1, 'בת ציון' union all
-select 1, 'הגבור האלמוני' union all
-select 1, 'עמק איילון' union all
-select 1, 'לה גארדיה' union all
-select 1, 'מרגולין' union all
-select 1, 'אנילביץ מרדכי' union all
-select 1, 'סטרומה' union all
-select 1, 'מורדי הגטאות' union all
-select 1, 'בית ירח' union all
-select 1, 'סנש חנה' union all
-select 1, 'רייק חביבה' union all
-select 1, 'שד המעפילים' union all
-select 1, 'החותרים' union all
-select 1, 'דרך ההגנה' union all
-select 1, 'גוש עציון' union all
-select 1, 'יציאת אירופה' union all
-select 1, 'רייס רפאל' union all
-select 1, 'סירני חיים' union all
-select 1, 'הפרטיזן היהודי' union all
-select 1, 'אני מאמין' union all
-select 1, 'שד החי"ל' union all
-select 1, 'פטרסון' union all
-select 1, 'ווג''ווד' union all
-select 1, 'התשעים ושלוש' union all
-select 1, 'חניתה' union all
-select 1, 'חרוץ' union all
-select 1, 'נירים' union all
-select 1, 'פטריה' union all
-select 1, 'קיסריה' union all
-select 1, 'השלושה' union all
-select 1, 'המאבק' union all
-select 1, 'המערכה' union all
-select 1, 'הגייסות' union all
-select 1, 'הסיירים' union all
-select 1, 'ברנפלד שמעון' union all
-select 1, 'בובר שלמה' union all
-select 1, 'באכר זאב' union all
-select 1, 'הרב רייפמן' union all
-select 1, 'הורודצקי' union all
-select 1, 'הרכבי אברהם' union all
-select 1, 'שטינשנידר' union all
-select 1, 'פוזננסקי שמואל' union all
-select 1, 'דוידקה' union all
-select 1, 'טשרנא' union all
-select 1, 'שביל מרדכי' union all
-select 1, 'קלמר משה' union all
-select 1, 'רח 4206' union all
-select 1, 'משעול שירה' union all
-select 1, 'סמטת נטע' union all
-select 1, 'רח 7083' union all
-select 1, 'רחבת מרטון ארנסט' union all
-select 1, 'רח 0131' union all
-select 1, 'עוזר' union all
-select 1, 'נוריאל' union all
-select 1, 'סימן טוב' union all
-select 1, 'הודיה' union all
-select 1, 'חפר' union all
-select 1, 'זרח' union all
-select 1, 'עבאס אברהם' union all
-select 1, 'ברכיה' union all
-select 1, 'ורדיאל' union all
-select 1, 'דעואל' union all
-select 1, 'דורון' union all
-select 1, 'היימן' union all
-select 1, 'גדליה' union all
-select 1, 'האגמון' union all
-select 1, 'בלשן' union all
-select 1, 'הברוש' union all
-select 1, 'האקליפטוס' union all
-select 1, 'קהילת ניו יורק' union all
-select 1, 'השיטה' union all
-select 1, 'קהילת מכסיקו' union all
-select 1, 'סמ מסילה א' union all
-select 1, 'סמ מסילה ב' union all
-select 1, 'יחיעם' union all
-select 1, 'ותיק' union all
-select 1, 'ורד' union all
-select 1, 'רשף' union all
-select 1, 'מושיע' union all
-select 1, 'יזהר' union all
-select 1, 'אחיעזר' union all
-select 1, 'שלמון' union all
-select 1, 'אצ"ל' union all
-select 1, 'השכל' union all
-select 1, 'הונא' union all
-select 1, 'לפידות' union all
-select 1, 'לבלוב' union all
-select 1, 'ישרש' union all
-select 1, 'אביטל' union all
-select 1, 'וילון' union all
-select 1, 'בן חסד' union all
-select 1, 'שבתאי' union all
-select 1, 'קלמן' union all
-select 1, 'עברי' union all
-select 1, 'אביאסף' union all
-select 1, 'הרן' union all
-select 1, 'בועז' union all
-select 1, 'כצנלסון בת שבע' union all
-select 1, 'נדב' union all
-select 1, 'רזי' union all
-select 1, 'נעמן' union all
-select 1, 'זבד' union all
-select 1, 'אבימלך' union all
-select 1, 'ביתוס' union all
-select 1, 'קרייתי' union all
-select 1, 'רח 3031' union all
-select 1, 'רשפים' union all
-select 1, 'רח צ' union all
-select 1, 'רח פז' union all
-select 1, 'רח פה' union all
-select 1, 'רח פג' union all
-select 1, 'רח פד' union all
-select 1, 'איתיאל' union all
-select 1, 'רח פ' union all
-select 1, 'אחימעץ' union all
-select 1, 'אביתר' union all
-select 1, 'דרך בר לב חיים' union all
-select 1, 'דרך בר-לב חיים' union all
-select 1, 'פלוגות' union all
-select 1, 'סמ מעוז' union all
-select 1, 'יונדב' union all
-select 1, 'צלופחד' union all
-select 1, 'תרדיון' union all
-select 1, 'תשבי' union all
-select 1, 'ששון' union all
-select 1, 'שמחה' union all
-select 1, 'רוני' union all
-select 1, 'קמואל' union all
-select 1, 'עזאי' union all
-select 1, 'התקוה' union all
-select 1, 'קדמיאל' union all
-select 1, 'נתן' union all
-select 1, 'רצון' union all
-select 1, 'סמדר' union all
-select 1, 'צפריר' union all
-select 1, 'צורישדי' union all
-select 1, 'פנואל' union all
-select 1, 'פלטיאל' union all
-select 1, 'מבשר' union all
-select 1, 'חנוך' union all
-select 1, 'כביר' union all
-select 1, 'כרמי' union all
-select 1, 'ליש' union all
-select 1, 'יקותיאל' union all
-select 1, 'טלמון' union all
-select 1, 'יאיר' union all
-select 1, 'למואל' union all
-select 1, 'טרפון' union all
-select 1, 'הרותם' union all
-select 1, 'גואל' union all
-select 1, 'תדהר דוד' union all
-select 1, 'המכבש' union all
-select 1, 'מבחר' union all
-select 1, 'סמ כביר' union all
-select 1, 'רח 7884' union all
-select 1, 'רח מו כ שלם' union all
-select 1, 'רח מא כ שלם' union all
-select 1, 'רח מג כ שלם' union all
-select 1, 'רח מב כ שלם' union all
-select 1, 'רח מד כ שלם' union all
-select 1, 'נתיבות' union all
-select 1, 'רח סא שכ'' הארגזים' union all
-select 1, 'רח סל שכ'' הארגזים' union all
-select 1, 'שתולים' union all
-select 1, 'מלקוש' union all
-select 1, 'גבעולים' union all
-select 1, 'שרשים' union all
-select 1, 'תמוז' union all
-select 1, 'חירותנו' union all
-select 1, 'תשרי' union all
-select 1, 'אלול' union all
-select 1, 'אב' union all
-select 1, 'סמ זרת' union all
-select 1, 'סיוון' union all
-select 1, 'כסלו' union all
-select 1, 'שבט' union all
-select 1, 'אדר' union all
-select 1, 'אייר' union all
-select 1, 'שבלים' union all
-select 1, 'טבת' union all
-select 1, 'אורים' union all
-select 1, 'חשון' union all
-select 1, 'גדיש' union all
-select 1, 'יורה' union all
-select 1, 'קמה' union all
-select 1, 'פלג' union all
-select 1, 'דגן' union all
-select 1, 'ימין' union all
-select 1, 'יורם' union all
-select 1, 'זרעים' union all
-select 1, 'רח 0873' union all
-select 1, 'מצובה' union all
-select 1, 'רח סל' union all
-select 1, 'הרטוב' union all
-select 1, 'גופר' union all
-select 1, 'בדולח' union all
-select 1, 'דוחן' union all
-select 1, 'נטעים' union all
-select 1, 'לח"י' union all
-select 1, 'רח 4211' union all
-select 1, 'רח'' 4211' union all
-select 1, 'הרב טייב יצחק' union all
-select 1, 'ליבנה אליעזר' union all
-select 1, 'הרב גביזון חי' union all
-select 1, 'אלוף דן לנר' union all
-select 1, 'רח 1084' union all
-select 1, 'רח 5801' union all
-select 1, 'רח מ כ שלם' union all
-select 1, 'רח נט כ שלם' union all
-select 1, 'בר כוכבא משה בריל' union all
-select 1, 'משה בריל בר-כוכבא' union all
-select 1, 'רח מז כ שלם' union all
-select 1, 'רח כז כ שלם' union all
-select 1, 'רח מח כ שלם' union all
-select 1, 'רח מט כ שלם' union all
-select 1, 'שייקה דן' union all
-select 1, 'רח נ כ שלם' union all
-select 1, 'רח כ כ שלם' union all
-select 1, 'רח כד כ שלם' union all
-select 1, 'רח כה כ שלם' union all
-select 1, 'רח לט כ שלם' union all
-select 1, 'רח ז כפר שלם' union all
-select 1, 'מדמון מנחם' union all
-select 1, 'רח ה כפר שלם' union all
-select 1, 'רח כט כ שלם' union all
-select 1, 'רח יט כ שלם' union all
-select 1, 'רח יח כ שלם' union all
-select 1, 'רח כח כ שלם' union all
-select 1, 'רח כו כ שלם' union all
-select 1, 'רח ו כפר שלם' union all
-select 1, 'רח עג כ שלם' union all
-select 1, 'רח ב כפר שלם' union all
-select 1, 'רח יב כ שלם' union all
-select 1, 'רח יא כ שלם' union all
-select 1, 'רח ח כ שלם' union all
-select 1, 'רח ט כ שלם' union all
-select 1, 'רח יג כ שלם' union all
-select 1, 'רח יד כ שלם' union all
-select 1, 'רח יז כ שלם' union all
-select 1, 'רח סב כ שלם' union all
-select 1, 'רח טו כפר שלם' union all
-select 1, 'רח סג כ שלם' union all
-select 1, 'רח טז כפר שלם' union all
-select 1, 'רח סד כ שלם' union all
-select 1, 'רח לא כפר שלם' union all
-select 1, 'רח נז כ שלם' union all
-select 1, 'רח נח כ שלם' union all
-select 1, 'רח סא כ שלם' union all
-select 1, 'רח לה כפר שלם' union all
-select 1, 'רח לו כפר שלם' union all
-select 1, 'רח לג כפר שלם' union all
-select 1, 'רח לד כפר שלם' union all
-select 1, 'רח ל כפר שלם' union all
-select 1, 'רח כג כפר שלם' union all
-select 1, 'רח נו כ שלם' union all
-select 1, 'רח כא כפר שלם' union all
-select 1, 'רח לח כפר שלם' union all
-select 1, 'רח נא כ שלם' union all
-select 1, 'רח 4848' union all
-select 1, 'רח לז כפר שלם' union all
-select 1, 'רח נב כ שלם' union all
-select 1, 'רח נה כ שלם' union all
-select 1, 'רח י כ שלם' union all
-select 1, 'רח נד כ שלם' union all
-select 1, 'אליעז רפאל' union all
-select 1, 'מח"ל' union all
-select 1, 'שד ששת הימים' union all
-select 1, 'מעפילי אגוז' union all
-select 1, 'סנפיר' union all
-select 1, 'צוקרמן יצחק' union all
-select 1, 'תקוע' union all
-select 1, 'בושם' union all
-select 1, 'מור' union all
-select 1, 'צרעה' union all
-select 1, 'מוצא' union all
-select 1, 'בירנית' union all
-select 1, 'רח 5704' union all
-select 1, 'גולינקין מרדכי' union all
-select 1, 'צלילי חנינא' union all
-select 1, 'הרצפלד אברהם' union all
-select 1, 'הרב אלנקווה' union all
-select 1, 'רוטנשטרייך' union all
-select 1, 'סרלין יוסף' union all
-select 1, 'סלע יעקב' union all
-select 1, 'רח רי"ז' union all
-select 1, 'רח'' 4218' union all
-select 1, 'גבירטיג מרדכי' union all
-select 1, 'רח'' 4219' union all
-select 1, 'קורין עזרא' union all
-select 1, 'לובטקין צביה' union all
-select 1, 'קהילת ברזיל' union all
-select 1, 'רח 6124' union all
-select 1, 'רח 4217' union all
-select 1, 'מבוא וולקר יוסף' union all
-select 1, 'רח 2224' union all
-select 1, 'רח 3224' union all
-select 1, 'רח 4224' union all
-select 1, 'מרדור מוניה' union all
-select 1, 'אבידן שמעון' union all
-select 1, 'רח 5514' union all
-select 1, 'רי"ז' union all
-select 1, 'רח 7684' union all
-select 1, 'רח 4890' union all
-select 1, 'רח 1784' union all
-select 1, 'רח 1984' union all
-select 1, 'רח 2984' union all
-select 1, 'רח 3984' union all
-select 1, 'ויל קורט' union all
-select 1, 'פרוץ לאו' union all
-select 1, 'חלמית' union all
-select 1, 'חיננית' union all
-select 1, 'גלעינית' union all
-select 1, 'מחרוזת' union all
-select 1, 'נרדור' union all
-select 1, 'סומקן' union all
-select 1, 'שז"ר זלמן' union all
-select 1, 'אירוס' union all
-select 1, 'דקל' union all
-select 1, 'שקד' union all
-select 1, 'גרוסמן מאיר' union all
-select 1, 'קורקידי' union all
-select 1, 'שיק' union all
-select 1, 'צונץ' union all
-select 1, 'רח 3385' union all
-select 1, 'כרמי דב' union all
-select 1, 'אזור תעשיה הירקון' union all
-select 1, 'הזז חיים' union all
-select 1, 'רוזן פנחס' union all
-select 1, 'הלוחמים' union all
-select 1, 'רמבה אייזיק' union all
-select 1, 'דריוס מיו' union all
-select 1, '3946' union all
-select 1, '3947' union all
-select 1, 'יוניצ''מן' union all
-select 1, 'מיכאל (נאמן)' union all
-select 1, 'רח 2040' union all
-select 1, 'אורי צבי גרינברג' union all
-select 1, 'גרינברג אורי צבי' union all
-select 1, 'יערי מאיר' union all
-select 1, 'גלילי ישראל' union all
-select 1, 'בוני העיר' union all
-select 1, 'רובינא חנה' union all
-select 1, 'קובנר אבא' union all
-select 1, 'רופא המחתרות' union all
-select 1, 'רובין ראבן' union all
-select 1, 'רובין ראובן' union all
-select 1, 'אביגור שאול' union all
-select 1, 'מרסל ינקו' union all
-select 1, 'ויינשל' union all
-select 1, 'רוזנבלום יאיר' union all
-select 1, 'סמבורסקי דניאל' union all
-select 1, 'מוקדי משה' union all
-select 1, 'רח 2632' union all
-select 1, 'רח 3632' union all
-select 1, 'רח 4632' union all
-select 1, 'סאמט שמעון' union all
-select 1, 'רח 0212' union all
-select 1, 'רח 0402' union all
-select 1, 'סי אנד סאן' union all
-select 1, 'קאונטרי קלאב' union all
-select 1, 'סמ גולי קניה' union all
-select 1, 'סוסקין אברהם' union all
-select 1, 'לבון פנחס' union all
-select 1, 'ירבלום מרק' union all
-select 1, 'גוטמן נחום' union all
-select 1, 'מעבר 333' union all
-select 1, 'רח 553' union all
-select 1, 'רח 653' union all
-select 1, 'רח 824' union all
-select 1, 'רח 924' union all
-select 1, 'רח 044' union all
-select 1, 'רח 443' union all
-select 1, 'רח 444' union all
-select 1, 'רח 454' union all
-select 1, 'רח 074' union all
-select 1, 'רח 974' union all
-select 1, 'רח 985' union all
-select 1, 'רח 316' union all
-select 1, 'רח 416' union all
-select 1, 'רח 516' union all
-select 1, 'רח 236' union all
-select 1, 'רח 666' union all
-select 1, 'רח 866' union all
-select 1, 'רח 396' union all
-select 1, 'רח 796' union all
-select 1, 'רח 117' union all
-select 1, 'רח 818' union all
-select 1, 'רח 658' union all
-select 1, 'רח 709' union all
-select 1, 'רח 219' union all
-select 1, 'רח 129' union all
-select 1, 'רח 679' union all
-select 1, 'רח 779' union all
-select 1, 'רח 979' union all
-select 1, 'רח 089' union all
-select 1, 'רח 1019' union all
-select 1, 'רח 4201' union all
-select 1, 'יעוד ודרך' union all
-select 1, 'רח 3601' union all
-select 1, 'רח 3701' union all
-select 1, 'רח 0801' union all
-select 1, 'רח 1081' union all
-select 1, 'רח 6901' union all
-select 1, 'רח 9901' union all
-select 1, 'רח 0011' union all
-select 1, 'רח 3011' union all
-select 1, 'רח 4011' union all
-select 1, 'רח 5011' union all
-select 1, 'רח 6011' union all
-select 1, 'רח 7011' union all
-select 1, 'רח 8011' union all
-select 1, 'רח 2111' union all
-select 1, 'סמ בארי' union all
-select 1, 'רח 5111' union all
-select 1, 'רח 6111' union all
-select 1, 'רח 8111' union all
-select 1, 'רח 1211' union all
-select 1, 'רח 0311' union all
-select 1, 'רח 1311' union all
-select 1, 'רח 1133' union all
-select 1, 'רח 4963' union all
-select 1, 'רח 8311' union all
-select 1, 'רח 9311' union all
-select 1, 'רח 0411' union all
-select 1, 'רח 1411' union all
-select 1, 'רח 2411' union all
-select 1, 'צימפל פרידריך' union all
-select 1, 'אליאש מרים' union all
-select 1, 'רח 6611' union all
-select 1, 'אליאב בנימין' union all
-select 1, 'רח 8611' union all
-select 1, 'סילמן יהודה קדיש' union all
-select 1, 'שוהם צילה' union all
-select 1, 'סלע עמנואל' union all
-select 1, 'רח 4711' union all
-select 1, 'רח 9711' union all
-select 1, 'רח 3811' union all
-select 1, 'רח 6811' union all
-select 1, 'רח 1191' union all
-select 1, 'זיע"א יוסף חיים' union all
-select 1, 'רח 3911' union all
-select 1, 'רח 4911' union all
-select 1, 'חדד סעדיא' union all
-select 1, 'חלד יוסף' union all
-select 1, 'סחרוב אנדרי' union all
-select 1, 'יששכרוב חי' union all
-select 1, 'מייטוס אליהו' union all
-select 1, 'רח 2021' union all
-select 1, 'מוהר יחיאל' union all
-select 1, 'לוי משה אהרון' union all
-select 1, 'אנוסי משהד' union all
-select 1, 'רח 6021' union all
-select 1, 'גסטר משה' union all
-select 1, 'ונטורה משה' union all
-select 1, 'רח 1209' union all
-select 1, 'רח 0121' union all
-select 1, 'כ"ץ בן ציון' union all
-select 1, 'הופמן יעקב' union all
-select 1, 'בור נילס' union all
-select 1, 'גרשום שלום' union all
-select 1, 'רח 5121' union all
-select 1, 'בלומנפלד יהודה' union all
-select 1, 'גורלסקי ברוך' union all
-select 1, 'הלוי ז''ק' union all
-select 1, 'מילר כהן אניטה' union all
-select 1, 'רח 0221' union all
-select 1, 'רח 1221' union all
-select 1, 'רח 3221' union all
-select 1, 'רח 4321' union all
-select 1, 'רח 5321' union all
-select 1, 'רח 6321' union all
-select 1, 'רח 7321' union all
-select 1, 'רח 1238' union all
-select 1, 'רח 4384' union all
-select 1, 'רח 7384' union all
-select 1, 'צ''רטוק שמשון' union all
-select 1, 'רח 8802' union all
-select 1, 'רח 1239' union all
-select 1, 'רח 0421' union all
-select 1, 'הרב באזוב דוד' union all
-select 1, 'רח 7421' union all
-select 1, 'רח 9421' union all
-select 1, 'רח 1252' union all
-select 1, 'רח 1253' union all
-select 1, 'רח 1254' union all
-select 1, 'חכם שמעון' union all
-select 1, 'פילץ אריה' union all
-select 1, 'שרמן משה' union all
-select 1, 'בן דוד חיים' union all
-select 1, 'רח 8621' union all
-select 1, 'צ''רצ''יל וינסטון' union all
-select 1, 'אלטמן אריה' union all
-select 1, 'רח 2721' union all
-select 1, 'רח 3721' union all
-select 1, 'רח 0821' union all
-select 1, 'מוסינזון יגאל' union all
-select 1, 'רח 7484' union all
-select 1, 'רח 3002' union all
-select 1, 'אוניקובסקי פרץ' union all
-select 1, 'רח 8002' union all
-select 1, 'קהילת זגלביה' union all
-select 1, 'רח 2096' union all
-select 1, 'רח 1312' union all
-select 1, 'ברתנא מרדכי' union all
-select 1, 'רח 9312' union all
-select 1, 'רח 0412' union all
-select 1, 'אויסטרך דויד' union all
-select 1, 'רח 9712' union all
-select 1, 'דר'' לוין שלום' union all
-select 1, 'לוין שלום' union all
-select 1, 'רח'' 2281' union all
-select 1, 'רח 5811' union all
-select 1, 'רח 1193' union all
-select 1, 'רח 8193' union all
-select 1, 'רח 9193' union all
-select 1, 'רח 0293' union all
-select 1, 'רח 1293' union all
-select 1, 'רח 2293' union all
-select 1, 'רח 3293' union all
-select 1, 'רח 2368' union all
-select 1, 'שוסטקוביץ דימיטרי' union all
-select 1, '4216' union all
-select 1, 'רוזנבלום הרצל' union all
-select 1, 'גלבלום אריה' union all
-select 1, 'רח 4850' union all
-select 1, 'העדני מהלל' union all
-select 1, 'מהלל העדני' union all
-select 1, 'קדמוני אסא' union all
-select 1, 'רח 9484' union all
-select 1, 'אלבז נתן' union all
-select 1, 'רח 4878' union all
-select 1, 'רח 4880' union all
-select 1, 'רח 0024' union all
-select 1, 'גז מטילדה' union all
-select 1, 'רח 0093' union all
-select 1, 'רח 0132' union all
-select 1, 'ד"ר פלד רות' union all
-select 1, 'ד"ר פלד רות רופין' union all
-select 1, 'רח 0283' union all
-select 1, 'רח 0313' union all
-select 1, 'שינדלר אוסקר' union all
-select 1, 'פוחובסקי אריה' union all
-select 1, 'פוחובסקי אריה דר''' union all
-select 1, 'רח 0384' union all
-select 1, 'רח 0422' union all
-select 1, 'רכטר זאב' union all
-select 1, 'רח 0484' union all
-select 1, 'רח 0512' union all
-select 1, 'רח 0583' union all
-select 1, 'תבין אלי' union all
-select 1, 'רח 0683' union all
-select 1, 'רח 0684' union all
-select 1, 'רח 0712' union all
-select 1, 'רח 0783' union all
-select 1, 'רח 0784' union all
-select 1, 'רח 2132' union all
-select 1, 'רח 0883' union all
-select 1, 'רח 0921' union all
-select 1, 'גלבוע אמיר' union all
-select 1, 'רח 2290' union all
-select 1, 'רח 0973' union all
-select 1, 'דולצ''ין אריה' union all
-select 1, 'רח 1093' union all
-select 1, 'פרידמן שרגא' union all
-select 1, 'רח 1222' union all
-select 1, 'עמירן עמנואל' union all
-select 1, 'רח 1283' union all
-select 1, 'חזן יעקב' union all
-select 1, 'פלדרמן וילהלם' union all
-select 1, 'פלדרמן וילהלם דר''' union all
-select 1, 'רח 3831' union all
-select 1, 'רח 1384' union all
-select 1, 'רח 1484' union all
-select 1, 'רח 1583' union all
-select 1, 'רח 1683' union all
-select 1, 'וקנין רפי' union all
-select 1, 'צלאן פאול' union all
-select 1, 'רח 1783' union all
-select 1, 'שדמי נחום' union all
-select 1, 'רח 3281' union all
-select 1, 'הייקל יוסף' union all
-select 1, 'רח 1884' union all
-select 1, 'רח 1921' union all
-select 1, 'רח 2291' union all
-select 1, 'שגאל מרק' union all
-select 1, 'רח 2024' union all
-select 1, 'רח 2032' union all
-select 1, 'רח 2093' union all
-select 1, 'אלי כהן' union all
-select 1, 'כהן אלי' union all
-select 1, 'ארצי יצחק' union all
-select 1, 'קיסרי אורי' union all
-select 1, 'רח 2263' union all
-select 1, 'רח 2283' union all
-select 1, 'רח 2322' union all
-select 1, 'רח 2324' union all
-select 1, 'סגל שמוליק' union all
-select 1, 'רח 2383' union all
-select 1, 'רח 2384' union all
-select 1, '4897' union all
-select 1, 'בילויה מעוז' union all
-select 1, 'רח 2484' union all
-select 1, 'רח 2513' union all
-select 1, 'לבני איתן' union all
-select 1, 'אקסלרוד נתן' union all
-select 1, 'רח 2663' union all
-select 1, 'רח 2683' union all
-select 1, 'רח 2684' union all
-select 1, 'רח 2712' union all
-select 1, 'קריגר משה' union all
-select 1, 'רח 2783' union all
-select 1, 'רח 2784' union all
-select 1, 'רח 2822' union all
-select 1, 'רינהרט מקס' union all
-select 1, 'רח 4882' union all
-select 1, 'רח 2921' union all
-select 1, 'זינגר בשביס יצחק' union all
-select 1, 'רח 3024' union all
-select 1, 'רח 3032' union all
-select 1, 'רח 3122' union all
-select 1, 'בן גל מיכאל' union all
-select 1, 'בן גל(דג''מס)מיכאל' union all
-select 1, 'רח 3322' union all
-select 1, 'זליבנסקי' union all
-select 1, 'זליבנסקי דוד הלוי' union all
-select 1, 'רח 3384' union all
-select 1, 'רח 3484' union all
-select 1, 'רח 3513' union all
-select 1, 'סשא ארגוב' union all
-select 1, 'סשה ארגוב' union all
-select 1, 'רח 3683' union all
-select 1, 'רח 3684' union all
-select 1, 'כהן יעקב' union all
-select 1, 'רח 3783' union all
-select 1, 'רח 3784' union all
-select 1, 'רח 3843' union all
-select 1, 'רח 3883' union all
-select 1, 'רח 3884' union all
-select 1, 'רח 3921' union all
-select 1, 'רח 3922' union all
-select 1, 'רח 4032' union all
-select 1, 'פיינברג יוסף' union all
-select 1, 'רח'' 2314' union all
-select 1, 'רח 4132' union all
-select 1, 'רח 8884' union all
-select 1, 'ברסקי יהודה לייב' union all
-select 1, 'רח 4303' union all
-select 1, 'רח 4322' union all
-select 1, 'פינקל שמעון' union all
-select 1, 'רח 1832' union all
-select 1, 'וילנסקי משה' union all
-select 1, 'רח 4584' union all
-select 1, 'רח 4683' union all
-select 1, 'הרב צוברי יוסף' union all
-select 1, 'פרנץ קפקא' union all
-select 1, 'רח 4783' union all
-select 1, 'רח 2184' union all
-select 1, 'יהודה עמיחי ' union all
-select 1, 'רח 4884' union all
-select 1, 'רח 4921' union all
-select 1, 'רח 4922' union all
-select 1, 'רח 4953' union all
-select 1, 'רח 5032' union all
-select 1, 'רח 5124' union all
-select 1, 'איתין אהרון' union all
-select 1, 'רח 5163' union all
-select 1, 'רח 5222' union all
-select 1, 'פוירשטיין אמיל' union all
-select 1, 'רח 5284' union all
-select 1, 'רח 5322' union all
-select 1, 'זמיר עמנואל' union all
-select 1, 'רח 5384' union all
-select 1, 'מרידור יעקב' union all
-select 1, 'רח 4845' union all
-select 1, 'לוין קיפניס' union all
-select 1, 'קיפניס לוין' union all
-select 1, 'זעירא מרדכי' union all
-select 1, 'רח 5683' union all
-select 1, 'רח 5684' union all
-select 1, 'גלעזר אליהו' union all
-select 1, 'רח 5783' union all
-select 1, 'דר'' שבי יעקב מאור' union all
-select 1, 'ש"בי יעקב מאור' union all
-select 1, 'רח 5812' union all
-select 1, 'אייזק שטרן' union all
-select 1, 'רח 5884' union all
-select 1, 'רח 5922' union all
-select 1, 'רח 596' union all
-select 1, 'רח 5983' union all
-select 1, 'רח 6032' union all
-select 1, 'אידלסון רחל ושמוא' union all
-select 1, 'ע הלל' union all
-select 1, 'ע.הלל' union all
-select 1, 'רח 6284' union all
-select 1, 'שמאלי אליעזר' union all
-select 1, 'הופנקו משה' union all
-select 1, 'הרמלין יוסף' union all
-select 1, 'רח 6533' union all
-select 1, 'רח 6583' union all
-select 1, 'רח 4856' union all
-select 1, 'רח 6614' union all
-select 1, 'בן חיים פאול' union all
-select 1, 'יוחננוף כהן שמואל' union all
-select 1, 'רח 4822' union all
-select 1, 'רוזנשטיין אברהם' union all
-select 1, 'רח 6783' union all
-select 1, 'סנהדראי טובה' union all
-select 1, 'רח 6821' union all
-select 1, 'רח 2286' union all
-select 1, 'ריבולוב מנחם' union all
-select 1, 'רח 6922' union all
-select 1, 'רח 6983' union all
-select 1, 'רח 7032' union all
-select 1, 'רח 6884' union all
-select 1, 'רח 7122' union all
-select 1, 'משה (שלוש)' union all
-select 1, 'רח 7183' union all
-select 1, 'רח 7224' union all
-select 1, 'ויטנברג יצחק' union all
-select 1, 'ויטנברג לאו יצחק' union all
-select 1, 'רח 7284' union all
-select 1, 'אריה שרון אדר''' union all
-select 1, 'שרון אריה' union all
-select 1, 'רח 7383' union all
-select 1, 'זק"ש נלי' union all
-select 1, 'קול משה' union all
-select 1, 'רח 7583' union all
-select 1, 'רח 7584' union all
-select 1, 'אלמוג דוד' union all
-select 1, 'אורלוב חנה' union all
-select 1, 'רח 7773' union all
-select 1, 'רח 7783' union all
-select 1, 'רח 7784' union all
-select 1, 'רח 2287' union all
-select 1, 'שטרייכמן יחזקאל' union all
-select 1, 'רח 7922' union all
-select 1, 'רח 7983' union all
-select 1, 'רח 8024' union all
-select 1, 'רח 8032' union all
-select 1, 'איזמוז''יק לאה ודו' union all
-select 1, 'איזמוזי''ק לאה ודו' union all
-select 1, 'רח 8183' union all
-select 1, 'רח 8222' union all
-select 1, 'רח 8224' union all
-select 1, 'ברוידס אברהם' union all
-select 1, 'רח 8284' union all
-select 1, 'רח 8383' union all
-select 1, 'רח 8384' union all
-select 1, 'נרקיס עוזי' union all
-select 1, 'רח 8483' union all
-select 1, 'רח 8514' union all
-select 1, 'רח 8583' union all
-select 1, 'רח 8584' union all
-select 1, 'מאור משה' union all
-select 1, 'רח 8673' union all
-select 1, 'ברלין ישעיהו' union all
-select 1, 'רח 8684' union all
-select 1, 'רח 8783' union all
-select 1, 'רח 8812' union all
-select 1, 'רח 8821' union all
-select 1, 'רובינשטיין ארתור' union all
-select 1, 'רח 2288' union all
-select 1, 'רח 8922' union all
-select 1, 'רח 8983' union all
-select 1, 'רח 9022' union all
-select 1, 'רח 9032' union all
-select 1, 'וינשטיין נחום' union all
-select 1, 'רח 9163' union all
-select 1, 'רח 9203' union all
-select 1, 'רח 9213' union all
-select 1, 'רח 9222' union all
-select 1, 'אברך ישעיהו' union all
-select 1, 'רח 9243' union all
-select 1, 'ויטלה מאוריציו' union all
-select 1, 'מאוריציו ויטלה' union all
-select 1, 'פרלשטיין יצחק' union all
-select 1, 'רח 9384' union all
-select 1, 'מקס ברוד' union all
-select 1, 'רח 9584' union all
-select 1, 'רח 9612' union all
-select 1, 'פרייגרזון צבי' union all
-select 1, 'רח 9684' union all
-select 1, 'רח 9783' union all
-select 1, 'אונטרמן איסר יהוד' union all
-select 1, 'אונטרמן אסר יהודה' union all
-select 1, 'רח 9821' union all
-select 1, 'חפץ ישה' union all
-select 1, 'רח 2289' union all
-select 1, 'רח 9873' union all
-select 1, 'רח 4889' union all
-select 1, 'רח 9922' union all
-select 1, 'רח 9983' union all
-select 1, 'ארסטידס סוזה מנדס' union all
-select 1, 'יעקב שבתאי' union all
-select 1, '2244' union all
-select 1, 'רח מ"ה' union all
-select 1, 'פרלוק משה' union all
-select 1, 'רח 9224' union all
-select 1, 'רח 6224' union all
-select 1, 'רח 0324' union all
-select 1, 'זריצקי יוסף' union all
-select 1, 'רח 7821' union all
-select 1, 'פן אלכסנדר' union all
-select 1, 'מאייר מרדכי' union all
-select 1, 'בקר אהרון' union all
-select 1, 'מילוא יוסף' union all
-select 1, 'שניצר שמואל' union all
-select 1, 'פאגלין עמיחי' union all
-select 1, 'ברלין אליהו' union all
-select 1, 'סטימצקי' union all
-select 1, 'זליגמן מקס' union all
-select 1, 'אבידן דוד' union all
-select 1, 'רח 1032' union all
-select 1, 'רח 1132' union all
-select 1, 'סמ אלון' union all
-select 1, 'דבורה' union all
-select 1, 'תמיר שמואל' union all
-select 1, 'רח 5632' union all
-select 1, 'רח 0032' union all
-select 1, 'רח 2280' union all
-select 1, 'רח'' 2280' union all
-select 1, '4865' union all
-select 1, 'מנוי ברשת בזק' union all
-select 1, 'רח בזק' union all
-select 1, 'רח 2292' union all
-select 1, '3866' union all
-select 1, '3867' union all
-select 1, '3868' union all
-select 1, 'שד'' מיכאל נאמן' union all
-select 1, 'רח 5822' union all
-select 1, 'ככר ב'' בנובמבר' union all
-select 1, 'ככר הכנסת' union all
-select 1, 'ככר ביאליק' union all
-select 1, 'ככר דיזנגוף' union all
-select 1, 'ככר הבימה' union all
-select 1, 'ככר ההסתדרות' union all
-select 1, 'ככר היל' union all
-select 1, 'ככר ברנשטין לאונר' union all
-select 1, 'ככר המדינה' union all
-select 1, 'ככר המושבות' union all
-select 1, 'ככר המלך אלברט' union all
-select 1, 'ככר הסוכנות' union all
-select 1, 'ככר השוטר' union all
-select 1, 'ככר חסידי האומות' union all
-select 1, 'ככר לונדון' union all
-select 1, 'ככר מגן דוד' union all
-select 1, 'ככר מיכאלס' union all
-select 1, 'ככר נמיר' union all
-select 1, 'ככר פלומר' union all
-select 1, 'ככר קדומים' union all
-select 1, 'ככר שטרן מרדכי' union all
-select 1, 'ככר מהלר גוסטב' union all
-select 1, 'ככר יצחק רבין' union all
-select 1, 'ככר גרשוין ג''ורג''' union all
-select 1, 'ככר סתר מרדכי' union all
-select 1, 'ככר אופנבך ז''ק' union all
-select 1, 'ככר בלוך ארנסט' union all
-select 1, 'ככר וולך יונה' union all
-select 1, 'ככר שנברג ארנולד' union all
-select 1, 'רחבת לאונרד ברנשט' union all
-select 1, 'הבלונים' union all
-select 1, 'אזורי חן' union all
-select 1, 'קרית החינוך' union all
-select 1, 'שכ כוכב הצפון' union all
-select 1, 'תכנית ל' union all
-select 1, 'יפו העתיקה' union all
-select 1, 'שכ שפירא' union all
-select 1, 'שכ מונטיפיורי' union all
-select 1, 'שכ יד אליהו' union all
-select 1, 'שכ ביצרון' union all
-select 1, 'שכ התקווה' union all
-select 1, 'גני יהושע' union all
-select 1, 'ש לדוגמא' union all
-select 1, 'ש לדוגמא ב' union all
-select 1, 'ש נוה אביבים' union all
-select 1, 'מרכז הירידים' union all
-select 1, 'ש רמת אביב' union all
-select 1, 'ש אפקה' union all
-select 1, 'שכ גלילות' union all
-select 1, 'שכ שיך מוניס' union all
-select 1, 'רמת אביב החדשה' union all
-select 1, 'גבעת הפרחים' union all
-select 1, 'שכ פלורנטין' union all
-select 1, 'שכ רביבים' union all
-select 1, 'ש הדר יוסף' union all
-select 1, 'ש מחל' union all
-select 1, 'ש מעוז אביב' union all
-select 1, 'ש עולי צכיה' union all
-select 1, 'שכ תל ברוך' union all
-select 1, 'המשתלה' union all
-select 1, 'נווה דן' union all
-select 1, 'מע יד המעביר' union all
-select 1, 'ש דן' union all
-select 1, 'ש יוגוסלבים' union all
-select 1, 'ש ישגב' union all
-select 1, 'ש מעונות' union all
-select 1, 'ש נוה משכן' union all
-select 1, 'ש נוה שרת' union all
-select 1, 'גני צהלה' union all
-select 1, 'שכ נחלת יצחק' union all
-select 1, 'ש צהלה' union all
-select 1, 'ש שנחאי' union all
-select 1, 'שכ גן הירקון' union all
-select 1, 'קרית עתידים' union all
-select 1, 'רמות צהלה' union all
-select 1, 'שכ מחלול א' union all
-select 1, 'שכ מחלול ב' union all
-select 1, 'מרכז רפואי סוראסק' union all
-select 1, 'שכ נורדיה' union all
-select 1, 'ש בבלי' union all
-select 1, 'שכ גב עמל ב' union all
-select 1, 'עג''מי' union all
-select 1, 'שכ גב עמל א' union all
-select 1, 'שכ כ סומיל' union all
-select 1, 'כרם התימנים' union all
-select 1, 'בית יעקב' union all
-select 1, 'שכ ולהלה' union all
-select 1, 'שכ חסן בק' union all
-select 1, 'תל חיים' union all
-select 1, 'שכ נווה צדק' union all
-select 1, 'הרה"ג יוסף צוברי' union all
-select 1, 'הקריה' union all
-select 1, 'שכ הרכבת' union all
-select 1, 'גבעת הרצל' union all
-select 1, 'שכ מכבי ישנה' union all
-select 1, 'שכ קזנובה' union all
-select 1, 'שכ שפת הים' union all
-select 1, 'ש חסכון כביש בת י' union all
-select 1, 'ש עממי שד ירושלים' union all
-select 1, 'ש צהלון' union all
-select 1, 'שכ שבת' union all
-select 1, 'גבעת התמרים' union all
-select 1, 'שכ אבו כביר' union all
-select 1, 'ש חסכון יפו' union all
-select 1, 'ש סחנה א' union all
-select 1, 'שכון ד' union all
-select 1, 'שכ נוה שאנן' union all
-select 1, 'שכ ראשלצ' union all
-select 1, 'שכ גב משה א' union all
-select 1, 'שכ מכבי חדשה' union all
-select 1, 'שכ עובד' union all
-select 1, 'שכ שיבת ציון' union all
-select 1, 'נוה תקוה' union all
-select 1, 'ש סלע ק שלום' union all
-select 1, 'ש צבא קבע ק שלום' union all
-select 1, 'ש קרית שלום' union all
-select 1, 'שכ שמעון' union all
-select 1, 'ש מגורים ב' union all
-select 1, 'ש רמת ישראל' union all
-select 1, 'רמת הטייסים' union all
-select 1, 'ש הקאוקזים' union all
-select 1, 'ש נוה צהל' union all
-select 1, 'שכ גב אלישיב' union all
-select 1, 'מע ב כ שלם' union all
-select 1, 'שכ גב שמשון' union all
-select 1, 'שכ הארגזים' union all
-select 1, 'שכ הבולגרים' union all
-select 1, 'שכ ידידיה' union all
-select 1, 'שכ לבנה' union all
-select 1, 'שכ עזרא' union all
-select 1, 'כפר שלם' union all
-select 1, 'מע א כ שלם' union all
-select 1, 'נוה אליעזר' union all
-select 1, 'נוה ברבור' union all
-select 1, 'נוה כפיר' union all
-select 1, 'ניר אביב' union all
-select 1, 'ש נוה שלם' union all
-select 1, 'סיטי מנשיה' union all
-select 1, 'אזור הספורט' union all
-select 1, 'שכ גן ההגנה' union all
-select 1, 'רח 6273' union all
-select 1, 'רח'' 2285' union all
-select 1, 'רח'' 2284' union all
-select 1, 'שאגל מרק' union all
-select 1, 'דה פיליפ אדיס (אב' union all
-select 1, 'רח'' 3813' union all
-select 1, 'מוזיאון הארץ' union all
-select 1, 'רציף 0' union all
-select 1, 'רציף 1' union all
-select 1, 'רציף 2' union all
-select 1, 'רציף 3' union all
-select 1, 'רציף 4' union all
-select 1, 'רציף 5' union all
-select 1, 'רציף 6' union all
-select 1, 'חוף הילטון' union all
-select 1, 'מלון מנדרין' union all
-select 1, 'חוף הצוק' union all
-select 1, 'חוף שרתון' union all
-select 1, 'חוף תל ברוך' union all
-select 1, 'מגרשי התערוכה' union all
-select 1, 'אצטדיון בלומפילד' union all
-select 1, 'חוף בוגרשוב' union all
-select 1, 'קרית התערוכות' union all
-select 1, 'מרינה ת"א' union all
-select 1, 'קרית האוניברסיטה' union all
-select 1, 'פארק דרום' union all
-select 1, 'קרוואנים ק.שלום' union all
-select 1, 'קרוואנים שלבים' union all
-select 1, 'חוף ירושלים' union all
-select 1, 'חוף גאולה' union all
-select 1, 'חוף הגולשים' union all
-select 1, 'רח'' 4101' union all
-select 1, 'רח'' 2243' union all
-select 1, 'רח'' 2244' union all
-select 1, 'תב"ע 1116' union all
-select 1, 'רח מא שכ'' הארגזים' union all
-select 1, 'התחנה' union all
-select 1, 'רח'' 4850' union all
-select 1, 'רח'' 2367' union all
-select 1, 'רח'' 4849' union all
-select 1, '1206' union all
-select 1, 'רח'' נמל ת"א' union all
-select 1, 'רח 2080' union all
-select 1, '2חוף מציצים' union all
-select 1, 'נרדי נחום' union all
-select 1, 'אופיר שייקה' union all
-select 1, 'בריג אמיל' union all
-select 1, 'גילוץ דבורה ומנחם' union all
-select 1, 'מחפוז נג''יב' union all
-select 1, 'אבן חלדון' union all
-select 1, 'טאג''יר שמואל וסול' union all
-select 1, 'אבולעפיה רבקה ושל' union all
-select 1, 'יהושע רוזין' union all
-select 1, 'זאבי רחבעם (גנדי)' union all
-select 1, 'מבוא גורוכוב' union all
-select 1, 'יקותיאלי יוסף' union all
-select 1, 'מהלר גוסטב' union all
-select 1, 'רח'' 2283';
+insert into main."Street" ("CityId", "LocalName", "OtherNames")
+select 1, 'רדינג', null union all
+select 1, 'בן הלל מרדכי', null union all
+select 1, 'הררי', null union all
+select 1, 'קרני יהודה', null union all
+select 1, 'שמעוני', null union all
+select 1, 'פיכמן', null union all
+select 1, 'הברון הירש', null union all
+select 1, 'בלום ליאון', null union all
+select 1, 'ברש אשר', null union all
+select 1, 'ברודצקי', null union all
+select 1, 'נח', null union all
+select 1, 'לחובר', null union all
+select 1, 'סלואדור', null union all
+select 1, 'הרטגלס', null union all
+select 1, 'לבנון חיים', null union all
+select 1, 'גרונימן', null union all
+select 1, 'כפר יונה', null union all
+select 1, 'פטאי יוסף', null union all
+select 1, 'טורטשינר', null union all
+select 1, 'צמחי היהודים', null union all
+select 1, 'קרויס', null union all
+select 1, 'ברודי', null union all
+select 1, 'הופיין', null union all
+select 1, 'בארט', null union all
+select 1, 'אינשטיין', null union all
+select 1, 'אוניברסיטת תל אבי', null union all
+select 1, 'חי"ש', null union all
+select 1, 'המשמר האזרחי', null union all
+select 1, 'הנוטר', null union all
+select 1, 'המתנדב', null union all
+select 1, 'אפקים', null union all
+select 1, 'חיל משמר', null union all
+select 1, 'מגשימים', null union all
+select 1, 'עלומים', null union all
+select 1, 'מרדכי (מוטה) גור', null union all
+select 1, 'מבטחים', null union all
+select 1, 'שפיה', null union all
+select 1, 'קוממיות', null union all
+select 1, 'ברקאי שמואל', null union all
+select 1, 'שמיר', null union all
+select 1, 'ארזי יהודה', null union all
+select 1, 'פרויד', null union all
+select 1, 'קלוזנר', null union all
+select 1, 'שבט ראובן', null union all
+select 1, 'שבט גד', null union all
+select 1, 'בני ישראל', null union all
+select 1, 'שבט בנימין', null union all
+select 1, 'שבט שמעון', null union all
+select 1, 'שבט לוי', null union all
+select 1, 'שבט יששכר', null union all
+select 1, 'שבט יהודה', null union all
+select 1, 'שבט זבולון', null union all
+select 1, 'שבט דן', null union all
+select 1, 'שבט אשר', null union all
+select 1, 'שבט יוסף', null union all
+select 1, 'רח 4222', null union all
+select 1, 'ברלינר', null union all
+select 1, 'ש"י', null union all
+select 1, 'פראנקל', null union all
+select 1, 'התנאים', null union all
+select 1, 'הסבוראים', null union all
+select 1, 'האמוראים', null union all
+select 1, 'קרית שאול', null union all
+select 1, 'רודנסקי שמואל', null union all
+select 1, 'קלצ''קין', null union all
+select 1, 'שד אבנר מאיר', null union all
+select 1, 'קרן היסוד', null union all
+select 1, 'טאגור רבינדרנארט', null union all
+select 1, 'אנדרסן', null union all
+select 1, 'פסטרנק אריה', null union all
+select 1, 'ברגסון', null union all
+select 1, 'מוריץ דניאל', null union all
+select 1, 'פיליכובסקי', null union all
+select 1, 'שד רוקח', null union all
+select 1, 'יהודה הנשיא', null union all
+select 1, 'לויטן יצחק', null union all
+select 1, 'מניה וישראל', null union all
+select 1, 'הרכש', null union all
+select 1, 'פרופס אהרון צבי', null union all
+select 1, 'רח 2203', null union all
+select 1, 'אושה', null union all
+select 1, 'משמר הגבול', null union all
+select 1, 'אופנהיימר', null union all
+select 1, 'גייגר', null union all
+select 1, 'רבינא', null union all
+select 1, 'רב אשי', null union all
+select 1, 'ברזיל', null union all
+select 1, 'אפטר יעקב', null union all
+select 1, 'בורלא יהודה', null union all
+select 1, 'אשכול לוי', null union all
+select 1, 'עגנון ש"י', null union all
+select 1, 'למדן יצחק', null union all
+select 1, 'קיציס יוסף', null union all
+select 1, 'בן ישי', null union all
+select 1, 'קהילת סופיה', null union all
+select 1, 'רוזאניס', null union all
+select 1, 'מיזאן', null union all
+select 1, 'רומנו', null union all
+select 1, 'מנורה', null union all
+select 1, 'גנתון', null union all
+select 1, 'רוממה', null union all
+select 1, 'מורשת', null union all
+select 1, 'יפעת', null union all
+select 1, 'יציץ', null union all
+select 1, 'גזית', null union all
+select 1, 'שדה דב', null union all
+select 1, 'רפידים', null union all
+select 1, 'מגדל שרשן', null union all
+select 1, 'תל ברוך', null union all
+select 1, 'אופיר', null union all
+select 1, 'אוגרית', null union all
+select 1, 'שורר חיים', null union all
+select 1, 'הרבסט קרול', null union all
+select 1, 'קפריסין', null union all
+select 1, 'עמרי', null union all
+select 1, 'בית חורון', null union all
+select 1, 'בני אפרים', null union all
+select 1, 'וייז ג''ורג''', null union all
+select 1, 'קהילת יאסי', null union all
+select 1, 'יד המעביר', null union all
+select 1, 'קהילת בודפסט', null union all
+select 1, 'קהילת ורשה', null union all
+select 1, 'קהילת אודסה', null union all
+select 1, 'קהילת קישינוב', null union all
+select 1, 'קהילת טשרנוביץ', null union all
+select 1, 'אמיל בריג', null union all
+select 1, 'קהילת לודג''', null union all
+select 1, 'הדר יוסף', null union all
+select 1, 'בן זבארה', null union all
+select 1, 'ברכיהו הנקדן', null union all
+select 1, 'זכות משה', null union all
+select 1, 'סומו יהודה', null union all
+select 1, 'יוסף האפרתי', null union all
+select 1, 'חופשי דוד', null union all
+select 1, 'רח 579', null union all
+select 1, 'קהילת לבוב', null union all
+select 1, 'קהילת קרקוב', null union all
+select 1, 'קהילת ביאליסטוק', null union all
+select 1, 'קהילת בריסק', null union all
+select 1, 'קדושי השואה', null union all
+select 1, 'מבצע קדש', null union all
+select 1, 'קהילת ונציה', null union all
+select 1, 'קהילת סאלוניקי', null union all
+select 1, 'קהילת ריגא', null union all
+select 1, 'קהילת ז''יטומיר', null union all
+select 1, 'קהילת פאדובה', null union all
+select 1, 'קהילת פוזנא', null union all
+select 1, 'קהילת קובנה', null union all
+select 1, 'קהילת קיוב', null union all
+select 1, 'חצור', null union all
+select 1, 'קדש ברנע', null union all
+select 1, 'שניר', null union all
+select 1, 'קרן קיימת לישראל', null union all
+select 1, 'אש שלום', null union all
+select 1, 'לאה', null union all
+select 1, 'אנכי', null union all
+select 1, 'אלתרמן נתן', null union all
+select 1, 'המאירי אביגדור', null union all
+select 1, 'האוזנר דב', null union all
+select 1, 'שיטרית', null union all
+select 1, 'שינמן פנחס', null union all
+select 1, 'אריכא יוסף', null union all
+select 1, 'רקנאטי', null union all
+select 1, 'פרסיץ שושנה', null union all
+select 1, 'זאב', null union all
+select 1, 'זליג', null union all
+select 1, 'מעונות אוניברסיטה', null union all
+select 1, 'מרק יעקב', null union all
+select 1, 'אחימאיר אבא', null union all
+select 1, 'בן יוסף שלמה', null union all
+select 1, 'בית צורי אליהו', null union all
+select 1, 'חכים אליהו', null union all
+select 1, 'גרונר דב', null union all
+select 1, 'אלקחי מרדכי', null union all
+select 1, 'קשאני אליעזר', null union all
+select 1, 'ברזאני משה', null union all
+select 1, 'פיינשטיין', null union all
+select 1, 'חביב אבשלום', null union all
+select 1, 'נקר מאיר', null union all
+select 1, 'וייס יעקב', null union all
+select 1, 'דרזנר יחיאל', null union all
+select 1, 'גליקסברג', null union all
+select 1, 'שלונסקי', null union all
+select 1, 'פרידלנד צבי', null union all
+select 1, 'ברטונוב יהושע', null union all
+select 1, 'צ''מרינסקי ברוך', null union all
+select 1, 'טורקוב זיגמונד', null union all
+select 1, 'מסקין אהרון', null union all
+select 1, 'צה"ל', null union all
+select 1, 'ברק', null union all
+select 1, 'המצביאים', null union all
+select 1, 'בת יפתח', null union all
+select 1, 'סביון', null union all
+select 1, 'נורית', null union all
+select 1, 'הרדוף', null union all
+select 1, 'אמנון ותמר', null union all
+select 1, 'מרגנית', null union all
+select 1, 'עיר שמש', null union all
+select 1, 'יהונתן', null union all
+select 1, 'אהוד', null union all
+select 1, 'אבנר', null union all
+select 1, 'יואב', null union all
+select 1, 'השושנים', null union all
+select 1, 'אבישי', null union all
+select 1, 'שמגר', null union all
+select 1, 'בניהו', null union all
+select 1, 'בת חן', null union all
+select 1, 'הפרסה', null union all
+select 1, 'עשהאל', null union all
+select 1, 'בנימין מטודלה', null union all
+select 1, 'משמר הירדן', null union all
+select 1, 'אלדד הדני', null union all
+select 1, 'אשכנזי', null union all
+select 1, 'פתחיה מרגנשבורג', null union all
+select 1, 'רומנילי', null union all
+select 1, 'אבן ספיר', null union all
+select 1, 'תבואות הארץ', null union all
+select 1, 'אליהו מפירארה', null union all
+select 1, 'דילה רינה יוסף', null union all
+select 1, 'חילו יצחק', null union all
+select 1, 'הגולן', null union all
+select 1, 'הרוגי מלכות', null union all
+select 1, 'גולי קניה', null union all
+select 1, 'גולי אריתראה', null union all
+select 1, 'טובים עמנואל', null union all
+select 1, 'נמירובר', null union all
+select 1, 'לויטה', null union all
+select 1, 'קרפל ליפא', null union all
+select 1, 'טריטש', null union all
+select 1, 'שטיינר', null union all
+select 1, 'עולי הגרדום', null union all
+select 1, 'מרכוס דוד', null union all
+select 1, 'טבנקין יצחק', null union all
+select 1, 'ניסן כהן', null union all
+select 1, 'ק"ם', null union all
+select 1, 'גדנ"ע', null union all
+select 1, 'ביריה', null union all
+select 1, 'הטית זין', null union all
+select 1, 'הראל', null union all
+select 1, 'עטרות', null union all
+select 1, 'רבדים', null union all
+select 1, 'רמות נפתלי', null union all
+select 1, 'הלמד הא', null union all
+select 1, 'באסולה', null union all
+select 1, 'סמ משמר הירדן', null union all
+select 1, 'הברזל', null union all
+select 1, 'ולנברג ראול', null union all
+select 1, 'רח 3412', null union all
+select 1, 'הארד', null union all
+select 1, 'הנחושת', null union all
+select 1, 'רוזוב', null union all
+select 1, 'דבורה הנביאה', null union all
+select 1, 'רח 2832', null union all
+select 1, 'רח 3832', null union all
+select 1, 'רח 4832', null union all
+select 1, 'נחלאות', null union all
+select 1, 'בית אל', null union all
+select 1, 'רמה', null union all
+select 1, 'כיסופים', null union all
+select 1, 'רביבים', null union all
+select 1, 'אדירים', null union all
+select 1, 'פילדלפיה', null union all
+select 1, 'הצנחנים', null union all
+select 1, 'אח"י דקר', null union all
+select 1, 'אלמגור', null union all
+select 1, 'כורזים', null union all
+select 1, 'נהריים', null union all
+select 1, 'מינץ בנימין', null union all
+select 1, 'ענתות', null union all
+select 1, 'שוהם מתתיהו', null union all
+select 1, 'ויסבורג חיים', null union all
+select 1, 'טולקובסקי', null union all
+select 1, 'מויאל אהרון', null union all
+select 1, 'בראלי', null union all
+select 1, 'אבוקה', null union all
+select 1, 'פומרוק יוסף', null union all
+select 1, 'אמירים', null union all
+select 1, 'מבוא גילת', null union all
+select 1, 'מבוא גניגר', null union all
+select 1, 'מבוא געתון', null union all
+select 1, 'מבוא גרופית', null union all
+select 1, 'הדף היומי', null union all
+select 1, 'תירוש', null union all
+select 1, 'סנה משה', null union all
+select 1, 'כ"ג יורדי הסירה', null union all
+select 1, 'התערוכה', null union all
+select 1, 'ירמיהו', null union all
+select 1, 'דיזנגוף', null union all
+select 1, 'זכריה', null union all
+select 1, 'צידון', null union all
+select 1, 'שער ציון', null union all
+select 1, 'הושע', null union all
+select 1, 'נמל תל אביב', null union all
+select 1, 'נחשון', null union all
+select 1, 'חבקוק', null union all
+select 1, 'נחום', null union all
+select 1, 'מיכה', null union all
+select 1, 'יואל הנביא', null union all
+select 1, 'יחזקאל', null union all
+select 1, 'מלאכי', null union all
+select 1, 'עובדיה הנביא', null union all
+select 1, 'סמ מיכה', null union all
+select 1, 'צפניה', null union all
+select 1, 'יוחנן הורקנוס', null union all
+select 1, 'שמעון התרסי', null union all
+select 1, 'סמ התרסי', null union all
+select 1, 'אלכסנדר ינאי', null union all
+select 1, 'שד נורדאו', null union all
+select 1, 'יהושע בן נון', null union all
+select 1, 'עמוס', null union all
+select 1, 'סמ עמוס', null union all
+select 1, 'סוקולוב', null union all
+select 1, 'סמ נורדאו', null union all
+select 1, 'ישעיהו', null union all
+select 1, 'חגי', null union all
+select 1, 'מודיעין', null union all
+select 1, 'אגריפס', null union all
+select 1, 'אוסישקין', null union all
+select 1, 'ארבע ארצות', null union all
+select 1, 'אשתורי הפרחי', null union all
+select 1, 'משעול שמידט יוסף', null union all
+select 1, 'עובדיה מברטנורה', null union all
+select 1, 'אלקלעי', null union all
+select 1, 'השל"ה', null union all
+select 1, 'עמדן', 'עמדן יעקב' union all
+select 1, 'איבשיץ', 'אייבשיץ' union all
+select 1, 'הבשן', null union all
+select 1, 'יריחו', null union all
+select 1, 'עין גדי', null union all
+select 1, 'הגלעד', null union all
+select 1, 'הר נבו', null union all
+select 1, 'זנגביל', null union all
+select 1, 'בזל', null union all
+select 1, 'מנדלשטם', null union all
+select 1, 'טהון יהושע', null union all
+select 1, 'יפה נוף', null union all
+select 1, 'מוצקין', null union all
+select 1, 'ויתקין', null union all
+select 1, 'ז''בוטינסקי', null union all
+select 1, 'גריזים', null union all
+select 1, 'פקיעין', null union all
+select 1, 'סמ זנגביל', null union all
+select 1, 'סמ מנדלשטם', null union all
+select 1, 'הירקון', null union all
+select 1, 'ברון עקיבא', null union all
+select 1, 'סמ נחושתן', null union all
+select 1, 'שד יוצ"ר', null union all
+select 1, 'זרובבל יעקב', null union all
+select 1, 'בת מרים יוכבד', null union all
+select 1, 'בוקשפן דוד', null union all
+select 1, 'בויאר אברהם', null union all
+select 1, 'דיסנצ''יק אריה', null union all
+select 1, 'ארם משה', null union all
+select 1, '2390', null union all
+select 1, 'רח 5821', null union all
+select 1, 'אגדתי ברוך', null union all
+select 1, 'השחקנים', null union all
+select 1, 'בינט מאיר', null union all
+select 1, 'רח 2005', null union all
+select 1, 'מהר"ל', null union all
+select 1, 'חת"ם סופר', null union all
+select 1, 'לוי יצחק', null union all
+select 1, 'התניא', null union all
+select 1, 'פרנקפורט', null union all
+select 1, 'וילנא', null union all
+select 1, 'פראג', null union all
+select 1, 'הלפרין', null union all
+select 1, 'זלטופולסקי', null union all
+select 1, 'בן יהודה', null union all
+select 1, 'מאנגר איציק', null union all
+select 1, 'סמ החובבים', null union all
+select 1, 'יוסט', null union all
+select 1, 'בחור אליהו', null union all
+select 1, 'עמנואל הרומי', null union all
+select 1, 'אמסטרדם', null union all
+select 1, 'קלונימוס', null union all
+select 1, 'עזריה מן האדומים', null union all
+select 1, 'קורדובה', null union all
+select 1, 'וורמיזה', null union all
+select 1, 'סמ נ"ס', null union all
+select 1, 'הקליר', null union all
+select 1, 'אלחריזי', null union all
+select 1, 'בן עזרא', null union all
+select 1, 'הפרדס', null union all
+select 1, 'שמואל הנגיד', null union all
+select 1, 'הדסה', null union all
+select 1, 'יודפת', null union all
+select 1, 'גוש חלב', null union all
+select 1, 'באר טוביה', null union all
+select 1, 'חולדה', null union all
+select 1, 'מצדה', null union all
+select 1, 'אד"ם הכהן', null union all
+select 1, 'ליברמן', null union all
+select 1, 'ויזל', null union all
+select 1, 'יהל"ל', null union all
+select 1, 'שד בן גוריון', null union all
+select 1, 'לסל', null union all
+select 1, 'אהרון דוד גורדון', null union all
+select 1, 'ברנשטיין אדוארד', null union all
+select 1, 'רנ"ק', null union all
+select 1, 'וייס אייזיק הירש', null union all
+select 1, 'וייס רפאל', null union all
+select 1, 'גרץ', null union all
+select 1, 'שי"ר', null union all
+select 1, 'רחל', null union all
+select 1, 'מלון אורה', null union all
+select 1, 'סמ בן יהודה', null union all
+select 1, 'מלון בזל', null union all
+select 1, 'אמיל זולה', null union all
+select 1, 'ז''ורס ז''אן', null union all
+select 1, 'ביירון', null union all
+select 1, 'קורולנקו', null union all
+select 1, 'נתן החכם', null union all
+select 1, 'הוז דב', null union all
+select 1, 'ישורון', null union all
+select 1, 'רופין', null union all
+select 1, 'ארנון', null union all
+select 1, 'הכרם', null union all
+select 1, 'עם ישראל חי', null union all
+select 1, 'יהואש', null union all
+select 1, 'של"ג', null union all
+select 1, 'מאפו', null union all
+select 1, 'מנדלי מוכר ספרים', null union all
+select 1, 'בוגרשוב', null union all
+select 1, 'טייגר היל', null union all
+select 1, 'סירקין', null union all
+select 1, 'סמולנסקין', null union all
+select 1, 'פרוג', null union all
+select 1, 'שלום עליכם', null union all
+select 1, 'חובבי ציון', null union all
+select 1, 'בן עמי', null union all
+select 1, 'גנסין', null union all
+select 1, 'פינסקר', null union all
+select 1, 'בילינסון', null union all
+select 1, 'אהרונוביץ', null union all
+select 1, 'דרויאנוב', null union all
+select 1, 'לוריא', null union all
+select 1, 'גליקסון', null union all
+select 1, 'צפת', null union all
+select 1, 'טבריה', null union all
+select 1, 'רציף הירקון', null union all
+select 1, 'פרי אליעזר', null union all
+select 1, 'דיזנגוף סנטר', null union all
+select 1, 'קהילת קליבלנד', null union all
+select 1, 'חוף גורדון', null union all
+select 1, 'מלון קרלטון', null union all
+select 1, 'מרינה', null union all
+select 1, 'פרופ'' יובל נאמן', null union all
+select 1, 'מנדלסון', null union all
+select 1, 'שפינוזה', null union all
+select 1, 'פילון', null union all
+select 1, 'כהן הרמן', null union all
+select 1, 'ריינס', null union all
+select 1, 'גוטליב', null union all
+select 1, 'הירשנברג', null union all
+select 1, 'ש"ץ', null union all
+select 1, 'ישראליס', null union all
+select 1, 'שלמה המלך', null union all
+select 1, 'גורדון י ל', null union all
+select 1, 'סמ יל"ג', null union all
+select 1, 'סמ גור אריה', null union all
+select 1, 'פרישמן', null union all
+select 1, 'לכיש', null union all
+select 1, 'מלון אסטור', null union all
+select 1, 'מגידו', null union all
+select 1, 'מצפה', null union all
+select 1, 'גזר', null union all
+select 1, 'שטנד', null union all
+select 1, 'רייך', null union all
+select 1, 'שד מסריק', null union all
+select 1, 'שדרות ח"ן', null union all
+select 1, 'אימבר', null union all
+select 1, 'נצח ישראל', null union all
+select 1, 'גדעון', null union all
+select 1, 'השופטים', null union all
+select 1, 'לטריס', null union all
+select 1, 'הנביאים', null union all
+select 1, 'מלכי ישראל', null union all
+select 1, 'שמשון', null union all
+select 1, 'ספיר', null union all
+select 1, 'ספיר אליהו', null union all
+select 1, 'סמ רשבג', null union all
+select 1, 'המליץ', null union all
+select 1, 'בוקי בן יגלי', null union all
+select 1, 'המלך ג''ורג''', null union all
+select 1, 'בר גיורא', null union all
+select 1, 'עין חרוד', null union all
+select 1, 'תל חי', null union all
+select 1, 'זמנהוף', null union all
+select 1, 'אסתר המלכה', null union all
+select 1, 'שולמית', null union all
+select 1, 'רות', null union all
+select 1, 'יעל', null union all
+select 1, 'שפירא צבי', null union all
+select 1, 'שמריהו לוין', null union all
+select 1, 'שד'' תרס"ט', null union all
+select 1, 'חיסין', null union all
+select 1, 'שד בן ציון', null union all
+select 1, 'לב אברהם', null union all
+select 1, 'מרמורק', null union all
+select 1, 'ביל"ו', null union all
+select 1, 'טוסקניני', null union all
+select 1, 'הוברמן', null union all
+select 1, 'יוסף אליהו', null union all
+select 1, 'האלקושי', null union all
+select 1, 'רוזנבאום', null union all
+select 1, 'פולד ברכה', null union all
+select 1, 'סטארה אלברט', null union all
+select 1, 'צוויג סטפן', null union all
+select 1, 'פינלס', null union all
+select 1, 'בובליק', null union all
+select 1, 'שלומציון המלכה', null union all
+select 1, 'בני דן', null union all
+select 1, 'מתתיהו כהן גדול', null union all
+select 1, 'יוחנן הגדי', null union all
+select 1, 'יונתן הופסי', null union all
+select 1, 'אונקלוס', null union all
+select 1, 'לואי מרשל', null union all
+select 1, 'דה האז', null union all
+select 1, 'מרים החשמונאית', null union all
+select 1, 'חוני המעגל', null union all
+select 1, 'אנטיגונוס', null union all
+select 1, 'יהודה המכבי', null union all
+select 1, 'אלעזר החורני', null union all
+select 1, 'אריסטובול', null union all
+select 1, 'שטריקר', null union all
+select 1, 'שד סמאטס', null union all
+select 1, 'ברנדיס', null union all
+select 1, 'הרב צירלסון', null union all
+select 1, 'ועידת קטוביץ', null union all
+select 1, 'הרב פרידמן', null union all
+select 1, 'רילף יצחק', null union all
+select 1, 'רב צעיר', null union all
+select 1, 'שלזינגר', null union all
+select 1, 'הילדסהיימר', null union all
+select 1, 'ניסנבוים', null union all
+select 1, 'הרב עמיאל', null union all
+select 1, 'ויצמן', null union all
+select 1, 'בני משה', null union all
+select 1, 'בירנבוים', null union all
+select 1, 'ירושלמי', null union all
+select 1, 'תוספתא', null union all
+select 1, 'הכנסת הגדולה', null union all
+select 1, 'בבלי', null union all
+select 1, 'בן סירא', null union all
+select 1, 'זמר חנה', null union all
+select 1, 'מרגלית מאיר', null union all
+select 1, 'הזוהר', null union all
+select 1, 'המשנה', null union all
+select 1, 'הנשיאים', null union all
+select 1, 'פעמוני יוסף', null union all
+select 1, 'סנהדרין', null union all
+select 1, 'רחבת מילאנו', null union all
+select 1, 'הרב ניסים', null union all
+select 1, 'זטורי משה', null union all
+select 1, 'שטינמן', null union all
+select 1, 'עקיבא אריה', null union all
+select 1, 'אהבת ציון', null union all
+select 1, 'חיותמן', null union all
+select 1, 'דנין', null union all
+select 1, 'סמילנסקי', null union all
+select 1, 'שרת משה', null union all
+select 1, 'גור יהודה', null union all
+select 1, 'שד הציונות', null union all
+select 1, 'ויסוצקי', null union all
+select 1, 'בילטמור', null union all
+select 1, 'חנקין', null union all
+select 1, 'קרמניצקי', null union all
+select 1, 'פנקס', null union all
+select 1, 'בודנהיימר', null union all
+select 1, 'הא באייר', null union all
+select 1, 'שור', null union all
+select 1, 'מוזיר יעקב', null union all
+select 1, 'ילין דוד', null union all
+select 1, 'אפשטיין', null union all
+select 1, 'מוסינזון', null union all
+select 1, 'אבן ג''נאח', null union all
+select 1, 'רד"ק', null union all
+select 1, 'בן סרוק', null union all
+select 1, 'בן שפרוט', null union all
+select 1, 'בן לברט', null union all
+select 1, 'רח 4811', null union all
+select 1, 'רמז דוד', null union all
+select 1, 'מטמון כהן', null union all
+select 1, 'חדרה', null union all
+select 1, 'תש"ח', null union all
+select 1, 'הלסינקי', null union all
+select 1, 'ליסין', null union all
+select 1, 'ארלוזורוב', null union all
+select 1, 'פייבל', null union all
+select 1, 'זלוציסטי', null union all
+select 1, 'קליי', null union all
+select 1, 'זכרון יעקב', null union all
+select 1, 'חברה חדשה', null union all
+select 1, 'בלקינד', null union all
+select 1, 'גלוסקין', null union all
+select 1, 'כהנשטם', null union all
+select 1, 'השופט נופך', null union all
+select 1, 'גבעת המורה', null union all
+select 1, 'ליפסקי לואי', null union all
+select 1, 'רח 9721', null union all
+select 1, 'מסוף רדינג', null union all
+select 1, 'מסוף ארלוזורוב', null union all
+select 1, 'דוש', null union all
+select 1, 'בוסקוביץ', null union all
+select 1, 'אלוני ניסים', null union all
+select 1, 'רח 7921', null union all
+select 1, 'רח 6921', null union all
+select 1, 'הרב גורן שלמה', null union all
+select 1, 'על פרשת דרכים', null union all
+select 1, 'רח 4821', null union all
+select 1, 'בארי', null union all
+select 1, 'סולד הנרייטה', null union all
+select 1, 'התמר', null union all
+select 1, 'דרך נמיר מרדכי', null union all
+select 1, 'הרימון', null union all
+select 1, 'הגפן', null union all
+select 1, 'הזית', null union all
+select 1, 'התאנה', null union all
+select 1, 'דפנה', null union all
+select 1, 'שילה', null union all
+select 1, 'מודיליאני', null union all
+select 1, 'גליצנשטין', null union all
+select 1, 'בצלאל', null union all
+select 1, 'סוטין', null union all
+select 1, 'אורי', null union all
+select 1, 'פישמן מימון', null union all
+select 1, 'נהרדעא', null union all
+select 1, 'פומבדיתא', null union all
+select 1, 'בלוך דוד', null union all
+select 1, 'רב אלוף יעקב דורי', null union all
+select 1, 'חכמי קירואן', null union all
+select 1, 'רמברנדט', null union all
+select 1, 'שטרוק', null union all
+select 1, 'ליליאן', null union all
+select 1, 'אנטוקולסקי', null union all
+select 1, 'צייטלין', null union all
+select 1, 'דובנוב', null union all
+select 1, 'שד דוד המלך', null union all
+select 1, 'בריינין ראובן', null union all
+select 1, 'שד שאול המלך', null union all
+select 1, 'דוליצקי', null union all
+select 1, 'קצנלסון יצחק', null union all
+select 1, 'אבן גבירול', null union all
+select 1, 'מאנה', null union all
+select 1, 'דה וינצ''י לאונרדו', null union all
+select 1, 'זיו רבקה', null union all
+select 1, 'מעלה שמיר משה', null union all
+select 1, 'ברקוביץ', null union all
+select 1, 'מרכז גולדה מאיר', null union all
+select 1, 'ספיר פנחס', null union all
+select 1, 'יהודה הלוי', null union all
+select 1, 'ברדיצ''בסקי', null union all
+select 1, 'שד רוטשילד', null union all
+select 1, 'אחד העם', null union all
+select 1, 'כרמיה', null union all
+select 1, 'החשמונאים', null union all
+select 1, 'לונץ', null union all
+select 1, 'בר אילן', null union all
+select 1, 'שיינקין', null union all
+select 1, 'הגלבוע', null union all
+select 1, 'מרכז בעלי מלאכה', null union all
+select 1, 'נפחא יצחק', null union all
+select 1, 'העבודה', null union all
+select 1, 'חיות פרץ', null union all
+select 1, 'רש"י', null union all
+select 1, 'לאן א', null union all
+select 1, 'סמטה אלמונית', null union all
+select 1, 'סמטה פלונית', null union all
+select 1, 'מיכ"ל', null union all
+select 1, 'בורוכוב', null union all
+select 1, 'חיים ואלישע', null union all
+select 1, 'ורבורג', null union all
+select 1, 'שבע השקמים', null union all
+select 1, 'משעול יעקב', null union all
+select 1, 'רבנו תם', null union all
+select 1, 'טרומפלדור', null union all
+select 1, 'ברוק צבי', null union all
+select 1, 'ברנשטין כהן', null union all
+select 1, 'שניאור זלמן', null union all
+select 1, 'בר כוכבא', null union all
+select 1, 'שמעון בר כוכבא', null union all
+select 1, 'המכבי', null union all
+select 1, 'בית לחם', null union all
+select 1, 'אלנבי', null union all
+select 1, 'אלו מציאות', null union all
+select 1, 'ביאליק', null union all
+select 1, 'אידלסון אברהם', null union all
+select 1, 'הס משה', null union all
+select 1, 'טשרניחובסקי', null union all
+select 1, 'חברון', null union all
+select 1, 'בית החיים', null union all
+select 1, 'רציף הרברט סמואל', null union all
+select 1, 'נס ציונה', null union all
+select 1, 'סמ נס ציונה', null union all
+select 1, 'הירדן', null union all
+select 1, 'לאן ב', null union all
+select 1, 'סמ גן מאיר', null union all
+select 1, 'מורד הטיילת', null union all
+select 1, 'מלון ימית', null union all
+select 1, 'יונה הנביא', null union all
+select 1, 'הכובשים', null union all
+select 1, 'גאולה', null union all
+select 1, 'הרב קוק', null union all
+select 1, 'האר"י', null union all
+select 1, 'אהרונסון', null union all
+select 1, 'זרובבל', null union all
+select 1, 'עזרא הסופר', null union all
+select 1, 'דניאל', null union all
+select 1, 'נחמיה', null union all
+select 1, 'תרמ"ב', null union all
+select 1, 'יום טוב', null union all
+select 1, 'קפאח יחיה', null union all
+select 1, 'סמ הכרמל', null union all
+select 1, 'נחליאל', null union all
+select 1, 'כנפי נשרים', null union all
+select 1, 'קהילת עדן', null union all
+select 1, 'ישכון', null union all
+select 1, 'מל"ן', null union all
+select 1, 'הכרמל', null union all
+select 1, 'רבי מאיר', null union all
+select 1, 'אלישיב', null union all
+select 1, 'בית יוסף', null union all
+select 1, 'אלשיך', null union all
+select 1, 'רבן גמליאל', null union all
+select 1, 'רבי עקיבא', null union all
+select 1, 'גדרה', null union all
+select 1, 'נג''ארה ישראל', null union all
+select 1, 'הלל הזקן', null union all
+select 1, 'השומר', null union all
+select 1, 'נחלת בנימין', null union all
+select 1, 'רמב"ם', null union all
+select 1, 'סמ שפ"ר', null union all
+select 1, 'התבור', null union all
+select 1, 'רבינוביץ שפ"ר', null union all
+select 1, 'צדוק הכהן', null union all
+select 1, 'קלישר', null union all
+select 1, 'יעב"ץ', null union all
+select 1, 'סמ התבור', null union all
+select 1, 'מוהליבר', null union all
+select 1, 'גרוזנברג', null union all
+select 1, 'ברנר', null union all
+select 1, 'שטראוס', null union all
+select 1, 'פיארברג', null union all
+select 1, 'מלצ''ט', null union all
+select 1, 'יבנה', null union all
+select 1, 'עין ורד', null union all
+select 1, 'יוסף הנשיא', null union all
+select 1, 'יוחנן הסנדלר', null union all
+select 1, 'אליוט ג''ורג''', null union all
+select 1, 'מונטיפיורי', null union all
+select 1, 'נטר קרל', null union all
+select 1, 'יוחנן בן זכאי', null union all
+select 1, 'בית השואבה', null union all
+select 1, 'השחר', null union all
+select 1, 'הר סיני', null union all
+select 1, 'אחוזת בית', null union all
+select 1, 'אנגל', null union all
+select 1, 'המגיד', null union all
+select 1, 'בלפור', null union all
+select 1, 'מזא"ה', null union all
+select 1, 'נחמני', null union all
+select 1, 'יפה בצלאל', null union all
+select 1, 'סמ האור', null union all
+select 1, 'הרכבת', null union all
+select 1, 'גת רימון', null union all
+select 1, 'דה פיג''וטו', null union all
+select 1, 'שד"ל', null union all
+select 1, 'רמח"ל', null union all
+select 1, 'החשמל', null union all
+select 1, 'ברזילי', null union all
+select 1, 'לבונטין', null union all
+select 1, 'מקוה ישראל', null union all
+select 1, 'סמ הגינה', null union all
+select 1, 'לשם', null union all
+select 1, 'חבשוש חיים', null union all
+select 1, 'דרך יפו', null union all
+select 1, 'סמ בית הבד', null union all
+select 1, 'רוקח שמעון', null union all
+select 1, 'שטיין', null union all
+select 1, 'שרעבי', null union all
+select 1, 'כפר סבא', null union all
+select 1, 'בוסתנאי', null union all
+select 1, 'לילינבלום', null union all
+select 1, 'מולכו שלמה', null union all
+select 1, '3952', null union all
+select 1, 'תחכמוני', null union all
+select 1, 'סמ תחכמוני', null union all
+select 1, 'עין גנים', null union all
+select 1, 'היכל התלמוד', null union all
+select 1, 'סמ מולכו', null union all
+select 1, 'נוה צדק', null union all
+select 1, 'סמ נוה צדק', null union all
+select 1, 'אלחנן יצחק', null union all
+select 1, 'עצמון', null union all
+select 1, 'לפין', null union all
+select 1, 'יבנאל', null union all
+select 1, 'מחנה יוסף', null union all
+select 1, 'דגניה', null union all
+select 1, 'החרמון', null union all
+select 1, 'התלמי יהושע', null union all
+select 1, 'שבזי', null union all
+select 1, 'יהודה החסיד', null union all
+select 1, 'סמ שבזי', null union all
+select 1, 'כנרת', null union all
+select 1, 'פינס', null union all
+select 1, 'סמ החרמון', null union all
+select 1, 'מטולה', null union all
+select 1, 'עין יעקב', null union all
+select 1, 'אחווה', null union all
+select 1, 'שלוש', null union all
+select 1, 'מגדל', null union all
+select 1, 'סמ מגדל', null union all
+select 1, 'חברת ש"ס', null union all
+select 1, 'השנית', null union all
+select 1, 'יקינתון', null union all
+select 1, 'המרד', null union all
+select 1, 'איל"ן', null union all
+select 1, '1330', null union all
+select 1, 'שלהבית', null union all
+select 1, 'גוש 6007', null union all
+select 1, 'לוע הארי', null union all
+select 1, 'תרצ"ו', null union all
+select 1, 'אילת', null union all
+select 1, 'סמ שלוש', null union all
+select 1, 'אשקלון', null union all
+select 1, 'רח 3357', null union all
+select 1, 'אולשן יצחק', null union all
+select 1, 'ברנט', null union all
+select 1, 'שמרלינג', null union all
+select 1, 'אבא ושרה נאמן', null union all
+select 1, 'כל ישראל חברים', null union all
+select 1, 'אמזלג', null union all
+select 1, 'יחיאלי', null union all
+select 1, 'באר יעקב', null union all
+select 1, 'נוה שלום', null union all
+select 1, 'אלרואי', null union all
+select 1, 'בית הנוער', null union all
+select 1, 'גוש 8007', null union all
+select 1, 'מישאל', null union all
+select 1, 'חנניה', null union all
+select 1, 'כרמלית', null union all
+select 1, 'תרפט', null union all
+select 1, 'גוש 5007', null union all
+select 1, 'המצודה', null union all
+select 1, 'עזריה', null union all
+select 1, 'צורית', null union all
+select 1, 'גוטמאכר', null union all
+select 1, 'חוסן', null union all
+select 1, 'הרב עוזיאל', null union all
+select 1, 'ישיבת וולוז''ין', null union all
+select 1, 'אלעזר (רוקח)', null union all
+select 1, 'גומא', null union all
+select 1, 'גלזנר', null union all
+select 1, 'חזון איש', null union all
+select 1, 'ברגנר אליזבת', null union all
+select 1, 'מאה שערים', null union all
+select 1, 'חלץ', null union all
+select 1, 'גוש 4007', null union all
+select 1, 'ראשונים', null union all
+select 1, 'שביל האטד', null union all
+select 1, 'הרב טולידנו', null union all
+select 1, 'קוסובסקי', null union all
+select 1, 'הרב הרצוג', null union all
+select 1, 'קויפמן יחזקאל', null union all
+select 1, 'לוי יוסף', null union all
+select 1, 'שנקר אריה', null union all
+select 1, 'גולדמן נחום', null union all
+select 1, 'מוזס ולטר', null union all
+select 1, 'גולדברג', null union all
+select 1, 'טיומקין', null union all
+select 1, 'סעדיה גאון', null union all
+select 1, 'לויד ג''ורג''', null union all
+select 1, 'וילסון', null union all
+select 1, 'לינקולן', null union all
+select 1, 'כורש', null union all
+select 1, 'אוליפנט', null union all
+select 1, 'קרית ספר', null union all
+select 1, 'עמרם גאון', null union all
+select 1, 'קרליבך', null union all
+select 1, 'חכמי דוד', null union all
+select 1, 'ריב"ל', null union all
+select 1, 'שונצינו', null union all
+select 1, 'ראם', null union all
+select 1, 'תושיה', null union all
+select 1, 'חומה ומגדל', null union all
+select 1, 'אלישברג', null union all
+select 1, 'בית אלפא', null union all
+select 1, 'בית עובד', null union all
+select 1, 'בן אביגדור', null union all
+select 1, 'האחים מסלאויטה', null union all
+select 1, 'המלאכה', null union all
+select 1, 'המקצוע', null union all
+select 1, 'הצפירה', null union all
+select 1, 'השפלה', null union all
+select 1, 'התעשיה', null union all
+select 1, 'יגיע כפיים', null union all
+select 1, 'יד חרוצים', null union all
+select 1, 'טברסקי', null union all
+select 1, 'מיקוניס שמואל', null union all
+select 1, 'רבניצקי', null union all
+select 1, 'שאר ישוב', null union all
+select 1, 'שבח', null union all
+select 1, 'שטיבל', null union all
+select 1, 'שפרינצק', null union all
+select 1, 'לסקוב חיים', null union all
+select 1, 'בן אב"י איתמר', null union all
+select 1, 'קפלן', null union all
+select 1, 'הארבעה', null union all
+select 1, 'הפטמן', null union all
+select 1, 'עין דור', null union all
+select 1, 'פריש דניאל', null union all
+select 1, 'שד יהודית', null union all
+select 1, 'הנצי"ב', null union all
+select 1, 'קארו יוסף', null union all
+select 1, 'איסרליש', null union all
+select 1, 'ילין מור נתן', null union all
+select 1, 'בית הלל', null union all
+select 1, 'שץ גגה גרשון', null union all
+select 1, 'ב"ק ישראל', null union all
+select 1, 'בית שמאי', null union all
+select 1, 'המסגר', null union all
+select 1, 'דרך בגין', null union all
+select 1, 'דרך בגין מנחם', null union all
+select 1, 'הרכב', null union all
+select 1, 'שפע טל', null union all
+select 1, 'ארניה אסוולדו', null union all
+select 1, 'גבעון', null union all
+select 1, 'צקלג', null union all
+select 1, 'נחל איילון', null union all
+select 1, 'אלוף מנדלר אברהם', null union all
+select 1, 'אלוף מגן קלמן', null union all
+select 1, 'רב אלוף דוד אלעזר', null union all
+select 1, 'רח 8901', null union all
+select 1, 'סטרכילביץ צבי', null union all
+select 1, 'רח ה', null union all
+select 1, 'מקלף מרדכי', null union all
+select 1, 'פועה', null union all
+select 1, 'גבעת התחמושת', null union all
+select 1, 'רח 1274', null union all
+select 1, 'רח 1275', null union all
+select 1, 'רח 1276', null union all
+select 1, 'רח 1277', null union all
+select 1, 'רח 1278', null union all
+select 1, 'נתיבי איילון דרום', null union all
+select 1, 'נתיבי איילון צפון', null union all
+select 1, 'קור פאול', null union all
+select 1, 'רח 1243', null union all
+select 1, 'רח 1244', null union all
+select 1, 'רח ז', null union all
+select 1, 'אליפלט', null union all
+select 1, 'מעון', null union all
+select 1, 'הנגרים', null union all
+select 1, 'חצרים', null union all
+select 1, 'המחוגה', null union all
+select 1, 'המשור', null union all
+select 1, 'צריפין', null union all
+select 1, 'קומפרט', null union all
+select 1, 'אוארבך', null union all
+select 1, 'בר הופמן', null union all
+select 1, 'שלבים', null union all
+select 1, 'וסרמן יעקב', null union all
+select 1, 'פראנצויז', null union all
+select 1, 'רח 294', null union all
+select 1, 'רח 305', null union all
+select 1, 'רוחמה', null union all
+select 1, 'נחמה', null union all
+select 1, 'ניצנה', null union all
+select 1, 'סגולה', null union all
+select 1, 'שד ירושלים', null union all
+select 1, 'בת עמי', null union all
+select 1, 'פוריה', null union all
+select 1, 'תרצה', null union all
+select 1, 'דיצה', null union all
+select 1, 'אפ"ק', null union all
+select 1, 'הרבי מבכרך', null union all
+select 1, 'רח 6193', null union all
+select 1, 'עציון גבר', null union all
+select 1, 'רח 3312', null union all
+select 1, 'רח 7193', null union all
+select 1, 'רבנו חננאל', null union all
+select 1, 'אבולעפיה', null union all
+select 1, 'הש"ך', null union all
+select 1, 'אלפסי', null union all
+select 1, 'רח 3093', null union all
+select 1, 'רח 5093', null union all
+select 1, 'שארית ישראל', null union all
+select 1, 'התקומה', null union all
+select 1, 'התחיה', null union all
+select 1, 'רח 375', null union all
+select 1, 'היתד', null union all
+select 1, 'רח 973', null union all
+select 1, 'חזק', null union all
+select 1, 'אומץ', null union all
+select 1, 'שמעון הצדיק', null union all
+select 1, 'שמעיה', null union all
+select 1, 'אלעזר בן עזריה', null union all
+select 1, 'שמעון בן זומא', null union all
+select 1, 'שמעון בן עזאי', null union all
+select 1, 'בן גמליאל', null union all
+select 1, 'בני בתירא', null union all
+select 1, 'אליעזר בן הורקנוס', null union all
+select 1, 'חנינא בן תרדיון', null union all
+select 1, 'אלעזר בן צדוק', null union all
+select 1, 'רזיאל', null union all
+select 1, 'הדואר', null union all
+select 1, 'בן שטח שמעון', null union all
+select 1, 'רח 3321', null union all
+select 1, 'הגמנסיה העברית', null union all
+select 1, 'המלך חירם', null union all
+select 1, 'רח 543', null union all
+select 1, 'רח 8333', null union all
+select 1, 'רוסלאן', null union all
+select 1, 'רטוש יונתן', null union all
+select 1, 'רח 282', null union all
+select 1, 'רח 8823', null union all
+select 1, 'פנחס בן יאיר', null union all
+select 1, 'בית אשל', null union all
+select 1, 'אבטליון', null union all
+select 1, 'אלעזר בן יוסי', null union all
+select 1, 'חנינא בן דוסא', null union all
+select 1, 'רח 3350', null union all
+select 1, 'יועזר איש הבירה', null union all
+select 1, 'שניצלר', null union all
+select 1, 'ליענר שלמה', null union all
+select 1, 'המנוע', null union all
+select 1, 'הפלך', null union all
+select 1, 'הכישור', null union all
+select 1, 'הזרם', null union all
+select 1, 'היסוד', null union all
+select 1, 'רח 7103', null union all
+select 1, 'רח 3018', null union all
+select 1, 'רח 3019', null union all
+select 1, 'רח 1203', null union all
+select 1, 'רח 3233', null union all
+select 1, 'רח 6333', null union all
+select 1, 'רח 1533', null union all
+select 1, 'רח 2673', null union all
+select 1, 'רח 9262', null union all
+select 1, 'רח 3361', null union all
+select 1, 'סגל צבי הרמן', null union all
+select 1, 'רח 382', null union all
+select 1, 'רח 1433', null union all
+select 1, 'סוגיהרה סמפו', null union all
+select 1, 'רח 0233', null union all
+select 1, 'סמטת הש"ך', null union all
+select 1, 'מרזוק ועזר', null union all
+select 1, 'רח 5393', null union all
+select 1, 'רח 4393', null union all
+select 1, 'רח 2393', null union all
+select 1, 'מפרץ שלמה', null union all
+select 1, 'הפנינים', null union all
+select 1, 'רח 7093', null union all
+select 1, 'רח 3028', null union all
+select 1, 'שמעון הבורסקי', null union all
+select 1, 'רח 1393', null union all
+select 1, 'העליה השניה', null union all
+select 1, 'שפתי ישנים', null union all
+select 1, 'רח 4293', null union all
+select 1, 'גוש 9107', null union all
+select 1, 'גוש 0407', null union all
+select 1, 'פסטר', null union all
+select 1, 'אבן סינא', null union all
+select 1, 'האגוז', null union all
+select 1, 'אחילוף', null union all
+select 1, 'שמואל בן עדיה', null union all
+select 1, 'אמונים', null union all
+select 1, 'אבן רשד', null union all
+select 1, 'הצרי', null union all
+select 1, 'בית רעים', null union all
+select 1, 'שריד', null union all
+select 1, 'הערמון', null union all
+select 1, 'רח 9293', null union all
+select 1, 'סייפן', null union all
+select 1, 'החרוב', null union all
+select 1, 'תות', null union all
+select 1, 'חייבי משה', null union all
+select 1, 'דודאים', null union all
+select 1, 'צנובר', null union all
+select 1, 'נסאר ג''ורג''', null union all
+select 1, 'רח 5293', null union all
+select 1, 'סלסלה', null union all
+select 1, 'בן אחיטוב', null union all
+select 1, 'תפוח', null union all
+select 1, 'דוד הראובני', null union all
+select 1, 'לונדון בצלאל', null union all
+select 1, 'רח 3094', null union all
+select 1, 'תמריר', null union all
+select 1, 'זהבי דוד', null union all
+select 1, 'רח 3083', null union all
+select 1, 'ההגה', null union all
+select 1, 'אלביטר עבדאלראוף', null union all
+select 1, 'רח 6293', null union all
+select 1, 'רח 1373', null union all
+select 1, 'רח 3733', null union all
+select 1, 'גרוסמן חייקה', null union all
+select 1, 'ויינר זאב', null union all
+select 1, 'התעודה האדומה', null union all
+select 1, 'רח 2373', null union all
+select 1, 'רח 0393', null union all
+select 1, 'רח 6303', null union all
+select 1, 'רח 0403', null union all
+select 1, 'הצדף', null union all
+select 1, 'השחף', null union all
+select 1, 'הדולפין', null union all
+select 1, 'העוגן', null union all
+select 1, 'רח 0473', null union all
+select 1, 'שערי ניקנור', null union all
+select 1, 'רח 8293', null union all
+select 1, 'נמל יפו', null union all
+select 1, 'המלחים', null union all
+select 1, 'קדם', null union all
+select 1, 'הספינה', null union all
+select 1, 'רב החובל', null union all
+select 1, 'התורן', null union all
+select 1, 'המשוט', null union all
+select 1, 'המפרש', null union all
+select 1, 'הקברניט', null union all
+select 1, 'רח 2473', null union all
+select 1, 'רח 2013', null union all
+select 1, 'רח 103', null union all
+select 1, 'רח 3750', null union all
+select 1, 'הדגה', null union all
+select 1, 'רח 7293', null union all
+select 1, 'צופית', null union all
+select 1, 'רח 101', null union all
+select 1, 'רח 153', null union all
+select 1, 'רח 157', null union all
+select 1, 'מכמורת', null union all
+select 1, 'הדייגים', null union all
+select 1, 'רח 131', null union all
+select 1, 'זיקים', null union all
+select 1, 'רח 251', null union all
+select 1, 'רח 561', null union all
+select 1, 'רח 551', null union all
+select 1, 'מכלל יופי', null union all
+select 1, 'מד אנדרומדה', null union all
+select 1, 'אזוב', null union all
+select 1, 'פייר מנדס פרנס', null union all
+select 1, 'שטרנהרץ', null union all
+select 1, 'המגיד מדובנא', null union all
+select 1, 'רח 3172', null union all
+select 1, 'דונולו הרופא', null union all
+select 1, 'שביב', null union all
+select 1, 'נבטים', null union all
+select 1, 'געש', null union all
+select 1, 'הסנה', null union all
+select 1, 'בצרה', null union all
+select 1, 'החטה', null union all
+select 1, 'הלוטוס', null union all
+select 1, 'השקמה', null union all
+select 1, 'הקיקיון', null union all
+select 1, 'עגור', null union all
+select 1, 'דישון', null union all
+select 1, 'ולנסיה', null union all
+select 1, 'מענית', null union all
+select 1, 'שלוחות', null union all
+select 1, 'הלענה', null union all
+select 1, 'רח 3144', null union all
+select 1, 'האשכולית', null union all
+select 1, 'עולש', null union all
+select 1, 'לוזים', null union all
+select 1, 'רח 3136', null union all
+select 1, 'רח 3142', null union all
+select 1, 'הלימון', null union all
+select 1, 'יסעור', null union all
+select 1, 'השעורה', null union all
+select 1, 'השיפון', null union all
+select 1, 'טולוז', null union all
+select 1, 'בית פלט', null union all
+select 1, 'האלומה', null union all
+select 1, 'רח 3178', null union all
+select 1, 'השיבולת', null union all
+select 1, 'רח 331', null union all
+select 1, 'ים סוף', null union all
+select 1, 'אסף הרופא', null union all
+select 1, 'מנוחה', null union all
+select 1, 'בת גלים', null union all
+select 1, 'המרפא', null union all
+select 1, 'הנופש', null union all
+select 1, 'קורצ''אק יאנוש', null union all
+select 1, 'שתי האחיות', null union all
+select 1, 'רח 1913', null union all
+select 1, 'האתרוג', null union all
+select 1, 'ההדס', null union all
+select 1, 'רח 6093', null union all
+select 1, 'רח 3175', null union all
+select 1, 'הערבה', null union all
+select 1, 'רח 6573', null union all
+select 1, 'רח 3180', null union all
+select 1, 'רח 3201', null union all
+select 1, 'רח 3179', null union all
+select 1, 'רח 7393', null union all
+select 1, 'רח 291', null union all
+select 1, 'קדרון', null union all
+select 1, 'מרגוע', null union all
+select 1, 'רח 3913', null union all
+select 1, 'רח 1613', null union all
+select 1, 'מנדלשטם אוסיפ', null union all
+select 1, 'בת ים', null union all
+select 1, 'רח 3195', null union all
+select 1, 'יטבת', null union all
+select 1, 'זכרון קדושים', null union all
+select 1, 'רח 002', null union all
+select 1, 'רח 3198', null union all
+select 1, 'שם הגדולים', null union all
+select 1, 'פחד יצחק', null union all
+select 1, 'רח 5573', null union all
+select 1, 'רח 3416', null union all
+select 1, 'רח 1303', null union all
+select 1, 'רח 701', null union all
+select 1, 'נתיב המזלות', null union all
+select 1, 'מזל בתולה', null union all
+select 1, 'מזל מאזנים', null union all
+select 1, 'מזל עקרב', null union all
+select 1, 'מזל קשת', null union all
+select 1, 'מזל סרטן', null union all
+select 1, 'מזל דגים', null union all
+select 1, 'מזל טלה', null union all
+select 1, 'מזל דלי', null union all
+select 1, 'מזל גדי', null union all
+select 1, 'מזל אריה', null union all
+select 1, 'מזל שור', null union all
+select 1, 'מזל תאומים', null union all
+select 1, 'המגדלור', null union all
+select 1, 'החלפנים', null union all
+select 1, 'רח 3887', null union all
+select 1, 'רח 6883', null union all
+select 1, 'רח 5883', null union all
+select 1, 'רח 1473', null union all
+select 1, 'רח 3888', null union all
+select 1, 'רח 4313', null union all
+select 1, 'רח 3889', null union all
+select 1, 'רח 4573', null union all
+select 1, 'רח 3890', null union all
+select 1, 'חריף אייזיק', null union all
+select 1, 'הצורפים', null union all
+select 1, 'שגב', null union all
+select 1, 'רח 1983', null union all
+select 1, 'רח 2983', null union all
+select 1, 'רח 4143', null union all
+select 1, 'רח 3413', null union all
+select 1, 'רח 2143', null union all
+select 1, 'אריסטו', null union all
+select 1, 'טימן יעקב', null union all
+select 1, 'רח 3408', null union all
+select 1, 'רח א סחנה ג', null union all
+select 1, 'רח 3383', null union all
+select 1, 'הגבול', null union all
+select 1, 'הולצברג שמחה', null union all
+select 1, 'רח ח סחנה ג', null union all
+select 1, 'אפלטון', null union all
+select 1, 'סוקרטס', null union all
+select 1, 'גוש 8407', null union all
+select 1, 'רח 3983', null union all
+select 1, 'רח 4983', null union all
+select 1, 'רח 4883', null union all
+select 1, 'רח 304', null union all
+select 1, 'רח 204', null union all
+select 1, 'רח 104', null union all
+select 1, 'רח 5043', null union all
+select 1, 'רח 3407', null union all
+select 1, 'רח יא סחנה ג', null union all
+select 1, 'רח יב סחנה ג', null union all
+select 1, 'רח ב סחנה ג', null union all
+select 1, 'רח ד סחנה ג', null union all
+select 1, 'עבודת ישראל', null union all
+select 1, 'מדרש פנחס', null union all
+select 1, 'מאור עינים', null union all
+select 1, 'שד חב"ד', null union all
+select 1, 'הרבי מפשיסחא', null union all
+select 1, 'רח 832', null union all
+select 1, 'שד הבאש"ט', null union all
+select 1, 'שד הבעש"ט', null union all
+select 1, 'דב ממזריץ', null union all
+select 1, 'אוהב ישראל', null union all
+select 1, 'ישראל מריז''ין', null union all
+select 1, 'נחמן מברסלב', null union all
+select 1, 'כ"ץ יעקב יוסף', null union all
+select 1, 'הסבא משפולה', null union all
+select 1, 'בת עין', null union all
+select 1, 'הרבי מלילוב', null union all
+select 1, 'הרבי מויטבסק', null union all
+select 1, 'הרבי מקוצק', null union all
+select 1, 'הרבי מקרלין', null union all
+select 1, 'חידושי הרי"ם', null union all
+select 1, 'ציהתל"י', null union all
+select 1, 'צהלון הרופא', null union all
+select 1, 'שמואל ירחינאי', null union all
+select 1, 'ישראלי יצחק', null union all
+select 1, 'טוביה הרופא', null union all
+select 1, 'דה פיליפ אדיס', null union all
+select 1, 'רח 211', null union all
+select 1, 'ליב בן שרה', null union all
+select 1, 'פנץ נתן', null union all
+select 1, 'רח'' 3214', null union all
+select 1, 'שויצר דוביד', null union all
+select 1, 'הרבי מקוטוב', null union all
+select 1, 'מעפילי סלואדור', null union all
+select 1, 'ארליך', null union all
+select 1, 'עבד אל גני', null union all
+select 1, 'עבד אל-גני', null union all
+select 1, 'רח'' 57', null union all
+select 1, 'תג''ר ציונה', null union all
+select 1, 'רח 3737', null union all
+select 1, 'פסטלוצי', null union all
+select 1, 'ולבה יואל', null union all
+select 1, 'רח 3738', null union all
+select 1, 'רח 3739', null union all
+select 1, 'מיכאל אנג''לו', null union all
+select 1, 'דאנטה', null union all
+select 1, 'ויקטור הוגו', null union all
+select 1, 'ראסין ז''אן', null union all
+select 1, 'פושקין', null union all
+select 1, 'גורקי', null union all
+select 1, 'אוז''שקובה', null union all
+select 1, 'רומן רולן', null union all
+select 1, 'עולי ציון', null union all
+select 1, 'נועם', null union all
+select 1, 'ריש גלותא', null union all
+select 1, 'בעלי התוספות', null union all
+select 1, 'שבטי ישראל', null union all
+select 1, 'רב האי גאון', null union all
+select 1, 'ארדון מרדכי', null union all
+select 1, 'רח 3048', null union all
+select 1, 'יהודה הימית', null union all
+select 1, 'רח 3335', null union all
+select 1, 'דרור', null union all
+select 1, 'בעל הטורים', null union all
+select 1, 'מגן אברהם', null union all
+select 1, 'אבן שושן אברהם', null union all
+select 1, 'דואר שושנה', null union all
+select 1, 'רח 3053', null union all
+select 1, 'יהודה מרגוזה', null union all
+select 1, 'יפת', null union all
+select 1, 'אביצור שמואל', null union all
+select 1, 'ספיר ברוך', null union all
+select 1, 'רבי חנינא', null union all
+select 1, 'הגיחון', null union all
+select 1, 'רבי פנחס', null union all
+select 1, 'עמיעד', null union all
+select 1, 'רבי נחמן', null union all
+select 1, 'רבי יוחנן', null union all
+select 1, 'רחבת אבוטבול יעקב', null union all
+select 1, 'יהושע בן פרחיה', null union all
+select 1, 'יוסי בן יוסי', null union all
+select 1, 'רבי אדא', null union all
+select 1, 'רבי תנחום', null union all
+select 1, 'רבי אחא', null union all
+select 1, 'קהילת אוסטרליה', null union all
+select 1, 'רח מו סחנה ג', null union all
+select 1, 'רח ג סחנה ג', null union all
+select 1, 'רח ה סחנה ג', null union all
+select 1, 'רח 1603', null union all
+select 1, 'מחנה אריאל', null union all
+select 1, 'מייזל זלמן', null union all
+select 1, 'רח 3055', null union all
+select 1, 'קיוסו אלברט', null union all
+select 1, 'סהרון', null union all
+select 1, 'פיקוס', null union all
+select 1, 'עירית', null union all
+select 1, 'הרב הלר חיים', null union all
+select 1, 'אבינרי יצחק', null union all
+select 1, '3933', null union all
+select 1, 'רובינשטיין יצחק', null union all
+select 1, 'רובינשטין', null union all
+select 1, 'רח 6043', null union all
+select 1, 'קרוא ברוך', null union all
+select 1, 'רח 3824', null union all
+select 1, 'רח 3404', null union all
+select 1, 'רח 0193', null union all
+select 1, 'רח 4193', null union all
+select 1, 'רח 5193', null union all
+select 1, 'רח 2193', null union all
+select 1, 'רח 3193', null union all
+select 1, 'באר שבע', null union all
+select 1, 'סמ באר שבע', null union all
+select 1, 'רח 324', null union all
+select 1, 'רח 222', null union all
+select 1, 'מדרש תנחומא', null union all
+select 1, 'נחל הבשור', null union all
+select 1, 'קדימה', null union all
+select 1, 'קוץ'' אדוארד', null union all
+select 1, 'רח 3241', null union all
+select 1, 'נחל עוז', null union all
+select 1, 'איסקוב נסים', null union all
+select 1, 'רח 3226', null union all
+select 1, 'גר צדק', null union all
+select 1, 'וכטנגוב', null union all
+select 1, 'חסידי האומות', null union all
+select 1, 'עזה', null union all
+select 1, 'מיצקביץ אדם', null union all
+select 1, 'אנדרוס', null union all
+select 1, 'רוזנבלט צבי', null union all
+select 1, 'רח 2996', null union all
+select 1, 'רח 381', null union all
+select 1, 'נס לגויים', null union all
+select 1, 'עדולם', null union all
+select 1, 'היינה', null union all
+select 1, 'חבר הלאומים', null union all
+select 1, 'שרירא גאון', null union all
+select 1, 'למרטין', null union all
+select 1, 'רח 3071', null union all
+select 1, 'הלוי משה', null union all
+select 1, 'רח 3070', null union all
+select 1, 'דברי חיים', null union all
+select 1, 'אור החיים', null union all
+select 1, 'רבנו ירוחם', null union all
+select 1, 'רח 742', null union all
+select 1, 'סמ שרירא', null union all
+select 1, 'אשדוד', null union all
+select 1, 'דרך יגאל ידין', null union all
+select 1, 'רח 3382', null union all
+select 1, 'רח 1493', null union all
+select 1, 'רח 6833', null union all
+select 1, 'תל גבורים', null union all
+select 1, 'בית עולים שמעון', null union all
+select 1, 'רח 3389', null union all
+select 1, 'רח 3387', null union all
+select 1, 'גוש 3996', null union all
+select 1, 'רח 152א', null union all
+select 1, 'רח 2933', null union all
+select 1, 'רח 3393', null union all
+select 1, 'נחל שורק', null union all
+select 1, 'הכוזרי', null union all
+select 1, 'הגבורים', null union all
+select 1, 'ארבר מנחם', null union all
+select 1, 'נוזהה', null union all
+select 1, 'רח 1343', null union all
+select 1, 'רח 3812', null union all
+select 1, 'פעמונית', null union all
+select 1, 'קהילת קנדה', null union all
+select 1, 'החלוצים', null union all
+select 1, 'זבולון', null union all
+select 1, 'השוק', null union all
+select 1, 'השוק סמ', null union all
+select 1, 'מרחביה', null union all
+select 1, 'המשביר', null union all
+select 1, 'מרכלת', null union all
+select 1, 'רענן', null union all
+select 1, 'מזרחי', null union all
+select 1, 'הקישון', null union all
+select 1, 'כפר גלעדי', null union all
+select 1, 'גבולות', null union all
+select 1, 'אברבנאל', null union all
+select 1, 'הרא"ש', null union all
+select 1, 'הרצל', null union all
+select 1, 'העליה', null union all
+select 1, 'סמ העליה', null union all
+select 1, 'פלורנטין', null union all
+select 1, 'גנני', null union all
+select 1, 'אוריאל אקוסטה', null union all
+select 1, 'מסילת וולפסון', null union all
+select 1, 'מסילת וולפסן', null union all
+select 1, 'שד ושינגטון', null union all
+select 1, 'ויטל חיים', null union all
+select 1, 'קורדובירו', null union all
+select 1, 'בנבנישתי', null union all
+select 1, 'בן עטר', null union all
+select 1, 'צ''לנוב', null union all
+select 1, 'פרץ י ל', null union all
+select 1, 'חזנוביץ', null union all
+select 1, 'מסילת העולים', null union all
+select 1, 'מולדת', null union all
+select 1, 'הרב פרנקל', null union all
+select 1, 'אלוף בצלות', null union all
+select 1, 'בני ברק', null union all
+select 1, 'הגר"א', null union all
+select 1, 'ארלנג''ר', null union all
+select 1, 'פין', null union all
+select 1, 'סלומון', null union all
+select 1, 'הנגב', null union all
+select 1, 'השרון', null union all
+select 1, 'הגליל', null union all
+select 1, 'השומרון', null union all
+select 1, 'ראש פינה', null union all
+select 1, 'החרש', null union all
+select 1, 'מירון', null union all
+select 1, 'עין הקורא', null union all
+select 1, 'איילת השחר', null union all
+select 1, 'איגר עקיבא', null union all
+select 1, 'יסוד המעלה', null union all
+select 1, 'ראשון לציון', null union all
+select 1, 'רח 2', null union all
+select 1, 'הגדוד העברי', null union all
+select 1, 'נוה שאנן', null union all
+select 1, 'וולפסון', null union all
+select 1, 'רח 3183', null union all
+select 1, 'שטרן', null union all
+select 1, 'שביל עכו', null union all
+select 1, 'רח 3362', null union all
+select 1, 'סג''רה', null union all
+select 1, 'אהלי יעקב', null union all
+select 1, 'בכורי ציון', null union all
+select 1, 'שוקן', null union all
+select 1, 'רח 6243', null union all
+select 1, 'תחנה מרכזית', null union all
+select 1, 'לודויפול', null union all
+select 1, 'גולומב', null union all
+select 1, 'רח א מכבי חדשה', null union all
+select 1, 'רח ב מכבי חדשה', null union all
+select 1, 'רח ג מכבי חדשה', null union all
+select 1, 'ישראל מסלנט', null union all
+select 1, 'לבנדה', null union all
+select 1, 'קנטור', null union all
+select 1, 'דרך קיבוץ גלויות', null union all
+select 1, 'כרם חמד', null union all
+select 1, 'שטינברג', null union all
+select 1, 'השילוח', null union all
+select 1, 'האסיף', null union all
+select 1, 'כוכבי יצחק', null union all
+select 1, 'פרי עץ חיים', null union all
+select 1, 'ענתבי', null union all
+select 1, 'סמ ענתבי', null union all
+select 1, 'צמח דוד', null union all
+select 1, 'רח 3677', null union all
+select 1, 'תחנה מרכזית החדשה', null union all
+select 1, 'עמיר', null union all
+select 1, 'שד השלכת', null union all
+select 1, 'מנשה בן ישראל', null union all
+select 1, 'שיבת ציון', null union all
+select 1, 'בית קציר', null union all
+select 1, 'הקונגרס', null union all
+select 1, 'מטלון', null union all
+select 1, 'לוינסקי', null union all
+select 1, 'בית גוברין', null union all
+select 1, 'יון מצולה', null union all
+select 1, 'הראב"ע', null union all
+select 1, 'חובות הלבבות', null union all
+select 1, 'סמ עובד', null union all
+select 1, 'בן אשר', null union all
+select 1, 'מלבי"ם', null union all
+select 1, 'חיוג יהודה', null union all
+select 1, 'ידעיה הפניני', null union all
+select 1, 'רויגו אברהם', null union all
+select 1, 'פלקירה', null union all
+select 1, 'לצרוס משה', null union all
+select 1, 'מקור חיים', null union all
+select 1, 'בעל העקידה', null union all
+select 1, 'רלב"ג', null union all
+select 1, 'יש"ר מקנדיא', null union all
+select 1, 'התיבונים', null union all
+select 1, 'גבעת בן יהודה', null union all
+select 1, 'טורי זהב', null union all
+select 1, 'קרשקש חסדאי', null union all
+select 1, 'אבודרהם', null union all
+select 1, 'שח"ל', null union all
+select 1, 'דה מודינה אריה', null union all
+select 1, 'ראב"ד', null union all
+select 1, 'סמ ראב"ד', null union all
+select 1, 'סמ רבי פוזילוב', null union all
+select 1, 'מורה נבוכים', null union all
+select 1, 'לסקר', null union all
+select 1, 'שיפר', null union all
+select 1, 'מסילת ישרים', null union all
+select 1, 'רבי מאיר בעל הנס', null union all
+select 1, 'מימון שלמה', null union all
+select 1, 'שד חכמי ישראל', null union all
+select 1, 'חכמי לובלין', null union all
+select 1, 'מהרש"א', null union all
+select 1, 'בית חדש', null union all
+select 1, 'חכמי אתונה', null union all
+select 1, 'מאור הגולה', null union all
+select 1, 'בלבן מאיר', null union all
+select 1, 'שד הר ציון', null union all
+select 1, 'סמ הר ציון', null union all
+select 1, 'בר יוחאי', null union all
+select 1, 'סמ בר יוחאי', null union all
+select 1, 'העמל', null union all
+select 1, 'המנור', null union all
+select 1, 'הסדנה', null union all
+select 1, 'דרך שלמה', null union all
+select 1, 'ראשית חכמה', null union all
+select 1, 'שערי תשובה', null union all
+select 1, 'אליקום', null union all
+select 1, 'סמ ראשית חכמה', null union all
+select 1, 'חזקיהו המלך', null union all
+select 1, 'גוש 2607', null union all
+select 1, 'גוש 9696', null union all
+select 1, 'גוש 3607', null union all
+select 1, 'רח 3377', null union all
+select 1, 'רח 8393', null union all
+select 1, 'רח 3833', null union all
+select 1, 'עמיקם', null union all
+select 1, 'אסירי ציון', null union all
+select 1, 'נס הרים', null union all
+select 1, 'הקנאים', null union all
+select 1, 'תרפ"א', null union all
+select 1, 'מבקיעים', null union all
+select 1, 'גבעת כ"ח', null union all
+select 1, 'ניל"י', null union all
+select 1, 'סמ חכמי ישראל', null union all
+select 1, 'שלושת החיצים', null union all
+select 1, 'המבצעים', null union all
+select 1, 'הקלעים', null union all
+select 1, 'השיירות', null union all
+select 1, 'המשלטים', null union all
+select 1, 'השופר', null union all
+select 1, 'החצוצרה', null union all
+select 1, 'הקשת', null union all
+select 1, 'המצפן', null union all
+select 1, 'המגן', null union all
+select 1, 'הלפיד', null union all
+select 1, 'דרך בן צבי', null union all
+select 1, 'רח 6483', null union all
+select 1, 'החרמש', null union all
+select 1, 'הדגל', null union all
+select 1, 'בורמה', null union all
+select 1, 'הקרן', null union all
+select 1, 'שד הותיקים', null union all
+select 1, 'די רוסי', null union all
+select 1, 'מאירבר', null union all
+select 1, 'הזמיר', null union all
+select 1, 'גוז''קוב', null union all
+select 1, 'העוגב', null union all
+select 1, 'גלאנץ לייב', null union all
+select 1, 'הכינור', null union all
+select 1, 'גורי ישראל', null union all
+select 1, 'אחרון יוסף', null union all
+select 1, 'מינקובסקי', null union all
+select 1, 'זולצר', null union all
+select 1, 'קפלנסקי', null union all
+select 1, 'בוסל', null union all
+select 1, 'רינגלבלום', null union all
+select 1, 'שילר', null union all
+select 1, 'לבנדובסקי', null union all
+select 1, 'אנסקי', null union all
+select 1, 'צונזר', null union all
+select 1, 'היהודי זיס', null union all
+select 1, 'זיגלבוים', null union all
+select 1, 'ורשבסקי', null union all
+select 1, 'גולדפאדן', null union all
+select 1, 'השרביט', null union all
+select 1, 'דיק', null union all
+select 1, 'דשבסקי', null union all
+select 1, 'לקרט', null union all
+select 1, 'דריפוס', null union all
+select 1, 'זייד אלכסנדר', null union all
+select 1, 'אז"ר', null union all
+select 1, 'אופטושו יוסף', null union all
+select 1, 'קמינסקה', null union all
+select 1, 'החזיון', null union all
+select 1, 'רח 3785', null union all
+select 1, 'הירשביין', null union all
+select 1, 'שפיר קליין', null union all
+select 1, 'רח 3873', null union all
+select 1, 'בית יצקר', null union all
+select 1, 'הפטיש', null union all
+select 1, 'התנופה', null union all
+select 1, 'המפעל', null union all
+select 1, 'שביל המרץ', null union all
+select 1, 'משגב עם', null union all
+select 1, 'חיל השריון', null union all
+select 1, 'גרינבוים', null union all
+select 1, 'ליוויק', null union all
+select 1, 'סמ אסירי ציון', null union all
+select 1, 'גיתית', null union all
+select 1, 'רח 3628', null union all
+select 1, 'רח 9263', null union all
+select 1, 'רח 4873', null union all
+select 1, 'עלית הנוער', null union all
+select 1, 'נהלל', null union all
+select 1, 'ערבי נחל', null union all
+select 1, 'זימן', null union all
+select 1, 'ברוריה', null union all
+select 1, 'עמק ברכה', null union all
+select 1, 'יקנעם', null union all
+select 1, 'מעבר יבוק', null union all
+select 1, 'נחלת יצחק', null union all
+select 1, 'פרי מגדים', null union all
+select 1, 'פרחי אביב', null union all
+select 1, 'חפץ חיים', null union all
+select 1, 'אבני זכרון', null union all
+select 1, 'בן שמן', null union all
+select 1, 'גינוסר', null union all
+select 1, 'שביל החלב', null union all
+select 1, 'חיי אדם', null union all
+select 1, 'טירת צבי', null union all
+select 1, 'ילקוט הרועים', null union all
+select 1, 'מנורת המאור', null union all
+select 1, 'גלוסקא זכריה', null union all
+select 1, 'תוצרת הארץ', null union all
+select 1, 'אלון יגאל', null union all
+select 1, 'הסוללים', null union all
+select 1, 'ינון', null union all
+select 1, 'תובל', null union all
+select 1, 'הרקפת', null union all
+select 1, 'הפרגים', null union all
+select 1, 'הצבר', null union all
+select 1, 'הכלנית', null union all
+select 1, 'פליטי הספר', null union all
+select 1, 'הניצנים', null union all
+select 1, 'דם המכבים', null union all
+select 1, 'דרך דיין משה', null union all
+select 1, 'זכריני', null union all
+select 1, 'הצלף', null union all
+select 1, 'ניר עם', null union all
+select 1, 'היסמין', null union all
+select 1, 'הצפורן', null union all
+select 1, 'החרצית', null union all
+select 1, 'הדמומית', null union all
+select 1, 'החצב', null union all
+select 1, 'האספרגוס', null union all
+select 1, 'דרך הגבורה', null union all
+select 1, 'יפרח', null union all
+select 1, 'יניב', null union all
+select 1, 'ביצרון', null union all
+select 1, 'בצרון', null union all
+select 1, 'שד ההשכלה', null union all
+select 1, 'בן זאב', null union all
+select 1, 'גינצבורג', null union all
+select 1, 'ארטר יצחק', null union all
+select 1, 'גוטלובר', null union all
+select 1, 'שולמן', null union all
+select 1, 'צויפל', null union all
+select 1, 'סלונימסקי', null union all
+select 1, 'רובין שלמה', null union all
+select 1, 'מנדלקרן', null union all
+select 1, 'בן יעקב', null union all
+select 1, 'טביוב', null union all
+select 1, 'עמינדב', null union all
+select 1, 'יצחק שדה', null union all
+select 1, 'עין זיתים', null union all
+select 1, 'פאת השולחן', null union all
+select 1, 'מיטב', null union all
+select 1, 'וולמן יהודה', null union all
+select 1, 'בוקסנבאום יוסף', null union all
+select 1, 'הנרקיס', null union all
+select 1, 'רח 1135', null union all
+select 1, 'בנימיני אהרון', null union all
+select 1, 'סוסליק אריה', null union all
+select 1, 'מוזס יהודה ונח', null union all
+select 1, 'גובר רבקה', null union all
+select 1, 'לילי מנחם', null union all
+select 1, 'האומנים', null union all
+select 1, 'רח 5031', null union all
+select 1, 'רח 6031', null union all
+select 1, 'דרך הטייסים', null union all
+select 1, 'עמישב', null union all
+select 1, 'גונן', null union all
+select 1, 'דרך השלום', null union all
+select 1, 'אשרמן יוסף', null union all
+select 1, 'החבצלת', null union all
+select 1, 'הצבי', null union all
+select 1, 'עודד', null union all
+select 1, 'רח סו כ שלם', null union all
+select 1, 'רח סה כ שלם', null union all
+select 1, 'רח ד כפר שלם', null union all
+select 1, 'יפתח', null union all
+select 1, 'מלילות', null union all
+select 1, 'מסלול', null union all
+select 1, 'תעוז', null union all
+select 1, 'פרזון', null union all
+select 1, 'דימונה', null union all
+select 1, 'תמנע', null union all
+select 1, 'הרודיון', null union all
+select 1, 'טור מלכא', null union all
+select 1, 'נשרי צבי', null union all
+select 1, 'נגבה', null union all
+select 1, 'עין גב', null union all
+select 1, 'בית אורן', null union all
+select 1, 'מונאש', null union all
+select 1, 'קיש', null union all
+select 1, 'עיינות', null union all
+select 1, 'שפירא ישראל', null union all
+select 1, 'ברגי בנימין', null union all
+select 1, 'סמ איתן', null union all
+select 1, 'אריאל', null union all
+select 1, 'גבעתי', null union all
+select 1, 'בן חיל', null union all
+select 1, 'אלוף', null union all
+select 1, 'בית קשת', null union all
+select 1, 'מקראי קדש', null union all
+select 1, 'יגור', null union all
+select 1, 'מצודת בית"ר', null union all
+select 1, 'וינגייט', null union all
+select 1, 'הפורצים', null union all
+select 1, 'שער הגיא', null union all
+select 1, 'שד יד לבנים', null union all
+select 1, 'לוחמי גליפולי', null union all
+select 1, 'הפלמ"ח', null union all
+select 1, 'בת ציון', null union all
+select 1, 'הגבור האלמוני', null union all
+select 1, 'עמק איילון', null union all
+select 1, 'לה גארדיה', null union all
+select 1, 'מרגולין', null union all
+select 1, 'אנילביץ מרדכי', null union all
+select 1, 'סטרומה', null union all
+select 1, 'מורדי הגטאות', null union all
+select 1, 'בית ירח', null union all
+select 1, 'סנש חנה', null union all
+select 1, 'רייק חביבה', null union all
+select 1, 'שד המעפילים', null union all
+select 1, 'החותרים', null union all
+select 1, 'דרך ההגנה', null union all
+select 1, 'גוש עציון', null union all
+select 1, 'יציאת אירופה', null union all
+select 1, 'רייס רפאל', null union all
+select 1, 'סירני חיים', null union all
+select 1, 'הפרטיזן היהודי', null union all
+select 1, 'אני מאמין', null union all
+select 1, 'שד החי"ל', null union all
+select 1, 'פטרסון', null union all
+select 1, 'ווג''ווד', null union all
+select 1, 'התשעים ושלוש', null union all
+select 1, 'חניתה', null union all
+select 1, 'חרוץ', null union all
+select 1, 'נירים', null union all
+select 1, 'פטריה', null union all
+select 1, 'קיסריה', null union all
+select 1, 'השלושה', null union all
+select 1, 'המאבק', null union all
+select 1, 'המערכה', null union all
+select 1, 'הגייסות', null union all
+select 1, 'הסיירים', null union all
+select 1, 'ברנפלד שמעון', null union all
+select 1, 'בובר שלמה', null union all
+select 1, 'באכר זאב', null union all
+select 1, 'הרב רייפמן', null union all
+select 1, 'הורודצקי', null union all
+select 1, 'הרכבי אברהם', null union all
+select 1, 'שטינשנידר', null union all
+select 1, 'פוזננסקי שמואל', null union all
+select 1, 'דוידקה', null union all
+select 1, 'טשרנא', null union all
+select 1, 'שביל מרדכי', null union all
+select 1, 'קלמר משה', null union all
+select 1, 'רח 4206', null union all
+select 1, 'משעול שירה', null union all
+select 1, 'סמטת נטע', null union all
+select 1, 'רח 7083', null union all
+select 1, 'רחבת מרטון ארנסט', null union all
+select 1, 'רח 0131', null union all
+select 1, 'עוזר', null union all
+select 1, 'נוריאל', null union all
+select 1, 'סימן טוב', null union all
+select 1, 'הודיה', null union all
+select 1, 'חפר', null union all
+select 1, 'זרח', null union all
+select 1, 'עבאס אברהם', null union all
+select 1, 'ברכיה', null union all
+select 1, 'ורדיאל', null union all
+select 1, 'דעואל', null union all
+select 1, 'דורון', null union all
+select 1, 'היימן', null union all
+select 1, 'גדליה', null union all
+select 1, 'האגמון', null union all
+select 1, 'בלשן', null union all
+select 1, 'הברוש', null union all
+select 1, 'האקליפטוס', null union all
+select 1, 'קהילת ניו יורק', null union all
+select 1, 'השיטה', null union all
+select 1, 'קהילת מכסיקו', null union all
+select 1, 'סמ מסילה א', null union all
+select 1, 'סמ מסילה ב', null union all
+select 1, 'יחיעם', null union all
+select 1, 'ותיק', null union all
+select 1, 'ורד', null union all
+select 1, 'רשף', null union all
+select 1, 'מושיע', null union all
+select 1, 'יזהר', null union all
+select 1, 'אחיעזר', null union all
+select 1, 'שלמון', null union all
+select 1, 'אצ"ל', null union all
+select 1, 'השכל', null union all
+select 1, 'הונא', null union all
+select 1, 'לפידות', null union all
+select 1, 'לבלוב', null union all
+select 1, 'ישרש', null union all
+select 1, 'אביטל', null union all
+select 1, 'וילון', null union all
+select 1, 'בן חסד', null union all
+select 1, 'שבתאי', null union all
+select 1, 'קלמן', null union all
+select 1, 'עברי', null union all
+select 1, 'אביאסף', null union all
+select 1, 'הרן', null union all
+select 1, 'בועז', null union all
+select 1, 'כצנלסון בת שבע', null union all
+select 1, 'נדב', null union all
+select 1, 'רזי', null union all
+select 1, 'נעמן', null union all
+select 1, 'זבד', null union all
+select 1, 'אבימלך', null union all
+select 1, 'ביתוס', null union all
+select 1, 'קרייתי', null union all
+select 1, 'רח 3031', null union all
+select 1, 'רשפים', null union all
+select 1, 'רח צ', null union all
+select 1, 'רח פז', null union all
+select 1, 'רח פה', null union all
+select 1, 'רח פג', null union all
+select 1, 'רח פד', null union all
+select 1, 'איתיאל', null union all
+select 1, 'רח פ', null union all
+select 1, 'אחימעץ', null union all
+select 1, 'אביתר', null union all
+select 1, 'דרך בר לב חיים', null union all
+select 1, 'דרך בר-לב חיים', null union all
+select 1, 'פלוגות', null union all
+select 1, 'סמ מעוז', null union all
+select 1, 'יונדב', null union all
+select 1, 'צלופחד', null union all
+select 1, 'תרדיון', null union all
+select 1, 'תשבי', null union all
+select 1, 'ששון', null union all
+select 1, 'שמחה', null union all
+select 1, 'רוני', null union all
+select 1, 'קמואל', null union all
+select 1, 'עזאי', null union all
+select 1, 'התקוה', null union all
+select 1, 'קדמיאל', null union all
+select 1, 'נתן', null union all
+select 1, 'רצון', null union all
+select 1, 'סמדר', null union all
+select 1, 'צפריר', null union all
+select 1, 'צורישדי', null union all
+select 1, 'פנואל', null union all
+select 1, 'פלטיאל', null union all
+select 1, 'מבשר', null union all
+select 1, 'חנוך', null union all
+select 1, 'כביר', null union all
+select 1, 'כרמי', null union all
+select 1, 'ליש', null union all
+select 1, 'יקותיאל', null union all
+select 1, 'טלמון', null union all
+select 1, 'יאיר', null union all
+select 1, 'למואל', null union all
+select 1, 'טרפון', null union all
+select 1, 'הרותם', null union all
+select 1, 'גואל', null union all
+select 1, 'תדהר דוד', null union all
+select 1, 'המכבש', null union all
+select 1, 'מבחר', null union all
+select 1, 'סמ כביר', null union all
+select 1, 'רח 7884', null union all
+select 1, 'רח מו כ שלם', null union all
+select 1, 'רח מא כ שלם', null union all
+select 1, 'רח מג כ שלם', null union all
+select 1, 'רח מב כ שלם', null union all
+select 1, 'רח מד כ שלם', null union all
+select 1, 'נתיבות', null union all
+select 1, 'רח סא שכ'' הארגזים', null union all
+select 1, 'רח סל שכ'' הארגזים', null union all
+select 1, 'שתולים', null union all
+select 1, 'מלקוש', null union all
+select 1, 'גבעולים', null union all
+select 1, 'שרשים', null union all
+select 1, 'תמוז', null union all
+select 1, 'חירותנו', null union all
+select 1, 'תשרי', null union all
+select 1, 'אלול', null union all
+select 1, 'אב', null union all
+select 1, 'סמ זרת', null union all
+select 1, 'סיוון', null union all
+select 1, 'כסלו', null union all
+select 1, 'שבט', null union all
+select 1, 'אדר', null union all
+select 1, 'אייר', null union all
+select 1, 'שבלים', null union all
+select 1, 'טבת', null union all
+select 1, 'אורים', null union all
+select 1, 'חשון', null union all
+select 1, 'גדיש', null union all
+select 1, 'יורה', null union all
+select 1, 'קמה', null union all
+select 1, 'פלג', null union all
+select 1, 'דגן', null union all
+select 1, 'ימין', null union all
+select 1, 'יורם', null union all
+select 1, 'זרעים', null union all
+select 1, 'רח 0873', null union all
+select 1, 'מצובה', null union all
+select 1, 'רח סל', null union all
+select 1, 'הרטוב', null union all
+select 1, 'גופר', null union all
+select 1, 'בדולח', null union all
+select 1, 'דוחן', null union all
+select 1, 'נטעים', null union all
+select 1, 'לח"י', null union all
+select 1, 'רח 4211', null union all
+select 1, 'רח'' 4211', null union all
+select 1, 'הרב טייב יצחק', null union all
+select 1, 'ליבנה אליעזר', null union all
+select 1, 'הרב גביזון חי', null union all
+select 1, 'אלוף דן לנר', null union all
+select 1, 'רח 1084', null union all
+select 1, 'רח 5801', null union all
+select 1, 'רח מ כ שלם', null union all
+select 1, 'רח נט כ שלם', null union all
+select 1, 'בר כוכבא משה בריל', null union all
+select 1, 'משה בריל בר-כוכבא', null union all
+select 1, 'רח מז כ שלם', null union all
+select 1, 'רח כז כ שלם', null union all
+select 1, 'רח מח כ שלם', null union all
+select 1, 'רח מט כ שלם', null union all
+select 1, 'שייקה דן', null union all
+select 1, 'רח נ כ שלם', null union all
+select 1, 'רח כ כ שלם', null union all
+select 1, 'רח כד כ שלם', null union all
+select 1, 'רח כה כ שלם', null union all
+select 1, 'רח לט כ שלם', null union all
+select 1, 'רח ז כפר שלם', null union all
+select 1, 'מדמון מנחם', null union all
+select 1, 'רח ה כפר שלם', null union all
+select 1, 'רח כט כ שלם', null union all
+select 1, 'רח יט כ שלם', null union all
+select 1, 'רח יח כ שלם', null union all
+select 1, 'רח כח כ שלם', null union all
+select 1, 'רח כו כ שלם', null union all
+select 1, 'רח ו כפר שלם', null union all
+select 1, 'רח עג כ שלם', null union all
+select 1, 'רח ב כפר שלם', null union all
+select 1, 'רח יב כ שלם', null union all
+select 1, 'רח יא כ שלם', null union all
+select 1, 'רח ח כ שלם', null union all
+select 1, 'רח ט כ שלם', null union all
+select 1, 'רח יג כ שלם', null union all
+select 1, 'רח יד כ שלם', null union all
+select 1, 'רח יז כ שלם', null union all
+select 1, 'רח סב כ שלם', null union all
+select 1, 'רח טו כפר שלם', null union all
+select 1, 'רח סג כ שלם', null union all
+select 1, 'רח טז כפר שלם', null union all
+select 1, 'רח סד כ שלם', null union all
+select 1, 'רח לא כפר שלם', null union all
+select 1, 'רח נז כ שלם', null union all
+select 1, 'רח נח כ שלם', null union all
+select 1, 'רח סא כ שלם', null union all
+select 1, 'רח לה כפר שלם', null union all
+select 1, 'רח לו כפר שלם', null union all
+select 1, 'רח לג כפר שלם', null union all
+select 1, 'רח לד כפר שלם', null union all
+select 1, 'רח ל כפר שלם', null union all
+select 1, 'רח כג כפר שלם', null union all
+select 1, 'רח נו כ שלם', null union all
+select 1, 'רח כא כפר שלם', null union all
+select 1, 'רח לח כפר שלם', null union all
+select 1, 'רח נא כ שלם', null union all
+select 1, 'רח 4848', null union all
+select 1, 'רח לז כפר שלם', null union all
+select 1, 'רח נב כ שלם', null union all
+select 1, 'רח נה כ שלם', null union all
+select 1, 'רח י כ שלם', null union all
+select 1, 'רח נד כ שלם', null union all
+select 1, 'אליעז רפאל', null union all
+select 1, 'מח"ל', null union all
+select 1, 'שד ששת הימים', null union all
+select 1, 'מעפילי אגוז', null union all
+select 1, 'סנפיר', null union all
+select 1, 'צוקרמן יצחק', null union all
+select 1, 'תקוע', null union all
+select 1, 'בושם', null union all
+select 1, 'מור', null union all
+select 1, 'צרעה', null union all
+select 1, 'מוצא', null union all
+select 1, 'בירנית', null union all
+select 1, 'רח 5704', null union all
+select 1, 'גולינקין מרדכי', null union all
+select 1, 'צלילי חנינא', null union all
+select 1, 'הרצפלד אברהם', null union all
+select 1, 'הרב אלנקווה', null union all
+select 1, 'רוטנשטרייך', null union all
+select 1, 'סרלין יוסף', null union all
+select 1, 'סלע יעקב', null union all
+select 1, 'רח רי"ז', null union all
+select 1, 'רח'' 4218', null union all
+select 1, 'גבירטיג מרדכי', null union all
+select 1, 'רח'' 4219', null union all
+select 1, 'קורין עזרא', null union all
+select 1, 'לובטקין צביה', null union all
+select 1, 'קהילת ברזיל', null union all
+select 1, 'רח 6124', null union all
+select 1, 'רח 4217', null union all
+select 1, 'מבוא וולקר יוסף', null union all
+select 1, 'רח 2224', null union all
+select 1, 'רח 3224', null union all
+select 1, 'רח 4224', null union all
+select 1, 'מרדור מוניה', null union all
+select 1, 'אבידן שמעון', null union all
+select 1, 'רח 5514', null union all
+select 1, 'רי"ז', null union all
+select 1, 'רח 7684', null union all
+select 1, 'רח 4890', null union all
+select 1, 'רח 1784', null union all
+select 1, 'רח 1984', null union all
+select 1, 'רח 2984', null union all
+select 1, 'רח 3984', null union all
+select 1, 'ויל קורט', null union all
+select 1, 'פרוץ לאו', null union all
+select 1, 'חלמית', null union all
+select 1, 'חיננית', null union all
+select 1, 'גלעינית', null union all
+select 1, 'מחרוזת', null union all
+select 1, 'נרדור', null union all
+select 1, 'סומקן', null union all
+select 1, 'שז"ר זלמן', null union all
+select 1, 'אירוס', null union all
+select 1, 'דקל', null union all
+select 1, 'שקד', null union all
+select 1, 'גרוסמן מאיר', null union all
+select 1, 'קורקידי', null union all
+select 1, 'שיק', null union all
+select 1, 'צונץ', null union all
+select 1, 'רח 3385', null union all
+select 1, 'כרמי דב', null union all
+select 1, 'אזור תעשיה הירקון', null union all
+select 1, 'הזז חיים', null union all
+select 1, 'רוזן פנחס', null union all
+select 1, 'הלוחמים', null union all
+select 1, 'רמבה אייזיק', null union all
+select 1, 'דריוס מיו', null union all
+select 1, '3946', null union all
+select 1, '3947', null union all
+select 1, 'יוניצ''מן', null union all
+select 1, 'מיכאל (נאמן)', null union all
+select 1, 'רח 2040', null union all
+select 1, 'אורי צבי גרינברג', null union all
+select 1, 'גרינברג אורי צבי', null union all
+select 1, 'יערי מאיר', null union all
+select 1, 'גלילי ישראל', null union all
+select 1, 'בוני העיר', null union all
+select 1, 'רובינא חנה', null union all
+select 1, 'קובנר אבא', null union all
+select 1, 'רופא המחתרות', null union all
+select 1, 'רובין ראבן', null union all
+select 1, 'רובין ראובן', null union all
+select 1, 'אביגור שאול', null union all
+select 1, 'מרסל ינקו', null union all
+select 1, 'ויינשל', null union all
+select 1, 'רוזנבלום יאיר', null union all
+select 1, 'סמבורסקי דניאל', null union all
+select 1, 'מוקדי משה', null union all
+select 1, 'רח 2632', null union all
+select 1, 'רח 3632', null union all
+select 1, 'רח 4632', null union all
+select 1, 'סאמט שמעון', null union all
+select 1, 'רח 0212', null union all
+select 1, 'רח 0402', null union all
+select 1, 'סי אנד סאן', null union all
+select 1, 'קאונטרי קלאב', null union all
+select 1, 'סמ גולי קניה', null union all
+select 1, 'סוסקין אברהם', null union all
+select 1, 'לבון פנחס', null union all
+select 1, 'ירבלום מרק', null union all
+select 1, 'גוטמן נחום', null union all
+select 1, 'מעבר 333', null union all
+select 1, 'רח 553', null union all
+select 1, 'רח 653', null union all
+select 1, 'רח 824', null union all
+select 1, 'רח 924', null union all
+select 1, 'רח 044', null union all
+select 1, 'רח 443', null union all
+select 1, 'רח 444', null union all
+select 1, 'רח 454', null union all
+select 1, 'רח 074', null union all
+select 1, 'רח 974', null union all
+select 1, 'רח 985', null union all
+select 1, 'רח 316', null union all
+select 1, 'רח 416', null union all
+select 1, 'רח 516', null union all
+select 1, 'רח 236', null union all
+select 1, 'רח 666', null union all
+select 1, 'רח 866', null union all
+select 1, 'רח 396', null union all
+select 1, 'רח 796', null union all
+select 1, 'רח 117', null union all
+select 1, 'רח 818', null union all
+select 1, 'רח 658', null union all
+select 1, 'רח 709', null union all
+select 1, 'רח 219', null union all
+select 1, 'רח 129', null union all
+select 1, 'רח 679', null union all
+select 1, 'רח 779', null union all
+select 1, 'רח 979', null union all
+select 1, 'רח 089', null union all
+select 1, 'רח 1019', null union all
+select 1, 'רח 4201', null union all
+select 1, 'יעוד ודרך', null union all
+select 1, 'רח 3601', null union all
+select 1, 'רח 3701', null union all
+select 1, 'רח 0801', null union all
+select 1, 'רח 1081', null union all
+select 1, 'רח 6901', null union all
+select 1, 'רח 9901', null union all
+select 1, 'רח 0011', null union all
+select 1, 'רח 3011', null union all
+select 1, 'רח 4011', null union all
+select 1, 'רח 5011', null union all
+select 1, 'רח 6011', null union all
+select 1, 'רח 7011', null union all
+select 1, 'רח 8011', null union all
+select 1, 'רח 2111', null union all
+select 1, 'סמ בארי', null union all
+select 1, 'רח 5111', null union all
+select 1, 'רח 6111', null union all
+select 1, 'רח 8111', null union all
+select 1, 'רח 1211', null union all
+select 1, 'רח 0311', null union all
+select 1, 'רח 1311', null union all
+select 1, 'רח 1133', null union all
+select 1, 'רח 4963', null union all
+select 1, 'רח 8311', null union all
+select 1, 'רח 9311', null union all
+select 1, 'רח 0411', null union all
+select 1, 'רח 1411', null union all
+select 1, 'רח 2411', null union all
+select 1, 'צימפל פרידריך', null union all
+select 1, 'אליאש מרים', null union all
+select 1, 'רח 6611', null union all
+select 1, 'אליאב בנימין', null union all
+select 1, 'רח 8611', null union all
+select 1, 'סילמן יהודה קדיש', null union all
+select 1, 'שוהם צילה', null union all
+select 1, 'סלע עמנואל', null union all
+select 1, 'רח 4711', null union all
+select 1, 'רח 9711', null union all
+select 1, 'רח 3811', null union all
+select 1, 'רח 6811', null union all
+select 1, 'רח 1191', null union all
+select 1, 'זיע"א יוסף חיים', null union all
+select 1, 'רח 3911', null union all
+select 1, 'רח 4911', null union all
+select 1, 'חדד סעדיא', null union all
+select 1, 'חלד יוסף', null union all
+select 1, 'סחרוב אנדרי', null union all
+select 1, 'יששכרוב חי', null union all
+select 1, 'מייטוס אליהו', null union all
+select 1, 'רח 2021', null union all
+select 1, 'מוהר יחיאל', null union all
+select 1, 'לוי משה אהרון', null union all
+select 1, 'אנוסי משהד', null union all
+select 1, 'רח 6021', null union all
+select 1, 'גסטר משה', null union all
+select 1, 'ונטורה משה', null union all
+select 1, 'רח 1209', null union all
+select 1, 'רח 0121', null union all
+select 1, 'כ"ץ בן ציון', null union all
+select 1, 'הופמן יעקב', null union all
+select 1, 'בור נילס', null union all
+select 1, 'גרשום שלום', null union all
+select 1, 'רח 5121', null union all
+select 1, 'בלומנפלד יהודה', null union all
+select 1, 'גורלסקי ברוך', null union all
+select 1, 'הלוי ז''ק', null union all
+select 1, 'מילר כהן אניטה', null union all
+select 1, 'רח 0221', null union all
+select 1, 'רח 1221', null union all
+select 1, 'רח 3221', null union all
+select 1, 'רח 4321', null union all
+select 1, 'רח 5321', null union all
+select 1, 'רח 6321', null union all
+select 1, 'רח 7321', null union all
+select 1, 'רח 1238', null union all
+select 1, 'רח 4384', null union all
+select 1, 'רח 7384', null union all
+select 1, 'צ''רטוק שמשון', null union all
+select 1, 'רח 8802', null union all
+select 1, 'רח 1239', null union all
+select 1, 'רח 0421', null union all
+select 1, 'הרב באזוב דוד', null union all
+select 1, 'רח 7421', null union all
+select 1, 'רח 9421', null union all
+select 1, 'רח 1252', null union all
+select 1, 'רח 1253', null union all
+select 1, 'רח 1254', null union all
+select 1, 'חכם שמעון', null union all
+select 1, 'פילץ אריה', null union all
+select 1, 'שרמן משה', null union all
+select 1, 'בן דוד חיים', null union all
+select 1, 'רח 8621', null union all
+select 1, 'צ''רצ''יל וינסטון', null union all
+select 1, 'אלטמן אריה', null union all
+select 1, 'רח 2721', null union all
+select 1, 'רח 3721', null union all
+select 1, 'רח 0821', null union all
+select 1, 'מוסינזון יגאל', null union all
+select 1, 'רח 7484', null union all
+select 1, 'רח 3002', null union all
+select 1, 'אוניקובסקי פרץ', null union all
+select 1, 'רח 8002', null union all
+select 1, 'קהילת זגלביה', null union all
+select 1, 'רח 2096', null union all
+select 1, 'רח 1312', null union all
+select 1, 'ברתנא מרדכי', null union all
+select 1, 'רח 9312', null union all
+select 1, 'רח 0412', null union all
+select 1, 'אויסטרך דויד', null union all
+select 1, 'רח 9712', null union all
+select 1, 'דר'' לוין שלום', null union all
+select 1, 'לוין שלום', null union all
+select 1, 'רח'' 2281', null union all
+select 1, 'רח 5811', null union all
+select 1, 'רח 1193', null union all
+select 1, 'רח 8193', null union all
+select 1, 'רח 9193', null union all
+select 1, 'רח 0293', null union all
+select 1, 'רח 1293', null union all
+select 1, 'רח 2293', null union all
+select 1, 'רח 3293', null union all
+select 1, 'רח 2368', null union all
+select 1, 'שוסטקוביץ דימיטרי', null union all
+select 1, '4216', null union all
+select 1, 'רוזנבלום הרצל', null union all
+select 1, 'גלבלום אריה', null union all
+select 1, 'רח 4850', null union all
+select 1, 'העדני מהלל', null union all
+select 1, 'מהלל העדני', null union all
+select 1, 'קדמוני אסא', null union all
+select 1, 'רח 9484', null union all
+select 1, 'אלבז נתן', null union all
+select 1, 'רח 4878', null union all
+select 1, 'רח 4880', null union all
+select 1, 'רח 0024', null union all
+select 1, 'גז מטילדה', null union all
+select 1, 'רח 0093', null union all
+select 1, 'רח 0132', null union all
+select 1, 'ד"ר פלד רות', null union all
+select 1, 'ד"ר פלד רות רופין', null union all
+select 1, 'רח 0283', null union all
+select 1, 'רח 0313', null union all
+select 1, 'שינדלר אוסקר', null union all
+select 1, 'פוחובסקי אריה', null union all
+select 1, 'פוחובסקי אריה דר''', null union all
+select 1, 'רח 0384', null union all
+select 1, 'רח 0422', null union all
+select 1, 'רכטר זאב', null union all
+select 1, 'רח 0484', null union all
+select 1, 'רח 0512', null union all
+select 1, 'רח 0583', null union all
+select 1, 'תבין אלי', null union all
+select 1, 'רח 0683', null union all
+select 1, 'רח 0684', null union all
+select 1, 'רח 0712', null union all
+select 1, 'רח 0783', null union all
+select 1, 'רח 0784', null union all
+select 1, 'רח 2132', null union all
+select 1, 'רח 0883', null union all
+select 1, 'רח 0921', null union all
+select 1, 'גלבוע אמיר', null union all
+select 1, 'רח 2290', null union all
+select 1, 'רח 0973', null union all
+select 1, 'דולצ''ין אריה', null union all
+select 1, 'רח 1093', null union all
+select 1, 'פרידמן שרגא', null union all
+select 1, 'רח 1222', null union all
+select 1, 'עמירן עמנואל', null union all
+select 1, 'רח 1283', null union all
+select 1, 'חזן יעקב', null union all
+select 1, 'פלדרמן וילהלם', null union all
+select 1, 'פלדרמן וילהלם דר''', null union all
+select 1, 'רח 3831', null union all
+select 1, 'רח 1384', null union all
+select 1, 'רח 1484', null union all
+select 1, 'רח 1583', null union all
+select 1, 'רח 1683', null union all
+select 1, 'וקנין רפי', null union all
+select 1, 'צלאן פאול', null union all
+select 1, 'רח 1783', null union all
+select 1, 'שדמי נחום', null union all
+select 1, 'רח 3281', null union all
+select 1, 'הייקל יוסף', null union all
+select 1, 'רח 1884', null union all
+select 1, 'רח 1921', null union all
+select 1, 'רח 2291', null union all
+select 1, 'שגאל מרק', null union all
+select 1, 'רח 2024', null union all
+select 1, 'רח 2032', null union all
+select 1, 'רח 2093', null union all
+select 1, 'אלי כהן', null union all
+select 1, 'כהן אלי', null union all
+select 1, 'ארצי יצחק', null union all
+select 1, 'קיסרי אורי', null union all
+select 1, 'רח 2263', null union all
+select 1, 'רח 2283', null union all
+select 1, 'רח 2322', null union all
+select 1, 'רח 2324', null union all
+select 1, 'סגל שמוליק', null union all
+select 1, 'רח 2383', null union all
+select 1, 'רח 2384', null union all
+select 1, '4897', null union all
+select 1, 'בילויה מעוז', null union all
+select 1, 'רח 2484', null union all
+select 1, 'רח 2513', null union all
+select 1, 'לבני איתן', null union all
+select 1, 'אקסלרוד נתן', null union all
+select 1, 'רח 2663', null union all
+select 1, 'רח 2683', null union all
+select 1, 'רח 2684', null union all
+select 1, 'רח 2712', null union all
+select 1, 'קריגר משה', null union all
+select 1, 'רח 2783', null union all
+select 1, 'רח 2784', null union all
+select 1, 'רח 2822', null union all
+select 1, 'רינהרט מקס', null union all
+select 1, 'רח 4882', null union all
+select 1, 'רח 2921', null union all
+select 1, 'זינגר בשביס יצחק', null union all
+select 1, 'רח 3024', null union all
+select 1, 'רח 3032', null union all
+select 1, 'רח 3122', null union all
+select 1, 'בן גל מיכאל', null union all
+select 1, 'בן גל(דג''מס)מיכאל', null union all
+select 1, 'רח 3322', null union all
+select 1, 'זליבנסקי', null union all
+select 1, 'זליבנסקי דוד הלוי', null union all
+select 1, 'רח 3384', null union all
+select 1, 'רח 3484', null union all
+select 1, 'רח 3513', null union all
+select 1, 'סשא ארגוב', null union all
+select 1, 'סשה ארגוב', null union all
+select 1, 'רח 3683', null union all
+select 1, 'רח 3684', null union all
+select 1, 'כהן יעקב', null union all
+select 1, 'רח 3783', null union all
+select 1, 'רח 3784', null union all
+select 1, 'רח 3843', null union all
+select 1, 'רח 3883', null union all
+select 1, 'רח 3884', null union all
+select 1, 'רח 3921', null union all
+select 1, 'רח 3922', null union all
+select 1, 'רח 4032', null union all
+select 1, 'פיינברג יוסף', null union all
+select 1, 'רח'' 2314', null union all
+select 1, 'רח 4132', null union all
+select 1, 'רח 8884', null union all
+select 1, 'ברסקי יהודה לייב', null union all
+select 1, 'רח 4303', null union all
+select 1, 'רח 4322', null union all
+select 1, 'פינקל שמעון', null union all
+select 1, 'רח 1832', null union all
+select 1, 'וילנסקי משה', null union all
+select 1, 'רח 4584', null union all
+select 1, 'רח 4683', null union all
+select 1, 'הרב צוברי יוסף', null union all
+select 1, 'פרנץ קפקא', null union all
+select 1, 'רח 4783', null union all
+select 1, 'רח 2184', null union all
+select 1, 'יהודה עמיחי ', null union all
+select 1, 'רח 4884', null union all
+select 1, 'רח 4921', null union all
+select 1, 'רח 4922', null union all
+select 1, 'רח 4953', null union all
+select 1, 'רח 5032', null union all
+select 1, 'רח 5124', null union all
+select 1, 'איתין אהרון', null union all
+select 1, 'רח 5163', null union all
+select 1, 'רח 5222', null union all
+select 1, 'פוירשטיין אמיל', null union all
+select 1, 'רח 5284', null union all
+select 1, 'רח 5322', null union all
+select 1, 'זמיר עמנואל', null union all
+select 1, 'רח 5384', null union all
+select 1, 'מרידור יעקב', null union all
+select 1, 'רח 4845', null union all
+select 1, 'לוין קיפניס', null union all
+select 1, 'קיפניס לוין', null union all
+select 1, 'זעירא מרדכי', null union all
+select 1, 'רח 5683', null union all
+select 1, 'רח 5684', null union all
+select 1, 'גלעזר אליהו', null union all
+select 1, 'רח 5783', null union all
+select 1, 'דר'' שבי יעקב מאור', null union all
+select 1, 'ש"בי יעקב מאור', null union all
+select 1, 'רח 5812', null union all
+select 1, 'אייזק שטרן', null union all
+select 1, 'רח 5884', null union all
+select 1, 'רח 5922', null union all
+select 1, 'רח 596', null union all
+select 1, 'רח 5983', null union all
+select 1, 'רח 6032', null union all
+select 1, 'אידלסון רחל ושמוא', null union all
+select 1, 'ע הלל', null union all
+select 1, 'ע.הלל', null union all
+select 1, 'רח 6284', null union all
+select 1, 'שמאלי אליעזר', null union all
+select 1, 'הופנקו משה', null union all
+select 1, 'הרמלין יוסף', null union all
+select 1, 'רח 6533', null union all
+select 1, 'רח 6583', null union all
+select 1, 'רח 4856', null union all
+select 1, 'רח 6614', null union all
+select 1, 'בן חיים פאול', null union all
+select 1, 'יוחננוף כהן שמואל', null union all
+select 1, 'רח 4822', null union all
+select 1, 'רוזנשטיין אברהם', null union all
+select 1, 'רח 6783', null union all
+select 1, 'סנהדראי טובה', null union all
+select 1, 'רח 6821', null union all
+select 1, 'רח 2286', null union all
+select 1, 'ריבולוב מנחם', null union all
+select 1, 'רח 6922', null union all
+select 1, 'רח 6983', null union all
+select 1, 'רח 7032', null union all
+select 1, 'רח 6884', null union all
+select 1, 'רח 7122', null union all
+select 1, 'משה (שלוש)', null union all
+select 1, 'רח 7183', null union all
+select 1, 'רח 7224', null union all
+select 1, 'ויטנברג יצחק', null union all
+select 1, 'ויטנברג לאו יצחק', null union all
+select 1, 'רח 7284', null union all
+select 1, 'אריה שרון אדר''', null union all
+select 1, 'שרון אריה', null union all
+select 1, 'רח 7383', null union all
+select 1, 'זק"ש נלי', null union all
+select 1, 'קול משה', null union all
+select 1, 'רח 7583', null union all
+select 1, 'רח 7584', null union all
+select 1, 'אלמוג דוד', null union all
+select 1, 'אורלוב חנה', null union all
+select 1, 'רח 7773', null union all
+select 1, 'רח 7783', null union all
+select 1, 'רח 7784', null union all
+select 1, 'רח 2287', null union all
+select 1, 'שטרייכמן יחזקאל', null union all
+select 1, 'רח 7922', null union all
+select 1, 'רח 7983', null union all
+select 1, 'רח 8024', null union all
+select 1, 'רח 8032', null union all
+select 1, 'איזמוז''יק לאה ודו', null union all
+select 1, 'איזמוזי''ק לאה ודו', null union all
+select 1, 'רח 8183', null union all
+select 1, 'רח 8222', null union all
+select 1, 'רח 8224', null union all
+select 1, 'ברוידס אברהם', null union all
+select 1, 'רח 8284', null union all
+select 1, 'רח 8383', null union all
+select 1, 'רח 8384', null union all
+select 1, 'נרקיס עוזי', null union all
+select 1, 'רח 8483', null union all
+select 1, 'רח 8514', null union all
+select 1, 'רח 8583', null union all
+select 1, 'רח 8584', null union all
+select 1, 'מאור משה', null union all
+select 1, 'רח 8673', null union all
+select 1, 'ברלין ישעיהו', null union all
+select 1, 'רח 8684', null union all
+select 1, 'רח 8783', null union all
+select 1, 'רח 8812', null union all
+select 1, 'רח 8821', null union all
+select 1, 'רובינשטיין ארתור', null union all
+select 1, 'רח 2288', null union all
+select 1, 'רח 8922', null union all
+select 1, 'רח 8983', null union all
+select 1, 'רח 9022', null union all
+select 1, 'רח 9032', null union all
+select 1, 'וינשטיין נחום', null union all
+select 1, 'רח 9163', null union all
+select 1, 'רח 9203', null union all
+select 1, 'רח 9213', null union all
+select 1, 'רח 9222', null union all
+select 1, 'אברך ישעיהו', null union all
+select 1, 'רח 9243', null union all
+select 1, 'ויטלה מאוריציו', null union all
+select 1, 'מאוריציו ויטלה', null union all
+select 1, 'פרלשטיין יצחק', null union all
+select 1, 'רח 9384', null union all
+select 1, 'מקס ברוד', null union all
+select 1, 'רח 9584', null union all
+select 1, 'רח 9612', null union all
+select 1, 'פרייגרזון צבי', null union all
+select 1, 'רח 9684', null union all
+select 1, 'רח 9783', null union all
+select 1, 'אונטרמן איסר יהוד', null union all
+select 1, 'אונטרמן אסר יהודה', null union all
+select 1, 'רח 9821', null union all
+select 1, 'חפץ ישה', null union all
+select 1, 'רח 2289', null union all
+select 1, 'רח 9873', null union all
+select 1, 'רח 4889', null union all
+select 1, 'רח 9922', null union all
+select 1, 'רח 9983', null union all
+select 1, 'ארסטידס סוזה מנדס', null union all
+select 1, 'יעקב שבתאי', null union all
+select 1, '2244', null union all
+select 1, 'רח מ"ה', null union all
+select 1, 'פרלוק משה', null union all
+select 1, 'רח 9224', null union all
+select 1, 'רח 6224', null union all
+select 1, 'רח 0324', null union all
+select 1, 'זריצקי יוסף', null union all
+select 1, 'רח 7821', null union all
+select 1, 'פן אלכסנדר', null union all
+select 1, 'מאייר מרדכי', null union all
+select 1, 'בקר אהרון', null union all
+select 1, 'מילוא יוסף', null union all
+select 1, 'שניצר שמואל', null union all
+select 1, 'פאגלין עמיחי', null union all
+select 1, 'ברלין אליהו', null union all
+select 1, 'סטימצקי', null union all
+select 1, 'זליגמן מקס', null union all
+select 1, 'אבידן דוד', null union all
+select 1, 'רח 1032', null union all
+select 1, 'רח 1132', null union all
+select 1, 'סמ אלון', null union all
+select 1, 'דבורה', null union all
+select 1, 'תמיר שמואל', null union all
+select 1, 'רח 5632', null union all
+select 1, 'רח 0032', null union all
+select 1, 'רח 2280', null union all
+select 1, 'רח'' 2280', null union all
+select 1, '4865', null union all
+select 1, 'מנוי ברשת בזק', null union all
+select 1, 'רח בזק', null union all
+select 1, 'רח 2292', null union all
+select 1, '3866', null union all
+select 1, '3867', null union all
+select 1, '3868', null union all
+select 1, 'שד'' מיכאל נאמן', null union all
+select 1, 'רח 5822', null union all
+select 1, 'ככר ב'' בנובמבר', null union all
+select 1, 'ככר הכנסת', null union all
+select 1, 'ככר ביאליק', null union all
+select 1, 'ככר דיזנגוף', null union all
+select 1, 'ככר הבימה', null union all
+select 1, 'ככר ההסתדרות', null union all
+select 1, 'ככר היל', null union all
+select 1, 'ככר ברנשטין לאונר', null union all
+select 1, 'ככר המדינה', null union all
+select 1, 'ככר המושבות', null union all
+select 1, 'ככר המלך אלברט', null union all
+select 1, 'ככר הסוכנות', null union all
+select 1, 'ככר השוטר', null union all
+select 1, 'ככר חסידי האומות', null union all
+select 1, 'ככר לונדון', null union all
+select 1, 'ככר מגן דוד', null union all
+select 1, 'ככר מיכאלס', null union all
+select 1, 'ככר נמיר', null union all
+select 1, 'ככר פלומר', null union all
+select 1, 'ככר קדומים', null union all
+select 1, 'ככר שטרן מרדכי', null union all
+select 1, 'ככר מהלר גוסטב', null union all
+select 1, 'ככר יצחק רבין', null union all
+select 1, 'ככר גרשוין ג''ורג''', null union all
+select 1, 'ככר סתר מרדכי', null union all
+select 1, 'ככר אופנבך ז''ק', null union all
+select 1, 'ככר בלוך ארנסט', null union all
+select 1, 'ככר וולך יונה', null union all
+select 1, 'ככר שנברג ארנולד', null union all
+select 1, 'רחבת לאונרד ברנשט', null union all
+select 1, 'הבלונים', null union all
+select 1, 'אזורי חן', null union all
+select 1, 'קרית החינוך', null union all
+select 1, 'שכ כוכב הצפון', null union all
+select 1, 'תכנית ל', null union all
+select 1, 'יפו העתיקה', null union all
+select 1, 'שכ שפירא', null union all
+select 1, 'שכ מונטיפיורי', null union all
+select 1, 'שכ יד אליהו', null union all
+select 1, 'שכ ביצרון', null union all
+select 1, 'שכ התקווה', null union all
+select 1, 'גני יהושע', null union all
+select 1, 'ש לדוגמא', null union all
+select 1, 'ש לדוגמא ב', null union all
+select 1, 'ש נוה אביבים', null union all
+select 1, 'מרכז הירידים', null union all
+select 1, 'ש רמת אביב', null union all
+select 1, 'ש אפקה', null union all
+select 1, 'שכ גלילות', null union all
+select 1, 'שכ שיך מוניס', null union all
+select 1, 'רמת אביב החדשה', null union all
+select 1, 'גבעת הפרחים', null union all
+select 1, 'שכ פלורנטין', null union all
+select 1, 'שכ רביבים', null union all
+select 1, 'ש הדר יוסף', null union all
+select 1, 'ש מחל', null union all
+select 1, 'ש מעוז אביב', null union all
+select 1, 'ש עולי צכיה', null union all
+select 1, 'שכ תל ברוך', null union all
+select 1, 'המשתלה', null union all
+select 1, 'נווה דן', null union all
+select 1, 'מע יד המעביר', null union all
+select 1, 'ש דן', null union all
+select 1, 'ש יוגוסלבים', null union all
+select 1, 'ש ישגב', null union all
+select 1, 'ש מעונות', null union all
+select 1, 'ש נוה משכן', null union all
+select 1, 'ש נוה שרת', null union all
+select 1, 'גני צהלה', null union all
+select 1, 'שכ נחלת יצחק', null union all
+select 1, 'ש צהלה', null union all
+select 1, 'ש שנחאי', null union all
+select 1, 'שכ גן הירקון', null union all
+select 1, 'קרית עתידים', null union all
+select 1, 'רמות צהלה', null union all
+select 1, 'שכ מחלול א', null union all
+select 1, 'שכ מחלול ב', null union all
+select 1, 'מרכז רפואי סוראסק', null union all
+select 1, 'שכ נורדיה', null union all
+select 1, 'ש בבלי', null union all
+select 1, 'שכ גב עמל ב', null union all
+select 1, 'עג''מי', null union all
+select 1, 'שכ גב עמל א', null union all
+select 1, 'שכ כ סומיל', null union all
+select 1, 'כרם התימנים', null union all
+select 1, 'בית יעקב', null union all
+select 1, 'שכ ולהלה', null union all
+select 1, 'שכ חסן בק', null union all
+select 1, 'תל חיים', null union all
+select 1, 'שכ נווה צדק', null union all
+select 1, 'הרה"ג יוסף צוברי', null union all
+select 1, 'הקריה', null union all
+select 1, 'שכ הרכבת', null union all
+select 1, 'גבעת הרצל', null union all
+select 1, 'שכ מכבי ישנה', null union all
+select 1, 'שכ קזנובה', null union all
+select 1, 'שכ שפת הים', null union all
+select 1, 'ש חסכון כביש בת י', null union all
+select 1, 'ש עממי שד ירושלים', null union all
+select 1, 'ש צהלון', null union all
+select 1, 'שכ שבת', null union all
+select 1, 'גבעת התמרים', null union all
+select 1, 'שכ אבו כביר', null union all
+select 1, 'ש חסכון יפו', null union all
+select 1, 'ש סחנה א', null union all
+select 1, 'שכון ד', null union all
+select 1, 'שכ נוה שאנן', null union all
+select 1, 'שכ ראשלצ', null union all
+select 1, 'שכ גב משה א', null union all
+select 1, 'שכ מכבי חדשה', null union all
+select 1, 'שכ עובד', null union all
+select 1, 'שכ שיבת ציון', null union all
+select 1, 'נוה תקוה', null union all
+select 1, 'ש סלע ק שלום', null union all
+select 1, 'ש צבא קבע ק שלום', null union all
+select 1, 'ש קרית שלום', null union all
+select 1, 'שכ שמעון', null union all
+select 1, 'ש מגורים ב', null union all
+select 1, 'ש רמת ישראל', null union all
+select 1, 'רמת הטייסים', null union all
+select 1, 'ש הקאוקזים', null union all
+select 1, 'ש נוה צהל', null union all
+select 1, 'שכ גב אלישיב', null union all
+select 1, 'מע ב כ שלם', null union all
+select 1, 'שכ גב שמשון', null union all
+select 1, 'שכ הארגזים', null union all
+select 1, 'שכ הבולגרים', null union all
+select 1, 'שכ ידידיה', null union all
+select 1, 'שכ לבנה', null union all
+select 1, 'שכ עזרא', null union all
+select 1, 'כפר שלם', null union all
+select 1, 'מע א כ שלם', null union all
+select 1, 'נוה אליעזר', null union all
+select 1, 'נוה ברבור', null union all
+select 1, 'נוה כפיר', null union all
+select 1, 'ניר אביב', null union all
+select 1, 'ש נוה שלם', null union all
+select 1, 'סיטי מנשיה', null union all
+select 1, 'אזור הספורט', null union all
+select 1, 'שכ גן ההגנה', null union all
+select 1, 'רח 6273', null union all
+select 1, 'רח'' 2285', null union all
+select 1, 'רח'' 2284', null union all
+select 1, 'שאגל מרק', null union all
+select 1, 'דה פיליפ אדיס (אב', null union all
+select 1, 'רח'' 3813', null union all
+select 1, 'מוזיאון הארץ', null union all
+select 1, 'רציף 0', null union all
+select 1, 'רציף 1', null union all
+select 1, 'רציף 2', null union all
+select 1, 'רציף 3', null union all
+select 1, 'רציף 4', null union all
+select 1, 'רציף 5', null union all
+select 1, 'רציף 6', null union all
+select 1, 'חוף הילטון', null union all
+select 1, 'מלון מנדרין', null union all
+select 1, 'חוף הצוק', null union all
+select 1, 'חוף שרתון', null union all
+select 1, 'חוף תל ברוך', null union all
+select 1, 'מגרשי התערוכה', null union all
+select 1, 'אצטדיון בלומפילד', null union all
+select 1, 'חוף בוגרשוב', null union all
+select 1, 'קרית התערוכות', null union all
+select 1, 'מרינה ת"א', null union all
+select 1, 'קרית האוניברסיטה', null union all
+select 1, 'פארק דרום', null union all
+select 1, 'קרוואנים ק.שלום', null union all
+select 1, 'קרוואנים שלבים', null union all
+select 1, 'חוף ירושלים', null union all
+select 1, 'חוף גאולה', null union all
+select 1, 'חוף הגולשים', null union all
+select 1, 'רח'' 4101', null union all
+select 1, 'רח'' 2243', null union all
+select 1, 'רח'' 2244', null union all
+select 1, 'תב"ע 1116', null union all
+select 1, 'רח מא שכ'' הארגזים', null union all
+select 1, 'התחנה', null union all
+select 1, 'רח'' 4850', null union all
+select 1, 'רח'' 2367', null union all
+select 1, 'רח'' 4849', null union all
+select 1, '1206', null union all
+select 1, 'רח'' נמל ת"א', null union all
+select 1, 'רח 2080', null union all
+select 1, '2חוף מציצים', null union all
+select 1, 'נרדי נחום', null union all
+select 1, 'אופיר שייקה', null union all
+select 1, 'בריג אמיל', null union all
+select 1, 'גילוץ דבורה ומנחם', null union all
+select 1, 'מחפוז נג''יב', null union all
+select 1, 'אבן חלדון', null union all
+select 1, 'טאג''יר שמואל וסול', null union all
+select 1, 'אבולעפיה רבקה ושל', null union all
+select 1, 'יהושע רוזין', null union all
+select 1, 'זאבי רחבעם (גנדי)', null union all
+select 1, 'מבוא גורוכוב', null union all
+select 1, 'יקותיאלי יוסף', null union all
+select 1, 'מהלר גוסטב', null union all
+select 1, 'רח'' 2283', null;
