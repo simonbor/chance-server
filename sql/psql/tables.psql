@@ -85,6 +85,7 @@ create table main."Chance" (
     "DateStart" timestamp(3) not null,
     "DriversIn" varchar(1000) null, 									-- array of customers id, BTW
     "DriverOut" int not null references main."Driver"("DriverId"),		-- out customer id
+	"Size" boolean null,												-- false meaning small parking size, true - big size and null - normal size
 	"Created" timestamp(3) not null default(timezone('utc', now())),
 	"CreatedBy" int null,
 	"Updated" timestamp(3) not null default(timezone('utc', now())),
