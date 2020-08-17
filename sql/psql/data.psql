@@ -682,7 +682,7 @@ select 1, 'שבע השקמים', null union all
 select 1, 'משעול יעקב', null union all
 select 1, 'רבנו תם', null union all
 select 1, 'טרומפלדור', null union all
-select 1, 'ברוק צבי', null union all
+select 1, 'ברוק צבי', 'ברוק ' union all
 select 1, 'ברנשטין כהן', null union all
 select 1, 'שניאור זלמן', null union all
 select 1, 'בר כוכבא', null union all
