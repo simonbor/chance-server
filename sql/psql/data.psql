@@ -400,7 +400,7 @@ select 1, 'אד"ם הכהן', null union all
 select 1, 'ליברמן', null union all
 select 1, 'ויזל', null union all
 select 1, 'יהל"ל', null union all
-select 1, 'שד בן גוריון', null union all
+select 1, 'שד בן גוריון', 'בן גוריון' union all
 select 1, 'לסל', null union all
 select 1, 'אהרון דוד גורדון', null union all
 select 1, 'ברנשטיין אדוארד', null union all
