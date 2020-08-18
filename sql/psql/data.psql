@@ -460,7 +460,7 @@ select 1, 'כהן הרמן', null union all
 select 1, 'ריינס', null union all
 select 1, 'גוטליב', null union all
 select 1, 'הירשנברג', null union all
-select 1, 'ש"ץ', null union all
+select 1, 'ש"ץ', 'שץ' union all
 select 1, 'ישראליס', null union all
 select 1, 'שלמה המלך', null union all
 select 1, 'גורדון י ל', null union all
