@@ -4,11 +4,24 @@ const chanceDal = require('../dal/chanceDal');
 const streetDal = require('../dal/streetDal');
 const { InsertChanceReq } = require('../models/chance');
 
+const streetFound = (waMessage, streetNames) => {
+    let result = false;
+    
+    streetNames.map(streetName => {
+        if(waMessage.indexOf(streetName) > -1) {
+            result = true;
+        }
+    })
+
+    return result;
+}
+
 const getStreetLocalName = (waMessage, streetsList) => {
     let streetLocalName;
 
     streetsList.map(street => {
-        if(waMessage.indexOf(street.LocalName) > -1) {
+        const streets = street.OtherNames ? `${street.LocalName},${street.OtherNames}`.split(',') : [street.LocalName];
+        if(streetFound(waMessage, streets)) {
             streetLocalName = street.LocalName;
         }
     })
@@ -26,7 +39,7 @@ const chanceInsert = async (req, res) => {
 
     // check whenever the street is exists in the City:
     //      if "yes" replace with it the req.body.Address.StreetName
-    //      if "no" log the message and response http status 403
+    //      if "no" log the message and response http status 400
     const waMessage = req.body.Address.StreetName;
     const cityStreets = await streetDal.streetGetAll(req.body.Address);
     const streetLocalName = getStreetLocalName(waMessage, cityStreets)

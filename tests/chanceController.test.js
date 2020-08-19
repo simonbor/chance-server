@@ -64,4 +64,14 @@ describe('chance controller tests', () => {
     expect(res.statusCode).toEqual(200);
     expect(typeof chance).toBe('object');
   });
+
+  test('test insert chance - check insertion by street OtherName. Should obtain status 200', async () => {
+    const res = mockResponse();
+
+    req.body.Address.StreetName = 'מפנה בשיר 10'; // שיר == שי"ר
+
+    const chance = await chanceController.chanceInsert(req, res);
+    expect(res.statusCode).toEqual(200);
+    expect(typeof chance).toBe('object');
+  });
 });
