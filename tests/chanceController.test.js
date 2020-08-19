@@ -51,7 +51,7 @@ describe('chance controller tests', () => {
     req.body.Address.StreetName = 'מפנה ברחוב שלא קיים 25 בעוד עשרים דקות';
 
     const chance = await chanceController.chanceInsert(req, res);
-    expect(res.statusCode).toEqual(403);
+    expect(res.statusCode).toEqual(400);
     expect(typeof chance).toBe('object');
   });
 
