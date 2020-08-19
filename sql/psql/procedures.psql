@@ -35,7 +35,7 @@ $$ language sql;
 create or replace function main."sp_UpdateReports" (
 	p_DriverId int
 ) returns table("DriverId" int, "Name" varchar(100)) as $$
-	update main."Driver" d set d."Reports" = d."Reports" + 1 where d."DriverId" = p_DriverId;
+	update main."Driver" set "Reports" = "Reports" + 1 where "DriverId" = p_DriverId;
 	select "DriverId", "Name" from main."Driver" d where d."DriverId" = p_DriverId;
 $$ language sql;
 

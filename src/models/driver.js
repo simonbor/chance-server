@@ -25,4 +25,10 @@ class InsertDriverReq {
     }
 }
 
-module.exports = { Driver, GetDriverReq, InsertDriverReq }
+class UpdateReportDriverReq {
+	constructor({DriverId}) {
+        this.DriverId = { 'typeName': 'Int', 'value': DriverId };
+    }
+}
+
+module.exports = { Driver, GetDriverReq, InsertDriverReq, UpdateReportDriverReq }

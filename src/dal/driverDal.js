@@ -1,6 +1,6 @@
 'use strict';
 const DbContext = require('./dal-context/dbContext');
-const { Driver, GetDriverReq, InsertDriverReq } = require('./../models/driver');
+const { Driver, GetDriverReq, InsertDriverReq, UpdateReportDriverReq } = require('./../models/driver');
 
 const driverGet = async function(driver) {
     const dbContext = new DbContext();
@@ -22,4 +22,14 @@ const driverInsert = async function(driver) {
     return res;
 }
 
-module.exports = {driverGet, driverInsert}
+const updateReports = async function(driver) {
+    const dbContext = new DbContext();
+
+    const driverReq = new UpdateReportDriverReq(driver);
+    let driverData = await dbContext.execute('main."sp_UpdateReports"', driverReq);
+    const res = new Driver((driverData[0])[0]);
+
+    return res;
+}
+
+module.exports = {driverGet, driverInsert, updateReports}
