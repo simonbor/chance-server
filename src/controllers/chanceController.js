@@ -63,6 +63,9 @@ const chanceInsert = async (req, res) => {
     const chanceReq = new InsertChanceReq (address.AddressId, driver.DriverId, req.body.Chance.DateStart, null, driver.DriverId);
     const chanceRes = await chanceDal.chanceInsert(chanceReq);
 
+    // increment driver reports reputation
+    driverDal.updateReports(driver);
+
     res.statusCode = 200;
     return chanceRes;
 }
