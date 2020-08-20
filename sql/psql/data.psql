@@ -312,7 +312,7 @@ select 1, 'יוחנן הורקנוס', null union all
 select 1, 'שמעון התרסי', null union all
 select 1, 'סמ התרסי', null union all
 select 1, 'אלכסנדר ינאי', null union all
-select 1, 'שד נורדאו', null union all
+select 1, 'שד נורדאו', 'נורדאו' union all
 select 1, 'יהושע בן נון', null union all
 select 1, 'עמוס', null union all
 select 1, 'סמ עמוס', null union all
@@ -385,7 +385,7 @@ select 1, 'עזריה מן האדומים', null union all
 select 1, 'קורדובה', null union all
 select 1, 'וורמיזה', null union all
 select 1, 'סמ נ"ס', null union all
-select 1, 'הקליר', null union all
+select 1, 'הקליר', 'קליר' union all
 select 1, 'אלחריזי', null union all
 select 1, 'בן עזרא', null union all
 select 1, 'הפרדס', null union all
@@ -502,7 +502,7 @@ select 1, 'שפירא צבי', null union all
 select 1, 'שמריהו לוין', null union all
 select 1, 'שד'' תרס"ט', null union all
 select 1, 'חיסין', null union all
-select 1, 'שד בן ציון', null union all
+select 1, 'שד בן ציון', 'בן ציון' union all
 select 1, 'לב אברהם', null union all
 select 1, 'מרמורק', null union all
 select 1, 'ביל"ו', null union all
