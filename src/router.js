@@ -2,6 +2,7 @@ const url = require('url');
 const {parse} = require('querystring');
 const addressController = require('./controllers/addressController');
 const chanceController = require('./controllers/chanceController');
+const loginController = require('./controllers/loginController');
 
 function collectRequestDataAsync(request) {    
     const FORM_URLENCODED = 'application/x-www-form-urlencoded';
@@ -38,6 +39,10 @@ const route = async function(req, res) {
     } else if (reqUrl.pathname == '/chance' && req.method === 'POST') {
         const chance = await chanceController.chanceInsert(req, res);
         res.end(JSON.stringify(chance));
+
+    } else if (reqUrl.pathname == '/login' && req.method === 'POST') {
+        const driver = await loginController.driverGet(req, res);
+        res.end(JSON.stringify(driver));
 
     } else {
         res.statusCode = 404;
