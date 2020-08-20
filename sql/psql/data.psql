@@ -456,7 +456,7 @@ select 1, 'פרופ'' יובל נאמן', null union all
 select 1, 'מנדלסון', null union all
 select 1, 'שפינוזה', null union all
 select 1, 'פילון', null union all
-select 1, 'כהן הרמן', null union all
+select 1, 'כהן הרמן', 'הרמן כהן' union all
 select 1, 'ריינס', null union all
 select 1, 'גוטליב', null union all
 select 1, 'הירשנברג', null union all
