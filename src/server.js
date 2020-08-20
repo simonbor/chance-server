@@ -13,11 +13,10 @@ const server = http.createServer((req, res) => {
         'Access-Control-Allow-Methods': 'POST, GET',
         'Access-Control-Allow-Headers': '*'
     };
+    res.writeHead(200, headers);
 
     const router = require('./router');
     router.route(req, res);
-
-    //res.writeHead(200, headers);
 });
 
 
