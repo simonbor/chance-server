@@ -17,6 +17,7 @@
     }
   },
   "dependencies": {
+    "jsonwebtoken": "^8.5.1",
     "mssql": "^6.2.0",
     "pg": "^8.3.0"
   },
