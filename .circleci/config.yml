@@ -4,6 +4,12 @@ workflows:
   build-deploy:
     jobs:
       - build-deploy
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              only:
+                - master
 
 jobs:
   build-deploy:
