@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'POST, GET',
         'Access-Control-Allow-Headers': '*',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json;charset=UTF-8'
     };
     res.writeHead(res.statusCode, headers);
 
