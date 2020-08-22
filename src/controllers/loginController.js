@@ -5,7 +5,7 @@ const driverGet = async (req, res) => {
     const driver = await driverDal.driverGet(req.body.Driver);
     if (!driver.DriverId) {
         res.statusCode = 401;
-        return { auth: false, user: {}, token: '' };
+        return { auth: false, user: {}, token: null };
     }
     
     const secret = process.env.CRYPTO_KEY || 'secretPassword';
