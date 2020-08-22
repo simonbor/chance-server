@@ -11,7 +11,8 @@ const server = http.createServer((req, res) => {
     const headers = {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'POST, GET',
-        'Access-Control-Allow-Headers': '*'
+        'Access-Control-Allow-Headers': '*',
+        'Content-Type': 'application/json'
     };
     res.writeHead(res.statusCode, headers);
 
