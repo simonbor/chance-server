@@ -76,7 +76,9 @@ create table main."Location" (
 	"Updated" timestamp(3) not null default(timezone('utc', now())),
 	"UpdatedBy" int null,
 	"Deleted" timestamp(3) null,
-	"DeletedBy" int null
+	"DeletedBy" int null,
+
+	unique("Longitude", "Latitude", "Altitude", "AddressId")
 );
 
 create table main."Chance" (
