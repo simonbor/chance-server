@@ -46,7 +46,7 @@ const route = async function(req, res) {
 
     } else {
         res.statusCode = 404;
-        res.end({});
+        res.end('{}');
     }
 }
 
