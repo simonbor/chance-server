@@ -30,24 +30,21 @@ const route = async function(req, res) {
     }
 
     if (reqUrl.pathname == '/address-get' && req.method === 'POST') {
-        res.end(JSON.stringify(await addressController.addressGet(req, res)));
+        return await addressController.addressGet(req, res);
 
     } else if (reqUrl.pathname == '/address' && req.method === 'POST') {
-        const address = await addressController.addressInsert(req, res);
-        res.end(JSON.stringify(address));
+        return await addressController.addressInsert(req, res);
 
     } else if (reqUrl.pathname == '/chance' && req.method === 'POST') {
-        const chance = await chanceController.chanceInsert(req, res);
-        res.end(JSON.stringify(chance));
+        return await chanceController.chanceInsert(req, res);
 
     } else if (reqUrl.pathname == '/login' && req.method === 'POST') {
-        const driver = await loginController.driverGet(req, res);
-        res.end(JSON.stringify(driver));
+        return await loginController.driverGet(req, res);
 
     } else {
         res.statusCode = 404;
-        res.end('{}');
+        return '{}';
     }
 }
 
-module.exports = {route}
+module.exports = { route }
