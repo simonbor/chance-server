@@ -313,7 +313,7 @@ select 1, 'שמעון התרסי', null union all
 select 1, 'סמ התרסי', null union all
 select 1, 'אלכסנדר ינאי', null union all
 select 1, 'שד נורדאו', 'נורדאו' union all
-select 1, 'יהושע בן נון', null union all
+select 1, 'יהושע בן נון', 'יהושוע בן נון,יהושוע,יהושע' union all
 select 1, 'עמוס', null union all
 select 1, 'סמ עמוס', null union all
 select 1, 'סוקולוב', null union all
