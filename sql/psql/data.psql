@@ -365,7 +365,7 @@ select 1, 'השחקנים', null union all
 select 1, 'בינט מאיר', null union all
 select 1, 'רח 2005', null union all
 select 1, 'מהר"ל', null union all
-select 1, 'חת"ם סופר', null union all
+select 1, 'חת"ם סופר', 'חתם סופר' union all
 select 1, 'לוי יצחק', null union all
 select 1, 'התניא', null union all
 select 1, 'פרנקפורט', null union all
@@ -418,7 +418,7 @@ select 1, 'ז''ורס ז''אן', null union all
 select 1, 'ביירון', null union all
 select 1, 'קורולנקו', null union all
 select 1, 'נתן החכם', null union all
-select 1, 'הוז דב', null union all
+select 1, 'הוז דב', 'הוז דוב' union all
 select 1, 'ישורון', null union all
 select 1, 'רופין', null union all
 select 1, 'ארנון', null union all
@@ -481,7 +481,7 @@ select 1, 'נצח ישראל', null union all
 select 1, 'גדעון', null union all
 select 1, 'השופטים', null union all
 select 1, 'לטריס', null union all
-select 1, 'הנביאים', null union all
+select 1, 'הנביאים', 'נביאים' union all
 select 1, 'מלכי ישראל', null union all
 select 1, 'שמשון', null union all
 select 1, 'ספיר', null union all
