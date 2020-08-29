@@ -33,8 +33,7 @@ describe('chance controller tests', () => {
     req.body = {
       "Address": {
         "CityId": 1,
-        "CountryId": 367,
-        "Building": 1
+        "CountryId": 367
       },
       "Driver": {
         "MobileNum": "0544123123"
@@ -48,7 +47,7 @@ describe('chance controller tests', () => {
   test('Test insert chance - incorrect street use case. Should obtain status 403', async () => {
     const res = mockResponse();
 
-    req.body.Address.StreetName = 'מפנה ברחוב שלא קיים 25 בעוד עשרים דקות';
+    req.body.Address.Text = 'מפנה ברחוב שלא קיים 5 בעוד עשרים דקות';
 
     const chance = await chanceController.chanceInsert(req, res);
     expect(res.statusCode).toEqual(400);
@@ -58,7 +57,7 @@ describe('chance controller tests', () => {
   test('test insert chance - correct street use case. Should obtain status 200', async () => {
     const res = mockResponse();
 
-    req.body.Address.StreetName = 'מפנה בבוגרשוב 55 בעוד עשרים דקות';
+    req.body.Address.Text = 'מפנה בבוגרשוב 5 בעוד עשרים דקות';
 
     const chance = await chanceController.chanceInsert(req, res);
     expect(res.statusCode).toEqual(200);
@@ -68,7 +67,7 @@ describe('chance controller tests', () => {
   test('test insert chance - check insertion by street OtherName. Should obtain status 200', async () => {
     const res = mockResponse();
 
-    req.body.Address.StreetName = 'מפנה בשיר 10'; // שיר == שי"ר
+    req.body.Address.Text = 'מפנה בשיר 5'; // שיר == שי"ר
 
     const chance = await chanceController.chanceInsert(req, res);
     expect(res.statusCode).toEqual(200);
