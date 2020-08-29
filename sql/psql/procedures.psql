@@ -7,6 +7,7 @@ drop function if exists main."sp_GetLocationByAddress";
 drop function if exists main."sp_InsertLocation";
 drop function if exists main."sp_InsertChance";
 drop function if exists main."sp_GetChanceByCity";
+drop function if exists main."sp_GetCity";
 
 -- =================================
 -- Driver
@@ -38,6 +39,18 @@ create or replace function main."sp_UpdateReports" (
 	update main."Driver" set "Reports" = "Reports" + 1 where "DriverId" = p_DriverId;
 	select "DriverId", "Name" from main."Driver" d where d."DriverId" = p_DriverId;
 $$ language sql;
+
+-- =================================
+-- City
+-- =================================
+
+create or replace function main."sp_GetCity" (
+	p_CityId int
+) returns setof main."City" as $$
+begin
+    return query select * from main."City" c where c."CityId" = p_CityId;
+end;
+$$ language plpgsql;
 
 -- =================================
 -- Streets
