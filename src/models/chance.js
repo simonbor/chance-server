@@ -1,11 +1,16 @@
 'use strict';
 
 class Chance {
-	constructor(AddressId, DriverOut, DateStart, CreatedBy) {
+    constructor({ChanceId, LocationId, AddressId, DriverOut, DriversIn, DateStart, Size, Created, CreatedBy}) {
+        this.ChanceId = ChanceId;
+        this.LocationId = LocationId;
         this.AddressId = AddressId;
         this.DriverOut = DriverOut;
+        this.DriversIn = DriversIn;
         this.DateStart = DateStart;
+        this.Size = Size;
         this.CreatedBy = CreatedBy;
+        this.Created = Created;
     }
 }
 

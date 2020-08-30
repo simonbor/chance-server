@@ -1,6 +1,6 @@
 'use strict';
 const DbContext = require('./dal-context/dbContext');
-const { InsertChanceReq } = require('../models/chance');
+const { Chance, InsertChanceReq } = require('../models/chance');
 
 const chanceInsert = async function(req) {
     const dbContext = new DbContext();
@@ -12,8 +12,9 @@ const chanceInsert = async function(req) {
         req.body.Location.LocationId, 
         req.body.Driver.DriverId);
     let chanceData = await dbContext.execute('main."sp_InsertChance"', chanceReq);
+    const chance = new Chance((chanceData[0])[0] || chanceData[0]);
 
-    return chanceData;
+    return chance;
 }
 
-module.exports = {chanceInsert}
+module.exports = { chanceInsert }
