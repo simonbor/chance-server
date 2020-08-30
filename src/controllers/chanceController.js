@@ -9,7 +9,7 @@ const cipher = require('../cipher');
 const utils = require('../utils');
 
 const getDriver = async function(req) {
-    let driver = await driverDal.driverGet(req.body.Driver) || {};
+    let driver = await driverDal.driverGet(req.body.Driver);
     if(!driver.DriverId) {
         driver = await driverDal.driverInsert(req.body.Driver);
     }
