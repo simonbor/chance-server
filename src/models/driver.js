@@ -1,13 +1,15 @@
 'use strict';
 
 class Driver {
-	constructor({DriverId, MobileNum, Name, CarName, CarColor, Reports}) {
+	constructor({DriverId, MobileNum, Name, CarName, CarColor, Reports, Updated, Created}) {
         this.DriverId = DriverId;
         this.MobileNum = MobileNum;
         this.Name = Name;
         this.CarName = CarName;
         this.CarColor = CarColor;
         this.Reports = Reports;
+        this.Created = Created;
+        this.Updated = Updated;
     }
 }
 

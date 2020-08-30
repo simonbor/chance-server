@@ -1,6 +1,7 @@
 drop function if exists main."sp_GetDriver";
-drop function if exists main."sp_GetAllStreets";
 drop function if exists main."sp_InsertDriver";
+drop function if exists main."sp_UpdateReports";
+drop function if exists main."sp_GetAllStreets";
 drop function if exists main."sp_GetAddress";
 drop function if exists main."sp_InsertAddress";
 drop function if exists main."sp_GetLocationByAddress";
@@ -35,10 +36,12 @@ $$ language sql;
 
 create or replace function main."sp_UpdateReports" (
 	p_DriverId int
-) returns table("DriverId" int, "Name" varchar(100)) as $$
-	update main."Driver" set "Reports" = "Reports" + 1 where "DriverId" = p_DriverId;
-	select "DriverId", "Name" from main."Driver" d where d."DriverId" = p_DriverId;
-$$ language sql;
+) returns setof main."Driver" as $$
+begin
+	update main."Driver" set "Reports" = "Reports" + 1, "Updated" = timezone('utc', now()) where"DriverId" = p_DriverId;
+	return query select * from main."Driver" d where d."DriverId" = p_DriverId;
+end;
+$$ language plpgsql;
 
 -- =================================
 -- City
