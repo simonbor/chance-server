@@ -5,9 +5,16 @@ const chanceDal = require('../dal/chanceDal');
 const streetDal = require('../dal/streetDal');
 const locationDal = require('../dal/locationDal');
 const cityDal = require('../dal/cityDal');
-const { InsertChanceReq } = require('../models/chance');
 const cipher = require('../cipher');
 const utils = require('../utils');
+
+const getDriver = async function(req) {
+    let driver = await driverDal.driverGet(req.body.Driver) || {};
+    if(!driver.DriverId) {
+        driver = await driverDal.driverInsert(req.body.Driver);
+    }
+    return driver;
+}
 
 const streetFound = (waMessage, streetNames) => {
     let result = false;    
@@ -17,14 +24,6 @@ const streetFound = (waMessage, streetNames) => {
         }
     });
     return result;
-}
-
-const getDriver = async function(req) {
-    let driver = await driverDal.driverGet(req.body.Driver) || {};
-    if(!driver.DriverId) {
-        driver = await driverDal.driverInsert(req.body.Driver);
-    }
-    return driver;
 }
 
 const getStreetName = async function(req) {
@@ -85,9 +84,7 @@ const chanceInsert = async (req, res) => {
 
     // get/insert the street
     const streetLocalName = await getStreetName(req);       // check whenever the street is exists in the City:
-    if (streetLocalName) {
-        req.body.Address.StreetName = streetLocalName;
-    } else {
+    if (!streetLocalName) {
         // todo: log req.body.Address.Text
         console.log(`Error: The street name isn't found in the message "${req.body.Address.Text}".`);
         res.statusCode = 400;
@@ -95,6 +92,7 @@ const chanceInsert = async (req, res) => {
     }
     
     // get/insert the address
+    req.body.Address.StreetName = streetLocalName;
     req.body.Address.Building = req.body.Address.Text.match(/\d+/)[0];
     req.body.Driver.DriverId = driver.DriverId;
     const address = await getAddress(req);
@@ -104,9 +102,8 @@ const chanceInsert = async (req, res) => {
     const location = await getLocation(req);
     
     // insert chance
-    const chanceReq = new InsertChanceReq (address.AddressId, driver.DriverId, req.body.Chance.DateStart, 
-        location.LocationId, driver.DriverId);
-    const chanceRes = await chanceDal.chanceInsert(chanceReq);
+    req.body.Location = {"LocationId": location.LocationId};
+    const chanceRes = await chanceDal.chanceInsert(req);
 
     // increment driver reports reputation
     driverDal.updateReports(driver);
