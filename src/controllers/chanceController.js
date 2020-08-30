@@ -26,18 +26,16 @@ const streetFound = (waMessage, streetNames) => {
     return result;
 }
 
-const getStreetName = async function(req) {
-    const waMessage = req.body.Address.Text;
+const getStreet = async function(req) {
+    const addressText = req.body.Address.Text;
     const cityStreets = await streetDal.streetGetAll(req.body.Address);
-    let streetLocalName;
+    let street = {};
 
-    cityStreets.map(street => {
-        const streets = street.OtherNames ? `${street.LocalName},${street.OtherNames}`.split(',') : [street.LocalName];
-        if(streetFound(waMessage, streets)) {
-            streetLocalName = street.LocalName;
-        }
+    cityStreets.map(cityStreet => {
+        const streets = cityStreet.OtherNames ? `${cityStreet.LocalName},${cityStreet.OtherNames}`.split(',') : [cityStreet.LocalName];
+        streetFound(addressText, streets) && (street = cityStreet);
     });
-    return streetLocalName;
+    return street;
 }
 
 const getAddress = async function(req) {
@@ -59,7 +57,7 @@ const getLocation = async function(req) {
         // retrieve location from here map service
         const url = config.here_map.geo_url
             + '?apiKey=' + cipher.decrypt(config.here_map.api_key)
-            + '&searchtext=' + req.body.Address.StreetName
+            + '&searchtext=' + req.body.Street.LocalName
             + ' ' + req.body.Address.Building
             + ' ' + req.body.Address.CityName;
         const geoData = await utils.get(url);
@@ -83,8 +81,8 @@ const chanceInsert = async (req, res) => {
     const driver = await getDriver(req);
 
     // get/insert the street
-    const streetLocalName = await getStreetName(req);       // check whenever the street is exists in the City:
-    if (!streetLocalName) {
+    const street = await getStreet(req);       // check whenever the street is exists in the City:
+    if (!street.StreetId) {
         // todo: log req.body.Address.Text
         console.log(`Error: The street name isn't found in the message "${req.body.Address.Text}".`);
         res.statusCode = 400;
@@ -92,13 +90,14 @@ const chanceInsert = async (req, res) => {
     }
     
     // get/insert the address
-    req.body.Address.StreetName = streetLocalName;
-    req.body.Address.Building = req.body.Address.Text.match(/\d+/)[0];
+    req.body.Address.StreetId = street.StreetId;
+    req.body.Address.Building = parseInt(req.body.Address.Text.match(/\d+/)[0]);
     req.body.Driver.DriverId = driver.DriverId;
     const address = await getAddress(req);
 
     // get/insert the location
     req.body.Address.AddressId = address.AddressId;
+    req.body.Street = {"LocalName": street.LocalName};
     const location = await getLocation(req);
     
     // insert chance
