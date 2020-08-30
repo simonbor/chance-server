@@ -348,7 +348,7 @@ select 340, 'גריזים', null, 1 union all
 select 341, 'פקיעין', null, 1 union all
 select 342, 'סמ זנגביל', null, 1 union all
 select 343, 'סמ מנדלשטם', null, 1 union all
-select 344, 'הירקון', null, 1 union all
+select 344, 'הירקון', 'ירקון', 1 union all
 select 345, 'ברון עקיבא', null, 1 union all
 select 346, 'סמ נחושתן', null, 1 union all
 select 347, 'שד יוצ"ר', null, 1 union all
