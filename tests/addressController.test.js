@@ -49,7 +49,7 @@ describe('location controller tests', () => {
   test('test address read - exists address use case', async () => {
     const res = mockResponse();
 
-    req.body.Address.StreetName = 'בוגרשוב';
+    req.body.Address.StreetId = 1;
 
     let address = await addressController.addressGet(req, res);
     if(!address.AddressId) {
