@@ -19,7 +19,8 @@ module.exports = class MssqlContext {
         const data = [];
         const res = await pool.query(`select row_to_json(${procedureName}(${csDollars}))`, arrParams);
         res.rows.map(row => { row && data.push(row['row_to_json']) })
-
+        pool.end();
+        
         return [data];
     }
 }
