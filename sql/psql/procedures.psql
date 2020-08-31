@@ -137,6 +137,8 @@ end;$$;
 -- =================================
 create or replace function main."sp_InsertChance" (
 	p_DriverOut int,
+	p_Latitude double precision,
+	p_Longitude double precision,
 	p_DateStart timestamp(3),
 	p_AddressId int = null,
 	p_LocationId int = null,
@@ -145,8 +147,8 @@ create or replace function main."sp_InsertChance" (
 language plpgsql as $$
 	declare v_ChanceId integer;
 begin
-	insert into main."Chance" ("LocationId", "AddressId", "DateStart", "DriverOut", "CreatedBy")
-	values (p_LocationId, p_AddressId, p_DateStart, p_DriverOut, p_CreatedBy)
+	insert into main."Chance" ("Latitude", "Longitude", "LocationId", "AddressId", "DateStart", "DriverOut", "CreatedBy")
+	values (p_Latitude, p_Longitude, p_LocationId, p_AddressId, p_DateStart, p_DriverOut, p_CreatedBy)
 	returning main."Chance"."ChanceId" into v_ChanceId;
 
 	return query select c."ChanceId", c."CreatedBy" from main."Chance" c where c."ChanceId" = v_ChanceId;
@@ -172,8 +174,8 @@ begin
 	raise notice 'p_DateStart: %', p_DateStart;
 	raise notice 'v_NowMinusGap: %', v_NowMinusGap;
 
-	return query select c."ChanceId", l."Longitude", l."Latitude", c."DateStart", c."DriverOut", c."Size", c."AddressId"
-	from main."Chance" c inner join main."Location" l on c."LocationId" = l."LocationId"
+	return query select c."ChanceId", c."Longitude", c."Latitude", c."DateStart", c."DriverOut", c."Size", c."AddressId"
+	from main."Chance" c
 	where c."AddressId" in (select a."AddressId" from main."Address" a where a."CityId" = p_CityId) 
 		and c."DateStart" > v_NowMinusGap;
 end;$$;

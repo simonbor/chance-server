@@ -17,4 +17,14 @@ const chanceInsert = async function(req) {
     return chance;
 }
 
-module.exports = { chanceInsert }
+const chanceGet = async function(req) {
+    const dbContext = new DbContext();
+
+    const chanceReq = new GetChanceByCityReq (req.body.Address.CityId, req.body.Chance.DateStart);
+    let chanceData = await dbContext.execute('main."sp_GetChanceByCity"', chanceReq);
+    const chance = new Chance((chanceData[0])[0] || chanceData[0]);
+
+    return chance;
+}
+
+module.exports = { chanceInsert, chanceGet }
