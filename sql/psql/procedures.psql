@@ -1,6 +1,7 @@
 drop function if exists main."sp_GetDriver";
 drop function if exists main."sp_InsertDriver";
 drop function if exists main."sp_UpdateReports";
+drop function if exists main."sp_GetCity";
 drop function if exists main."sp_GetAllStreets";
 drop function if exists main."sp_GetAddress";
 drop function if exists main."sp_InsertAddress";
@@ -8,7 +9,6 @@ drop function if exists main."sp_GetLocationByAddress";
 drop function if exists main."sp_InsertLocation";
 drop function if exists main."sp_InsertChance";
 drop function if exists main."sp_GetChanceByCity";
-drop function if exists main."sp_GetCity";
 
 -- =================================
 -- Driver
@@ -152,20 +152,28 @@ begin
 	return query select c."ChanceId", c."CreatedBy" from main."Chance" c where c."ChanceId" = v_ChanceId;
 end;$$;
 
+drop function if exists main."sp_GetChanceByCity";
 create or replace function main."sp_GetChanceByCity" (
 	p_CityId int,
-	p_Gap int = 10 -- 10 minutes gap
-) returns setof main."Chance"
+	p_DateStart timestamp(3) = null
+) returns table ("ChanceId" int, "Longitude" double precision, "Latitude" double precision, "DateStart" timestamp(3), "DriverOut" int, "Size" boolean, "AddressId" int) 
 language plpgsql AS $$
-	declare v_NowMinusGap timestamp(3) = (SELECT -@Gap * INTERVAL '1 mi' + getutcdate());
+	declare v_GapTime varchar = '20 minutes';
+	declare v_NowMinusGap timestamp(3);
 begin
-	select * 
-	from main."Chance" c 
-	where c."AddressId" 
-		in (select "AddressId" from main."Address" a where a."CityId" = p_CityId) and
-        c."DateStart" > v_NowMinusGap;
+	if p_DateStart is null
+	then -- calculate by default Gap Time (20 min)
+		v_NowMinusGap = (select timezone('utc', now())::timestamp - v_GapTime::interval); -- don't forget change it to 10 mins
+	else -- calculate by provided time
+		v_NowMinusGap = p_DateStart;
+	end if;
+
+	raise notice 'v_GapTime: %', v_GapTime;
+	raise notice 'p_DateStart: %', p_DateStart;
+	raise notice 'v_NowMinusGap: %', v_NowMinusGap;
+
+	return query select c."ChanceId", l."Longitude", l."Latitude", c."DateStart", c."DriverOut", c."Size", c."AddressId"
+	from main."Chance" c inner join main."Location" l on c."LocationId" = l."LocationId"
+	where c."AddressId" in (select a."AddressId" from main."Address" a where a."CityId" = p_CityId) 
+		and c."DateStart" > v_NowMinusGap;
 end;$$;
-
-
-
-
