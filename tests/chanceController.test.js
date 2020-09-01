@@ -1,6 +1,7 @@
 const chanceController = require('../src/controllers/chanceController');
 const DbContext = require('../src/dal/dal-context/dbContext')
 
+// https://scotch.io/tutorials/nodejs-tests-mocking-http-requests
 describe('chance controller tests', () => {
   const mockRequest = () => {
     const req = {};
@@ -26,10 +27,6 @@ describe('chance controller tests', () => {
   });
 
   beforeEach(async () => {
-    // https://stackoverflow.com/questions/20083807/javascript-date-to-sql-date-object
-    // new Date().toISOString().slice(0, 19).replace('T', ' ');
-    // req.body.Chance = {"DateStart": (new Date()).toLocaleString("en-US")};
-
     req.body = {
       "Address": {
         "CityId": 1,
@@ -44,7 +41,7 @@ describe('chance controller tests', () => {
     }
   });
 
-  test('Test insert chance - incorrect street use case. Should obtain status 403', async () => {
+  test('Test insert chance - incorrect street use case', async () => {
     const res = mockResponse();
 
     req.body.Address.Text = 'מפנה ברחוב שלא קיים 5 בעוד עשרים דקות';
@@ -54,7 +51,7 @@ describe('chance controller tests', () => {
     expect(typeof chance).toBe('object');
   });
 
-  test('test insert chance - correct street use case. Should obtain status 200', async () => {
+  test('test insert chance - correct street use case', async () => {
     const res = mockResponse();
 
     req.body.Address.Text = `מפנה בבוגרשוב ${Math.floor((Math.random()*300) + 1)} בעוד עשרים דקות`;
@@ -64,7 +61,7 @@ describe('chance controller tests', () => {
     expect(typeof chance).toBe('object');
   });
 
-  test('test insert chance - check insertion by street OtherName. Should obtain status 200', async () => {
+  test('test insert chance - check insertion by street OtherName', async () => {
     const res = mockResponse();
 
     req.body.Address.Text = 'מפנה בשיר ' + Math.floor((Math.random()*300) + 1); // שיר == שי"ר
@@ -73,4 +70,23 @@ describe('chance controller tests', () => {
     expect(res.statusCode).toEqual(200);
     expect(typeof chance).toBe('object');
   });
+
+  test('test get chances - chance list should be bigger then 0', async () => {
+    const res = mockResponse();
+
+    // insert chance
+    req.body.Address.Text = `מפנה בבוגרשוב ${Math.floor((Math.random()*300) + 1)}`;
+    await chanceController.chanceInsert(req, res);
+
+    const date = new Date();
+    date.setDate(date.getDate() - 1);
+    req.body.Chance.DateStart = (date).toLocaleString("en-US");
+    const chanceList = await chanceController.chanceGet(req, res);
+    
+    expect(chanceList.length > 0).toBeTruthy();
+    expect(res.statusCode).toEqual(200);
+  });
+
+
+
 });
