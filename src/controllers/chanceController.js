@@ -47,6 +47,7 @@ const getAddress = async function(req) {
     return address;
 }
 
+// https://scotch.io/tutorials/nodejs-tests-mocking-http-requests
 const getLocation = async function(req) {
     let location = await locationDal.locationGet(req.body.Address);
     if (!location.LocationId) {
@@ -96,12 +97,12 @@ const chanceInsert = async (req, res) => {
     const address = await getAddress(req);
 
     // get/insert the location
+    // https://scotch.io/tutorials/nodejs-tests-mocking-http-requests
     req.body.Address.AddressId = address.AddressId;
     req.body.Street = {"LocalName": street.LocalName};
-    const location = await getLocation(req);
+    req.body.Location = await getLocation(req);
     
     // insert chance
-    req.body.Location = {"LocationId": location.LocationId};
     const chance = await chanceDal.chanceInsert(req);
     if(chance.ChanceId) {
         driverDal.updateReports(driver);    // increment driver reports reputation
@@ -112,4 +113,11 @@ const chanceInsert = async (req, res) => {
     return chance;
 }
 
-module.exports = { chanceInsert }
+const chanceGet = async function(req, res) {
+    const chanceList = await chanceDal.chanceGet(req);
+
+    res.statusCode = 200;
+    return chanceList;
+}
+
+module.exports = { chanceInsert, chanceGet }

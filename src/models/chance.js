@@ -17,12 +17,14 @@ class Chance {
 }
 
 class InsertChanceReq {
-	constructor(addressId, DriverOut, dateStart, locationId, createdBy) {
+	constructor(DriverOut, Latitude, Longitude, DateStart, LocationId, AddressId, CreatedBy) {
         this.DriverOut =    { 'typeName': 'Int', 'value': DriverOut };
-        this.DateStart =    { 'typeName': 'DateTime', 'value': dateStart };
-        this.AddressId =    { 'typeName': 'Int', 'value': addressId };
-        this.LocationId =   { 'typeName': 'Int', 'value': locationId };
-        this.CreatedBy =    { 'typeName': 'Int', 'value': createdBy };
+        this.Latitude =     { 'typeName': 'Float', 'value': Latitude },
+        this.Longitude =    { 'typeName': 'Float', 'value': Longitude },
+        this.DateStart =    { 'typeName': 'DateTime', 'value': DateStart };
+        this.AddressId =    { 'typeName': 'Int', 'value': AddressId };
+        this.LocationId =   { 'typeName': 'Int', 'value': LocationId };
+        this.CreatedBy =    { 'typeName': 'Int', 'value': CreatedBy };
     }
 }
 
@@ -33,4 +35,4 @@ class GetChanceByCityReq {
     }
 }
 
-module.exports = { Chance, InsertChanceReq }
+module.exports = { Chance, InsertChanceReq, GetChanceByCityReq }
