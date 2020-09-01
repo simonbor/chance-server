@@ -1,6 +1,7 @@
 drop function if exists main."sp_GetDriver";
 drop function if exists main."sp_InsertDriver";
 drop function if exists main."sp_UpdateReports";
+drop function if exists main."sp_GetCity";
 drop function if exists main."sp_GetAllStreets";
 drop function if exists main."sp_GetAddress";
 drop function if exists main."sp_InsertAddress";
@@ -8,7 +9,6 @@ drop function if exists main."sp_GetLocationByAddress";
 drop function if exists main."sp_InsertLocation";
 drop function if exists main."sp_InsertChance";
 drop function if exists main."sp_GetChanceByCity";
-drop function if exists main."sp_GetCity";
 
 -- =================================
 -- Driver
@@ -137,6 +137,8 @@ end;$$;
 -- =================================
 create or replace function main."sp_InsertChance" (
 	p_DriverOut int,
+	p_Latitude double precision,
+	p_Longitude double precision,
 	p_DateStart timestamp(3),
 	p_AddressId int = null,
 	p_LocationId int = null,
@@ -145,27 +147,35 @@ create or replace function main."sp_InsertChance" (
 language plpgsql as $$
 	declare v_ChanceId integer;
 begin
-	insert into main."Chance" ("LocationId", "AddressId", "DateStart", "DriverOut", "CreatedBy")
-	values (p_LocationId, p_AddressId, p_DateStart, p_DriverOut, p_CreatedBy)
+	insert into main."Chance" ("Latitude", "Longitude", "LocationId", "AddressId", "DateStart", "DriverOut", "CreatedBy")
+	values (p_Latitude, p_Longitude, p_LocationId, p_AddressId, p_DateStart, p_DriverOut, p_CreatedBy)
 	returning main."Chance"."ChanceId" into v_ChanceId;
 
 	return query select c."ChanceId", c."CreatedBy" from main."Chance" c where c."ChanceId" = v_ChanceId;
 end;$$;
 
+drop function if exists main."sp_GetChanceByCity";
 create or replace function main."sp_GetChanceByCity" (
 	p_CityId int,
-	p_Gap int = 10 -- 10 minutes gap
-) returns setof main."Chance"
+	p_DateStart timestamp(3) = null
+) returns table ("ChanceId" int, "Longitude" double precision, "Latitude" double precision, "DateStart" timestamp(3), "DriverOut" int, "Size" boolean, "AddressId" int) 
 language plpgsql AS $$
-	declare v_NowMinusGap timestamp(3) = (SELECT -@Gap * INTERVAL '1 mi' + getutcdate());
+	declare v_GapTime varchar = '20 minutes';
+	declare v_NowMinusGap timestamp(3);
 begin
-	select * 
-	from main."Chance" c 
-	where c."AddressId" 
-		in (select "AddressId" from main."Address" a where a."CityId" = p_CityId) and
-        c."DateStart" > v_NowMinusGap;
+	if p_DateStart is null
+	then -- calculate by default Gap Time (20 min)
+		v_NowMinusGap = (select timezone('utc', now())::timestamp - v_GapTime::interval); -- don't forget change it to 10 mins
+	else -- calculate by provided time
+		v_NowMinusGap = p_DateStart;
+	end if;
+
+	raise notice 'v_GapTime: %', v_GapTime;
+	raise notice 'p_DateStart: %', p_DateStart;
+	raise notice 'v_NowMinusGap: %', v_NowMinusGap;
+
+	return query select c."ChanceId", c."Longitude", c."Latitude", c."DateStart", c."DriverOut", c."Size", c."AddressId"
+	from main."Chance" c
+	where c."AddressId" in (select a."AddressId" from main."Address" a where a."CityId" = p_CityId) 
+		and c."DateStart" > v_NowMinusGap;
 end;$$;
-
-
-
-
