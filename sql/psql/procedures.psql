@@ -121,16 +121,15 @@ create or replace function main."sp_InsertLocation" (
 	p_Default boolean = false,
 	p_Desc varchar(500) = null,
 	p_CreatedBy int = null
-) returns table("LocationId" int, "CreatedBy" int)
-language plpgsql as $$
+) returns setof main."Location" as $body$
 	declare v_LocationId integer;
 begin
 	insert into main."Location"("Latitude", "Longitude", "Altitude", "AddressId", "DefLocation", "Desc", "CreatedBy")
 	values (p_Latitude, p_Longitude, p_Altitude, p_AddressId, p_Default, p_Desc, p_CreatedBy)
 	returning main."Location"."LocationId" into v_LocationId;
 	
-	return query select l."LocationId", l."CreatedBy" from main."Location" l where l."LocationId" = v_LocationId;
-end;$$;
+	return query select * from main."Location" l where l."LocationId" = v_LocationId;
+end;$body$ language plpgsql;
 
 -- =================================
 -- Chance
@@ -140,8 +139,8 @@ create or replace function main."sp_InsertChance" (
 	p_Latitude double precision,
 	p_Longitude double precision,
 	p_DateStart timestamp(3),
-	p_AddressId int = null,
-	p_LocationId int = null,
+	p_AddressId int,
+	p_LocationId int,
 	p_CreatedBy int = null
 ) returns table ("ChanceId" int, "CreatedBy" int) 
 language plpgsql as $$
