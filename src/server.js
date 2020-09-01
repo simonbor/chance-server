@@ -17,7 +17,6 @@ const server = http.createServer();
 server.on('request', async (req, res) => {
     res.writeHead(res.statusCode, headers);
     const jsonString = await router.route(req, res);
-    res.writeHead(res.statusCode, headers);
 
     res.end(JSON.stringify(jsonString));
 });
