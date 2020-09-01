@@ -85,7 +85,7 @@ const chanceInsert = async (req, res) => {
     const street = await getStreet(req);       // check whenever the street is exists in the City:
     if (!street.StreetId) {
         // todo: log req.body.Address.Text
-        console.error(`Error: The street name isn't found in the message "${req.body.Address.Text}".`);
+        console.error(`Error: The street not found in the message "${req.body.Address.Text}".`);
         res.statusCode = 400;
         return {};
     }
@@ -106,8 +106,10 @@ const chanceInsert = async (req, res) => {
     const chance = await chanceDal.chanceInsert(req);
     if(chance.ChanceId) {
         driverDal.updateReports(driver);    // increment driver reports reputation
+        console.info(`Info: New chance #${chance.ChanceId} at street ${street.LocalName} posted by ${req.body.Driver.MobileNum}`);
         res.statusCode = 200;
     } else {
+        console.error(`Error: There was an error recording chance`);
         res.statusCode = 400;
     }
     return chance;
