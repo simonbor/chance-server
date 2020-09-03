@@ -45,7 +45,6 @@ const getAddress = async function(req) {
     return address;
 }
 
-// https://scotch.io/tutorials/nodejs-tests-mocking-http-requests
 const getLocation = async function(req) {
     let location = await locationDal.locationGet(req.body.Address);
     if (!location.LocationId) {

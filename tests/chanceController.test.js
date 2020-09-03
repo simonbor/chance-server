@@ -2,7 +2,6 @@ const chanceController = require('../src/controllers/chanceController');
 const DbContext = require('../src/dal/dal-context/dbContext')
 const HmContext = require('../src/contexts/hmContext/hmContext');
 
-// https://scotch.io/tutorials/nodejs-tests-mocking-http-requests
 describe('chance controller tests', () => {
   const mockRequest = () => {
     const req = {};
