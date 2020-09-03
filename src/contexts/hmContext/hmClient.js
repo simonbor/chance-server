@@ -1,6 +1,7 @@
 'use strict'
-const config = require('../../config');
 const https = require('https');
+const config = require('../../config');
+const cipher = require('../../cipher');
 
 module.exports = class HmClient {
     getLocation(searchText) {
