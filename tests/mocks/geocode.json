@@ -1,0 +1,18 @@
+{
+    "Response": {
+      "View": [
+        {
+          "Result": [
+            {
+              "Location": {
+                "DisplayPosition": {
+                  "Latitude": 32.07579,
+                  "Longitude": 34.7722
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
