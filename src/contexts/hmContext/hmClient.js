@@ -7,8 +7,6 @@ module.exports = class HmClient {
     getLocation(searchText) {
         const url = `${config.here_map.geo_url}?apiKey=${cipher.decrypt(config.here_map.api_key)}&searchtext=${searchText}`;
 
-        console.log(url);
-
         return new Promise(resolve => {
             https.get(url, res => {
                 res.setEncoding("utf8");
@@ -17,9 +15,6 @@ module.exports = class HmClient {
                     body += data;
                 });
                 res.on("end", () => {
-
-                    console.log(body);
-
                     const data = JSON.parse(body);
                     resolve(data.Response.View[0].Result[0].Location.DisplayPosition);
                 });
