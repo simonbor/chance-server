@@ -53,7 +53,7 @@ const getLocation = async function(req) {
         req.body.Address.CityName = city.LocalName;
 
         const hmContext = new HmContext();
-        const displayPosition = await hmContext.getLocation(`${req.body.Street.LocalName} ${req.body.Street.Building} ${req.body.Street.CityName}`);
+        const displayPosition = await hmContext.getLocation(`${req.body.Street.LocalName} ${req.body.Address.Building} ${req.body.Address.CityName}`);
 
         // insert location
         req.body.Location = {
