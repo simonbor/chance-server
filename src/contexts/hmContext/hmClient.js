@@ -5,7 +5,7 @@ const cipher = require('../../cipher');
 
 module.exports = class HmClient {
     getLocation(searchText) {
-        const url = `${config.here_map.geo_url}?apiKey=${cipher.decrypt(config.here_map.api_key)}&searchtext${searchText}`;
+        const url = `${config.here_map.geo_url}?apiKey=${cipher.decrypt(config.here_map.api_key)}&searchtext=${searchText}`;
 
         console.log(url);
 
