@@ -1,5 +1,6 @@
 const chanceController = require('../src/controllers/chanceController');
 const DbContext = require('../src/dal/dal-context/dbContext')
+const HmContext = require('../src/contexts/hmContext/hmContext');
 
 // https://scotch.io/tutorials/nodejs-tests-mocking-http-requests
 describe('chance controller tests', () => {
@@ -19,8 +20,8 @@ describe('chance controller tests', () => {
   const req = mockRequest();
 
   beforeAll(async (done) => {
-    // init database (mssql, postgres)
-    DbContext.initContext();
+    DbContext.initContext();  // init test database (mssql, postgres)
+    HmContext.initContext(); // init Here Map mock api 
 
     // wait for db recreation
     setTimeout(function() {done()}, DB_RECREATE_DELAY);

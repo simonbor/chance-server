@@ -2,6 +2,7 @@
 
 const http = require('http');
 const DbContext = require('./dal/dal-context/dbContext');
+const HmContext = require('./contexts/hmContext/hmContext');
 
 const host = '0.0.0.0';
 const port = process.env.PORT || 8080;
@@ -21,8 +22,8 @@ server.on('request', async (req, res) => {
     res.end(JSON.stringify(jsonString));
 });
 
-// init database (mssql, postgres)
-DbContext.initContext();
+DbContext.initContext();    // init database (mssql, postgres)
+HmContext.initContext();    // init Here Map context
 
 server.listen(port, host, () => {
     console.log(`Running on http://${host}:${port}/`);

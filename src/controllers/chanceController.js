@@ -1,12 +1,10 @@
-const config = require('../config');
 const driverDal = require('../dal/driverDal');
 const addressDal = require('../dal/addressDal');
 const chanceDal = require('../dal/chanceDal');
 const streetDal = require('../dal/streetDal');
 const locationDal = require('../dal/locationDal');
 const cityDal = require('../dal/cityDal');
-const cipher = require('../cipher');
-const utils = require('../utils');
+const HmContext = require('../contexts/hmContext/hmContext');
 
 const getDriver = async function(req) {
     let driver = await driverDal.driverGet(req.body.Driver);
@@ -55,14 +53,8 @@ const getLocation = async function(req) {
         const city = await cityDal.cityGet(req.body.Address);
         req.body.Address.CityName = city.LocalName;
 
-        // retrieve location from here map service
-        const url = config.here_map.geo_url
-            + '?apiKey=' + cipher.decrypt(config.here_map.api_key)
-            + '&searchtext=' + req.body.Street.LocalName
-            + ' ' + req.body.Address.Building
-            + ' ' + req.body.Address.CityName;
-        const geoData = await utils.get(url);
-        const displayPosition = geoData.Response.View[0].Result[0].Location.DisplayPosition;
+        const hmContext = new HmContext();
+        const displayPosition = await hmContext.getLocation(`${req.body.Street.LocalName} ${req.body.Street.Building} ${req.body.Street.CityName}`);
 
         // insert location
         req.body.Location = {
