@@ -21,8 +21,9 @@ const chanceInsert = async function(req) {
 
 const chanceGet = async function(req) {
     const dbContext = new DbContext();
+    const dateStart = req.body.Chance ? req.body.Chance.DateStart : {};
 
-    const chanceReq = new GetChanceByCityReq (req.body.Address.CityId, req.body.Chance.DateStart);
+    const chanceReq = new GetChanceByCityReq (req.body.Address.CityId, dateStart);
     let chanceData = await dbContext.execute('main."sp_GetChanceByCity"', chanceReq);
 
     return chanceData[0];
