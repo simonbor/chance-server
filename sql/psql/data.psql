@@ -292,7 +292,7 @@ select 284, 'סנה משה', null, 1 union all
 select 285, 'כ"ג יורדי הסירה', null, 1 union all
 select 286, 'התערוכה', null, 1 union all
 select 287, 'ירמיהו', null, 1 union all
-select 288, 'דיזנגוף', null, 1 union all
+select 288, 'דיזנגוף', 'דיזינגוף', 1 union all
 select 289, 'זכריה', null, 1 union all
 select 290, 'צידון', null, 1 union all
 select 291, 'שער ציון', null, 1 union all
@@ -427,7 +427,7 @@ select 419, 'עם ישראל חי', null, 1 union all
 select 420, 'יהואש', null, 1 union all
 select 421, 'של"ג', null, 1 union all
 select 422, 'מאפו', null, 1 union all
-select 423, 'מנדלי מוכר ספרים', null, 1 union all
+select 423, 'מנדלי מוכר ספרים', 'מנדלי', 1 union all
 select 424, 'בוגרשוב', null, 1 union all
 select 425, 'טייגר היל', null, 1 union all
 select 426, 'סירקין', null, 1 union all
