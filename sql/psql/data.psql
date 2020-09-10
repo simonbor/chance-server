@@ -414,7 +414,7 @@ select 406, 'מלון אורה', null, 1 union all
 select 407, 'סמ בן יהודה', null, 1 union all
 select 408, 'מלון בזל', null, 1 union all
 select 409, 'אמיל זולה', null, 1 union all
-select 410, 'ז''ורס ז''אן', null, 1 union all
+select 410, 'ז''ורס ז''אן', 'זאן זורס,זאן ז''ורס,זורס זאן', 1 union all
 select 411, 'ביירון', null, 1 union all
 select 412, 'קורולנקו', null, 1 union all
 select 413, 'נתן החכם', null, 1 union all
