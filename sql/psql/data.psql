@@ -593,7 +593,7 @@ select 585, 'חדרה', null, 1 union all
 select 586, 'תש"ח', null, 1 union all
 select 587, 'הלסינקי', null, 1 union all
 select 588, 'ליסין', null, 1 union all
-select 589, 'ארלוזורוב', null, 1 union all
+select 589, 'ארלוזורוב', 'ארלוזרוב', 1 union all
 select 590, 'פייבל', null, 1 union all
 select 591, 'זלוציסטי', null, 1 union all
 select 592, 'קליי', null, 1 union all
