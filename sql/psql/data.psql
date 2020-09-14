@@ -693,7 +693,7 @@ select 685, 'אלנבי', null, 1 union all
 select 686, 'אלו מציאות', null, 1 union all
 select 687, 'ביאליק', null, 1 union all
 select 688, 'אידלסון אברהם', null, 1 union all
-select 689, 'הס משה', null, 1 union all
+select 689, 'הס משה', 'הס', 1 union all
 select 690, 'טשרניחובסקי', null, 1 union all
 select 691, 'חברון', null, 1 union all
 select 692, 'בית החיים', null, 1 union all
