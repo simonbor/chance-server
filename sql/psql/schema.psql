@@ -1,3 +1,5 @@
-drop schema if exists main cascade;
+--drop schema if exists auth cascade;
+--drop schema if exists main cascade;
 
+create schema auth;
 create schema main;
