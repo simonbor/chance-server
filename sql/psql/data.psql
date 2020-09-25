@@ -1,3 +1,9 @@
+truncate table auth."Role" cascade;
+insert into auth."Role" ("RoleId", "RoleName")
+select 1, 'Admin' union all
+select 5, 'Manager' union all
+select 9, 'User';
+
 truncate table main."City" cascade;
 insert into main."City" ("CityId", "Name", "LocalName")
 select 1, 'Tel Aviv', 'תל אביב' union all
