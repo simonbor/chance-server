@@ -1,0 +1,86 @@
+@PORT = 8080
+# @ENV = https://chance-app.herokuapp.com
+@ENV = http://localhost:8080
+
+	
+### chance test
+get {{ENV}}/ HTTP/1.1
+
+### address get
+post {{ENV}}/address-get HTTP/1.1
+content-type: application/json
+
+{
+	"Address": {
+		"StreetName": "בוגרשוב",
+		"CityId": 1,
+		"CountryId": 367,
+		"Building": 1
+    }
+}
+
+### address insert
+post {{ENV}}/address HTTP/1.1
+content-type: application/json
+
+{
+	"Address": {
+		"StreetName": "בוגרשוב",
+		"CityId": 1,
+		"CountryId": 367,
+		"Building": 3
+    }
+}
+
+### chance insert
+post {{ENV}}/chance HTTP/1.1
+content-type: application/json
+
+{
+	"Address": {
+		"Text": "בוגרשוב 5",
+		"CityId": 1,
+		"CountryId": 367
+    },
+	"Driver": {
+		"MobileNum": "0544123123"
+	},
+	"Chance": {
+		"DateStart": "8/8/2020, 11:31:57 AM"
+	}
+}
+
+### chance get
+post {{ENV}}/chance-list HTTP/1.1
+content-type: application/json
+
+{
+	"Address": {
+		"CityId": 1
+    },
+	"Chance": {
+		"DateStart": "8/8/2020, 11:27:56 AM"
+	}
+}
+
+### login
+POST {{ENV}}/login HTTP/1.1
+content-type: application/json
+
+{
+	"Driver": {
+		"MobileNum": "0544123123"
+    }
+}
+
+### get req
+get https://geocoder.ls.hereapi.com/6.2/geocode.json?apiKey=jMoxIpkNNj0aZNL1xVxGqPnsZ9sYLG7Zw5Q1FMRfd1s&searchtext=בוגרשוב+55+תל+אביב
+
+### Geocoding API code samples
+get https://geocode.search.hereapi.com/v1/geocode?q=5+Rue+Daunou%2C+75000+Paris%2C+France
+Authorization: Bearer FUG7KSx1ZMeVxhZmSHwvJE04QuWyeYGMxnGRPgFoJeIAvqnC39Ryhmg6rrf3g33FexGGsAKrNcL2KaPT6xmCxA
+
+###
+curl https://image.maps.ls.hereapi.com/mia/1.6/?e=QeL4rkKaxoA&u=5m&z=8 -H "Authorization: Bearer FUG7KSx1ZMeVxhZmSHwvJE04QuWyeYGMxnGRPgFoJeIAvqnC39Ryhmg6rrf3g33FexGGsAKrNcL2KaPT6xmCxA"
+
+
