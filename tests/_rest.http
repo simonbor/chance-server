@@ -28,7 +28,7 @@ content-type: application/json
 		"StreetName": "בוגרשוב",
 		"CityId": 1,
 		"CountryId": 367,
-		"Building": 3
+		"Building": 333
     }
 }
 
@@ -38,7 +38,7 @@ content-type: application/json
 
 {
 	"Address": {
-		"Text": "בוגרשוב 5",
+		"Text": "בוגרשוב 7",
 		"CityId": 1,
 		"CountryId": 367
     },
