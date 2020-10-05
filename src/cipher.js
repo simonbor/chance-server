@@ -1,23 +1,29 @@
-'use strict'
 const crypto = require('crypto');
-
-const algorithm = 'aes-256-ctr';
-const inputEncoding = 'utf8';
-const outputEncoding = 'hex';
-const cryptoKey = process.env.CRYPTO_KEY || 'secretPassword';
+const algorithm = 'aes-256-cbc';
+const ENCRYPTION_KEY = Buffer.from(process.env.ENCRYPTION_KEY || 'e7f576614babc03d53ad869272301ef3ca8b3b79d12f79b95191ae0a10af502e', 'hex');
 
 function encrypt(text) {
-    const cipher = crypto.createCipher(algorithm, cryptoKey);
-    let encrypted = cipher.update(text, inputEncoding, outputEncoding);
-    encrypted += cipher.final(outputEncoding);
-    return encrypted;
+    const iv = crypto.randomBytes(16);
+    const cipher = crypto.createCipheriv(algorithm, Buffer.from(ENCRYPTION_KEY), iv);
+    let encrypted = cipher.update(text);
+    encrypted = Buffer.concat([encrypted, cipher.final()]);
+
+    return [iv.toString('hex'), encrypted.toString('hex')].join(':');
 }
 
 function decrypt(text) {
-    const decipher = crypto.createDecipher(algorithm, cryptoKey);
-    let decrypted = decipher.update(text, outputEncoding, inputEncoding);
-    decrypted += decipher.final(inputEncoding);
-    return decrypted;
+    const [iv, encryptedText] = text.split(':');
+    const decipher = crypto.createDecipheriv(algorithm, Buffer.from(ENCRYPTION_KEY), Buffer.from(iv, 'hex'));
+    let decrypted = decipher.update(Buffer.from(encryptedText, 'hex'));
+    decrypted = Buffer.concat([decrypted, decipher.final()]);
+
+    return decrypted.toString();
 }
 
-module.exports = {encrypt, decrypt};
+function generateKey() {
+    const key = crypto.randomBytes(32).toString('hex');
+
+    return key;
+}
+
+module.exports = { encrypt, decrypt, generateKey };

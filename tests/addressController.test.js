@@ -2,7 +2,7 @@
 const addressController = require('../src/controllers/addressController');
 const DbContext = require('../src/dal/dal-context/dbContext')
 
-describe('location controller tests', () => {
+describe('address controller tests', () => {
   const mockRequest = () => {
     const req = {};
     req.body = jest.fn().mockReturnValue(req);

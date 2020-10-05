@@ -1,7 +1,7 @@
 ﻿{
 	"mssql-config": {
 		"user": "sa",
-		"password": "1262e49d6fbfac7fc5fc",
+		"password": "20e819acce431b1c66ee5ac9958b633e:e4f14e8a68a5e2582d77992a618a71c0",
 		"host": "172.18.0.10",
 		"database": "Parking"
 	},
@@ -9,12 +9,12 @@
 		"user": "postgres",
 		"host": "172.18.0.15",
 		"database": "Parking",
-		"password": "1262e49d6fbfac7fc5fc",
+		"password": "20e819acce431b1c66ee5ac9958b633e:e4f14e8a68a5e2582d77992a618a71c0",
 		"port": 5432
 	},
 	"db-in-use": "psql",
 	"here_map": {
 		"geo_url": "https://geocoder.ls.hereapi.com/6.2/geocode.json",
-		"api_key": "155cb9d517f68841eef89b6778be9317491fdd8efb2bce57f252d05c33c89f14f0504f47317b22bbe7462a"
+		"api_key": "a80e514ca5ff5a5c8c002af60a870f0b:9b6a8e0803eac8b1e6a59dcc0431d323b9752cd59e41a42ec908d1433d9953c34725b29074c2fa06edbbfbc695da286d"
 	}
 }

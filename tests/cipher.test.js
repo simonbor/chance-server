@@ -11,6 +11,9 @@ describe('cipher module test', () => {
         // console.log(`the pass: ${decPassword}`);
         // console.log(`enc pass: ${encPassword}`);
 
+        // for creation the new encryption key uncomment the next line
+        // console.log(crypt.generateKey());
+
         expect(flatPassword).not.toMatch(encPassword);
         expect(flatPassword).toMatch(decPassword);
       });
