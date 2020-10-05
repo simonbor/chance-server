@@ -1,4 +1,4 @@
-const DbContext = require('../src/dal/dal-context/dbContext')
+const DbContext = require('../src/contexts/data/db-context');
 const driverDal = require('../src/dal/driverDal');
 
 describe('driver dal tests', () => {

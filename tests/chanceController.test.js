@@ -1,6 +1,6 @@
 const chanceController = require('../src/controllers/chanceController');
-const DbContext = require('../src/dal/dal-context/dbContext')
-const HmContext = require('../src/contexts/hmContext/hmContext');
+const DbContext = require('../src/contexts/data/db-context');
+const HmContext = require('../src/contexts/maps/hmContext');
 
 describe('chance controller tests', () => {
   const mockRequest = () => {

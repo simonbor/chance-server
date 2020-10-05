@@ -1,5 +1,5 @@
 'use strict';
-const DbContext = require('./dal-context/dbContext');
+const DbContext = require('../contexts/data/db-context');
 const { GetCityReq, City } = require('../models/city');
 
 const cityGet = async function(address) {

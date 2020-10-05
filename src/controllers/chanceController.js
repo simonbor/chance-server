@@ -1,10 +1,11 @@
+'use strict';
 const driverDal = require('../dal/driverDal');
 const addressDal = require('../dal/addressDal');
 const chanceDal = require('../dal/chanceDal');
 const streetDal = require('../dal/streetDal');
 const locationDal = require('../dal/locationDal');
 const cityDal = require('../dal/cityDal');
-const HmContext = require('../contexts/hmContext/hmContext');
+const HmContext = require('../contexts/maps/hmContext');
 
 const getDriver = async function(req) {
     let driver = await driverDal.driverGet(req.body.Driver);

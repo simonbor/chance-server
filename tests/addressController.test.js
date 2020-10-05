@@ -1,6 +1,6 @@
 'use strict'
 const addressController = require('../src/controllers/addressController');
-const DbContext = require('../src/dal/dal-context/dbContext')
+const DbContext = require('../src/contexts/data/db-context');
 
 describe('address controller tests', () => {
   const mockRequest = () => {

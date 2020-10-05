@@ -1,5 +1,5 @@
 'use strict';
-const DbContext = require('./dal-context/dbContext');
+const DbContext = require('../contexts/data/db-context');
 const { Location, GetLocationByAddressReq, InsertLocationReq } = require('../models/location');
 
 const locationGet = async function(address) {

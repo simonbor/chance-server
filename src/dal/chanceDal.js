@@ -1,5 +1,5 @@
 'use strict';
-const DbContext = require('./dal-context/dbContext');
+const DbContext = require('../contexts/data/db-context');
 const { Chance, InsertChanceReq, GetChanceByCityReq } = require('../models/chance');
 
 const chanceInsert = async function(req) {

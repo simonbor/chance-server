@@ -1,5 +1,5 @@
 'use strict';
-const DbContext = require('./dal-context/dbContext');
+const DbContext = require('../contexts/data/db-context');
 const { Address, GetAddressReq, InsertAddressReq } = require('../models/address');
 
 const addressGet = async function(req) {

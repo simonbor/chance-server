@@ -1,3 +1,4 @@
+'use strict';
 const addressDal = require('../dal/addressDal');
 
 const addressGet = async (req, res) => {

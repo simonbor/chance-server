@@ -1,5 +1,5 @@
 'use strict';
-const DbContext = require('./dal-context/dbContext');
+const DbContext = require('../contexts/data/db-context');
 const { Driver, GetDriverReq, InsertDriverReq, UpdateReportDriverReq } = require('./../models/driver');
 
 const driverGet = async function(driver) {
