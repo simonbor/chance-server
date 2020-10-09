@@ -6,6 +6,8 @@ const streetDal = require('../dal/streetDal');
 const locationDal = require('../dal/locationDal');
 const cityDal = require('../dal/cityDal');
 const HmContext = require('../contexts/maps/hmContext');
+const ChanceResponse = require('../models/response');
+const { HttpStatusCode } = require('../enums');
 
 const getDriver = async function(req) {
     let driver = await driverDal.driverGet(req.body.Driver);
@@ -72,15 +74,17 @@ const getLocation = async function(req) {
 const chanceInsert = async (req, res) => {
     // get/insert new driver
     const driver = await getDriver(req);
+    let operStatusCode;
 
     // get/insert the street
     const street = await getStreet(req);       // check whenever the street is exists in the City:
     if (!street.StreetId) {
         // todo: log req.body.Address.Text
         process.env.NODE_ENV && process.env.NODE_ENV != 'test' &&
-        console.error(`Error: The street not found in the message "${req.body.Address.Text}".`);
-        res.statusCode = 400;
-        return {};
+        console.error(`Error: The street not found in the message "${req.body.Address.Text}".`);        
+        operStatusCode = HttpStatusCode.BAD_REQUEST;
+        res.statusCode = HttpStatusCode.SUCCESS;
+        return new ChanceResponse(operStatusCode, '', []);
     }
     
     // get/insert the address
@@ -101,19 +105,21 @@ const chanceInsert = async (req, res) => {
         driverDal.updateReports(driver);    // increment driver reports reputation
         process.env.NODE_ENV && process.env.NODE_ENV != 'test' &&
         console.info(`Info: New chance #${chance.ChanceId} at street ${street.LocalName} posted by ${req.body.Driver.MobileNum}`);
-        res.statusCode = 200;
+        operStatusCode = HttpStatusCode.SUCCESS;
     } else {
         console.error(`Error: There was an error recording chance`);
-        res.statusCode = 400;
+        operStatusCode = HttpStatusCode.BAD_REQUEST;
     }
-    return chance;
+
+    res.statusCode = HttpStatusCode.SUCCESS;
+    return new ChanceResponse(operStatusCode, '', chance);
 }
 
 const chanceGet = async function(req, res) {
     const chanceList = await chanceDal.chanceGet(req);
 
-    res.statusCode = 200;
-    return chanceList;
+    res.statusCode = HttpStatusCode.SUCCESS;
+    return new ChanceResponse(HttpStatusCode.SUCCESS, '', chanceList);
 }
 
 module.exports = { chanceInsert, chanceGet }

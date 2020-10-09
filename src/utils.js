@@ -1,7 +1,25 @@
 'use strict'
 const https = require('https');
 
-function get(url) {
+const getRequestData = function (request) {
+    const FORM_URLENCODED = 'application/x-www-form-urlencoded';
+    let body = '';
+
+    return new Promise(resolve => {
+        request.on('data', chunk => {
+            body += chunk.toString();
+        });
+        request.on('end', () => {
+            if(request.headers['content-type'].toLowerCase() === FORM_URLENCODED) {
+                resolve(parse(body));
+            } else {
+                resolve(JSON.parse(body));
+            }
+        });
+    });
+}
+
+function _get(url) {
     return new Promise(resolve => {
         https.get(url, res => {
             res.setEncoding("utf8");
@@ -19,4 +37,4 @@ function get(url) {
     });
 }
 
-module.exports = { get }
+module.exports = { getRequestData }
