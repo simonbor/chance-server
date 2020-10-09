@@ -25,4 +25,4 @@ Thumbs.db
 dist/**/*
 
 # Ignore mongo data
-data
+#data
