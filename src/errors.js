@@ -6,6 +6,7 @@ class BaseError extends Error {
 
         this.name = name;
         this.httpCode = httpCode;
+        this.description = description;
         this.isOperational = isOperational;
 
         // Maintains proper stack trace for where our error was thrown (only available on V8)
