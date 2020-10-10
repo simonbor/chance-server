@@ -45,30 +45,33 @@ describe('chance controller tests', () => {
     const res = mockResponse();
 
     req.body.Address.Text = 'מפנה ברחוב שלא קיים 5 בעוד עשרים דקות';
+    const chanceRes = await chanceController.chanceInsert(req, res);
 
-    const chance = await chanceController.chanceInsert(req, res);
-    expect(res.statusCode).toEqual(400);
-    expect(typeof chance).toBe('object');
+    expect(res.statusCode).toEqual(200);
+    expect(chanceRes.statusCode).toEqual(400);
+    expect(typeof chanceRes.data).toBe('object');
   });
 
   test('test insert chance - correct street use case', async () => {
     const res = mockResponse();
 
     req.body.Address.Text = `מפנה בבוגרשוב ${Math.floor((Math.random()*300) + 1)} בעוד עשרים דקות`;
+    const chanceRes = await chanceController.chanceInsert(req, res);
 
-    const chance = await chanceController.chanceInsert(req, res);
     expect(res.statusCode).toEqual(200);
-    expect(typeof chance).toBe('object');
+    expect(chanceRes.statusCode).toEqual(200);
+    expect(typeof chanceRes.data).toBe('object');
   });
 
   test('test insert chance - check insertion by street OtherName', async () => {
     const res = mockResponse();
 
     req.body.Address.Text = 'מפנה בשיר ' + Math.floor((Math.random()*300) + 1); // שיר == שי"ר
+    const chanceRes = await chanceController.chanceInsert(req, res);
 
-    const chance = await chanceController.chanceInsert(req, res);
     expect(res.statusCode).toEqual(200);
-    expect(typeof chance).toBe('object');
+    expect(chanceRes.statusCode).toEqual(200);
+    expect(typeof chanceRes.data).toBe('object');
   });
 
   test('test get chances - chance list should be bigger then 0', async () => {
@@ -81,12 +84,10 @@ describe('chance controller tests', () => {
     const date = new Date();
     date.setDate(date.getDate() - 1);
     req.body.Chance.DateStart = (date).toLocaleString("en-US");
-    const chanceList = await chanceController.chanceGet(req, res);
+    const chanceRes = await chanceController.chanceGet(req, res);
     
-    expect(chanceList.length > 0).toBeTruthy();
+    expect(chanceRes.data.length > 0).toBeTruthy();
+    expect(chanceRes.statusCode).toEqual(200);
     expect(res.statusCode).toEqual(200);
   });
-
-
-
 });
