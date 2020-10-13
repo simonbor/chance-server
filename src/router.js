@@ -2,9 +2,20 @@ const url = require('url');
 const addressController = require('./controllers/addressController');
 const chanceController = require('./controllers/chanceController');
 const loginController = require('./controllers/loginController');
+const { authenticate } = require('./auth');
+const { HttpStatusCode } = require('./enums');
 
 const route = async function(req, res) {
     const reqUrl = url.parse(req.url, true);
+
+    // authenticate request
+    if (reqUrl.pathname == '/chance-list') {
+        const chanceRes = await authenticate(req, res)
+        if(chanceRes.statusCode !== HttpStatusCode.SUCCESS) {
+            res.statusCode = chanceRes.statusCode;
+            return chanceRes;
+        }
+    }
 
     if (reqUrl.pathname == '/address-get' && req.method === 'POST') {
         return await addressController.addressGet(req, res);
@@ -22,7 +33,7 @@ const route = async function(req, res) {
         return await loginController.driverGet(req, res);
 
     } else {
-        res.statusCode = 404;
+        res.statusCode = HttpStatusCode.NOT_FOUND;
         return '{}';
     }
 }
