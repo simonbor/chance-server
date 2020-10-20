@@ -10,7 +10,8 @@ const getRequestData = function (request) {
             body += chunk.toString();
         });
         request.on('end', () => {
-            if(request.headers['content-type'].toLowerCase() === FORM_URLENCODED) {
+            const contentType = request.headers['content-type'];
+            if(contentType && (contentType.toLowerCase() === FORM_URLENCODED.toLowerCase())) {
                 resolve(parse(body));
             } else {
                 resolve(JSON.parse(body));
