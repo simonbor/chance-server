@@ -74,17 +74,18 @@ const getLocation = async function(req) {
 const chanceInsert = async (req, res) => {
     // get/insert new driver
     const driver = await getDriver(req);
-    let operStatusCode;
+    let operStatusCode, operStatusText;
 
     // get/insert the street
     const street = await getStreet(req);       // check whenever the street is exists in the City:
     if (!street.StreetId) {
         // todo: log req.body.Address.Text
         process.env.NODE_ENV && process.env.NODE_ENV != 'test' &&
-        console.error(`Error: The street not found in the message "${req.body.Address.Text}".`);        
+        console.error(`Error: The street not found in the message "${req.body.Address.Text}".`);
+        operStatusText = `Error: The street not found in the message "${req.body.Address.Text}".`;
         operStatusCode = HttpStatusCode.BAD_REQUEST;
         res.statusCode = HttpStatusCode.SUCCESS;
-        return new ChanceResponse(operStatusCode, '', []);
+        return new ChanceResponse(operStatusCode, operStatusText, []);
     }
     
     // get/insert the address
@@ -94,7 +95,6 @@ const chanceInsert = async (req, res) => {
     const address = await getAddress(req);
 
     // get/insert the location
-    // https://scotch.io/tutorials/nodejs-tests-mocking-http-requests
     req.body.Address.AddressId = address.AddressId;
     req.body.Street = {"LocalName": street.LocalName};
     req.body.Location = await getLocation(req);
@@ -105,21 +105,23 @@ const chanceInsert = async (req, res) => {
         driverDal.updateReports(driver);    // increment driver reports reputation
         process.env.NODE_ENV && process.env.NODE_ENV != 'test' &&
         console.info(`Info: New chance #${chance.ChanceId} at street ${street.LocalName} posted by ${req.body.Driver.MobileNum}`);
+        operStatusText = `Info: New chance #${chance.ChanceId} at street ${street.LocalName} posted by ${req.body.Driver.MobileNum}`;
         operStatusCode = HttpStatusCode.SUCCESS;
     } else {
         console.error(`Error: There was an error recording chance`);
+        operStatusText = 'Error: There was an error recording chance';
         operStatusCode = HttpStatusCode.BAD_REQUEST;
     }
 
     res.statusCode = HttpStatusCode.SUCCESS;
-    return new ChanceResponse(operStatusCode, '', chance);
+    return new ChanceResponse(operStatusCode, operStatusText, chance);
 }
 
 const chanceGet = async function(req, res) {
     const chanceList = await chanceDal.chanceGet(req);
 
     res.statusCode = HttpStatusCode.SUCCESS;
-    return new ChanceResponse(HttpStatusCode.SUCCESS, '', chanceList);
+    return new ChanceResponse(HttpStatusCode.SUCCESS, 'Success', chanceList);
 }
 
 module.exports = { chanceInsert, chanceGet }
