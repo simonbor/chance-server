@@ -5,6 +5,8 @@ const { Http401Error } = require('./errors');
 const { HttpStatusCode } = require('./enums');
 const ChanceResponse = require('../src/models/response');
 
+// https://www.digitalocean.com/community/tutorials/how-to-set-up-vue-js-authentication-and-route-handling-using-vue-router#step-2-%E2%80%94-set-up-nodejs-server
+// https://jasonwatmore.com/post/2018/09/24/nodejs-basic-authentication-tutorial-with-example-api#running-vue
 const authenticate = async function(req, res) {
     try{
         // check for auth header

@@ -1,5 +1,8 @@
+'use strict'
 const { HttpStatusCode } = require('./enums');
 
+// https://www.toptal.com/nodejs/node-js-error-handling
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
 class BaseError extends Error {
     constructor(name, httpCode, description, isOperational) {
         super(description);

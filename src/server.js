@@ -35,7 +35,6 @@ server.on('request', async (req, res) => {
 DbContext.initContext();    // init database (mssql, postgres)
 HmContext.initContext();    // init Here Map context
 
-
 // errors handling
 process.on('unhandledRejection', (reason, promise) => {
     throw reason;

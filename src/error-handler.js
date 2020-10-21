@@ -1,5 +1,8 @@
+'use strict'
 const {BaseError} = require('./errors');
 
+// https://www.toptal.com/nodejs/node-js-error-handling
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
 class ErrorHandler {
   async handleError(err) {
     // print error to console
