@@ -1,5 +1,6 @@
 'use strict';
 const connect = require('../../connect');
+const { Http400Error } = require('../../errors');
 
 module.exports = class PsqlContext {
     async query(sql, values) {
@@ -39,7 +40,8 @@ module.exports = class PsqlContext {
             res = await pool.query(`select row_to_json(${procedureName}(${csDollars}))`, arrParams);
             res.rows.map(row => { row && data.push(row['row_to_json']) });
         } catch (err) {
-            console.error(`Error: ${err.message}`);
+            // place for filter errors and throwing the most appropriate
+            throw new Http400Error(`Error: ${err.message}`);
         }
 
         pool.end();

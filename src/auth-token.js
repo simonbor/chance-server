@@ -14,7 +14,9 @@ const verify = function(token) {
     const now = Math.floor(Date.now() / 1000);
 
     if(payload.ExpiresIn && now > payload.ExpiresIn) {
-        throw new Http401Error('Token Expired')
+        process.env.NODE_ENV && process.env.NODE_ENV != 'test' &&
+        console.error('Error: token expired');
+        throw new Http401Error('Error: token expired');
     }
 
     delete payload.ExpiresIn;

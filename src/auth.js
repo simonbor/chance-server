@@ -9,7 +9,7 @@ const authenticate = async function(req, res) {
     try{
         // check for auth header
         if (!req.headers.authorization || req.headers.authorization.indexOf('Bearer ') === -1) {
-            throw new Http401Error('Missing Authorization Header');
+            throw new Http401Error('Error: missing authorization header');
         }
 
         // verify and get auth credentials
@@ -20,7 +20,7 @@ const authenticate = async function(req, res) {
         const result = await authController.authenticate(req, res);
 
         if (!result) {
-            throw new Http401Error('Invalid Authentication Credentials');
+            throw new Http401Error('Error: invalid authentication credentials');
         }
     } catch(err) {
         return new ChanceResponse(HttpStatusCode.UNAUTHORIZED, err.description, [])

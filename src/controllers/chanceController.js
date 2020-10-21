@@ -100,16 +100,17 @@ const chanceInsert = async (req, res) => {
     req.body.Location = await getLocation(req);
     
     // insert chance
-    const chance = await chanceDal.chanceInsert(req);
-    if(chance.ChanceId) {
+    let chance;
+    try{
+        chance = await chanceDal.chanceInsert(req);
         driverDal.updateReports(driver);    // increment driver reports reputation
         process.env.NODE_ENV && process.env.NODE_ENV != 'test' &&
         console.info(`Info: New chance #${chance.ChanceId} at street ${street.LocalName} posted by ${req.body.Driver.MobileNum}`);
         operStatusText = `Info: New chance #${chance.ChanceId} at street ${street.LocalName} posted by ${req.body.Driver.MobileNum}`;
         operStatusCode = HttpStatusCode.SUCCESS;
-    } else {
-        console.error(`Error: There was an error recording chance`);
-        operStatusText = 'Error: There was an error recording chance';
+    } catch(e) {
+        console.error(e.description);
+        operStatusText = e.description;
         operStatusCode = HttpStatusCode.BAD_REQUEST;
     }
 
