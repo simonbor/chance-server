@@ -469,7 +469,7 @@ select 455, 'הירשנברג', 'הירשינברג', 1 union all
 select 456, 'ש"ץ', 'שץ', 1 union all
 select 457, 'ישראליס', null, 1 union all
 select 458, 'שלמה המלך', null, 1 union all
-select 459, 'גורדון י ל', null, 1 union all
+select 459, 'גורדון י ל', 'גורדון', 1 union all
 select 460, 'סמ יל"ג', null, 1 union all
 select 461, 'סמ גור אריה', null, 1 union all
 select 462, 'פרישמן', null, 1 union all

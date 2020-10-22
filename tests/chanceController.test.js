@@ -41,6 +41,20 @@ describe('chance controller tests', () => {
     }
   });
 
+  test('Test insert chance - nested wrong street name in long right street name', async () => {
+    // רחוב "גורדון" נכנס כרחוב "ורד"
+    const res = mockResponse();
+
+    req.body.Address.Text = 'מפנה ברחוב גורדון 5 בעוד עשרים דקות';
+    const chanceRes = await chanceController.chanceInsert(req, res);
+
+    expect(res.statusCode).toEqual(200);
+    expect(chanceRes.statusCode).toEqual(200);
+    expect(chanceRes.statusText.indexOf('גורדון') > 0).toBeTruthy();
+
+    expect(typeof chanceRes.data).toBe('object');
+  });
+
   test('Test insert chance - incorrect street use case', async () => {
     const res = mockResponse();
 

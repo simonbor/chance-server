@@ -18,9 +18,13 @@ const getDriver = async function(req) {
 }
 
 const streetFound = (waMessage, streetNames) => {
-    let result = false;    
+    let result = false;
     streetNames.map(streetName => {
-        if(waMessage.indexOf(streetName) > -1) {
+        // prevent situations when one street name is a part of another street name -
+        // רחוב "גורדון" נכנס כרחוב "ורד"
+        const streetNameWord = streetName + ' ';
+
+        if(waMessage.indexOf(streetNameWord) > -1) {
             result = true;
         }
     });
