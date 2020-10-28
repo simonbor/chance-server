@@ -1,4 +1,4 @@
-const chanceController = require('../src/controllers/chanceController');
+const chanceController = require('../src/controllers/chance.controller');
 const DbContext = require('../src/contexts/data/db-context');
 const HmContext = require('../src/contexts/maps/hmContext');
 
