@@ -31,7 +31,7 @@ describe('auth tests', () => {
   });
   beforeEach(async () => {});
 
-  test('test authentication - ', async () => {
+  test('test authentication - Normal authentication flow', async () => {
     const res = mockResponse();
     const expiresIn = 60 * 5;
 
@@ -55,13 +55,11 @@ describe('auth tests', () => {
   });
 
   test('test authentication - Missing Authorization Header', async () => {
-    // const {Http401Error} = require('../src/errors');
     const res = mockResponse();
 
     req.headers.authorization && delete req.headers.authorization;
     const chanceRes = await authenticate(req, res);
     
     expect(chanceRes.statusCode).toEqual(401);
-    // expect(res.statusCode).toEqual(200);
   });
 });
