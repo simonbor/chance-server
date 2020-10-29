@@ -138,16 +138,17 @@ create or replace function main."sp_InsertChance" (
 	p_DriverOut int,
 	p_Latitude double precision,
 	p_Longitude double precision,
+	p_LocationId int,
 	p_DateStart timestamp(3),
 	p_AddressId int,
-	p_LocationId int,
+	p_Size boolean = null,
 	p_CreatedBy int = null
 ) returns table ("ChanceId" int, "CreatedBy" int) 
 language plpgsql as $$
 	declare v_ChanceId integer;
 begin
-	insert into main."Chance" ("Latitude", "Longitude", "LocationId", "AddressId", "DateStart", "DriverOut", "CreatedBy")
-	values (p_Latitude, p_Longitude, p_LocationId, p_AddressId, p_DateStart, p_DriverOut, p_CreatedBy)
+	insert into main."Chance" ("Latitude", "Longitude", "LocationId", "AddressId", "DateStart", "DriverOut", "Size", "CreatedBy")
+	values (p_Latitude, p_Longitude, p_LocationId, p_AddressId, p_DateStart, p_DriverOut, p_Size, p_CreatedBy)
 	returning main."Chance"."ChanceId" into v_ChanceId;
 
 	return query select c."ChanceId", c."CreatedBy" from main."Chance" c where c."ChanceId" = v_ChanceId;

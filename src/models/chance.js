@@ -17,13 +17,17 @@ class Chance {
 }
 
 class InsertChanceReq {
-	constructor(DriverOut, Latitude, Longitude, DateStart, LocationId, AddressId, CreatedBy) {
+	constructor(DriverOut, Latitude, Longitude, LocationId, DateStart, AddressId, Size, CreatedBy) {
+        // prepare a boolean type for PostgreSQL
+        const size = typeof Size !== 'undefined' ? Size.toString().toUpperCase() : Size;
+
         this.DriverOut =    { 'typeName': 'Int', 'value': DriverOut };
         this.Latitude =     { 'typeName': 'Float', 'value': Latitude },
         this.Longitude =    { 'typeName': 'Float', 'value': Longitude },
+        this.LocationId =   { 'typeName': 'Int', 'value': LocationId };
         this.DateStart =    { 'typeName': 'DateTime', 'value': DateStart };
         this.AddressId =    { 'typeName': 'Int', 'value': AddressId };
-        this.LocationId =   { 'typeName': 'Int', 'value': LocationId };
+        this.Size =         { 'typeName': 'Bit', 'value': size };
         this.CreatedBy =    { 'typeName': 'Int', 'value': CreatedBy };
     }
 }

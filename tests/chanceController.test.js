@@ -104,4 +104,58 @@ describe('chance controller tests', () => {
     expect(chanceRes.statusCode).toEqual(200);
     expect(res.statusCode).toEqual(200);
   });
+  
+  test('test insert chance with size - big small park sizes insertion', async () => {
+    const res = mockResponse();
+    req.body.Address.Text = `מפנה בבוגרשוב ${Math.floor((Math.random()*300) + 1)} בעוד חמש דקות`;
+    
+    let dateFewSecsAgo = new Date((Date.now() - 1000));
+    req.body.Chance.DateStart = (dateFewSecsAgo).toLocaleString("en-US");
+    const chanceNormSpot = await chanceController.chanceInsert(req, res);
+
+    req.body.Chance.Size = false;
+    dateFewSecsAgo = new Date((Date.now() - 2000));
+    req.body.Chance.DateStart = (dateFewSecsAgo).toLocaleString("en-US");
+    const chanceSmallSpot = await chanceController.chanceInsert(req, res);
+
+    req.body.Chance.Size = true;
+    dateFewSecsAgo = new Date((Date.now() - 3000));
+    req.body.Chance.DateStart = (dateFewSecsAgo).toLocaleString("en-US");
+    const chanceBigSpot = await chanceController.chanceInsert(req, res);
+
+    delete req.body.Chance.DateStart;
+    const chanceList = await chanceController.chanceGet(req, res);
+
+    const markerNormSpot = chanceList.data.find((ch) => ch.ChanceId === chanceNormSpot.data.ChanceId);
+    const markerSmallSpot = chanceList.data.find((ch) => ch.ChanceId === chanceSmallSpot.data.ChanceId);
+    const markerBigSpot = chanceList.data.find((ch) => ch.ChanceId === chanceBigSpot.data.ChanceId);
+    
+    // console.log(`chance.data.ChanceId: ${chance.data.ChanceId}`);
+    // console.log(`marker: ${JSON.stringify(marker)}`);
+
+    expect(markerNormSpot.Size).toEqual(null);
+    expect(markerSmallSpot.Size).toEqual(false);
+    expect(markerBigSpot.Size).toEqual(true);
+    expect(res.statusCode).toEqual(200);
+  });
+
+  // future times tests
+
+  test.skip('test future insert chance - ...', async () => {
+    const res = mockResponse();
+
+    // insert chance
+    req.body.Address.Text = `מפנה בבוגרשוב ${Math.floor((Math.random()*300) + 1)} בעוד חמש דקות`;
+    await chanceController.chanceInsert(req, res);
+
+    const date = new Date();
+    date.setDate(date.getDate() - 1);
+    req.body.Chance.DateStart = (date).toLocaleString("en-US");
+    const chanceRes = await chanceController.chanceGet(req, res);
+    
+    expect(chanceRes.data.length > 0).toBeTruthy();
+    expect(chanceRes.statusCode).toEqual(200);
+    expect(res.statusCode).toEqual(200);
+  });
+
 });
