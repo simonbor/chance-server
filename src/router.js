@@ -1,6 +1,6 @@
 const url = require('url');
 const addressController = require('./controllers/addressController');
-const chanceController = require('./controllers/chanceController');
+const chanceController = require('./controllers/chance.controller');
 const loginController = require('./controllers/loginController');
 const { authenticate } = require('./auth');
 const { HttpStatusCode } = require('./enums');
