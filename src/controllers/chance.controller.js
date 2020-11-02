@@ -8,7 +8,7 @@ const cityDal = require('../dal/cityDal');
 const HmContext = require('../contexts/maps/hmContext');
 const ChanceResponse = require('../models/response');
 const { HttpStatusCode } = require('../enums');
-const { calculateDateStart } = require('../services/date-start.service');
+const leavingService = require('../services/leaving.service');
 
 const getDriver = async function(req) {
     let driver = await driverDal.driverGet(req.body.Driver);
@@ -105,7 +105,7 @@ const chanceInsert = async (req, res) => {
     req.body.Location = await getLocation(req);
 
     // calculate the DateStart based on the text message
-    req.body.Chance.DateStart = calculateDateStart(req);
+    req.body.Chance.DateStart = leavingService.calculateDateStart(req);
 
     // insert chance
     let chance;
