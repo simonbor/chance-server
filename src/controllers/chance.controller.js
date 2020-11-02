@@ -8,6 +8,7 @@ const cityDal = require('../dal/cityDal');
 const HmContext = require('../contexts/maps/hmContext');
 const ChanceResponse = require('../models/response');
 const { HttpStatusCode } = require('../enums');
+const { calculateDateStart } = require('../services/date-start.service');
 
 const getDriver = async function(req) {
     let driver = await driverDal.driverGet(req.body.Driver);
@@ -102,15 +103,18 @@ const chanceInsert = async (req, res) => {
     req.body.Address.AddressId = address.AddressId;
     req.body.Street = {"LocalName": street.LocalName};
     req.body.Location = await getLocation(req);
-    
+
+    // calculate the DateStart based on the text message
+    req.body.Chance.DateStart = calculateDateStart(req);
+
     // insert chance
     let chance;
-    try{
+    try {
         chance = await chanceDal.chanceInsert(req);
         driverDal.updateReports(driver);    // increment driver reports reputation
-        process.env.NODE_ENV && process.env.NODE_ENV != 'test' &&
-        console.info(`Info: New chance #${chance.ChanceId} at street ${street.LocalName} posted by ${req.body.Driver.MobileNum}`);
         operStatusText = `Info: New chance #${chance.ChanceId} at street ${street.LocalName} posted by ${req.body.Driver.MobileNum}`;
+        process.env.NODE_ENV && process.env.NODE_ENV != 'test' &&
+        console.info(operStatusText);
         operStatusCode = HttpStatusCode.SUCCESS;
     } catch(e) {
         console.error(e.description);

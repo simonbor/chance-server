@@ -114,12 +114,12 @@ describe('chance controller tests', () => {
     const chanceNormSpot = await chanceController.chanceInsert(req, res);
 
     req.body.Chance.Size = false;
-    dateFewSecsAgo = new Date((Date.now() - 2000));
+    dateFewSecsAgo = new Date((Date.now() - 3000));
     req.body.Chance.DateStart = (dateFewSecsAgo).toLocaleString("en-US");
     const chanceSmallSpot = await chanceController.chanceInsert(req, res);
 
     req.body.Chance.Size = true;
-    dateFewSecsAgo = new Date((Date.now() - 3000));
+    dateFewSecsAgo = new Date((Date.now() - 5000));
     req.body.Chance.DateStart = (dateFewSecsAgo).toLocaleString("en-US");
     const chanceBigSpot = await chanceController.chanceInsert(req, res);
 
@@ -139,23 +139,28 @@ describe('chance controller tests', () => {
     expect(res.statusCode).toEqual(200);
   });
 
+  // ==================================================================
   // future times tests
+  // ==================================================================
 
-  test.skip('test future insert chance - ...', async () => {
+  test('test future insert chance - test DateStart time calculation', async () => {
     const res = mockResponse();
 
     // insert chance
     req.body.Address.Text = `מפנה בבוגרשוב ${Math.floor((Math.random()*300) + 1)} בעוד חמש דקות`;
-    await chanceController.chanceInsert(req, res);
+    const chanceSpot = await chanceController.chanceInsert(req, res);
 
-    const date = new Date();
-    date.setDate(date.getDate() - 1);
+    const date = new Date((Date.now() - 1000));
     req.body.Chance.DateStart = (date).toLocaleString("en-US");
-    const chanceRes = await chanceController.chanceGet(req, res);
-    
-    expect(chanceRes.data.length > 0).toBeTruthy();
-    expect(chanceRes.statusCode).toEqual(200);
+    const chanceList = await chanceController.chanceGet(req, res);
+
+    const markerSpot = chanceList.data.find((ch) => ch.ChanceId === chanceSpot.data.ChanceId);
+    const calculatedDate = (Date.parse(req.body.Chance.DateStart) + (1000 * 60 * 5));
+
+    // console.log([new Date(markerSpot.DateStart).setSeconds(0), new Date(calculatedDate).setSeconds(0)]);
+    // console.log([new Date(new Date(markerSpot.DateStart).setSeconds(0)), new Date(new Date(calculatedDate).setSeconds(0))]);
+
+    expect(new Date(markerSpot.DateStart).setSeconds(0) === new Date(calculatedDate).setSeconds(0)).toBeTruthy();
     expect(res.statusCode).toEqual(200);
   });
-
 });
