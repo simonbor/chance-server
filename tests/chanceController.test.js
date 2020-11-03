@@ -132,37 +132,10 @@ describe('chance controller tests', () => {
     const markerSmallSpot = chanceList.data.find((ch) => ch.ChanceId === chanceSmallSpot.data.ChanceId);
     const markerBigSpot = chanceList.data.find((ch) => ch.ChanceId === chanceBigSpot.data.ChanceId);
     
-    // console.log(`chance.data.ChanceId: ${chance.data.ChanceId}`);
-    // console.log(`marker: ${JSON.stringify(marker)}`);
-
     expect(markerNormSpot.Size).toEqual(null);
     expect(markerSmallSpot.Size).toEqual(false);
     expect(markerBigSpot.Size).toEqual(true);
     expect(res.statusCode).toEqual(200);
   });
 
-  // ==================================================================
-  // future times tests
-  // ==================================================================
-
-  test('test future insert chance - test DateStart time calculation', async () => {
-    const res = mockResponse();
-
-    // insert chance
-    req.body.Address.Text = `מפנה בבוגרשוב ${Math.floor((Math.random()*300) + 1)} בעוד חמש דקות`;
-    const chanceSpot = await chanceController.chanceInsert(req, res);
-
-    const date = new Date((Date.now() - 1000));
-    req.body.Chance.DateStart = (date).toLocaleString("en-US");
-    const chanceList = await chanceController.chanceGet(req, res);
-
-    const markerSpot = chanceList.data.find((ch) => ch.ChanceId === chanceSpot.data.ChanceId);
-    const calculatedDate = (Date.parse(req.body.Chance.DateStart) + (1000 * 60 * 5));
-
-    // console.log([new Date(markerSpot.DateStart).setSeconds(0), new Date(calculatedDate).setSeconds(0)]);
-    // console.log([new Date(new Date(markerSpot.DateStart).setSeconds(0)), new Date(new Date(calculatedDate).setSeconds(0))]);
-
-    expect(new Date(markerSpot.DateStart).setSeconds(0) === new Date(calculatedDate).setSeconds(0)).toBeTruthy();
-    expect(res.statusCode).toEqual(200);
-  });
 });
