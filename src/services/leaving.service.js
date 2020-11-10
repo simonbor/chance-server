@@ -97,7 +97,7 @@ const leavingAt = function(req, days) {
     return new Date(
         new Date().getFullYear(),
         new Date().getMonth(),
-        new Date().getDay() + 1 + days,
+        new Date().getDate() + days,
         hourValue + amPmValue,
         minuteValue
     );
