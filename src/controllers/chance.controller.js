@@ -2,7 +2,7 @@
 const driverDal = require('../dal/driverDal');
 const addressDal = require('../dal/addressDal');
 const chanceDal = require('../dal/chanceDal');
-const streetDal = require('../dal/streetDal');
+const streetsService = require('../services/streets.service');
 const locationDal = require('../dal/locationDal');
 const cityDal = require('../dal/cityDal');
 const HmContext = require('../contexts/maps/hmContext');
@@ -16,32 +16,6 @@ const getDriver = async function(req) {
         driver = await driverDal.driverInsert(req.body.Driver);
     }
     return driver;
-}
-
-const streetFound = (waMessage, streetNames) => {
-    let result = false;
-    streetNames.map(streetName => {
-        // prevent situations when one street name is a part of another street name -
-        // רחוב "גורדון" נכנס כרחוב "ורד"
-        const streetNameWord = streetName + ' ';
-
-        if(waMessage.indexOf(streetNameWord) > -1) {
-            result = true;
-        }
-    });
-    return result;
-}
-
-const getStreet = async function(req) {
-    const addressText = req.body.Address.Text;
-    const cityStreets = await streetDal.streetGetAll(req.body.Address);
-    let street = {};
-
-    cityStreets.map(cityStreet => {
-        const streets = cityStreet.OtherNames ? `${cityStreet.LocalName},${cityStreet.OtherNames}`.split(',') : [cityStreet.LocalName];
-        streetFound(addressText, streets) && (street = cityStreet);
-    });
-    return street;
 }
 
 const getAddress = async function(req) {
@@ -82,7 +56,7 @@ const chanceInsert = async (req, res) => {
     let operStatusCode, operStatusText;
 
     // get/insert the street
-    const street = await getStreet(req);       // check whenever the street is exists in the City:
+    const street = await streetsService.getStreet(req);       // check whenever the street is exists in the City:
     if (!street.StreetId) {
         // todo: log req.body.Address.Text
         process.env.NODE_ENV && process.env.NODE_ENV != 'test' &&
