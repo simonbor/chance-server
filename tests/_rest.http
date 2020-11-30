@@ -38,7 +38,7 @@ content-type: application/json
 
 {
 	"Address": {
-		"Text": "בוגרשוב 7",
+		"Text": "מפנה בעוד 5 ד בהירשנברג פינת גורדון",
 		"CityId": 1,
 		"CountryId": 367
     },
@@ -46,7 +46,7 @@ content-type: application/json
 		"MobileNum": "0544123123"
 	},
 	"Chance": {
-		"DateStart": "8/8/2020, 11:31:57 AM"
+		"DateStart": "11/30/2020, 3:35:00 PM"
 	}
 }
 

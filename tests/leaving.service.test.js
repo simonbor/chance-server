@@ -61,7 +61,23 @@ describe('leaving service tests', () => {
         expect(new Date(calculatedDateStart).setSeconds(0) === new Date(expectedDateStart).setSeconds(0)).toBeTruthy();
     });    
     
-    // ===================================================
+    test('test for schedule leaving in a 20 minutes', () => {
+      req.body.Address.Text = `פינסקר 20 בעוד עשרים דקות`;
+      const calculatedDateStart = leavingService.calculateDateStart(req);
+      const expectedDateStart = (Date.parse(req.body.Chance.DateStart) + (1000 * 60 * 20));
+
+      expect(new Date(calculatedDateStart).setSeconds(0) === new Date(expectedDateStart).setSeconds(0)).toBeTruthy();
+    });    
+    
+    test('test for schedule incorrect time leaving', () => {
+      req.body.Address.Text = `מפנה בעוד 10 ד בהירשנברג פינת גורדון`;
+      const calculatedDateStart = leavingService.calculateDateStart(req);
+      const expectedDateStart = req.body.Chance.DateStart;
+
+      expect(new Date(calculatedDateStart).setSeconds(0) === new Date(expectedDateStart).setSeconds(0)).toBeTruthy();
+    });    
+    
+  // ===================================================
     // Tomorrow's leaving tests
     // ===================================================
     test('test for schedule leaving tomorrow at twelve and ten', () => {
