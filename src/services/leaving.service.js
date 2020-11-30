@@ -60,7 +60,9 @@ const inSomeTimeLeaving = function(req) {
         }
     }
 
-    return new Date((Date.parse(dateStart)) + gapTime).toLocaleString('en-US');
+    return gapTime
+        ? new Date((Date.parse(dateStart)) + gapTime).toLocaleString('en-US')
+        : dateStart;
 }
 
 const leavingAt = function(req, days) {
