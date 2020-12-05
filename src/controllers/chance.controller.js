@@ -27,6 +27,7 @@ const getAddress = async function(req) {
     return address;
 }
 
+// consider move the function to dedicated service
 const getLocation = async function(req) {
     let location = await locationDal.locationGet(req.body.Address);
     if (!location.LocationId) {
@@ -69,6 +70,7 @@ const chanceInsert = async (req, res) => {
     
     // get/insert the address
     req.body.Address.StreetId = street.StreetId;
+    // todo: firstly try get a number that follows the street name
     req.body.Address.Building = parseInt(req.body.Address.Text.match(/\d+/)[0]);
     req.body.Driver.DriverId = driver.DriverId;
     const address = await getAddress(req);
@@ -107,4 +109,12 @@ const chanceGet = async function(req, res) {
     return new ChanceResponse(HttpStatusCode.SUCCESS, 'Success', chanceList);
 }
 
-module.exports = { chanceInsert, chanceGet }
+const chanceCountGet = async function(req, res) {
+    delete req.body.Chance;
+    const chanceList = await chanceDal.chanceGet(req);
+
+    res.statusCode = HttpStatusCode.SUCCESS;
+    return new ChanceResponse(HttpStatusCode.SUCCESS, 'Success', {count: chanceList.Count});
+}
+
+module.exports = { chanceInsert, chanceGet, chanceCountGet }
