@@ -314,7 +314,7 @@ select 300, 'מלאכי', null, 1 union all
 select 301, 'עובדיה הנביא', null, 1 union all
 select 302, 'סמ מיכה', null, 1 union all
 select 303, 'צפניה', null, 1 union all
-select 304, 'יוחנן הורקנוס', null, 1 union all
+select 304, 'יוחנן הורקנוס', 'הורקנוס', 1 union all
 select 305, 'שמעון התרסי', null, 1 union all
 select 306, 'סמ התרסי', null, 1 union all
 select 307, 'אלכסנדר ינאי', null, 1 union all
@@ -402,10 +402,10 @@ select 388, 'גוש חלב', null, 1 union all
 select 389, 'באר טוביה', null, 1 union all
 select 390, 'חולדה', null, 1 union all
 select 391, 'מצדה', null, 1 union all
-select 392, 'אד"ם הכהן', null, 1 union all
+select 392, 'אד"ם הכהן', 'אדם הכהן', 1 union all
 select 393, 'ליברמן', null, 1 union all
-select 394, 'ויזל', null, 1 union all
-select 395, 'יהל"ל', null, 1 union all
+select 394, 'ויזל', 'וייזל', 1 union all
+select 395, 'יהל"ל', 'יהלל', 1 union all
 select 396, 'שד בן גוריון', 'בן גוריון', 1 union all
 select 397, 'לסל', null, 1 union all
 select 398, 'אהרון דוד גורדון', null, 1 union all
@@ -446,7 +446,7 @@ select 432, 'גנסין', null, 1 union all
 select 433, 'פינסקר', null, 1 union all
 select 434, 'בילינסון', 'בלינסון', 1 union all
 select 435, 'אהרונוביץ', 'אהרונוביץ׳', 1 union all
-select 436, 'דרויאנוב', null, 1 union all
+select 436, 'דרויאנוב', 'דוריאנוב', 1 union all
 select 437, 'לוריא', null, 1 union all
 select 438, 'גליקסון', null, 1 union all
 select 439, 'צפת', null, 1 union all
@@ -485,7 +485,7 @@ select 471, 'שדרות ח"ן', null, 1 union all
 select 472, 'אימבר', null, 1 union all
 select 473, 'נצח ישראל', null, 1 union all
 select 474, 'גדעון', null, 1 union all
-select 475, 'השופטים', null, 1 union all
+select 475, 'השופטים', 'שופטים', 1 union all
 select 476, 'לטריס', null, 1 union all
 select 477, 'הנביאים', 'נביאים', 1 union all
 select 478, 'מלכי ישראל', null, 1 union all
@@ -500,7 +500,7 @@ select 486, 'בר גיורא', null, 1 union all
 select 487, 'עין חרוד', null, 1 union all
 select 488, 'תל חי', null, 1 union all
 select 489, 'זמנהוף', null, 1 union all
-select 490, 'אסתר המלכה', null, 1 union all
+select 490, 'אסתר המלכה', 'אסתר המחכה', 1 union all
 select 491, 'שולמית', null, 1 union all
 select 492, 'רות', null, 1 union all
 select 493, 'יעל', null, 1 union all
