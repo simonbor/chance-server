@@ -55,7 +55,7 @@ const inSomeTimeLeaving = function(req) {
 
     const textTime = text.slice(text.indexOf('בעוד') + 5);
     for (let [key, value] of minutes) {
-        if(key === textTime) {
+        if(textTime.indexOf(key) > -1) {
             gapTime = 1000 * 60 * value;
         }
     }
@@ -74,7 +74,7 @@ const leavingAt = function(req, days) {
 
     // retrieve hour
     for (let [key, value] of hours) {
-        if(text.indexOf(key) > 0) {
+        if(text.indexOf(key) > -1) {
             hourValue = value;
             break;
         }
@@ -82,7 +82,7 @@ const leavingAt = function(req, days) {
 
     // retrieve minutes
     for (let [key, value] of tenthsAndFractures) {
-        if(text.indexOf(key) > 0) {
+        if(text.indexOf(key) > -1) {
             minuteValue = value;
             break;
         }
@@ -90,7 +90,7 @@ const leavingAt = function(req, days) {
 
     // retrieve Morning / Evening
     for (let [key, value] of timesOfDay) {
-        if(text.indexOf(key) > 0) {
+        if(text.indexOf(key) > -1) {
             amPmValue = value;
             break;
         }
@@ -108,16 +108,16 @@ const leavingAt = function(req, days) {
 const calculateDateStart = function(req) {
     const { Address:{ Text: text } } = req.body;
 
-    if(text.indexOf('בעוד') > 0) {
+    if(text.indexOf('בעוד') > -1) {
         return inSomeTimeLeaving(req);
 
-    } else if(text.indexOf('היום') > 0) {
+    } else if(text.indexOf('היום') > -1) {
         return leavingAt(req, 0);
 
-    } else if(text.indexOf('מחר') > 0) {
+    } else if(text.indexOf('מחר') > -1) {
         return leavingAt(req, 1);
 
-    } else if(text.indexOf('מחרתיים') > 0) {
+    } else if(text.indexOf('מחרתיים') > -1) {
         return leavingAt(req, 2);
     }
 
