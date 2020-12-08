@@ -29,8 +29,11 @@ const route = async function(req, res) {
     } else if (reqUrl.pathname == '/chance-list' && req.method === 'POST') {
         return await chanceController.chanceGet(req, res);
 
-    } else if (reqUrl.pathname == '/chance-count' && req.method === 'POST') {
-        return await chanceController.chanceCountGet(req, res);
+    } else if (reqUrl.pathname == '/chance-now-count' && req.method === 'POST') {
+        return await chanceController.chancesNowCountGet(req, res);
+
+    } else if (reqUrl.pathname == '/chance-today-count' && req.method === 'POST') {
+        return await chanceController.chancesTodayCountGet(req, res);
 
     } else if (reqUrl.pathname == '/login' && req.method === 'POST') {
         return await loginController.driverGet(req, res);
