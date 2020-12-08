@@ -83,12 +83,21 @@ const chanceGet = async function(req, res) {
     return new ChanceResponse(HttpStatusCode.SUCCESS, 'Success', chanceList);
 }
 
-const chanceCountGet = async function(req, res) {
-    delete req.body.Chance;
+const chancesNowCountGet = async function(req, res) {
+    req.body.Chance.DateStart = (new Date()).toLocaleString("en-US");
     const chanceList = await chanceDal.chanceGet(req);
 
     res.statusCode = HttpStatusCode.SUCCESS;
-    return new ChanceResponse(HttpStatusCode.SUCCESS, 'Success', {count: chanceList.Count});
+    return new ChanceResponse(HttpStatusCode.SUCCESS, 'Success', [{count: chanceList.length}]);
 }
 
-module.exports = { chanceInsert, chanceGet, chanceCountGet }
+const chancesTodayCountGet = async function(req, res) {
+    const today = new Date(new Date().setHours(0,0,0,0)); // set time from today 00:00
+    req.body.Chance.DateStart = today.toLocaleString("en-US");    
+    const chanceList = await chanceDal.chanceGet(req);
+
+    res.statusCode = HttpStatusCode.SUCCESS;
+    return new ChanceResponse(HttpStatusCode.SUCCESS, 'Success', [{count: chanceList.length}]);
+}
+
+module.exports = { chanceInsert, chanceGet, chancesNowCountGet, chancesTodayCountGet }
