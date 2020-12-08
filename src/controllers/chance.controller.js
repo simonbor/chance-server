@@ -7,6 +7,7 @@ const { HttpStatusCode } = require('../enums');
 const streetsService = require('../services/streets.service');
 const leavingService = require('../services/leaving.service');
 const locationService = require('../services/location.service');
+const cache = require('../cache');
 
 const getDriver = async function(req) {
     let driver = await driverDal.driverGet(req.body.Driver);
@@ -76,7 +77,7 @@ const chanceInsert = async (req, res) => {
     return new ChanceResponse(operStatusCode, operStatusText, chance);
 }
 
-const chanceGet = async function(req, res) {
+const chancesListGet = async function(req, res) {
     const chanceList = await chanceDal.chanceGet(req);
 
     res.statusCode = HttpStatusCode.SUCCESS;
@@ -85,19 +86,29 @@ const chanceGet = async function(req, res) {
 
 const chancesNowCountGet = async function(req, res) {
     req.body.Chance.DateStart = (new Date()).toLocaleString("en-US");
-    const chanceList = await chanceDal.chanceGet(req);
+    
+    let chancesCount = cache.get('now-count');    
+    if(!chancesCount) {
+        chancesCount = await chanceDal.chanceGet(req);
+        cache.set('now-count', chancesCount);
+    }
 
     res.statusCode = HttpStatusCode.SUCCESS;
-    return new ChanceResponse(HttpStatusCode.SUCCESS, 'Success', [{count: chanceList.length}]);
+    return new ChanceResponse(HttpStatusCode.SUCCESS, 'Success', [{count: chancesCount.length}]);
 }
 
 const chancesTodayCountGet = async function(req, res) {
     const today = new Date(new Date().setHours(0,0,0,0)); // set time from today 00:00
     req.body.Chance.DateStart = today.toLocaleString("en-US");    
-    const chanceList = await chanceDal.chanceGet(req);
+    
+    let chancesCount = cache.get('today-count');
+    if(!chancesCount) {
+        chancesCount = await chanceDal.chanceGet(req);
+        cache.set('today-count', chancesCount);
+    }
 
     res.statusCode = HttpStatusCode.SUCCESS;
-    return new ChanceResponse(HttpStatusCode.SUCCESS, 'Success', [{count: chanceList.length}]);
+    return new ChanceResponse(HttpStatusCode.SUCCESS, 'Success', [{count: chancesCount.length}]);
 }
 
-module.exports = { chanceInsert, chanceGet, chancesNowCountGet, chancesTodayCountGet }
+module.exports = { chanceInsert, chancesListGet, chancesNowCountGet, chancesTodayCountGet }

@@ -27,7 +27,7 @@ const route = async function(req, res) {
         return await chanceController.chanceInsert(req, res);
 
     } else if (reqUrl.pathname == '/chance-list' && req.method === 'POST') {
-        return await chanceController.chanceGet(req, res);
+        return await chanceController.chancesListGet(req, res);
 
     } else if (reqUrl.pathname == '/chance-now-count' && req.method === 'POST') {
         return await chanceController.chancesNowCountGet(req, res);
