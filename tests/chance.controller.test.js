@@ -100,7 +100,7 @@ describe('chance controller tests', () => {
     const date = new Date();
     date.setDate(date.getDate() - 1);
     req.body.Chance.DateStart = (date).toLocaleString("en-US");
-    const chanceRes = await chanceController.chanceGet(req, res);
+    const chanceRes = await chanceController.chancesListGet(req, res);
     
     expect(chanceRes.data.length > 0).toBeTruthy();
     expect(chanceRes.statusCode).toEqual(200);
@@ -126,7 +126,7 @@ describe('chance controller tests', () => {
     const chanceBigSpot = await chanceController.chanceInsert(req, res);
 
     delete req.body.Chance.DateStart;
-    const chanceList = await chanceController.chanceGet(req, res);
+    const chanceList = await chanceController.chancesListGet(req, res);
 
     const markerNormSpot = chanceList.data.find((ch) => ch.ChanceId === chanceNormSpot.data.ChanceId);
     const markerSmallSpot = chanceList.data.find((ch) => ch.ChanceId === chanceSmallSpot.data.ChanceId);
