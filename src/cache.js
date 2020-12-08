@@ -11,7 +11,7 @@ const set = function (key, value, ttl = minute) {
 };
 
 const get = function (key) {
-    if(cache.has(key) && cache.get(key)[1] < Date.now()) {
+    if(cache.has(key) && (Date.now() < cache.get(key)[1])) {
         return cache.get(key)[0];
     } else {
         cache.delete(key);
