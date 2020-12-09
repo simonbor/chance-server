@@ -445,7 +445,7 @@ select 431, 'בן עמי', null, 1 union all
 select 432, 'גנסין', null, 1 union all
 select 433, 'פינסקר', null, 1 union all
 select 434, 'בילינסון', 'בלינסון', 1 union all
-select 435, 'אהרונוביץ', 'אהרונוביץ׳', 1 union all
+select 435, 'אהרונוביץ', 'אהרונוביץ'',אהרונוביץ׳', 1 union all
 select 436, 'דרויאנוב', 'דוריאנוב', 1 union all
 select 437, 'לוריא', null, 1 union all
 select 438, 'גליקסון', null, 1 union all
