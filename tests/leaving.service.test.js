@@ -61,6 +61,14 @@ describe('leaving service tests', () => {
         expect(new Date(calculatedDateStart).setSeconds(0) === new Date(expectedDateStart).setSeconds(0)).toBeTruthy();
     });    
     
+    test('test for schedule leaving in a five min', () => {
+        req.body.Address.Text = `מפנה בבוגרשוב 5 בעוד חמש דק`;
+        const calculatedDateStart = leavingService.calculateDateStart(req);
+        const expectedDateStart = (Date.parse(req.body.Chance.DateStart) + (1000 * 60 * 5));
+
+        expect(new Date(calculatedDateStart).setSeconds(0) === new Date(expectedDateStart).setSeconds(0)).toBeTruthy();
+    });
+    
     test('test for schedule leaving in a 20 minutes', () => {
       req.body.Address.Text = `פינסקר 20 בעוד עשרים דקות`;
       const calculatedDateStart = leavingService.calculateDateStart(req);
@@ -75,7 +83,15 @@ describe('leaving service tests', () => {
       const expectedDateStart = req.body.Chance.DateStart;
 
       expect(new Date(calculatedDateStart).setSeconds(0) === new Date(expectedDateStart).setSeconds(0)).toBeTruthy();
-    });    
+    });
+
+    test('test for schedule leaving in a quarter hour', () => {
+      req.body.Address.Text = `מפנה בבוגרשוב 5 בעוד רבע שעה`;
+      const calculatedDateStart = leavingService.calculateDateStart(req);
+      const expectedDateStart = (Date.parse(req.body.Chance.DateStart) + (1000 * 60 * 15));
+
+      expect(new Date(calculatedDateStart).setSeconds(0) === new Date(expectedDateStart).setSeconds(0)).toBeTruthy();
+  });
     
   // ===================================================
     // Tomorrow's leaving tests
