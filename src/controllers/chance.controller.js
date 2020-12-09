@@ -85,7 +85,7 @@ const chancesListGet = async function(req, res) {
 }
 
 const chancesNowCountGet = async function(req, res) {
-    req.body.Chance.DateStart = (new Date()).toLocaleString("en-US");
+    req.body.Chance = { DateStart: (new Date()).toLocaleString("en-US") };
     
     let chancesCount = cache.get('now-count');    
     if(!chancesCount) {
@@ -99,7 +99,7 @@ const chancesNowCountGet = async function(req, res) {
 
 const chancesTodayCountGet = async function(req, res) {
     const today = new Date(new Date().setHours(0,0,0,0)); // set time from today 00:00
-    req.body.Chance.DateStart = today.toLocaleString("en-US");    
+    req.body.Chance = { DateStart: today.toLocaleString("en-US") };
     
     let chancesCount = cache.get('today-count');
     if(!chancesCount) {

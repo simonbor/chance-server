@@ -1,3 +1,6 @@
+// https://dev.to/romainlanz/create-a-simple-cache-system-47om
+// https://www.mojotech.com/blog/node-js-memory-cache/
+
 const cache = new Map()
 const minute = 1000 * 60; // default living time
 
