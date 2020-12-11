@@ -87,28 +87,28 @@ const chancesListGet = async function(req, res) {
 const chancesNowCountGet = async function(req, res) {
     req.body.Chance = { DateStart: (new Date()).toLocaleString("en-US") };
     
-    let chancesCount = cache.get('now-count');    
-    if(!chancesCount) {
-        chancesCount = await chanceDal.chanceGet(req);
-        cache.set('now-count', chancesCount);
+    let chances = cache.get('now-count');
+    if(!chances) {
+        chances = await chanceDal.chanceGet(req);
+        cache.set('now-count', chances);
     }
 
     res.statusCode = HttpStatusCode.SUCCESS;
-    return new ChanceResponse(HttpStatusCode.SUCCESS, 'Success', [{count: chancesCount.length}]);
+    return new ChanceResponse(HttpStatusCode.SUCCESS, 'Success', [{count: chances.length}]);
 }
 
 const chancesTodayCountGet = async function(req, res) {
     const today = new Date(new Date().setHours(0,0,0,0)); // set time from today 00:00
     req.body.Chance = { DateStart: today.toLocaleString("en-US") };
     
-    let chancesCount = cache.get('today-count');
-    if(!chancesCount) {
-        chancesCount = await chanceDal.chanceGet(req);
-        cache.set('today-count', chancesCount);
+    let chances = cache.get('today-count');
+    if(!chances) {
+        chances = await chanceDal.chanceGet(req);
+        cache.set('today-count', chances);
     }
 
     res.statusCode = HttpStatusCode.SUCCESS;
-    return new ChanceResponse(HttpStatusCode.SUCCESS, 'Success', [{count: chancesCount.length}]);
+    return new ChanceResponse(HttpStatusCode.SUCCESS, 'Success', [{count: chances.length}]);
 }
 
 module.exports = { chanceInsert, chancesListGet, chancesNowCountGet, chancesTodayCountGet }
