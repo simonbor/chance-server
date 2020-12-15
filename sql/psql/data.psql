@@ -319,7 +319,7 @@ select 305, 'שמעון התרסי', null, 1 union all
 select 306, 'סמ התרסי', null, 1 union all
 select 307, 'אלכסנדר ינאי', null, 1 union all
 select 308, 'שד נורדאו', 'נורדאו', 1 union all
-select 309, 'יהושע בן נון', 'יהושוע בן נון,יהושוע,יהושע', 1 union all
+select 309, 'יהושע בן נון', 'יהושוע בן נון,יהושוע,יהושע,בן נון', 1 union all
 select 310, 'עמוס', null, 1 union all
 select 311, 'סמ עמוס', null, 1 union all
 select 312, 'סוקולוב', null, 1 union all
@@ -420,7 +420,7 @@ select 406, 'מלון אורה', null, 1 union all
 select 407, 'סמ בן יהודה', null, 1 union all
 select 408, 'מלון בזל', null, 1 union all
 select 409, 'אמיל זולה', null, 1 union all
-select 410, 'ז''ורס ז''אן', 'זאן זורס,זאן ז''ורס,זורס זאן', 1 union all
+select 410, 'ז''ורס ז''אן', 'זאן זורס,זאן ז''ורס,זורס זאן,ז''ן ז''ורס', 1 union all
 select 411, 'ביירון', null, 1 union all
 select 412, 'קורולנקו', null, 1 union all
 select 413, 'נתן החכם', null, 1 union all
@@ -433,7 +433,7 @@ select 419, 'עם ישראל חי', null, 1 union all
 select 420, 'יהואש', null, 1 union all
 select 421, 'של"ג', null, 1 union all
 select 422, 'מאפו', null, 1 union all
-select 423, 'מנדלי מוכר ספרים', 'מנדלי', 1 union all
+select 423, 'מנדלי מוכר ספרים', 'מנדלי,מנדלה', 1 union all
 select 424, 'בוגרשוב', null, 1 union all
 select 425, 'טייגר היל', null, 1 union all
 select 426, 'סירקין', null, 1 union all
@@ -467,11 +467,11 @@ select 453, 'ריינס', null, 1 union all
 select 454, 'גוטליב', null, 1 union all
 select 455, 'הירשנברג', 'הירשינברג', 1 union all
 select 456, 'ש"ץ', 'שץ', 1 union all
-select 457, 'ישראליס', null, 1 union all
+select 457, 'ישראליס', 'ישראלים', 1 union all
 select 458, 'שלמה המלך', null, 1 union all
 select 459, 'גורדון י ל', 'גורדון', 1 union all
 select 460, 'סמ יל"ג', null, 1 union all
-select 461, 'סמ גור אריה', null, 1 union all
+select 461, 'סמ גור אריה', 'סמטת גור אריה,גור אריה', 1 union all
 select 462, 'פרישמן', null, 1 union all
 select 463, 'לכיש', null, 1 union all
 select 464, 'מלון אסטור', null, 1 union all

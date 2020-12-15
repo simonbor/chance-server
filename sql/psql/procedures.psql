@@ -160,12 +160,12 @@ create or replace function main."sp_GetChanceByCity" (
 	p_DateStart timestamp(3) = null
 ) returns table ("ChanceId" int, "Longitude" double precision, "Latitude" double precision, "DateStart" timestamp(3), "DriverOut" int, "Size" boolean, "AddressId" int) 
 language plpgsql AS $$
-	declare v_GapTime varchar = '20 minutes';
+	declare v_GapTime varchar = '30 minutes';
 	declare v_NowMinusGap timestamp(3);
 begin
 	if p_DateStart is null
-	then -- calculate by default Gap Time (20 min)
-		v_NowMinusGap = (select timezone('utc', now())::timestamp - v_GapTime::interval); -- don't forget change it to 10 mins
+	then -- calculate by default Gap Time (30 min)
+		v_NowMinusGap = (select timezone('ist', now())::timestamp - v_GapTime::interval);
 	else -- calculate by provided time
 		v_NowMinusGap = p_DateStart;
 	end if;
