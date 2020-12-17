@@ -11,7 +11,32 @@ drop function if exists main."sp_InsertChance";
 drop function if exists main."sp_GetChanceByCity";
 
 -- =================================
--- Driver
+-- WhatsApp Group
+-- =================================
+
+create or replace function main."sp.GetWaGroup" (
+	p_Name varchar(25)
+) returns setof main."WaGroup" as $$
+begin
+	return query select * from main."WaGroup" g where g."Name" = p_Name;
+end;
+$$ language plpgsql;
+
+create or replace function main."sp_InsertWaGroup" (
+    p_Name varchar(25),
+	p_CreatedBy int,
+	p_Desc varchar(500) = null
+) returns table("GroupId" int, "Name" varchar(25))
+language plpgsql AS $$
+begin
+	insert into main."WaGroup" ("Name", "Desc", "CreatedBy")
+	values (p_Name, p_Desc, p_CreatedBy);
+
+	return query select g."GroupId", g."Name" from main."WaGroup" g where g."Name" = p_Name;
+end;$$;
+
+-- =================================
+-- WhatsApp Participants
 -- =================================
 
 create or replace function main."sp_GetDriver" (
