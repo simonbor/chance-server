@@ -1,3 +1,5 @@
+drop function if exists main."sp_GetWaGroup";
+drop function if exists main."sp_InsertWaGroup";
 drop function if exists main."sp_GetDriver";
 drop function if exists main."sp_InsertDriver";
 drop function if exists main."sp_UpdateReports";
@@ -14,7 +16,7 @@ drop function if exists main."sp_GetChanceByCity";
 -- WhatsApp Group
 -- =================================
 
-create or replace function main."sp.GetWaGroup" (
+create or replace function main."sp_GetWaGroup" (
 	p_Name varchar(25)
 ) returns setof main."WaGroup" as $$
 begin
@@ -26,13 +28,13 @@ create or replace function main."sp_InsertWaGroup" (
     p_Name varchar(25),
 	p_CreatedBy int,
 	p_Desc varchar(500) = null
-) returns table("GroupId" int, "Name" varchar(25))
+) returns table("WaGroupId" int, "Name" varchar(25))
 language plpgsql AS $$
 begin
 	insert into main."WaGroup" ("Name", "Desc", "CreatedBy")
 	values (p_Name, p_Desc, p_CreatedBy);
 
-	return query select g."GroupId", g."Name" from main."WaGroup" g where g."Name" = p_Name;
+	return query select g."WaGroupId", g."Name" from main."WaGroup" g where g."Name" = p_Name;
 end;$$;
 
 -- =================================
@@ -161,6 +163,7 @@ end;$body$ language plpgsql;
 -- =================================
 create or replace function main."sp_InsertChance" (
 	p_DriverOut int,
+	p_WaGroupId int,
 	p_Latitude double precision,
 	p_Longitude double precision,
 	p_LocationId int,
@@ -172,14 +175,13 @@ create or replace function main."sp_InsertChance" (
 language plpgsql as $$
 	declare v_ChanceId integer;
 begin
-	insert into main."Chance" ("Latitude", "Longitude", "LocationId", "AddressId", "DateStart", "DriverOut", "Size", "CreatedBy")
-	values (p_Latitude, p_Longitude, p_LocationId, p_AddressId, p_DateStart, p_DriverOut, p_Size, p_CreatedBy)
+	insert into main."Chance" ("Latitude", "Longitude", "LocationId", "AddressId", "DateStart", "DriverOut", "WaGroupId", "Size", "CreatedBy")
+	values (p_Latitude, p_Longitude, p_LocationId, p_AddressId, p_DateStart, p_DriverOut, p_WaGroupId, p_Size, p_CreatedBy)
 	returning main."Chance"."ChanceId" into v_ChanceId;
 
 	return query select c."ChanceId", c."CreatedBy" from main."Chance" c where c."ChanceId" = v_ChanceId;
 end;$$;
 
-drop function if exists main."sp_GetChanceByCity";
 create or replace function main."sp_GetChanceByCity" (
 	p_CityId int,
 	p_DateStart timestamp(3) = null
