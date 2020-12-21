@@ -37,6 +37,9 @@ describe('chance controller tests', () => {
       "Driver": {
         "MobileNum": "0544123123"
       },
+      "WhatsApp": {
+        "GroupName": "Group Name 1"
+      },
       "Chance": {
         "DateStart": (new Date()).toLocaleString("en-US")
       }
