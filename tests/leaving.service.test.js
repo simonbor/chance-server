@@ -9,13 +9,6 @@ describe('leaving service tests', () => {
       req.params = jest.fn().mockReturnValue(req);
       return req;
     }; 
-    const mockResponse = () => {
-      const res = {}
-      res.send = jest.fn().mockReturnValue(res)
-      res.statusCode = jest.fn().mockReturnValue(res)
-      res.json = jest.fn().mockReturnValue(res)
-      return res;
-    };
     const req = mockRequest();
   
     beforeAll(async () => {
