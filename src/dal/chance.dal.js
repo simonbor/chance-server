@@ -6,13 +6,14 @@ const chanceInsert = async function(req) {
     const dbContext = new DbContext();
 
     const chanceReq = new InsertChanceReq (
-        req.body.Driver.DriverId, 
-        req.body.Location.Latitude, 
-        req.body.Location.Longitude, 
-        req.body.Location.LocationId, 
-        req.body.Chance.DateStart, 
-        req.body.Address.AddressId, 
-        req.body.Chance.Size, 
+        req.body.Driver.DriverId,
+        req.body.Chance.WaGroupId,
+        req.body.Location.Latitude,
+        req.body.Location.Longitude,
+        req.body.Location.LocationId,
+        req.body.Chance.DateStart,
+        req.body.Address.AddressId,
+        req.body.Chance.Size,
         req.body.Driver.DriverId);
     let chanceData = await dbContext.execute('main."sp_InsertChance"', chanceReq);
     const chance = new Chance((chanceData[0])[0] || chanceData[0]);
