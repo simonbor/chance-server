@@ -1,12 +1,13 @@
 'use strict';
 const driverDal = require('../dal/driverDal');
 const addressDal = require('../dal/addressDal');
-const chanceDal = require('../dal/chanceDal');
+const chanceDal = require('../dal/chance.dal');
 const ChanceResponse = require('../models/response');
 const { HttpStatusCode } = require('../enums');
 const streetsService = require('../services/streets.service');
 const leavingService = require('../services/leaving.service');
 const locationService = require('../services/location.service');
+const whatsappService = require('../services/whatsapp.service');
 const cache = require('../cache');
 
 const getDriver = async function(req) {
@@ -57,6 +58,9 @@ const chanceInsert = async (req, res) => {
 
     // calculate the DateStart based on the text message
     req.body.Chance.DateStart = leavingService.calculateDateStart(req);
+
+    // get/insert the whatsapp group
+    req.body.Chance.WaGroupId = await whatsappService.getWaGroup(req);
 
     // insert chance
     let chance;
