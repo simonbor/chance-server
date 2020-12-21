@@ -1,3 +1,4 @@
+'use strict'
 const locationDal = require('../dal/locationDal');
 const cityDal = require('../dal/cityDal');
 const HmContext = require('../contexts/maps/hmContext');
