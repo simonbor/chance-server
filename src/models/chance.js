@@ -1,13 +1,14 @@
 'use strict';
 
 class Chance {
-    constructor({ChanceId, LocationId, AddressId, DriverOut, DriversIn, Latitude, Longitude, DateStart, Size, Created, CreatedBy}) {
+    constructor({ChanceId, LocationId, AddressId, DriverOut, WaGroupId, DriversIn, Latitude, Longitude, DateStart, Size, Created, CreatedBy}) {
         this.ChanceId =     ChanceId;
         this.LocationId =   LocationId;
         this.AddressId =    AddressId;
         this.Latitude =     Latitude,
         this.Longitude =    Longitude,
         this.DriverOut =    DriverOut;
+        this.WaGroupId =    WaGroupId;
         this.DriversIn =    DriversIn;
         this.DateStart =    DateStart;
         this.Size =         Size;
@@ -17,11 +18,12 @@ class Chance {
 }
 
 class InsertChanceReq {
-	constructor(DriverOut, Latitude, Longitude, LocationId, DateStart, AddressId, Size, CreatedBy) {
+	constructor(DriverOut, WaGroupId, Latitude, Longitude, LocationId, DateStart, AddressId, Size, CreatedBy) {
         // prepare a boolean type for PostgreSQL
         const size = typeof Size !== 'undefined' ? Size.toString().toUpperCase() : Size;
 
         this.DriverOut =    { 'typeName': 'Int', 'value': DriverOut };
+        this.WaGroupId =   { 'typeName': 'Int', 'value': WaGroupId };
         this.Latitude =     { 'typeName': 'Float', 'value': Latitude },
         this.Longitude =    { 'typeName': 'Float', 'value': Longitude },
         this.LocationId =   { 'typeName': 'Int', 'value': LocationId };
