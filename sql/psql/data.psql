@@ -349,7 +349,7 @@ select 335, 'טהון יהושע', null, 1 union all
 select 336, 'יפה נוף', null, 1 union all
 select 337, 'מוצקין', null, 1 union all
 select 338, 'ויתקין', null, 1 union all
-select 339, 'ז''בוטינסקי', null, 1 union all
+select 339, 'ז׳בוטינסקי', 'ז''בוטינסקי,זבוטינסקי', 1 union all
 select 340, 'גריזים', null, 1 union all
 select 341, 'פקיעין', null, 1 union all
 select 342, 'סמ זנגביל', null, 1 union all
@@ -420,7 +420,7 @@ select 406, 'מלון אורה', null, 1 union all
 select 407, 'סמ בן יהודה', null, 1 union all
 select 408, 'מלון בזל', null, 1 union all
 select 409, 'אמיל זולה', null, 1 union all
-select 410, 'ז''ורס ז''אן', 'זאן זורס,זאן ז''ורס,זורס זאן,ז''ן ז''ורס', 1 union all
+select 410, 'ז''ורס ז''אן', 'זאן זורס,זאן ז''ורס,זורס זאן,ז''ן ז''ורס,זאן ז’ורס', 1 union all
 select 411, 'ביירון', null, 1 union all
 select 412, 'קורולנקו', null, 1 union all
 select 413, 'נתן החכם', null, 1 union all
@@ -433,7 +433,7 @@ select 419, 'עם ישראל חי', null, 1 union all
 select 420, 'יהואש', null, 1 union all
 select 421, 'של"ג', null, 1 union all
 select 422, 'מאפו', null, 1 union all
-select 423, 'מנדלי מוכר ספרים', 'מנדלי,מנדלה', 1 union all
+select 423, 'מנדלי מוכר ספרים', 'מנדלי,מנדלה,מנדלימוס,מנדלימס', 1 union all
 select 424, 'בוגרשוב', null, 1 union all
 select 425, 'טייגר היל', null, 1 union all
 select 426, 'סירקין', null, 1 union all
@@ -470,7 +470,7 @@ select 456, 'ש"ץ', 'שץ', 1 union all
 select 457, 'ישראליס', 'ישראלים', 1 union all
 select 458, 'שלמה המלך', null, 1 union all
 select 459, 'גורדון י ל', 'גורדון', 1 union all
-select 460, 'סמ יל"ג', null, 1 union all
+select 460, 'סמ יל"ג', 'סמ ילג,ילג,סמטת יל"ג,סמטת ילג', 1 union all
 select 461, 'סמ גור אריה', 'סמטת גור אריה,גור אריה', 1 union all
 select 462, 'פרישמן', null, 1 union all
 select 463, 'לכיש', null, 1 union all
@@ -688,10 +688,10 @@ select 674, 'שבע השקמים', null, 1 union all
 select 675, 'משעול יעקב', null, 1 union all
 select 676, 'רבנו תם', null, 1 union all
 select 677, 'טרומפלדור', null, 1 union all
-select 678, 'ברוק צבי', 'ברוק', 1 union all
+select 678, 'ברוק צבי', 'ברוק,ברור,צבי ברוק,צבי ברור', 1 union all
 select 679, 'ברנשטין כהן', null, 1 union all
 select 680, 'שניאור זלמן', 'שניאור', 1 union all
-select 681, 'בר כוכבא', null, 1 union all
+select 681, 'בר כוכבא', 'בק כוכבא,כוכבא', 1 union all
 select 682, 'שמעון בר כוכבא', null, 1 union all
 select 683, 'המכבי', null, 1 union all
 select 684, 'בית לחם', null, 1 union all
