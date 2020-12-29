@@ -18,7 +18,7 @@ const chanceInsert = async function(req) {
     let chanceData = await dbContext.execute('main."sp_InsertChance"', chanceReq);
     const chance = new Chance((chanceData[0])[0] || chanceData[0]);
 
-    return [chance];
+    return chance;
 }
 
 const chanceGet = async function(req) {
