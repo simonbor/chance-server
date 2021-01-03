@@ -131,9 +131,9 @@ describe('chance controller tests', () => {
     delete req.body.Chance.DateStart;
     const chanceList = await chanceController.chancesListGet(req, res);
 
-    const markerNormSpot = chanceList.data.find((ch) => ch.ChanceId === chanceNormSpot.data.ChanceId);
-    const markerSmallSpot = chanceList.data.find((ch) => ch.ChanceId === chanceSmallSpot.data.ChanceId);
-    const markerBigSpot = chanceList.data.find((ch) => ch.ChanceId === chanceBigSpot.data.ChanceId);
+    const markerNormSpot = chanceList.data.find((ch) => ch.ChanceId === chanceNormSpot.data[0].ChanceId);
+    const markerSmallSpot = chanceList.data.find((ch) => ch.ChanceId === chanceSmallSpot.data[0].ChanceId);
+    const markerBigSpot = chanceList.data.find((ch) => ch.ChanceId === chanceBigSpot.data[0].ChanceId);
     
     expect(markerNormSpot.Size).toEqual(null);
     expect(markerSmallSpot.Size).toEqual(false);
