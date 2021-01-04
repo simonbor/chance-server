@@ -24,7 +24,9 @@ server.on('request', async (req, res) => {
     }
 
     // prepare request json
-    req.body = await utils.getRequestData(req);
+    if (req.method === 'POST') {
+        req.body = await utils.getRequestData(req);
+    }
 
     // process request
     const jsonString = await route(req, res);

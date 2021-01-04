@@ -4,6 +4,7 @@ const chanceController = require('./controllers/chance.controller');
 const loginController = require('./controllers/loginController');
 const { authenticate } = require('./auth');
 const { HttpStatusCode } = require('./enums');
+const ChanceResponse = require('./models/response');
 
 const route = async function(req, res) {
     const reqUrl = url.parse(req.url, true);
@@ -37,6 +38,9 @@ const route = async function(req, res) {
 
     } else if (reqUrl.pathname == '/login' && req.method === 'POST') {
         return await loginController.driverGet(req, res);
+
+    } else if (reqUrl.pathname == '/wakeup' && req.method === 'GET') {
+        return new ChanceResponse(HttpStatusCode.SUCCESS, 'Ready', []);
 
     } else {
         res.statusCode = HttpStatusCode.NOT_FOUND;
