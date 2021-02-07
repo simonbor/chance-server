@@ -28,9 +28,6 @@ const chanceGet = async function(req) {
     const chanceReq = new GetChanceByCityReq (req.body.Address.CityId, dateStart);
     let chanceData = await dbContext.execute('main."sp_GetChanceByCity"', chanceReq);
 
-    // remove the line now!
-    console.log(JSON.stringify(chanceData[0]));
-
     return chanceData[0];
 }
 
