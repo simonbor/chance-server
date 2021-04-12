@@ -192,7 +192,7 @@ language plpgsql AS $$
 begin
 	if p_DateStart is null
 	then -- calculate by default Gap Time (30 min)
-		v_NowMinusGap = (select timezone('ist', now())::timestamp - v_GapTime::interval);
+		v_NowMinusGap = (select timezone('-03', now())::timestamp - v_GapTime::interval);
 	else -- calculate by provided time
 		v_NowMinusGap = p_DateStart;
 	end if;
