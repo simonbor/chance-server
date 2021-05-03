@@ -28,43 +28,42 @@ const getAddress = async function(req) {
 }
 
 const chanceInsert = async (req, res) => {
-    // get/insert new driver
-    const driver = await getDriver(req);
-    let operStatusCode, operStatusText;
-
-    // get/insert the street
-    const street = await streetsService.getStreet(req);       // check whenever the street is exists in the City:
-    if (!street.StreetId) {
-        // todo: log req.body.Address.Text
-        process.env.NODE_ENV && process.env.NODE_ENV != 'test' &&
-        console.error(`Error: The street not found in the message "${req.body.Address.Text}".`);
-        operStatusText = `Error: The street not found in the message "${req.body.Address.Text}".`;
-        operStatusCode = HttpStatusCode.BAD_REQUEST;
-        res.statusCode = HttpStatusCode.SUCCESS;
-        return new ChanceResponse(operStatusCode, operStatusText, []);
-    }
-    
-    // get/insert the address
-    req.body.Address.StreetId = street.StreetId;
-    // todo: firstly try get a number that follows the street name
-    req.body.Address.Building = parseInt(req.body.Address.Text.match(/\d+/)[0]);
-    req.body.Driver.DriverId = driver.DriverId;
-    const address = await getAddress(req);
-
-    // get/insert the location
-    req.body.Address.AddressId = address.AddressId;
-    req.body.Street = {"LocalName": street.LocalName};
-    req.body.Location = await locationService.getLocation(req);
-
-    // calculate the DateStart based on the text message
-    req.body.Chance.DateStart = leavingService.calculateDateStart(req);
-
-    // get/insert the whatsapp group
-    req.body.Chance.WaGroupId = await whatsappService.getWaGroup(req);
-
-    // insert chance
-    let chance;
+    let chance, operStatusCode, operStatusText;
     try {
+        // get/insert new driver
+        const driver = await getDriver(req);
+
+        // get/insert the street
+        const street = await streetsService.getStreet(req);       // check whenever the street is exists in the City:
+        if (!street.StreetId) {
+            // todo: log req.body.Address.Text
+            process.env.NODE_ENV && process.env.NODE_ENV != 'test' &&
+            console.error(`Error: The street not found in the message "${req.body.Address.Text}".`);
+            operStatusText = `Error: The street not found in the message "${req.body.Address.Text}".`;
+            operStatusCode = HttpStatusCode.BAD_REQUEST;
+            res.statusCode = HttpStatusCode.SUCCESS;
+            return new ChanceResponse(operStatusCode, operStatusText, []);
+        }
+        
+        // get/insert the address
+        req.body.Address.StreetId = street.StreetId;
+        // todo: firstly try get a number that follows the street name
+        req.body.Address.Building = parseInt(req.body.Address.Text.match(/\d+/)[0]);
+        req.body.Driver.DriverId = driver.DriverId;
+        const address = await getAddress(req);
+
+        // get/insert the location
+        req.body.Address.AddressId = address.AddressId;
+        req.body.Street = {"LocalName": street.LocalName};
+        req.body.Location = await locationService.getLocation(req);
+
+        // calculate the DateStart based on the text message
+        req.body.Chance.DateStart = leavingService.calculateDateStart(req);
+
+        // get/insert the whatsapp group
+        req.body.Chance.WaGroupId = await whatsappService.getWaGroup(req);
+
+        // insert chance
         chance = await chanceDal.chanceInsert(req);
         driverDal.updateReports(driver);    // increment driver reports reputation
         operStatusText = `Info: New chance #${chance.ChanceId} at street ${street.LocalName} posted by ${req.body.Driver.MobileNum}`;
