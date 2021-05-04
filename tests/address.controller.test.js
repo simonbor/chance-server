@@ -1,5 +1,5 @@
 'use strict'
-const addressController = require('../src/controllers/addressController');
+const addressController = require('../src/controllers/address.controller');
 const DbContext = require('../src/contexts/data/db-context');
 
 describe('address controller tests', () => {
