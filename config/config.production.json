@@ -6,11 +6,11 @@
 		"database": "Parking"
 	},
 	"psql-config": {
-		"host": "ec2-52-16-42-185.eu-west-1.compute.amazonaws.com",
+		"host": "ec2-52-210-44-5.eu-west-1.compute.amazonaws.com",
 		"port": 5432,
-		"database": "ddp1e3ngaj4qnt",
-		"user": "rhgvbsdmirtpnz",
-		"password": "fd33c8b2b80f69c7471c15d4e0c5ae1a:e8e52f3280ed76eaf023a1f9d5882463b21b55cbc63323e488d1068a07cc16d9c42dc9b5e4718df91a4617ea7f9375e0f5649d571cca89d439d24b5886cf8f89c53e6ee563a2a8ae189824f81757becf",
+		"database": "dai6vqi9miftla",
+		"user": "nwwfcfalcgiugd",
+		"password": "d6687433c3311d331f2c1ed3515979dd:5f6acd075a2cfe953c5519c6aa32373631bd76ee3eb266c4a6774df1ef8813bdc7e01acb474a031ff13128775773a9063099cce5bc420413098806708c68867546413ca9441c4c5c2971b1768c25c",
 		"ssl": {
 			"rejectUnauthorized": false
 		}
