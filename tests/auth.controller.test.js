@@ -20,7 +20,7 @@ describe('auth controller tests', () => {
   };
   const req = mockRequest();
 
-  beforeAll(async (done) => {
+  beforeAll((done) => {
     // init database (mssql, postgres)
     DbContext.initContext();
 

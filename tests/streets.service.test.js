@@ -12,7 +12,7 @@ describe('streets service tests', () => {
   }; 
   const req = mockRequest();
 
-  beforeAll(async (done) => {
+  beforeAll((done) => {
     DbContext.initContext();  // init test database (mssql, postgres)
 
     // wait for db recreation

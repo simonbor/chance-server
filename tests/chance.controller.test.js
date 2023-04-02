@@ -21,7 +21,7 @@ describe('chance controller tests', () => {
   };
   const req = mockRequest();
 
-  beforeAll(async (done) => {
+  beforeAll((done) => {
     DbContext.initContext();  // init test database (mssql, postgres)
     HmContext.initContext(); // init Here Map mock api 
 

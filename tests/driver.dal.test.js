@@ -2,7 +2,7 @@ const DbContext = require('../src/contexts/data/db-context');
 const driverDal = require('../src/dal/driverDal');
 
 describe('driver dal tests', () => {
-  beforeAll(async (done) => {
+  beforeAll((done) => {
     // init database (mssql, postgres)
     DbContext.initContext();
 

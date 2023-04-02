@@ -12,7 +12,7 @@ describe('cache tests', () => {
         expect(cache.get('payload')).toEqual(payload);
     });  
 
-    test('test cache - load expired data', async (done) => {
+    test('test cache - load expired data', (done) => {
         const payload = { payload: 'true' };
         cache.set('payload', payload, 100);
 
