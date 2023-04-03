@@ -29,11 +29,15 @@ const getAddress = async function(req) {
 
 const chanceInsert = async (req, res) => {
     let chance, operStatusCode, operStatusText;
+
+    console.info(`chance controller -> chanceInsert`);
     try {
         // get/insert new driver
+        console.info(`get/insert new driver`);
         const driver = await getDriver(req);
 
         // get/insert the street
+        console.info(`get/insert the street`);
         const street = await streetsService.getStreet(req);       // check whenever the street is exists in the City:
         if (!street.StreetId) {
             // todo: log req.body.Address.Text
@@ -46,6 +50,7 @@ const chanceInsert = async (req, res) => {
         }
         
         // get/insert the address
+        console.info(`get/insert the address`);
         req.body.Address.StreetId = street.StreetId;
         // todo: firstly try get a number that follows the street name
         req.body.Address.Building = parseInt(req.body.Address.Text.match(/\d+/)[0]);
@@ -53,17 +58,21 @@ const chanceInsert = async (req, res) => {
         const address = await getAddress(req);
 
         // get/insert the location
+        console.info(`get/insert the location`);
         req.body.Address.AddressId = address.AddressId;
         req.body.Street = {"LocalName": street.LocalName};
         req.body.Location = await locationService.getLocation(req);
 
         // calculate the DateStart based on the text message
+        console.info(`calculate the DateStart based on the text message`);
         req.body.Chance.DateStart = leavingService.calculateDateStart(req);
 
         // get/insert the whatsapp group
+        console.info(`get/insert the whatsapp group`);
         req.body.Chance.WaGroupId = await whatsappService.getWaGroup(req);
 
         // insert chance
+        console.info(`insert chance`);
         chance = await chanceDal.chanceInsert(req);
         driverDal.updateReports(driver);    // increment driver reports reputation
         operStatusText = `Info: New chance #${chance.ChanceId} at street ${street.LocalName} posted by ${req.body.Driver.MobileNum}`;
@@ -71,7 +80,7 @@ const chanceInsert = async (req, res) => {
         console.info(operStatusText);
         operStatusCode = HttpStatusCode.SUCCESS;
     } catch(e) {
-        console.error(e.description);
+        console.error(e);
         operStatusText = e.description;
         operStatusCode = HttpStatusCode.BAD_REQUEST;
     }
