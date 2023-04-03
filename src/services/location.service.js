@@ -11,12 +11,12 @@ const getLocation = async function(req) {
         req.body.Address.CityName = city.LocalName;
 
         const hmContext = new HmContext();
-        const displayPosition = await hmContext.getLocation(`${req.body.Street.LocalName} ${req.body.Address.Building} ${req.body.Address.CityName}`);
+        const position = await hmContext.getLocation(`${req.body.Street.LocalName} ${req.body.Address.Building} ${req.body.Address.CityName}`);
 
         // insert location
         req.body.Location = {
-            "Longitude": displayPosition.Longitude,
-            "Latitude": displayPosition.Latitude,
+            "Longitude": position.lng,
+            "Latitude": position.lat,
             "DefLocation": true,
             "AddressId": req.body.Address.AddressId,
             "CreatedBy": req.body.Driver.DriverId,

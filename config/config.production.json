@@ -18,6 +18,6 @@
 	"db-in-use": "psql",
 	"here_map": {
 		"geo_url": "https://geocoder.ls.hereapi.com/6.2/geocode.json",
-		"api_key": "a6e86ea326bb10aef0ce1568860da671:0129389379d59ddb22172a83446bc3641fffe54cf884c35b3a74afc777b44ab8b3b7c33379b895f9a4f33015ee84e2e5"
+		"api_key": "dd6b136c28a00d6a1ab88b4754aa1d52:1ea9bcbec4ed4b6b2e47000ef5e7b42337bbfdfae202cf89e9ec82788673a23d09c5974471fb74bc6411d7b565d5475f"
 	}
 }

@@ -14,7 +14,7 @@
 	},
 	"db-in-use": "psql",
 	"here_map": {
-		"geo_url": "https://geocoder.ls.hereapi.com/6.2/geocode.json",
-		"api_key": "a80e514ca5ff5a5c8c002af60a870f0b:9b6a8e0803eac8b1e6a59dcc0431d323b9752cd59e41a42ec908d1433d9953c34725b29074c2fa06edbbfbc695da286d"
+		"geo_url": "https://geocode.search.hereapi.com/v1/geocode",
+		"api_key": "dd6b136c28a00d6a1ab88b4754aa1d52:1ea9bcbec4ed4b6b2e47000ef5e7b42337bbfdfae202cf89e9ec82788673a23d09c5974471fb74bc6411d7b565d5475f"
 	}
 }
