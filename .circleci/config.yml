@@ -1,10 +1,5 @@
 version: 2.1
 
-workflows:
-  build-deploy:
-    jobs:
-      - build-deploy
-
 jobs:
   build-deploy:
     machine: true
@@ -18,3 +13,8 @@ jobs:
             HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:login
             HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:push web --recursive -a chance-app
             HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release web -a chance-app
+
+workflows:
+  build-deploy:
+    jobs:
+      - build-deploy
