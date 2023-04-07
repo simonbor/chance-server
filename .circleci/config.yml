@@ -15,11 +15,10 @@ jobs:
       - checkout
       
       # Copy psql folder to Postgres image
-      - run:
-          name: Copy psql folder
-          command: |
-            docker ps
-      # docker cp ./sql/psql/ $(docker ps -q --filter "ancestor=postgres:12-alpine"):/
+      # - run:
+      #     name: Copy psql folder
+      #     command: |
+      #       docker cp ./sql/psql/ ./
 
       - run:
           name: Start Postgres
