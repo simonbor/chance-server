@@ -5,9 +5,9 @@ jobs:
     docker:
       - image: circleci/node:latest
       - image: postgres:12-alpine
-          environment:
-            POSTGRES_USER: ${POSTGRES_USER}
-            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+        environment:
+          POSTGRES_USER: ${POSTGRES_USER}
+          POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
 
     working_directory: ~/repo
 
