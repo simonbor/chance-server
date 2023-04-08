@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:18-alpine
 
 ARG encryption_key=the_pwd_come_in_build_cmd_line
 ARG node_env=development
