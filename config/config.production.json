@@ -10,7 +10,7 @@
 		"port": 5432,
 		"database": "dai6vqi9miftla",
 		"user": "nwwfcfalcgiugd",
-		"password": "e00731113cdd8d0882d6e2472e72ecf2:fad7dc19830856babb1074677cc31479e72e209fcd768afbdde2113d80f5f7ad8718c56db4062d9463f3e13b46012fe46e84cfde39b8c29415bc84e524356b3ac1139ac4c710ec028982775b4cf9f17c",
+		"password": "a4690163eaa4af5680faf94ae2c5b67b:7c60fa759f5e2966cb6bc25c9d4f065c44b5998026773ba07122c3edc2cfdd5bff0449545838b7a40c0e362792fb3f1d69a1eef87d4b8d7beafa1b2d1385cd645b1fc25fe32c573b8a0550d180dba137",
 		"ssl": {
 			"rejectUnauthorized": false
 		}
@@ -18,6 +18,6 @@
 	"db-in-use": "psql",
 	"here_map": {
 		"geo_url": "https://geocoder.ls.hereapi.com/6.2/geocode.json",
-		"api_key": "dd6b136c28a00d6a1ab88b4754aa1d52:1ea9bcbec4ed4b6b2e47000ef5e7b42337bbfdfae202cf89e9ec82788673a23d09c5974471fb74bc6411d7b565d5475f"
+		"api_key": "e39f7572f459ab201381c2783de98e42:0c273d9139a09343ce07616aa49e3a46fb08c248fd619dacce844bbcf4cd200296a34da04b9e8348a2035fe0aa8f139f"
 	}
 }
