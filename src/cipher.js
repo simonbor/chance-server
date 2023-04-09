@@ -1,3 +1,6 @@
+// NodeJS Crypto Module | Node Security
+// https://node-security.com/posts/nodejs-crypto/#symmetric-encryption
+
 const crypto = require('crypto');
 const algorithm = 'aes-256-cbc';
 const ENCRYPTION_KEY = Buffer.from(process.env.ENCRYPTION_KEY || 'e7f576614babc03d53ad869272301ef3ca8b3b79d12f79b95191ae0a10af502e', 'hex');

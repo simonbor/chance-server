@@ -6,8 +6,8 @@
             {
               "Location": {
                 "DisplayPosition": {
-                  "Latitude": 32.07579,
-                  "Longitude": 34.7722
+                  "lat": 32.07579,
+                  "lng": 34.7722
                 }
               }
             }
