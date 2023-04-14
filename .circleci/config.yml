@@ -11,7 +11,7 @@ jobs:
         #   POSTGRES_USER: ${POSTGRES_USER}
         #   POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     steps:
-      checkout
+      - checkout
       - run:
           name: Update NPM
           command: "sudo npm install -g npm"
