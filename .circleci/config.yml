@@ -24,6 +24,8 @@ jobs:
             psql -h localhost -U circleci-demo-go -d ParkingTest -c "CREATE TABLE test (name char(25));"
       - run: |
           psql \
+          -h localhost \
+          -U circleci-demo-go \
           -d ParkingTest \
           -c "INSERT INTO test VALUES ('John'), ('Joanna'), ('Jennifer');"
       - run:
