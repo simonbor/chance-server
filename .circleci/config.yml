@@ -5,10 +5,11 @@ jobs:
     working_directory: ~/chance-server
     docker:
       - image: cimg/node:16.13.0
-      - image: postgres:12-alpine
+      - image: postgres:12-alpine # - image: cimg/postgres:14.0
         environment:
           POSTGRES_USER: ${POSTGRES_USER}
           POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+          POSTGRES_DATABASE: ParkingTest
     steps:
       - checkout
       - run:
@@ -16,6 +17,9 @@ jobs:
           command: "sudo npm install -g npm"
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
+      - run: 
+          name: Install Postgres Client
+          command: "sudo npm install -g postgresql-client"
       - run:
           name: Install Dependencies
           command: npm install --legacy-peer-deps
