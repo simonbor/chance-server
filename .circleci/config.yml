@@ -16,10 +16,7 @@ jobs:
       - run: sudo apt-get install postgresql-client
       - run: whoami
       - run:
-          name: Process Postgres Script
-          environment: # environment variables for the database url and path to migration files
-            CONTACTS_DB_URL: "postgres://postgres@localhost:5432/ParkingTest?sslmode=disable"
-            CONTACTS_DB_MIGRATIONS: /home/circleci/project/db/migrations
+          name: Run Postgres Script
           command: "psql -h localhost -d ParkingTest -c "CREATE TABLE test (name char(25));"
       - run: |
           psql \
