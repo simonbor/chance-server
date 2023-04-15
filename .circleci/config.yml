@@ -6,7 +6,7 @@ jobs:
     docker:
       - image: cimg/node:16.13.0
       - image: postgres:12-alpine # - image: cimg/postgres:14.0
-       auth:
+        auth:
           username: ${POSTGRES_USER}
           password: ${POSTGRES_PASSWORD}
         environment:
