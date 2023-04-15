@@ -7,7 +7,7 @@ const { Pool } = require('pg');
 const getPool = async function(db) {
     let pool;
     const dbConfig = JSON.parse(JSON.stringify(config[`${db}-config`]));
-    dbConfig.password = cipher.decrypt(dbConfig.password);
+    dbConfig.password && (dbConfig.password = cipher.decrypt(dbConfig.password));
 
     (db === 'mssql') && (pool = await mssql.connect(dbConfig));
     (db === 'psql') && (pool = new Pool(dbConfig));

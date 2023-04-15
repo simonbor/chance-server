@@ -8,20 +8,16 @@ jobs:
       - image: cimg/postgres:12.14 #- image: postgres:12-alpine # - image: cimg/postgres:14.0
         environment:
           POSTGRES_DB: ParkingTest
-          PGHOST: 172.18.0.15
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: password
     steps:
       - checkout
       - run: sudo apt-get update
       - run: sudo apt-get install postgresql-client
-      - run: sudo apt-get install iproute2
-      - run: ip address add 172.18.0.15 dev eth0
       - run: whoami
       - run: 
           name: Create a Database
           command: |
-            psql -h 172.18.0.15 -U postgres -d ParkingTest -f sql/psql/schema.psql
+            psql -h localhost -U postgres -d ParkingTest -f sql/psql/schema.psql
             psql -h localhost -U postgres -d ParkingTest -f sql/psql/tables.psql
             psql -h localhost -U postgres -d ParkingTest -f sql/psql/procedures.psql
             psql -h localhost -U postgres -d ParkingTest -f sql/psql/data.psql

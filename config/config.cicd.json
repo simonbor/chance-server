@@ -1,0 +1,13 @@
+﻿{
+	"psql-config": {
+		"user": "postgres",
+		"host": "localhost",
+		"database": "ParkingTest",
+		"port": 5432
+	},
+	"db-in-use": "psql",
+	"here_map": {
+		"geo_url": "/tests/mocks/geocode.json",
+		"api_key": ""
+	}
+}
