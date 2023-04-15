@@ -17,6 +17,7 @@ jobs:
       - run: whoami
       - run: |
           psql \
+          -h localhost \
           -d ParkingTest \
           -c "CREATE TABLE test (name char(25));"
       - run: |
