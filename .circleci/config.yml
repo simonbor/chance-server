@@ -18,6 +18,7 @@ jobs:
       - run: |
           psql \
           -h localhost \
+          -U postgres
           -d ParkingTest \
           -c "CREATE TABLE test (name char(25));"
       - run: |
