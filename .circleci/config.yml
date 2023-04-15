@@ -21,7 +21,7 @@ jobs:
             CONTACTS_DB_URL: "postgres://circleci-demo-go@localhost:5432/ParkingTest?sslmode=disable"
             CONTACTS_DB_MIGRATIONS: /home/circleci/project/db/migrations
           command: |
-            psql -h localhost -d ParkingTest -c "CREATE TABLE test (name char(25));"
+            psql -h localhost -U circleci-demo-go -d ParkingTest -c "CREATE TABLE test (name char(25));"
       - run: |
           psql \
           -d ParkingTest \
