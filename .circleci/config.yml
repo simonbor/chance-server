@@ -20,6 +20,10 @@ jobs:
       - run: 
           name: Install Postgres Client
           command: "sudo npm install -g postgresql-client"
+      - run: 
+          name: Create a Database
+          command: |
+            psql -h localhost -d ParkingTest -U ${POSTGRES_USER} -f ./sql/psql/schema.sql
       - run:
           name: Install Dependencies
           command: npm install --legacy-peer-deps
