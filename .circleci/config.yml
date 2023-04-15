@@ -9,17 +9,28 @@ jobs:
         environment:
           POSTGRES_USER: ${POSTGRES_USER}
           POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-          POSTGRES_DATABASE: ParkingTest
+          POSTGRES_DB: ParkingTest
     steps:
       - checkout
+      - run: sudo apt-get update
+      - run: sudo apt-get install postgresql-client
+      - run: whoami
+      - run: |
+          psql \
+          -d ParkingTest \
+          -c "CREATE TABLE test (name char(25));"
+      - run: |
+          psql \
+          -d ParkingTest \
+          -c "INSERT INTO test VALUES ('John'), ('Joanna'), ('Jennifer');"
       - run:
           name: Update NPM
           command: "sudo npm install -g npm"
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
-      - run: 
-          name: Install Postgres Client
-          command: "sudo npm install -g postgresql-client"
+      # - run: 
+      #     name: Install Postgres Client
+      #     command: "sudo npm install -g postgresql-client"
       - run: 
           name: Create a Database
           command: |  # psql -h localhost -U ${POSTGRES_USER} -c "alter user ${POSTGRES_USER} with password '${POSTGRES_PASSWORD}'"
