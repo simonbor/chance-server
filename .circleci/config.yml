@@ -8,38 +8,27 @@ jobs:
       - image: cimg/postgres:12.14 #- image: postgres:12-alpine # - image: cimg/postgres:14.0
         environment:
           POSTGRES_USER: postgres
-          # POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
           POSTGRES_DB: ParkingTest
     steps:
       - checkout
       - run: sudo apt-get update
       - run: sudo apt-get install postgresql-client
       - run: whoami
+      - run: echo $NODE_ENV
       - run: pwd
       - run: ls -l
-      - run:
-          name: Run Postgres Script
+      - run: 
+          name: Create a Database
           command: |
-            psql -h localhost -U postgres -d ParkingTest -c "CREATE TABLE test (name char(25));"
-      - run: |
-          psql \
-          -h localhost \
-          -U postgres \
-          -d ParkingTest \
-          -c "INSERT INTO test VALUES ('John'), ('Joanna'), ('Jennifer');"
+            psql -h localhost -U postgres -d ParkingTest -f sql/psql/schema.psql
+            psql -h localhost -U postgres -d ParkingTest -f sql/psql/tables.psql
+            psql -h localhost -U postgres -d ParkingTest -f sql/psql/procedures.psql
+            psql -h localhost -U postgres -d ParkingTest -f sql/psql/data.psql
       - run:
           name: Update NPM
           command: "sudo npm install -g npm"
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
-      - run: 
-          name: Create a Database
-          command: |
-            psql -h localhost -U postgres -d ParkingTest -f sql/psql/databaseTest.psql
-            psql -h localhost -U postgres -d ParkingTest -f sql/psql/schema.psql
-            psql -h localhost -U postgres -d ParkingTest -f sql/psql/tables.psql
-            psql -h localhost -U postgres -d ParkingTest -f sql/psql/procedures.psql
-            psql -h localhost -U postgres -d ParkingTest -f sql/psql/data.psql
       - run:
           name: Install Dependencies
           command: npm install --legacy-peer-deps
