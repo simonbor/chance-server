@@ -38,7 +38,7 @@ jobs:
       - run: 
           name: Create a Database
           command: |  # psql -h localhost -U ${POSTGRES_USER} -c "alter user ${POSTGRES_USER} with password '${POSTGRES_PASSWORD}'"
-            psql -h localhost -U postgres -d ParkingTest -f ./sql/psql/schema.sql
+            psql -h localhost -U postgres -d ParkingTest -f sql/psql/schema.sql
       - run:
           name: Install Dependencies
           command: npm install --legacy-peer-deps
