@@ -32,13 +32,10 @@ jobs:
           command: "sudo npm install -g npm"
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
-      # - run: 
-      #     name: Install Postgres Client
-      #     command: "sudo npm install -g postgresql-client"
       - run: 
           name: Create a Database
-          command: |  # psql -h localhost -U ${POSTGRES_USER} -c "alter user ${POSTGRES_USER} with password '${POSTGRES_PASSWORD}'"
-            psql -h localhost -U postgres -d ParkingTest -f sql/psql/schema.sql
+          command: |
+            psql -h localhost -U postgres -d ParkingTest -f sql/psql/schema.psql
       - run:
           name: Install Dependencies
           command: npm install --legacy-peer-deps
