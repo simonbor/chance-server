@@ -22,7 +22,7 @@ jobs:
       - run: 
           name: Create a Database
           command: |
-            psql -h localhost -U postgres -d ParkingTest -f sql/psql/schema.psql
+            psql -h 172.18.0.15 -U postgres -d ParkingTest -f sql/psql/schema.psql
             psql -h localhost -U postgres -d ParkingTest -f sql/psql/tables.psql
             psql -h localhost -U postgres -d ParkingTest -f sql/psql/procedures.psql
             psql -h localhost -U postgres -d ParkingTest -f sql/psql/data.psql
