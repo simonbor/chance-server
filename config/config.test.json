@@ -7,9 +7,8 @@
 	},
 	"psql-config": {
 		"user": "postgres",
-		"host": "172.18.0.15",
+		"host": "localhost",
 		"database": "ParkingTest",
-		"password": "20e819acce431b1c66ee5ac9958b633e:e4f14e8a68a5e2582d77992a618a71c0",
 		"port": 5432
 	},
 	"db-in-use": "psql",
