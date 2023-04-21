@@ -7,7 +7,7 @@
 	},
 	"psql-config": {
 		"user": "postgres",
-		"host": "host.docker.internal",
+		"host": "127.0.0.1",
 		"database": "ParkingTest",
 		"port": 5432
 	},
